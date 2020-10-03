@@ -9,6 +9,8 @@ import * as serviceWorker from './serviceWorker';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet';
 
+window._store = store;
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
