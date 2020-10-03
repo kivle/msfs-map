@@ -1,13 +1,28 @@
 .main {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     border: 2px solid rgba(0,0,0,0.2);
     padding: 4px;
     position: absolute;
-    left: 60px;
+    right: 10px;
     top: 10px;
     background-color: white;
     z-index: 1000;
+}
+
+@media (min-width: 600px) {
+    .main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border: 2px solid rgba(0,0,0,0.2);
+        padding: 4px;
+        position: absolute;
+        left: 60px;
+        right: auto;
+        top: 10px;
+    }
 }
 
 .main > span.infoField {
@@ -21,11 +36,4 @@
 
 .main > span.infoField > span {
     vertical-align: center;
-}
-
-.icon {
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    padding: 8px;
 }

@@ -19,9 +19,6 @@ export default function UI() {
   return (
     <div>
       <div className={styles.main}>
-        <div className={styles.icon}>
-          
-        </div>
         <InfoField 
           label="Airspeed" 
           value={`${airspeed} kt (${airspeed_true} kt)`}
@@ -34,10 +31,10 @@ export default function UI() {
           label="V. speed" 
           value={`${vertical_speed} ft/s`}
         />
-        <InfoField 
+        {flaps !== '0' && <InfoField 
           label="Flaps" 
           value={`${flaps}`}
-        />
+        />}
         <InfoField 
           label="Trim" 
           value={`${trim}%`}
