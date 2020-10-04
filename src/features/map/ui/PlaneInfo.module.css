@@ -1,0 +1,39 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 2px solid rgba(0,0,0,0.2);
+  padding: 4px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: white;
+  z-index: 1000;
+}
+
+@media (min-width: 600px) {
+  .main {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      border: 2px solid rgba(0,0,0,0.2);
+      padding: 4px;
+      position: absolute;
+      left: 60px;
+      right: auto;
+      top: 10px;
+  }
+}
+
+.main > span.infoField {
+  margin: 8px;
+}
+
+.main > span.infoField > label {
+  display: block;
+  font-weight: 700;
+}
+
+.main > span.infoField > span {
+  vertical-align: center;
+}
