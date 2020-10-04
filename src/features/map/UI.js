@@ -35,14 +35,14 @@ export default function UI() {
           label="Flaps" 
           value={`${flaps}`}
         />}
-        <InfoField 
+        {trim !== '0.0' && <InfoField 
           label="Trim" 
           value={`${trim}%`}
-        />
-        <InfoField 
+        />}
+        {rudder_trim !== '0.0' && <InfoField 
           label="R.Trim" 
           value={`${rudder_trim}%`}
-        />
+        />}
       </div>
     </div>
   );
