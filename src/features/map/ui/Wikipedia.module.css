@@ -1,12 +1,34 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  border: 2px solid rgba(0,0,0,0.2);
-  padding: 4px;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  background-color: white;
-  z-index: 1000;
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgba(0,0,0,0.2);
+    padding: 4px;
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+    background-color: white;
+    z-index: 1000;
+    width: 300px;
+    max-height: calc(100vh - 60px);
+  }
+}
+
+.title {
+  padding: 10px;
+  font-weight: 700;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.text {
+  padding: 0 4px;
+  font-size: 0.8em;
+  overflow-y: scroll;
+  scrollbar-color: rgba(0, 0, 0, 0.5);;
+  scrollbar-width: thin;
 }

@@ -31,15 +31,15 @@ export default function PlaneInfo() {
           label="V. speed" 
           value={`${vertical_speed} ft/s`}
         />
-        {flaps !== '0' && <InfoField 
+        {parseFloat(flaps) !== 0 && <InfoField 
           label="Flaps" 
           value={`${flaps}`}
         />}
-        {trim !== '0.0' && <InfoField 
+        {parseFloat(trim) !== 0 && <InfoField 
           label="Trim" 
           value={`${trim}%`}
         />}
-        {rudder_trim !== '0.0' && <InfoField 
+        {parseFloat(rudder_trim) !== 0 && <InfoField 
           label="R.Trim" 
           value={`${rudder_trim}%`}
         />}
