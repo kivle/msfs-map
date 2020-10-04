@@ -8,6 +8,7 @@ import UI from './UI';
 import Wikipedia from "./layers/Wikipedia";
 
 import { selectPlanePosition, selectPlaneInfo, selectZoom, connect, zoomChanged } from "./mapSlice";
+import { getArticles } from '../wikipedia/wikipediaSlice';
 
 export default function Map() {
   const dispatch = useDispatch();
@@ -23,7 +24,8 @@ export default function Map() {
     if (event.zoom !== zoom) {
       dispatch(zoomChanged(event.zoom))
     }
-  }, [dispatch, zoom]);
+    dispatch(getArticles(planePosition[0], planePosition[1], 10000))
+  }, [dispatch, zoom, planePosition]);
 
   const plane = <div style={{transform: `rotate(${heading - 90}deg)`}}>
     <FaPlane size={24} />

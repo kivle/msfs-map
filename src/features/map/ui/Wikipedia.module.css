@@ -25,10 +25,15 @@
   text-align: center;
 }
 
+.title > img {
+  max-width: 100%;
+  margin-top: 6px;
+}
+
 .text {
   padding: 0 4px;
   font-size: 0.8em;
-  overflow-y: scroll;
+  overflow-y: auto;
   scrollbar-color: rgba(0, 0, 0, 0.5);;
   scrollbar-width: thin;
 }
