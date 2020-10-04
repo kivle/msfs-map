@@ -5,7 +5,7 @@ export const mapSlice = createSlice({
   name: 'map',
   initialState: {
     plane: {
-      position: [51.505, -0.09],
+      position: undefined,
       altitude: 0,
       heading: 0,
       airspeed: 0,

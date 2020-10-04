@@ -25,8 +25,16 @@
   text-align: center;
 }
 
+.title button {
+  background-color: unset;
+  border: none;
+  color: #33F;
+  font-weight: bold;
+}
+
 .title > img {
   max-width: 100%;
+  max-height: 300px;
   margin-top: 6px;
 }
 

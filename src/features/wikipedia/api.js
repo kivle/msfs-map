@@ -10,17 +10,19 @@ class WikipediaApi {
     return `https://${edition}.wikipedia.org/w/api.php?${query}`;
   }
 
-  async getPagesByGeoLocation(edition, lat, lng, radius, limit = 100) {
+  async getPagesByGeoLocation(edition, lat, lng, radius) {
     const query = {
       format: 'json',
       action: 'query',
       generator: 'geosearch',
-      ggslimit: limit,
+      ggslimit: 20,
       ggsradius: radius,
       ggscoord: lat + '|' + lng,
       origin: '*',
       prop: 'extracts|pageimages|coordinates',
       exsentences: '10',
+      exintro: true,
+      exlimit: 20,
       pithumbsize: '400',
       imlimit: '10'
     };

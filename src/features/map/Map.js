@@ -8,7 +8,7 @@ import UI from './UI';
 import Wikipedia from "./layers/Wikipedia";
 
 import { selectPlanePosition, selectPlaneInfo, selectZoom, connect, zoomChanged } from "./mapSlice";
-import { getArticles } from '../wikipedia/wikipediaSlice';
+import { getPages } from '../wikipedia/wikipediaSlice';
 
 export default function Map() {
   const dispatch = useDispatch();
@@ -20,27 +20,36 @@ export default function Map() {
     dispatch(connect);
   }, [dispatch]);
 
+  useEffect(() => {
+    if (planePosition?.length >= 2)
+      dispatch(getPages(planePosition[0], planePosition[1], 10000));
+  }, [dispatch, planePosition]);
+
   const viewportChangedHandler = useCallback((event) => {
     if (event.zoom !== zoom) {
-      dispatch(zoomChanged(event.zoom))
+      dispatch(zoomChanged(event.zoom));
     }
-    dispatch(getArticles(planePosition[0], planePosition[1], 10000))
-  }, [dispatch, zoom, planePosition]);
+  }, [dispatch, zoom]);
 
   const plane = <div style={{transform: `rotate(${heading - 90}deg)`}}>
     <FaPlane size={24} />
   </div>;
 
+  const mapCenter = 
+    planePosition?.length >= 2 
+      ? planePosition 
+      : [51.505, -0.09];
+
   return (
     <>
       <UI />
-      <LeafletMap center={planePosition} zoom={zoom} onViewportChanged={viewportChangedHandler}>
+      <LeafletMap center={mapCenter} zoom={zoom} onViewportChanged={viewportChangedHandler}>
         <TileLayer
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Wikipedia />
-        <Marker position={planePosition} icon={plane} />
+        {planePosition && <Marker position={planePosition} icon={plane} />}
       </LeafletMap>
     </>
   );

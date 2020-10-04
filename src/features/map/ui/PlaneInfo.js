@@ -10,6 +10,7 @@ export default function PlaneInfo() {
   const {
     airspeed,
     airspeed_true,
+    altitude,
     heading,
     vertical_speed,
     flaps,
@@ -22,6 +23,10 @@ export default function PlaneInfo() {
         <InfoField 
           label="Airspeed" 
           value={`${airspeed} kt (${airspeed_true} kt)`}
+        />
+        <InfoField 
+          label="Altitude" 
+          value={`${altitude} ft`}
         />
         <InfoField 
           label="Heading" 

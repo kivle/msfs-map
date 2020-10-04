@@ -1,14 +1,16 @@
 import * as React from 'react';
+import { useCallback, useEffect } from 'react';
 
-import { FaCity } from 'react-icons/fa';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import parse from 'html-react-parser';
+import striptags from 'striptags';
+import { decode } from 'entities';
 
 import styles from './Wikipedia.module.css';
-import { selectPages } from '../../wikipedia/wikipediaSlice';
+import { selectCurrentPage, nextPage } from '../../wikipedia/wikipediaSlice';
 
 function Extract({ page }) {
-  return parse(page.extract);
+  return page.extract ? parse(page.extract) : null;
 }
 
 function Thumbnail({ page }) {
@@ -18,18 +20,37 @@ function Thumbnail({ page }) {
 }
 
 export default function WikipediaPanel() {
-  const pages = useSelector(selectPages);
+  const dispatch = useDispatch();
+  const page = useSelector(selectCurrentPage);
+  const next = useCallback(() => {
+    dispatch(nextPage())
+  }, [dispatch]);
 
-  if (!pages.length) return null;
+  useEffect(
+    () => {
+      if (!page || !window.speechSynthesis) return;
+      const text = `${page.title}\n\n${page.extract ? decode(striptags(page.extract)) : ''}`;
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.voice = window.speechSynthesis.getVoices()[9];
+      utterance.onend = () => {
+        next();
+      };
+      window.speechSynthesis.speak(utterance);
+      return () => window.speechSynthesis.cancel();
+    },
+    [page, next]
+  );
+
+  if (!page) return null;
 
   return (
     <div className={styles.main}>
       <div className={styles.title}>
-        {pages[0].title}
-        <Thumbnail page={pages[0]} />
+        <div>{page.title} <button onClick={next}>Next</button></div>
+        <Thumbnail page={page} />
       </div>
       <div className={styles.text}>
-        <Extract page={pages[0]} />
+        <Extract page={page} />
       </div>
     </div>
   );
