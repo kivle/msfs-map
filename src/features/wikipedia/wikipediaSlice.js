@@ -48,9 +48,12 @@ export const wikipediaSlice = createSlice({
           state.pages = state.pages.filter(p => p.pageid !== leastInteresting.pageid);
         }
       }
-      const unreadPage = state.pages.find(
-        p => !state.pagesViewed.some(v => p.pageid === v)
-      );
+      const unreadPage = state.pages
+        .sort(
+          (a, b) => b?.extract?.length - a?.extract?.length
+        ).find(
+          p => !state.pagesViewed.some(v => p.pageid === v)
+        );
       if (unreadPage) {
         state.currentPage = unreadPage.pageid;
       }
