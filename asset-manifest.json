@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/msfs-map/static/css/main.bd2ec066.chunk.css",
+    "main.js": "/msfs-map/static/js/main.f60fa093.chunk.js",
+    "main.js.map": "/msfs-map/static/js/main.f60fa093.chunk.js.map",
+    "runtime-main.js": "/msfs-map/static/js/runtime-main.10dfa2d7.js",
+    "runtime-main.js.map": "/msfs-map/static/js/runtime-main.10dfa2d7.js.map",
+    "static/css/2.a4567992.chunk.css": "/msfs-map/static/css/2.a4567992.chunk.css",
+    "static/js/2.7bc31ced.chunk.js": "/msfs-map/static/js/2.7bc31ced.chunk.js",
+    "static/js/2.7bc31ced.chunk.js.map": "/msfs-map/static/js/2.7bc31ced.chunk.js.map",
+    "index.html": "/msfs-map/index.html",
+    "precache-manifest.e3c1b8d4b79eda94bac4085fcb553cfa.js": "/msfs-map/precache-manifest.e3c1b8d4b79eda94bac4085fcb553cfa.js",
+    "service-worker.js": "/msfs-map/service-worker.js",
+    "static/css/2.a4567992.chunk.css.map": "/msfs-map/static/css/2.a4567992.chunk.css.map",
+    "static/css/main.bd2ec066.chunk.css.map": "/msfs-map/static/css/main.bd2ec066.chunk.css.map",
+    "static/js/2.7bc31ced.chunk.js.LICENSE.txt": "/msfs-map/static/js/2.7bc31ced.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.10dfa2d7.js",
+    "static/css/2.a4567992.chunk.css",
+    "static/js/2.7bc31ced.chunk.js",
+    "static/css/main.bd2ec066.chunk.css",
+    "static/js/main.f60fa093.chunk.js"
+  ]
+}
