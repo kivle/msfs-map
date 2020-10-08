@@ -7,7 +7,7 @@ import striptags from 'striptags';
 import { decode } from 'entities';
 
 import styles from './Wikipedia.module.css';
-import { selectCurrentPage, nextPage } from '../../wikipedia/wikipediaSlice';
+import { selectCurrentPage, nextPage, selectVoice } from '../../wikipedia/wikipediaSlice';
 
 function Extract({ page }) {
   return page.extract ? parse(page.extract) : null;
@@ -22,23 +22,24 @@ function Thumbnail({ page }) {
 export default function WikipediaPanel() {
   const dispatch = useDispatch();
   const page = useSelector(selectCurrentPage);
+  const voice = useSelector(selectVoice);
   const next = useCallback(() => {
-    dispatch(nextPage())
+    dispatch(nextPage());
   }, [dispatch]);
 
   useEffect(
     () => {
       if (!page || !window.speechSynthesis) return;
+      window.speechSynthesis.cancel();
       const text = `${page.title}\n\n${page.extract ? decode(striptags(page.extract)) : ''}`;
       const utterance = new SpeechSynthesisUtterance(text);
-      utterance.voice = window.speechSynthesis.getVoices()[9];
+      utterance.voice = window.speechSynthesis.getVoices().find(v => v.name === voice);
       utterance.onend = () => {
         next();
       };
       window.speechSynthesis.speak(utterance);
-      return () => window.speechSynthesis.cancel();
     },
-    [page, next]
+    [page, next, voice]
   );
 
   if (!page) return null;

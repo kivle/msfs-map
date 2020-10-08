@@ -1,0 +1,27 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(0,0,0,0.2);
+  padding: 4px;
+  position: absolute;
+  left: 10px;
+  top: 90px;
+  z-index: 1000;
+  border: 2px solid rgba(0,0,0,0.2);
+  background-color: white;
+}
+
+.main .preference {
+  display: block;
+  margin: 4px;
+}
+
+.main label {
+  font-size: 0.8em;
+  display: block;
+  font-weight: 700;
+}
+
+.main select {
+  display: block;
+}

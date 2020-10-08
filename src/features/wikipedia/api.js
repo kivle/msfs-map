@@ -3,7 +3,7 @@ class WikipediaApi {
     const query = Object.keys(queryParams).reduce(
       (aggr, key) => {
         if (aggr) aggr += '&';
-        return `${aggr} ${encodeURIComponent(key)}=${encodeURIComponent(queryParams[key])}`;
+        return `${aggr}${encodeURIComponent(key)}=${encodeURIComponent(queryParams[key])}`;
       }, ''
     );
 
