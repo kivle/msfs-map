@@ -30,7 +30,6 @@ export default function WikipediaPanel() {
   useEffect(
     () => {
       if (!page || !window.speechSynthesis) return;
-      window.speechSynthesis.cancel();
       const text = `${page.title}\n\n${page.extract ? decode(striptags(page.extract)) : ''}`;
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.voice = window.speechSynthesis.getVoices().find(v => v.name === voice);
@@ -38,6 +37,10 @@ export default function WikipediaPanel() {
         next();
       };
       window.speechSynthesis.speak(utterance);
+      return () => {
+        utterance.onend = null;
+        speechSynthesis.cancel();
+      };
     },
     [page, next, voice]
   );

@@ -10,6 +10,8 @@ import Wikipedia from "./layers/Wikipedia";
 import { selectPlanePosition, selectPlaneInfo, selectZoom, connect, zoomChanged } from "./mapSlice";
 import { getPages } from '../wikipedia/wikipediaSlice';
 
+import styles from './Map.module.css';
+
 export default function Map() {
   const dispatch = useDispatch();
   const planePosition = useSelector(selectPlanePosition);
@@ -49,7 +51,7 @@ export default function Map() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Wikipedia />
-        {planePosition && <Marker position={planePosition} icon={plane} />}
+        {planePosition && <Marker position={planePosition} icon={plane} className={styles.plane} />}
       </LeafletMap>
     </>
   );
