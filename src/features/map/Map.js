@@ -10,6 +10,8 @@ import Wikipedia from "./layers/Wikipedia";
 import { selectPlanePosition, selectPlaneInfo, selectZoom, connect, zoomChanged } from "./mapSlice";
 import { getPages } from '../wikipedia/wikipediaSlice';
 
+import { version } from '../../../package.json';
+
 import styles from './Map.module.css';
 
 export default function Map() {
@@ -47,7 +49,11 @@ export default function Map() {
       <UI />
       <LeafletMap center={mapCenter} zoom={zoom} onViewportChanged={viewportChangedHandler}>
         <TileLayer
-          attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          attribution={
+            `&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors, ` +
+            `&copy; <a target="_blank" href="https://en.wikipedia.org">Wikipedia</a>, ` +
+            `&copy; <a target="_blank" href="https://react-leaflet.js.org/">react-leaflet</a>, ` +
+            `<a target="_blank" href="https://github.com/kivle/msfs-map">MSFS-map</a> v${version}`}
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Wikipedia />

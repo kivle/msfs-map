@@ -23,6 +23,7 @@ export default function WikipediaPanel() {
   const dispatch = useDispatch();
   const page = useSelector(selectCurrentPage);
   const voice = useSelector(selectVoice);
+  
   const next = useCallback(() => {
     dispatch(nextPage());
   }, [dispatch]);

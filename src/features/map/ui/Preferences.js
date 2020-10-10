@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useCallback, useEffect } from 'react';
 import ISO6391 from 'iso-639-1';
-import { useDispatch, useSelector } from 'react-redux';
+import { batch, useDispatch, useSelector } from 'react-redux';
 import { 
   selectAvailableEditions, selectEdition, setEdition, setVoice, 
   setAvailableVoices, selectVoice, selectAvailableVoices 
@@ -15,23 +15,30 @@ export default function Preferences() {
   const voice = useSelector(selectVoice);
   const availableVoices = useSelector(selectAvailableVoices);
 
+  useEffect(() => {
+    // Load preferences on startup
+    batch(() => {
+      if (localStorage['wikipedia-edition']) dispatch(setEdition(localStorage['wikipedia-edition']));
+      if (localStorage['voice']) dispatch(setVoice(localStorage['voice']));
+    });
+  }, [dispatch]);
+
   const changeEdition = useCallback((e) => {
+    localStorage['wikipedia-edition'] = e.target.value;
     dispatch(setEdition(e.target.value));
   }, [dispatch]);
 
   const changeVoice = useCallback((e) => {
+    localStorage['voice'] = e.target.value;
     dispatch(setVoice(e.target.value));
   }, [dispatch]);
 
   useEffect(() => {
-    const voices = window.speechSynthesis.getVoices();
-    if (voices && voices.length) {
-      dispatch(setAvailableVoices(voices.map(v => v.name)));
-    }
-    const voicesChanged = e => {
+    const voicesChanged = () => {
       const newVoices = window.speechSynthesis.getVoices();
       dispatch(setAvailableVoices(newVoices.map(v => v.name)));
     };
+    voicesChanged();
     window.speechSynthesis.addEventListener('voiceschanged', voicesChanged);
     
     return () => window.speechSynthesis.removeEventListener('voiceschanged', voicesChanged);
