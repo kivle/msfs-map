@@ -16,14 +16,44 @@ export const mapSlice = createSlice({
       rudder_trim: 0
     },
     zoom: 13,
-    tileServer: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    availableTileServers: [
-      { name: 'OpenStreetMap', tileServer: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' },
-      // { name: 'OpenAIP', tileServer: 'http://{s}.tile.maps.openaip.net/geowebcache/service/tms/1.0.0/openaip_basemap@EPSG%3A900913@png/{z}/{x}/{y}.png' },
-      { name: 'Stamen toner', tileServer: 'http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png' },
-      { name: 'Stamen terrain', tileServer: 'http://{s}.tile.stamen.com/terrain/{z}/{x}/{y}.png' },
-      { name: 'Stamen watercolor', tileServer: 'http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png' },
-      { name: 'Carto Dark', tileServer: 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png' }
+    currentMap: 'OpenStreetMap',
+    availableMaps: [
+      { 
+        name: 'OpenStreetMap', 
+        type: 'tileServer', 
+        tileServer: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 
+        attribution: `&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors` 
+      },
+      // { 
+      //   name: 'OpenAIP', 
+      //   type: 'tileServer',
+      //   tileServer: 'http://{s}.tile.maps.openaip.net/geowebcache/service/tms/1.0.0/openaip_basemap@EPSG%3A900913@png/{z}/{x}/{y}.png',
+      //   attribution: `&copy; <a target="_blank' href="https://www.openaip.net">openAIP</a>`
+      // },
+      { 
+        name: 'Stamen toner', 
+        type: 'tileServer', 
+        tileServer: 'http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png',
+        attribution: `&copy; <a target="_blank' href="http://maps.stamen.com">Stamen</a>`
+      },
+      { 
+        name: 'Stamen terrain', 
+        type: 'tileServer', 
+        tileServer: 'http://{s}.tile.stamen.com/terrain/{z}/{x}/{y}.png',
+        attribution: `&copy; <a target="_blank' href="http://maps.stamen.com">Stamen</a>`
+      },
+      { 
+        name: 'Stamen watercolor', 
+        type: 'tileServer', 
+        tileServer: 'http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png',
+        attribution: `&copy; <a target="_blank' href="http://maps.stamen.com">Stamen</a>`
+      },
+      { 
+        name: 'Carto Dark', 
+        type: 'tileServer', 
+        tileServer: 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png',
+        attribution: `&copy; <a target="_blank' href="https://carto.com">Carto</a>`
+      }
     ]
   },
   reducers: {
@@ -42,8 +72,8 @@ export const mapSlice = createSlice({
     zoomChanged: (state, action) => {
       state.zoom = action.payload;
     },
-    setTileServer: (state, action) => {
-      state.tileServer = action.payload;
+    setCurrentMap: (state, action) => {
+      state.currentMap = action.payload;
     }
   },
 });
@@ -51,7 +81,7 @@ export const mapSlice = createSlice({
 export const {
   updateMsfs,
   zoomChanged,
-  setTileServer
+  setCurrentMap
 } = mapSlice.actions;
 
 export const connect = dispatch => {
@@ -75,8 +105,8 @@ export const selectPlaneInfo = state => ({
   rudder_trim: state.map.plane.rudder_trim
 });
 
-export const selectTileServer = state => state.map.tileServer;
+export const selectCurrentMap = state => state.map.availableMaps.find(m => m.name === state.map.currentMap);
 
-export const selectAvailableTileServers = state => state.map.availableTileServers;
+export const selectAvailableMaps = state => state.map.availableMaps;
 
 export default mapSlice.reducer;

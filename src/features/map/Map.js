@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect } from "react";
-import { Map as LeafletMap, TileLayer } from "react-leaflet";
+import { Map as LeafletMap } from "react-leaflet";
 import { useSelector, useDispatch } from "react-redux";
 import Marker from 'react-leaflet-enhanced-marker';
 
@@ -7,19 +7,18 @@ import { FaPlane } from 'react-icons/fa';
 import UI from './UI';
 import Wikipedia from "./layers/Wikipedia";
 
-import { selectPlanePosition, selectPlaneInfo, selectZoom, connect, zoomChanged, selectTileServer } from "./mapSlice";
+import { selectPlanePosition, selectPlaneInfo, selectZoom, connect, zoomChanged, selectCurrentMap } from "./mapSlice";
 import { getPages } from '../wikipedia/wikipediaSlice';
 
-import { version } from '../../../package.json';
-
 import styles from './Map.module.css';
+import { MainLayer } from "./layers/MainLayer";
 
 export default function Map() {
   const dispatch = useDispatch();
   const planePosition = useSelector(selectPlanePosition);
   const { heading } = useSelector(selectPlaneInfo);
   const zoom = useSelector(selectZoom);
-  const tileServer = useSelector(selectTileServer);
+  const currentMap = useSelector(selectCurrentMap);
 
   useEffect(() => {
     dispatch(connect);
@@ -44,22 +43,12 @@ export default function Map() {
     planePosition?.length >= 2 
       ? planePosition 
       : [51.505, -0.09];
-
-  return (
+  
+      return (
     <>
       <UI />
       <LeafletMap center={mapCenter} zoom={zoom} onViewportChanged={viewportChangedHandler}>
-        <TileLayer
-          attribution={
-            `&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors, ` +
-            `&copy; <a target="_blank" href="https://en.wikipedia.org">Wikipedia</a>, ` +
-            // `&copy; <a target="_blank' href="https://www.openaip.net">openAIP</a>, ` +
-            `&copy; <a target="_blank' href="http://maps.stamen.com">Stamen</a>, ` +
-            `&copy; <a target="_blank' href="https://carto.com">Carto</a>, ` +
-            `&copy; <a target="_blank" href="https://react-leaflet.js.org/">react-leaflet</a>, ` +
-            `<a target="_blank" href="https://github.com/kivle/msfs-map">MSFS-map</a> v${version}`}
-          url={tileServer}
-        />
+        <MainLayer currentMap={currentMap} />
         <Wikipedia />
         {planePosition && <Marker position={planePosition} icon={plane} className={styles.plane} />}
       </LeafletMap>

@@ -7,7 +7,7 @@ import {
   setAvailableVoices, selectVoice, selectAvailableVoices 
 } from '../../wikipedia/wikipediaSlice';
 import styles from './Preferences.module.css';
-import { selectAvailableTileServers, selectTileServer, setTileServer } from '../mapSlice';
+import { selectAvailableMaps, selectCurrentMap, setCurrentMap } from '../mapSlice';
 
 export default function Preferences() {
   const dispatch = useDispatch();
@@ -15,15 +15,15 @@ export default function Preferences() {
   const availableEditions = useSelector(selectAvailableEditions);
   const voice = useSelector(selectVoice);
   const availableVoices = useSelector(selectAvailableVoices);
-  const tileServer = useSelector(selectTileServer);
-  const availableTileServers = useSelector(selectAvailableTileServers);
+  const currentMap = useSelector(selectCurrentMap);
+  const availableMaps = useSelector(selectAvailableMaps);
 
   useEffect(() => {
     // Load preferences on startup
     batch(() => {
       if (localStorage['wikipedia-edition']) dispatch(setEdition(localStorage['wikipedia-edition']));
       if (localStorage['voice']) dispatch(setVoice(localStorage['voice']));
-      if (localStorage['tileServer']) dispatch(setTileServer(localStorage['tileServer']));
+      if (localStorage['currentMap']) dispatch(setCurrentMap(localStorage['currentMap']));
     });
   }, [dispatch]);
 
@@ -37,9 +37,9 @@ export default function Preferences() {
     dispatch(setVoice(e.target.value));
   }, [dispatch]);
 
-  const changeTileServer = useCallback((e) => {
-    localStorage['tileServer'] = e.target.value;
-    dispatch(setTileServer(e.target.value));
+  const changeMap = useCallback((e) => {
+    localStorage['currentMap'] = e.target.value;
+    dispatch(setCurrentMap(e.target.value));
   }, [dispatch]);
 
   useEffect(() => {
@@ -56,14 +56,9 @@ export default function Preferences() {
   return (
     <div className={styles.main}>
       <div className={styles.preference}>
-        <label htmlFor="tileserver">Map</label>
-        <select id="tileserver" onChange={changeTileServer} value={tileServer}>
-          {availableTileServers.map(
-            server =>
-              <option key={server.tileServer} value={server.tileServer}>
-                {server.name}
-              </option>
-          )}
+        <label htmlFor="mapserver">Map</label>
+        <select id="mapserver" onChange={changeMap} value={currentMap.name}>
+          {availableMaps.map(({name}) => <option key={name} value={name}>{name}</option>)}
         </select>
       </div>
       <div className={styles.preference}>
