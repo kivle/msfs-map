@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect } from "react";
-import { Map as LeafletMap } from "react-leaflet";
+import { Map as LeafletMap, Circle } from "react-leaflet";
 import { useSelector, useDispatch } from "react-redux";
 import Marker from 'react-leaflet-enhanced-marker';
 
@@ -12,7 +12,6 @@ import { getPages, selectSearchRadius } from '../wikipedia/wikipediaSlice';
 
 import styles from './Map.module.css';
 import { MainLayer } from "./layers/MainLayer";
-import { CircleMarker } from "leaflet";
 
 export default function Map() {
   const dispatch = useDispatch();
@@ -37,8 +36,8 @@ export default function Map() {
     }
   }, [dispatch, zoom]);
 
-  const plane = <div style={{transform: `rotate(${heading - 90}deg)`}}>
-    <FaPlane size={24} />
+  const plane = <div className={styles.plane} style={{transform: `rotate(${heading - 90}deg)`}}>
+    <FaPlane size={32} stroke="white" strokeWidth="40" fill="#44F" />
   </div>;
 
   const mapCenter = 
@@ -52,8 +51,8 @@ export default function Map() {
       <LeafletMap center={mapCenter} zoom={zoom} onViewportChanged={viewportChangedHandler}>
         <MainLayer currentMap={currentMap} />
         <Wikipedia />
-        {planePosition && <CircleMarker center={planePosition} radius={searchRadius} />}
-        {planePosition && <Marker position={planePosition} icon={plane} className={styles.plane} />}
+        {planePosition && <Circle center={planePosition} radius={searchRadius} color="blue" fill={false} />}
+        {planePosition && <Marker position={planePosition} icon={plane} />}
       </LeafletMap>
     </>
   );

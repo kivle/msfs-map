@@ -104,7 +104,7 @@ export const wikipediaSlice = createSlice({
         state.voice = undefined;
     },
     setSearchRadius: (state, action) => {
-      state.searchRadius = action.payload;
+      state.searchRadius = parseInt(action.payload, 10);
     }
   },
 });
