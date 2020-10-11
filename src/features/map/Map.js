@@ -28,8 +28,8 @@ export default function Map() {
 
   useEffect(() => {
     if (planePosition?.length >= 2)
-      dispatch(getPages(planePosition[0], planePosition[1], 10000));
-  }, [dispatch, planePosition]);
+      dispatch(getPages(planePosition[0], planePosition[1], searchRadius));
+  }, [dispatch, planePosition, searchRadius]);
 
   const viewportChangedHandler = useCallback((event) => {
     if (event.zoom !== zoom) {
