@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import ISO6391 from 'iso-639-1';
 import { batch, useDispatch, useSelector } from 'react-redux';
 import { 
@@ -9,9 +9,11 @@ import {
 } from '../../wikipedia/wikipediaSlice';
 import styles from './Preferences.module.css';
 import { selectAvailableMaps, selectCurrentMap, setCurrentMap } from '../mapSlice';
+import { FaCog, FaCaretRight } from 'react-icons/fa';
 
 export default function Preferences() {
   const dispatch = useDispatch();
+  const [expanded, setExpanded] = useState(false);
   const edition = useSelector(selectEdition);
   const availableEditions = useSelector(selectAvailableEditions);
   const voice = useSelector(selectVoice);
@@ -50,6 +52,10 @@ export default function Preferences() {
     dispatch(setSearchRadius(e.target.value));
   }, [dispatch]);
 
+  const toggleExpanded = useCallback((e) => {
+    setExpanded(!expanded);
+  }, [expanded]);
+
   useEffect(() => {
     const voicesChanged = () => {
       const newVoices = window.speechSynthesis.getVoices();
@@ -63,37 +69,45 @@ export default function Preferences() {
 
   return (
     <div className={styles.main}>
-      <div className={styles.preference}>
-        <label htmlFor="mapserver">Map</label>
-        <select id="mapserver" onChange={changeMap} value={currentMap.name}>
-          {availableMaps.map(({name}) => <option key={name} value={name}>{name}</option>)}
-        </select>
-      </div>
-      <div className={styles.preference}>
-        <label htmlFor="wikipedia-edition">Wikipedia Edition</label>
-        <select id="wikipedia-edition" onChange={changeEdition} value={edition}>
-          {availableEditions.map(
-            e => 
-              <option key={e} value={e}>
-                {ISO6391.getName(e) ? `${ISO6391.getName(e)} (${e})` : e}
-              </option>
-          )}
-        </select>
-      </div>
-      <div className={styles.preference}>
-        <label htmlFor="searchRadius">Wikipedia search radius</label>
-        <select id="searchRadius" onChange={changeSearchRadius} value={searchRadius}>
-          {[5000, 10000, 20000, 50000, 100000].map(r =>
-            <option key={r} value={r}>{`${r} meters`}</option>
-          )}
-        </select>
-      </div>
-      <div className={styles.preference}>
-        <label htmlFor="voice">Voice</label>
-        <select id="voice" onChange={changeVoice} value={voice}>
-          {availableVoices.map(v => <option key={v} value={v}>{v}</option>)}
-        </select>
-      </div>
+      <button 
+        className={`${styles.preferenceButton}${expanded ? ` ${styles.expanded}` : ''}`}
+        onClick={toggleExpanded}>
+        <FaCog size="100%" />
+        <FaCaretRight className={styles.caret} />
+      </button>
+      {expanded && <>
+        <div className={styles.preference}>
+          <label htmlFor="mapserver">Map</label>
+          <select id="mapserver" onChange={changeMap} value={currentMap.name}>
+            {availableMaps.map(({name}) => <option key={name} value={name}>{name}</option>)}
+          </select>
+        </div>
+        <div className={styles.preference}>
+          <label htmlFor="wikipedia-edition">Wikipedia Edition</label>
+          <select id="wikipedia-edition" onChange={changeEdition} value={edition}>
+            {availableEditions.map(
+              e => 
+                <option key={e} value={e}>
+                  {ISO6391.getName(e) ? `${ISO6391.getName(e)} (${e})` : e}
+                </option>
+            )}
+          </select>
+        </div>
+        <div className={styles.preference}>
+          <label htmlFor="searchRadius">Wikipedia search radius</label>
+          <select id="searchRadius" onChange={changeSearchRadius} value={searchRadius}>
+            {[5000, 10000, 20000, 50000, 100000].map(r =>
+              <option key={r} value={r}>{`${r} meters`}</option>
+            )}
+          </select>
+        </div>
+        <div className={styles.preference}>
+          <label htmlFor="voice">Voice</label>
+          <select id="voice" onChange={changeVoice} value={voice}>
+            {availableVoices.map(v => <option key={v} value={v}>{v}</option>)}
+          </select>
+        </div>
+      </>}
     </div>
   );
 };

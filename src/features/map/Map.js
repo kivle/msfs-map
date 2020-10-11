@@ -46,7 +46,7 @@ export default function Map() {
       ? planePosition 
       : [51.505, -0.09];
   
-      return (
+  return (
     <>
       <UI />
       <LeafletMap center={mapCenter} zoom={zoom} onViewportChanged={viewportChangedHandler}>

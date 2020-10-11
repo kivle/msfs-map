@@ -25,3 +25,23 @@
 .main select {
   display: block;
 }
+
+.main .preferenceButton {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+}
+
+.main .preferenceButton.expanded {
+  filter: invert();
+}
+
+.main .preferenceButton .caret {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: rotate(45deg);
+}
