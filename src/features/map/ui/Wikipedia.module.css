@@ -25,11 +25,12 @@
   text-align: center;
 }
 
-.title button {
+.title a, .title a:visited {
   background-color: unset;
   border: none;
   color: #33F;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .title > img {

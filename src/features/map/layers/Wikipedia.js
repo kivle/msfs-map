@@ -5,12 +5,13 @@ import { useSelector } from "react-redux";
 import { FaWikipediaW } from "react-icons/fa";
 import { MdRecordVoiceOver } from 'react-icons/md';
 
-import { selectCurrentPage, selectPages } from "../../wikipedia/wikipediaSlice";
+import { selectCurrentPage, selectIsPlaying, selectPages } from "../../wikipedia/wikipediaSlice";
 
 import styles from './Wikipedia.module.css';
 
 export default React.memo(function Wikipedia() {
   const currentPage = useSelector(selectCurrentPage);
+  const isPlaying = useSelector(selectIsPlaying);
   const pages = useSelector(selectPages);
 
   return (
@@ -22,8 +23,9 @@ export default React.memo(function Wikipedia() {
               key={p.pageid}
               position={[c.lat, c.lon]}
               icon={
-                <div className={styles.marker}>
-                  <WikipediaIcon isReading={p.pageid === currentPage.pageid} />
+                <div className={`${styles.marker}${p.pageid === currentPage.pageid ? ` ${styles.current}` : ''}`}>
+                  <WikipediaIcon 
+                    isReading={isPlaying && p.pageid === currentPage.pageid} />
                 </div>
               }
             />

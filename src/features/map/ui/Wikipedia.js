@@ -1,11 +1,10 @@
 import * as React from 'react';
-import { useCallback } from 'react';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import parse from 'html-react-parser';
 
 import styles from './Wikipedia.module.css';
-import { selectCurrentPage, nextPage, selectVoice } from '../../wikipedia/wikipediaSlice';
+import { selectCurrentPage, selectEdition } from '../../wikipedia/wikipediaSlice';
 
 function Extract({ page }) {
   return page.extract ? parse(page.extract) : null;
@@ -18,19 +17,17 @@ function Thumbnail({ page }) {
 }
 
 export default function WikipediaPanel() {
-  const dispatch = useDispatch();
   const page = useSelector(selectCurrentPage);
-  
-  const next = useCallback(() => {
-    dispatch(nextPage());
-  }, [dispatch]);
+  const edition = useSelector(selectEdition);
 
   if (!page) return null;
+
+  const link = `https://${edition}.wikipedia.org/?curid=${page.pageid}`;
 
   return (
     <div className={styles.main}>
       <div className={styles.title}>
-        <div>{page.title} <button onClick={next}>Next</button></div>
+        <div><a href={link} target="_blank" rel="noopener noreferrer">{page.title}</a></div>
         <Thumbnail page={page} />
       </div>
       <div className={styles.text}>
