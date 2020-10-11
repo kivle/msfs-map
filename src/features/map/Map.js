@@ -7,7 +7,7 @@ import { FaPlane } from 'react-icons/fa';
 import UI from './UI';
 import Wikipedia from "./layers/Wikipedia";
 
-import { selectPlanePosition, selectPlaneInfo, selectZoom, connect, zoomChanged } from "./mapSlice";
+import { selectPlanePosition, selectPlaneInfo, selectZoom, connect, zoomChanged, selectTileServer } from "./mapSlice";
 import { getPages } from '../wikipedia/wikipediaSlice';
 
 import { version } from '../../../package.json';
@@ -19,6 +19,7 @@ export default function Map() {
   const planePosition = useSelector(selectPlanePosition);
   const { heading } = useSelector(selectPlaneInfo);
   const zoom = useSelector(selectZoom);
+  const tileServer = useSelector(selectTileServer);
 
   useEffect(() => {
     dispatch(connect);
@@ -52,9 +53,12 @@ export default function Map() {
           attribution={
             `&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors, ` +
             `&copy; <a target="_blank" href="https://en.wikipedia.org">Wikipedia</a>, ` +
+            // `&copy; <a target="_blank' href="https://www.openaip.net">openAIP</a>, ` +
+            `&copy; <a target="_blank' href="http://maps.stamen.com">Stamen</a>, ` +
+            `&copy; <a target="_blank' href="https://carto.com">Carto</a>, ` +
             `&copy; <a target="_blank" href="https://react-leaflet.js.org/">react-leaflet</a>, ` +
             `<a target="_blank" href="https://github.com/kivle/msfs-map">MSFS-map</a> v${version}`}
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          url={tileServer}
         />
         <Wikipedia />
         {planePosition && <Marker position={planePosition} icon={plane} className={styles.plane} />}

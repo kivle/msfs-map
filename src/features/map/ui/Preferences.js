@@ -7,6 +7,7 @@ import {
   setAvailableVoices, selectVoice, selectAvailableVoices 
 } from '../../wikipedia/wikipediaSlice';
 import styles from './Preferences.module.css';
+import { selectAvailableTileServers, selectTileServer, setTileServer } from '../mapSlice';
 
 export default function Preferences() {
   const dispatch = useDispatch();
@@ -14,12 +15,15 @@ export default function Preferences() {
   const availableEditions = useSelector(selectAvailableEditions);
   const voice = useSelector(selectVoice);
   const availableVoices = useSelector(selectAvailableVoices);
+  const tileServer = useSelector(selectTileServer);
+  const availableTileServers = useSelector(selectAvailableTileServers);
 
   useEffect(() => {
     // Load preferences on startup
     batch(() => {
       if (localStorage['wikipedia-edition']) dispatch(setEdition(localStorage['wikipedia-edition']));
       if (localStorage['voice']) dispatch(setVoice(localStorage['voice']));
+      if (localStorage['tileServer']) dispatch(setTileServer(localStorage['tileServer']));
     });
   }, [dispatch]);
 
@@ -31,6 +35,11 @@ export default function Preferences() {
   const changeVoice = useCallback((e) => {
     localStorage['voice'] = e.target.value;
     dispatch(setVoice(e.target.value));
+  }, [dispatch]);
+
+  const changeTileServer = useCallback((e) => {
+    localStorage['tileServer'] = e.target.value;
+    dispatch(setTileServer(e.target.value));
   }, [dispatch]);
 
   useEffect(() => {
@@ -46,6 +55,17 @@ export default function Preferences() {
 
   return (
     <div className={styles.main}>
+      <div className={styles.preference}>
+        <label htmlFor="tileserver">Map</label>
+        <select id="tileserver" onChange={changeTileServer} value={tileServer}>
+          {availableTileServers.map(
+            server =>
+              <option key={server.tileServer} value={server.tileServer}>
+                {server.name}
+              </option>
+          )}
+        </select>
+      </div>
       <div className={styles.preference}>
         <label htmlFor="wikipedia-edition">Wikipedia Edition</label>
         <select id="wikipedia-edition" onChange={changeEdition} value={edition}>

@@ -15,7 +15,16 @@ export const mapSlice = createSlice({
       trim: 0,
       rudder_trim: 0
     },
-    zoom: 13
+    zoom: 13,
+    tileServer: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    availableTileServers: [
+      { name: 'OpenStreetMap', tileServer: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' },
+      // { name: 'OpenAIP', tileServer: 'http://{s}.tile.maps.openaip.net/geowebcache/service/tms/1.0.0/openaip_basemap@EPSG%3A900913@png/{z}/{x}/{y}.png' },
+      { name: 'Stamen toner', tileServer: 'http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png' },
+      { name: 'Stamen terrain', tileServer: 'http://{s}.tile.stamen.com/terrain/{z}/{x}/{y}.png' },
+      { name: 'Stamen watercolor', tileServer: 'http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png' },
+      { name: 'Carto Dark', tileServer: 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png' }
+    ]
   },
   reducers: {
     updateMsfs: (state, action) => {
@@ -32,13 +41,17 @@ export const mapSlice = createSlice({
     },
     zoomChanged: (state, action) => {
       state.zoom = action.payload;
+    },
+    setTileServer: (state, action) => {
+      state.tileServer = action.payload;
     }
   },
 });
 
 export const {
   updateMsfs,
-  zoomChanged
+  zoomChanged,
+  setTileServer
 } = mapSlice.actions;
 
 export const connect = dispatch => {
@@ -61,5 +74,9 @@ export const selectPlaneInfo = state => ({
   trim: state.map.plane.trim,
   rudder_trim: state.map.plane.rudder_trim
 });
+
+export const selectTileServer = state => state.map.tileServer;
+
+export const selectAvailableTileServers = state => state.map.availableTileServers;
 
 export default mapSlice.reducer;
