@@ -3,7 +3,7 @@ import { TileLayer } from 'react-leaflet';
 
 import { version } from '../../../../package.json';
 
-export const MainLayer = ({ currentMap }) => {
+export const MainLayer = React.memo(({ currentMap }) => {
   const attribution = 
     `&copy; <a target="_blank" href="https://en.wikipedia.org">Wikipedia</a>, ` +
     `${currentMap.attribution}, ` +
@@ -20,4 +20,4 @@ export const MainLayer = ({ currentMap }) => {
   }
   
   return mainLayer;
-}
+});

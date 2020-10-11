@@ -1,6 +1,6 @@
 .main {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   border: 2px solid rgba(0,0,0,0.2);
   padding: 4px;
   position: absolute;
@@ -9,4 +9,18 @@
   z-index: 1000;
   border: 2px solid rgba(0,0,0,0.2);
   background-color: white;
+  height: 32px;
+}
+
+.main .btn {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+}
+
+.gap {
+  margin-left: 4px;
 }

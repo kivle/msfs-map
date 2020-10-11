@@ -40,7 +40,8 @@ export const wikipediaSlice = createSlice({
     currentPage: undefined,
     pages: [],
     pagesViewed: [],
-    searchRadius: 10000
+    searchRadius: 10000,
+    isPlaying: false
   },
   reducers: {
     addPages: (state, action) => {
@@ -105,6 +106,9 @@ export const wikipediaSlice = createSlice({
     },
     setSearchRadius: (state, action) => {
       state.searchRadius = parseInt(action.payload, 10);
+    },
+    setIsPlaying: (state, action) => {
+      state.isPlaying = action.payload;
     }
   },
 });
@@ -115,7 +119,8 @@ export const {
   setEdition,
   setVoice,
   setAvailableVoices,
-  setSearchRadius
+  setSearchRadius,
+  setIsPlaying
 } = wikipediaSlice.actions;
 
 export const getPages = (lat, lng, radius) => async (dispatch, getState) => {
@@ -140,5 +145,7 @@ export const selectCurrentPage = (state) =>
   state.wikipedia.currentPage && state.wikipedia.pages.find(p => p.pageid === state.wikipedia.currentPage);
 
 export const selectSearchRadius = (state) => state.wikipedia.searchRadius;
+
+export const selectIsPlaying = (state) => state.wikipedia.isPlaying;
 
 export default wikipediaSlice.reducer;
