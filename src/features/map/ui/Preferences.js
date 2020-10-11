@@ -4,7 +4,8 @@ import ISO6391 from 'iso-639-1';
 import { batch, useDispatch, useSelector } from 'react-redux';
 import { 
   selectAvailableEditions, selectEdition, setEdition, setVoice, 
-  setAvailableVoices, selectVoice, selectAvailableVoices 
+  setAvailableVoices, selectVoice, selectAvailableVoices, selectSearchRadius,
+  setSearchRadius
 } from '../../wikipedia/wikipediaSlice';
 import styles from './Preferences.module.css';
 import { selectAvailableMaps, selectCurrentMap, setCurrentMap } from '../mapSlice';
@@ -17,6 +18,7 @@ export default function Preferences() {
   const availableVoices = useSelector(selectAvailableVoices);
   const currentMap = useSelector(selectCurrentMap);
   const availableMaps = useSelector(selectAvailableMaps);
+  const searchRadius = useSelector(selectSearchRadius);
 
   useEffect(() => {
     // Load preferences on startup
@@ -24,6 +26,7 @@ export default function Preferences() {
       if (localStorage['wikipedia-edition']) dispatch(setEdition(localStorage['wikipedia-edition']));
       if (localStorage['voice']) dispatch(setVoice(localStorage['voice']));
       if (localStorage['currentMap']) dispatch(setCurrentMap(localStorage['currentMap']));
+      if (localStorage['searchRadius']) dispatch(setSearchRadius(localStorage['searchRadius']));
     });
   }, [dispatch]);
 
@@ -40,6 +43,11 @@ export default function Preferences() {
   const changeMap = useCallback((e) => {
     localStorage['currentMap'] = e.target.value;
     dispatch(setCurrentMap(e.target.value));
+  }, [dispatch]);
+
+  const changeSearchRadius = useCallback((e) => {
+    localStorage['searchRadius'] = e.target.value;
+    dispatch(setSearchRadius(e.target.value));
   }, [dispatch]);
 
   useEffect(() => {
@@ -69,6 +77,14 @@ export default function Preferences() {
               <option key={e} value={e}>
                 {ISO6391.getName(e) ? `${ISO6391.getName(e)} (${e})` : e}
               </option>
+          )}
+        </select>
+      </div>
+      <div className={styles.preference}>
+        <label htmlFor="searchRadius">Wikipedia search radius</label>
+        <select id="searchRadius" onChange={changeSearchRadius} value={searchRadius}>
+          {[5000, 10000, 20000, 50000, 100000].map(r =>
+            <option key={r} value={r}>{`${r} meters`}</option>
           )}
         </select>
       </div>

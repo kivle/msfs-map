@@ -8,10 +8,11 @@ import UI from './UI';
 import Wikipedia from "./layers/Wikipedia";
 
 import { selectPlanePosition, selectPlaneInfo, selectZoom, connect, zoomChanged, selectCurrentMap } from "./mapSlice";
-import { getPages } from '../wikipedia/wikipediaSlice';
+import { getPages, selectSearchRadius } from '../wikipedia/wikipediaSlice';
 
 import styles from './Map.module.css';
 import { MainLayer } from "./layers/MainLayer";
+import { CircleMarker } from "leaflet";
 
 export default function Map() {
   const dispatch = useDispatch();
@@ -19,6 +20,7 @@ export default function Map() {
   const { heading } = useSelector(selectPlaneInfo);
   const zoom = useSelector(selectZoom);
   const currentMap = useSelector(selectCurrentMap);
+  const searchRadius = useSelector(selectSearchRadius);
 
   useEffect(() => {
     dispatch(connect);
@@ -50,6 +52,7 @@ export default function Map() {
       <LeafletMap center={mapCenter} zoom={zoom} onViewportChanged={viewportChangedHandler}>
         <MainLayer currentMap={currentMap} />
         <Wikipedia />
+        {planePosition && <CircleMarker center={planePosition} radius={searchRadius} />}
         {planePosition && <Marker position={planePosition} icon={plane} className={styles.plane} />}
       </LeafletMap>
     </>
