@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/msfs-map/precache-manifest.e7c5b0ff45962f3cb095afe986a6f9a7.js"
+  "/msfs-map/precache-manifest.7529562a52e032a4f72031b3d44ef011.js"
 );
 
 self.addEventListener('message', (event) => {
