@@ -43,6 +43,19 @@ export default React.memo(function Playback() {
     },
     [isPlaying, page, next, voice]
   );
+
+  useEffect(
+    () => {
+      const keyHandler = (e) => {
+        if (e.key === 'n') {
+          next();
+        }
+      };
+
+      document.addEventListener('keypress', keyHandler);
+      return () => document.removeEventListener('keypress', keyHandler);
+    }
+  , [next]);
   
   return (
     <div className={styles.main}>

@@ -9,9 +9,11 @@
   border-color: black;
   border-style: solid;
   background-color: #ddd;
+  z-index: 500;
 }
 
 .current {
+  z-index: 600;
   background-color: white;
 }
 

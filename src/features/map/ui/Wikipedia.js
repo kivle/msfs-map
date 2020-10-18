@@ -5,6 +5,7 @@ import parse from 'html-react-parser';
 
 import styles from './Wikipedia.module.css';
 import { selectCurrentPage, selectEdition } from '../../wikipedia/wikipediaSlice';
+import RateArticle from './components/RateArticle';
 
 function Extract({ page }) {
   return page.extract ? parse(page.extract) : null;
@@ -33,6 +34,7 @@ export default function WikipediaPanel() {
       <div className={styles.text}>
         <Extract page={page} />
       </div>
+      <RateArticle page={page} />
     </div>
   );
 }
