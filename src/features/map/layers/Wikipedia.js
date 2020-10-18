@@ -2,7 +2,7 @@ import * as React from "react";
 
 import Marker from "react-leaflet-enhanced-marker";
 import { useSelector } from "react-redux";
-import { FaWikipediaW } from "react-icons/fa";
+import { FaBookReader, FaWikipediaW } from "react-icons/fa";
 import { MdRecordVoiceOver } from 'react-icons/md';
 
 import { selectCurrentPage, selectIsPlaying, selectPages } from "../../wikipedia/wikipediaSlice";
@@ -23,9 +23,10 @@ export default React.memo(function Wikipedia() {
               key={p.pageid}
               position={[c.lat, c.lon]}
               icon={
-                <div className={`${styles.marker}${p.pageid === currentPage.pageid ? ` ${styles.current}` : ''}`}>
+                <div className={`${styles.marker}${p.pageid === currentPage.pageid ? ` ${styles.current}` : ''}${p.rating === 'bad' ? ` ${styles.ratedBad}` : ''}`}>
                   <WikipediaIcon 
-                    isReading={isPlaying && p.pageid === currentPage.pageid} />
+                    isReading={isPlaying && p.pageid === currentPage.pageid}
+                    tts={p.rating === 'good'} />
                 </div>
               }
             />
@@ -35,11 +36,11 @@ export default React.memo(function Wikipedia() {
   );
 });
 
-function WikipediaIcon({ isReading }) {
+function WikipediaIcon({ isReading, tts }) {
   return (
     <>
       {!isReading && <FaWikipediaW size={32} />}
-      {isReading && 
+      {isReading && tts &&
         <MdRecordVoiceOver 
           className={styles.speaker}
           size={32} 
@@ -47,6 +48,12 @@ function WikipediaIcon({ isReading }) {
           strokeWidth={1}
           color="#FFF" 
         />}
+      {isReading && !tts &&
+        <FaBookReader
+          className={styles.speaker}
+          size={30}
+        />
+      }
     </>
   );
 };

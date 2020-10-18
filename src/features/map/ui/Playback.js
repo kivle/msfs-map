@@ -28,18 +28,27 @@ export default React.memo(function Playback() {
 
   useEffect(
     () => {
-      if (!isPlaying || !page || !window.speechSynthesis) return;
-      const text = `${page.title}\n\n${page.extract ? decode(striptags(page.extract)) : ''}`;
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.voice = window.speechSynthesis.getVoices().find(v => v.name === voice);
-      utterance.onend = () => {
-        next();
-      };
-      window.speechSynthesis.speak(utterance);
-      return () => {
-        utterance.onend = null;
-        speechSynthesis.cancel();
-      };
+      if (!isPlaying || !page) return;
+
+      if (page.rating === 'good') {
+        // Page is rated good and should be read by tts
+        const text = `${page.title}\n\n${page.extract ? decode(striptags(page.extract)) : ''}`;
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.voice = window.speechSynthesis.getVoices().find(v => v.name === voice);
+        utterance.onend = () => {
+          next();
+        };
+        window.speechSynthesis.speak(utterance);
+        return () => {
+          utterance.onend = null;
+          speechSynthesis.cancel();
+        };
+      }
+      else {
+        // Bad or unrated article.. just display it for 5 seconds
+        const timeout = setTimeout(() => next(), 8000);
+        return () => clearTimeout(timeout);
+      }
     },
     [isPlaying, page, next, voice]
   );
@@ -50,12 +59,15 @@ export default React.memo(function Playback() {
         if (e.key === 'n') {
           next();
         }
+        else if (e.key === ' ') {
+          togglePlaybackState();
+        }
       };
 
       document.addEventListener('keypress', keyHandler);
       return () => document.removeEventListener('keypress', keyHandler);
     }
-  , [next]);
+  , [next, togglePlaybackState]);
   
   return (
     <div className={styles.main}>

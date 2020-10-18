@@ -1,7 +1,6 @@
 .main {
   display: flex;
   padding: 4px;
-  border-top: 1px solid black;
   height: 38px;
 }
 

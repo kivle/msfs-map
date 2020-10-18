@@ -1,6 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
+import striptags from 'striptags';
+import { decode } from 'entities';
 
 import repository from './repository';
+import ML from '../../utils/ml';
 
 function worthwhile(text) {
   if (!text) return false;
@@ -64,24 +67,45 @@ export const wikipediaSlice = createSlice({
       }
     },
     nextPage: (state) => {
+      // Remove current page from backlog
       if (state.currentPage !== undefined) {
         state.pages = state.pages.filter(p => p.pageid !== state.currentPage);
         state.pagesViewed.push(state.currentPage);
-        while (state.pages.length > 10) {
-          // Remove least worthwhile articles to not end up with a huge backlog
+      }
+
+      // Limit backlog if there are a lot of pages loaded
+      while (state.pages.length > 30) {
+        // Remove least worthwhile articles to not end up with a huge backlog
+        if (state.pages.some(p => p.rating === 'bad')) {
+          const badPages = state.pages.filter(p => p.rating === 'bad');
+          const shortestArticle = Math.min(
+            ...badPages.map(p => p.extract.length)
+          );
+          const leastInteresting = badPages.find(p => p.extract.length === shortestArticle);
+          state.pages = state.pages.filter(p => p.pageid !== leastInteresting.pageid);
+        }
+        else {
           const shortestArticle = Math.min(...state.pages.map(p => p.extract.length));
           const leastInteresting = state.pages.find(p => p.extract.length === shortestArticle);
           state.pages = state.pages.filter(p => p.pageid !== leastInteresting.pageid);
         }
       }
-      const unreadPage = state.pages
+
+      // Find best candidate as next page
+      const unreadGoodPage = state.pages
+        .filter(
+          p => p.rating === 'good'
+        )
         .sort(
           (a, b) => b?.extract?.length - a?.extract?.length
         ).find(
           p => !state.pagesViewed.some(v => p.pageid === v)
         );
-      if (unreadPage) {
-        state.currentPage = unreadPage.pageid;
+      if (unreadGoodPage) {
+        state.currentPage = unreadGoodPage.pageid;
+      }
+      else if (state.pages.length) {
+        state.currentPage = state.pages[0].pageid;
       }
       else {
         state.currentPage = undefined;
@@ -109,6 +133,13 @@ export const wikipediaSlice = createSlice({
     },
     setIsPlaying: (state, action) => {
       state.isPlaying = action.payload;
+    },
+    updatePageRatings: (state, action) => {
+      action.payload.forEach(element => {
+        const page = state.pages.find(p => p.pageid === element.pageid);
+        page.rating = element.rating;
+        page.userRated = !!element.userRated;
+      });
     }
   },
 });
@@ -120,15 +151,51 @@ export const {
   setVoice,
   setAvailableVoices,
   setSearchRadius,
-  setIsPlaying
+  setIsPlaying,
+  updatePageRatings
 } = wikipediaSlice.actions;
 
 export const getPages = (lat, lng, radius) => async (dispatch, getState) => {
   const state = getState();
   const edition = selectEdition(state);
   const data = await repository.getPagesByGeoLocation(edition, lat, lng, radius);
-  if (data)
+  if (data) {
     dispatch(addPages({ data }));
+    dispatch(classifyPagesMissingRating());
+  }
+};
+
+export const classifyPagesMissingRating = (force = false) => async (dispatch, getState) => {
+  const state = getState();
+  const pages = selectPages(state);
+  const unclassifiedPages = pages.filter(p => force || !p.rating);
+  const results = await Promise.all(unclassifiedPages.map(async p => {
+    const text = decode(striptags(p.extract));
+    const rating = await ML.classify(text);
+    return {
+      pageid: p.pageid,
+      rating
+    };
+  }));
+  dispatch(updatePageRatings(results));
+};
+
+export const ratePage = (pageid, rating) => async (dispatch, getState) => {
+  const state = getState();
+  const pages = selectPages(state);
+  const page = pages.find(p => p.pageid === pageid);
+  if (!page) {
+    return;
+  }
+  const text = decode(striptags(page.extract));
+  ML.add(text, rating);
+  const updatedRating = await ML.classify(text);
+  dispatch(updatePageRatings([{ userRated: true, rating: updatedRating, pageid }]));
+  const updatedState = getState();
+  const currentPage = selectCurrentPage(updatedState);
+  if (currentPage.pageid === pageid && rating === 'bad') {
+    dispatch(nextPage());
+  }
 };
 
 export const selectEdition = (state) => state.wikipedia.edition;
