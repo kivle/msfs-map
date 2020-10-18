@@ -28,7 +28,7 @@ export default React.memo(function Playback() {
 
   useEffect(
     () => {
-      if (!isPlaying || !page) return;
+      if (!isPlaying || !page.title || !page.extract || !voice) return;
 
       if (page.rating === 'good') {
         // Page is rated good and should be read by tts
@@ -50,7 +50,7 @@ export default React.memo(function Playback() {
         return () => clearTimeout(timeout);
       }
     },
-    [isPlaying, page, next, voice]
+    [isPlaying, page.rating, page.title, page.extract, next, voice]
   );
 
   useEffect(
