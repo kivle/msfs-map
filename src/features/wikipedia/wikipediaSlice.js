@@ -5,13 +5,6 @@ import { decode } from 'entities';
 import repository from './repository';
 import ML from '../../utils/ml';
 
-function worthwhile(text) {
-  if (!text) return false;
-  
-  // try to determine if an extract is even worth reading
-  return text.length > 100 && (text.match(/\./g) || []).length > 1;
-}
-
 export const wikipediaSlice = createSlice({
   name: 'wikipedia',
   initialState: {
@@ -55,10 +48,7 @@ export const wikipediaSlice = createSlice({
         return a;
       }, []);
       const pagesToAdd = geosearch.filter(
-        p => p?.extract?.length > 100 &&
-             worthwhile(p?.extract) &&
-             p?.coordinates?.length > 0 &&
-             !state.pages.some(p2 => p.pageid === p2.pageid) &&
+        p => !state.pages.some(p2 => p.pageid === p2.pageid) &&
              !state.pagesViewed.some(p2 => p.pageid === p2)
       );
       state.pages.push(...pagesToAdd);
@@ -147,13 +137,17 @@ export const wikipediaSlice = createSlice({
 export const {
   addPages,
   nextPage,
-  setEdition,
   setVoice,
   setAvailableVoices,
   setSearchRadius,
   setIsPlaying,
   updatePageRatings
 } = wikipediaSlice.actions;
+
+export const setEdition = (edition) => async (dispatch, getState) => {
+  dispatch(wikipediaSlice.actions.setEdition(edition));
+  ML.setLanguage(edition);
+};
 
 export const getPages = (lat, lng, radius) => async (dispatch, getState) => {
   const state = getState();

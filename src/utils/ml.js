@@ -2,12 +2,22 @@ import bayes from 'bayes';
 
 class ArticleRater {
   constructor() {
+    this.language = 'en';
     this.loadClassifier();
   }
 
+  setLanguage(language) {
+    this.language = language;
+    this.loadClassifier();
+  }
+
+  get storageKey() {
+    return `${this.language}_classifier`;
+  }
+
   loadClassifier() {
-    if (localStorage['classifier']) {
-      this.classifier = bayes.fromJson(localStorage['classifier']);
+    if (localStorage[this.storageKey]) {
+      this.classifier = bayes.fromJson(localStorage[this.storageKey]);
     }
     else {
       this.classifier = bayes();
@@ -15,7 +25,7 @@ class ArticleRater {
   }
 
   saveClassifier() {
-    localStorage['classifier'] = this.classifier.toJson();
+    localStorage[this.storageKey] = this.classifier.toJson();
   }
 
   add(text, category) {
