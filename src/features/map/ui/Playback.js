@@ -12,6 +12,7 @@ import styles from './Playback.module.css';
 export default React.memo(function Playback() {
   const dispatch = useDispatch();
   const page = useSelector(selectCurrentPage);
+  const { rating, title, extract } = page ?? {};
   const voice = useSelector(selectVoice);
   const isPlaying = useSelector(selectIsPlaying);
   
@@ -28,11 +29,11 @@ export default React.memo(function Playback() {
 
   useEffect(
     () => {
-      if (!isPlaying || !page.title || !page.extract || !voice) return;
+      if (!isPlaying || !title || !extract || !voice) return;
 
-      if (page.rating === 'good') {
+      if (rating === 'good') {
         // Page is rated good and should be read by tts
-        const text = `${page.title}\n\n${page.extract ? decode(striptags(page.extract)) : ''}`;
+        const text = `${title}\n\n${extract ? decode(striptags(extract)) : ''}`;
         const utterance = new SpeechSynthesisUtterance(text);
         utterance.voice = window.speechSynthesis.getVoices().find(v => v.name === voice);
         utterance.onend = () => {
@@ -50,7 +51,7 @@ export default React.memo(function Playback() {
         return () => clearTimeout(timeout);
       }
     },
-    [isPlaying, page.rating, page.title, page.extract, next, voice]
+    [isPlaying, rating, title, extract, next, voice]
   );
 
   useEffect(
