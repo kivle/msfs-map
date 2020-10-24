@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e3b739c45bf6835990af22957376bc66",
+    "revision": "3cf420bb634d70dbfcb8c2c89a44fe3c",
     "url": "/msfs-map/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/msfs-map/static/css/2.a4567992.chunk.css"
   },
   {
-    "revision": "c8c8d0be1d758cffc4fa",
+    "revision": "1f9d6aa393c655871641",
     "url": "/msfs-map/static/css/main.d3da7302.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/msfs-map/static/js/2.ed3c3578.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c8c8d0be1d758cffc4fa",
-    "url": "/msfs-map/static/js/main.ead7983e.chunk.js"
+    "revision": "1f9d6aa393c655871641",
+    "url": "/msfs-map/static/js/main.4ad7bf23.chunk.js"
   },
   {
     "revision": "7e8058f8e6ead95b0a75",
