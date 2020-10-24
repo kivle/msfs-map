@@ -16,7 +16,7 @@ export default React.memo(function Wikipedia() {
 
   return (
     <>
-      {pages.map(
+      {pages?.map(
         (p) =>
           p?.coordinates.map(c =>
             <Marker
