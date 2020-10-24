@@ -18,7 +18,7 @@ export default React.memo(function Wikipedia() {
     <>
       {pages?.map(
         (p) =>
-          p?.coordinates.map(c =>
+          p?.coordinates?.map(c =>
             <Marker
               key={p.pageid}
               position={[c.lat, c.lon]}
