@@ -31,7 +31,7 @@ export default React.memo(function Playback() {
     () => {
       if (!isPlaying || !title || !extract || !voice) return;
 
-      if (rating === 'good') {
+      if (rating !== 'bad') {
         // Page is rated good and should be read by tts
         const text = `${title}\n\n${extract ? decode(striptags(extract)) : ''}`;
         const utterance = new SpeechSynthesisUtterance(text);
