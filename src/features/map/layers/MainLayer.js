@@ -16,6 +16,7 @@ export const MainLayer = React.memo(({ currentMap }) => {
     mainLayer = <TileLayer
       attribution={attribution}
       url={currentMap.tileServer}
+      subdomains={currentMap?.subdomains}
     />;
   }
   
