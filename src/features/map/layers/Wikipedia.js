@@ -18,19 +18,31 @@ export default React.memo(function Wikipedia() {
     <>
       {pages?.map(
         (p) =>
-          p?.coordinates?.map(c =>
-            <Marker
-              key={p.pageid}
-              position={[c.lat, c.lon]}
-              icon={
-                <div className={`${styles.marker}${p.pageid === currentPage.pageid ? ` ${styles.current}` : ''}${p.rating === 'bad' ? ` ${styles.ratedBad}` : ''}`}>
-                  <WikipediaIcon 
-                    isReading={isPlaying && p.pageid === currentPage.pageid}
-                    tts={p.rating === 'good'} />
-                </div>
-              }
-            />
-          )
+          p?.coordinates?.map(c => {
+            const { pageid, rating } = p;
+            const { lat, lon } = c;
+            let cn = styles.marker
+            if (pageid === currentPage.pageid) {
+              cn += ` ${styles.current}`;
+            }
+            if (rating === 'bad') {
+              cn += ` ${styles.ratedBad}`;
+            }
+
+            return (
+              <Marker
+                key={pageid}
+                position={[lat, lon]}
+                icon={
+                  <div className={cn}>
+                    <WikipediaIcon 
+                      isReading={isPlaying && pageid === currentPage.pageid}
+                      tts={rating === 'good'} />
+                  </div>
+                }
+              />
+            );
+          })
       )}
     </>
   );

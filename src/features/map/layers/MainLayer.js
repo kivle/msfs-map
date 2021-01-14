@@ -12,11 +12,15 @@ export const MainLayer = React.memo(({ currentMap }) => {
 
   let mainLayer = null;
 
+  const subdomains = currentMap.subdomains
+    ? { subdomains: currentMap.subdomains }
+    : {};
+
   if (currentMap.type === 'tileServer') {
     mainLayer = <TileLayer
       attribution={attribution}
       url={currentMap.tileServer}
-      subdomains={currentMap?.subdomains}
+      {...subdomains}
     />;
   }
   
