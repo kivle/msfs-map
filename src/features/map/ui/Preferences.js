@@ -5,11 +5,13 @@ import { batch, useDispatch, useSelector } from 'react-redux';
 import { 
   selectAvailableEditions, selectEdition, setEdition, setVoice, 
   setAvailableVoices, selectVoice, selectAvailableVoices, selectSearchRadius,
-  setSearchRadius
+  setSearchRadius,
+  classifyPages
 } from '../../wikipedia/wikipediaSlice';
 import styles from './Preferences.module.css';
 import { selectAvailableMaps, selectCurrentMap, setCurrentMap } from '../mapSlice';
 import { FaCog, FaCaretRight } from 'react-icons/fa';
+import ML from '../../../utils/ml';
 
 export default function Preferences() {
   const dispatch = useDispatch();
@@ -55,6 +57,11 @@ export default function Preferences() {
   const toggleExpanded = useCallback((e) => {
     setExpanded(!expanded);
   }, [expanded]);
+
+  const clearTrainingData = useCallback(() => {
+    ML.clearClassifier();
+    dispatch(classifyPages(true));
+  }, [dispatch]);
 
   useEffect(() => {
     const voicesChanged = () => {
@@ -106,6 +113,9 @@ export default function Preferences() {
           <select id="voice" onChange={changeVoice} value={voice}>
             {availableVoices.map(v => <option key={v} value={v}>{v}</option>)}
           </select>
+        </div>
+        <div className={styles.preference}>
+          <button type="button" onClick={clearTrainingData}>Clear traning data</button>
         </div>
       </>}
     </div>

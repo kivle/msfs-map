@@ -28,6 +28,13 @@ class ArticleRater {
     localStorage[this.storageKey] = this.classifier.toJson();
   }
 
+  clearClassifier() {
+    if (localStorage[this.storageKey]) {
+      localStorage.removeItem(this.storageKey);
+    }
+    this.loadClassifier();
+  }
+
   add(text, category) {
     this.classifier.learn(text, category);
     this.saveClassifier();

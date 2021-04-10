@@ -155,11 +155,11 @@ export const getPages = (lat, lng, radius) => async (dispatch, getState) => {
   const data = await repository.getPagesByGeoLocation(edition, lat, lng, radius);
   if (data) {
     dispatch(addPages({ data }));
-    dispatch(classifyPagesMissingRating());
+    dispatch(classifyPages());
   }
 };
 
-export const classifyPagesMissingRating = (force = false) => async (dispatch, getState) => {
+export const classifyPages = (force = false) => async (dispatch, getState) => {
   const state = getState();
   const pages = selectPages(state);
   const unclassifiedPages = pages.filter(p => force || !p.rating);
