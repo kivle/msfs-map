@@ -9,6 +9,7 @@ export const wikipediaSlice = createSlice({
   name: 'wikipedia',
   initialState: {
     edition: 'en',
+    isEnabled: true,
     availableEditions: [
       'en','ceb','sv','de','fr','nl','ru','it','es','pl','war','vi','ja','zh','arz','ar','uk',
       'pt','fa','ca','sr','id','no','ko','fi','hu','cs','sh','ro','zh-min-nan','tr','eu','ms',
@@ -40,6 +41,17 @@ export const wikipediaSlice = createSlice({
     isPlaying: false
   },
   reducers: {
+    setEnabled: (state, action) => {
+      if (action.payload) {
+        state.isEnabled = true;
+      }
+      else {
+        state.isEnabled = false;
+        state.isPlaying = false;
+        state.currentPage = undefined;
+        state.pages = [];
+      }
+    },
     addPages: (state, action) => {
       const { data: { query: { pages } = {} } = {} } = action.payload;
       if (!pages) return;
@@ -135,6 +147,7 @@ export const wikipediaSlice = createSlice({
 });
 
 export const {
+  setEnabled,
   addPages,
   nextPage,
   setVoice,
@@ -191,6 +204,8 @@ export const ratePage = (pageid, rating) => async (dispatch, getState) => {
     dispatch(nextPage());
   }
 };
+
+export const selectIsEnabled = (state) => state.wikipedia.isEnabled;
 
 export const selectEdition = (state) => state.wikipedia.edition;
 

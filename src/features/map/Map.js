@@ -8,7 +8,7 @@ import UI from './UI';
 import Wikipedia from "./layers/Wikipedia";
 
 import { selectPlanePosition, selectPlaneInfo, selectZoom, connect, zoomChanged, selectCurrentMap, selectIsFollowing } from "./mapSlice";
-import { getPages, selectSearchRadius } from '../wikipedia/wikipediaSlice';
+import { getPages, selectIsEnabled, selectSearchRadius } from '../wikipedia/wikipediaSlice';
 
 import styles from './Map.module.css';
 import { MainLayer } from "./layers/MainLayer";
@@ -21,15 +21,16 @@ export default function Map() {
   const currentMap = useSelector(selectCurrentMap);
   const searchRadius = useSelector(selectSearchRadius);
   const isFollowing = useSelector(selectIsFollowing);
+  const isWikipediaEnabled = useSelector(selectIsEnabled);
 
   useEffect(() => {
     dispatch(connect);
   }, [dispatch]);
 
   useEffect(() => {
-    if (planePosition?.length >= 2)
+    if (isWikipediaEnabled && planePosition?.length >= 2)
       dispatch(getPages(planePosition[0], planePosition[1], searchRadius));
-  }, [dispatch, planePosition, searchRadius]);
+  }, [dispatch, planePosition, searchRadius, isWikipediaEnabled]);
 
   const viewportChangedHandler = useCallback((event) => {
     if (event.zoom !== zoom) {
@@ -53,7 +54,7 @@ export default function Map() {
       <LeafletMap center={mapCenter} zoom={zoom} onViewportChanged={viewportChangedHandler}>
         <MainLayer currentMap={currentMap} />
         <Wikipedia />
-        {planePosition && <Circle center={planePosition} radius={searchRadius} color="blue" fill={false} />}
+        {planePosition && isWikipediaEnabled && <Circle center={planePosition} radius={searchRadius} color="blue" fill={false} />}
         {planePosition && <Marker position={planePosition} icon={plane} />}
       </LeafletMap>
     </>

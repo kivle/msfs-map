@@ -6,7 +6,8 @@ import {
   selectAvailableEditions, selectEdition, setEdition, setVoice, 
   setAvailableVoices, selectVoice, selectAvailableVoices, selectSearchRadius,
   setSearchRadius,
-  classifyPages
+  classifyPages,
+  setEnabled
 } from '../../wikipedia/wikipediaSlice';
 import styles from './Preferences.module.css';
 import { selectAvailableMaps, selectCurrentMap, setCurrentMap } from '../mapSlice';
@@ -27,6 +28,7 @@ export default function Preferences() {
   useEffect(() => {
     // Load preferences on startup
     batch(() => {
+      if (localStorage['wikipedia-enabled']) dispatch(setEnabled(JSON.parse(localStorage['wikipedia-enabled'])));
       if (localStorage['wikipedia-edition']) dispatch(setEdition(localStorage['wikipedia-edition']));
       if (localStorage['voice']) dispatch(setVoice(localStorage['voice']));
       if (localStorage['currentMap']) dispatch(setCurrentMap(localStorage['currentMap']));

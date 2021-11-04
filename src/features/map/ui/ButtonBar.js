@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { useEffect } from 'react';
 import { useCallback } from 'react';
-import { FaPlay, FaPause, FaStepForward } from 'react-icons/fa';
+import { FaPlay, FaPause, FaStepForward, FaWikipediaW } from 'react-icons/fa';
 import { CgTrack } from 'react-icons/cg';
 import { useDispatch, useSelector } from 'react-redux';
 import { 
-  nextPage, selectCurrentPage, selectIsPlaying, 
-  selectVoice, setIsPlaying
+  nextPage, selectCurrentPage, selectIsEnabled, selectIsPlaying, 
+  selectVoice, setEnabled, setIsPlaying
 } from '../../wikipedia/wikipediaSlice';
 import {
   selectIsFollowing, setIsFollowing
@@ -24,11 +24,14 @@ export default React.memo(function ButtonBar() {
   const isPlaying = useSelector(selectIsPlaying);
   
   const togglePlaybackState = useCallback(() => {
-    if (isPlaying) {
-      speechSynthesis.cancel();
-    }
     dispatch(setIsPlaying(!isPlaying));
   }, [dispatch, isPlaying]);
+
+  useEffect(() => {
+    if (!isPlaying) {
+      speechSynthesis.cancel();
+    }
+  }, [isPlaying]);
 
   const next = useCallback(() => {
     dispatch(nextPage());
@@ -81,19 +84,30 @@ export default React.memo(function ButtonBar() {
   const toggleFollow = useCallback(() => {
     dispatch(setIsFollowing(!isFollowing));
   }, [dispatch, isFollowing]);
+
+  const isWikipediaEnabled = useSelector(selectIsEnabled);
+  const toggleIsEnabled = useCallback(() => {
+    localStorage['wikipedia-enabled'] = JSON.stringify(!isWikipediaEnabled);
+    dispatch(setEnabled(!isWikipediaEnabled));
+  }, [dispatch, isWikipediaEnabled]);
   
   return (
     <div className={styles.main}>
       <button className={`${styles.btn} ${isFollowing ? styles.active : ''}`} onClick={toggleFollow}>
         <CgTrack size="100%" />
       </button>
-      <button className={`${styles.btn} ${styles.gap}`} onClick={togglePlaybackState}>
-        {isPlaying && <FaPause size="100%" />}
-        {!isPlaying && <FaPlay size="100%" />}
+      <button className={`${styles.btn} ${styles.gap} ${isWikipediaEnabled ? styles.active : ''}`} onClick={toggleIsEnabled}>
+        <FaWikipediaW size="100%" />
       </button>
-      <button className={`${styles.btn}`} onClick={next}>
-        <FaStepForward size="100%" />
-      </button>
+      {isWikipediaEnabled && <>
+        <button className={`${styles.btn} ${styles.gap}`} onClick={togglePlaybackState}>
+          {isPlaying && <FaPause size="100%" />}
+          {!isPlaying && <FaPlay size="100%" />}
+        </button>
+        <button className={`${styles.btn}`} onClick={next}>
+          <FaStepForward size="100%" />
+        </button>
+      </>}
     </div>
   );
 });
