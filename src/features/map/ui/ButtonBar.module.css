@@ -21,6 +21,10 @@
   padding: 2px;
 }
 
+.main .btn.active {
+  filter: invert();
+}
+
 .gap {
   margin-left: 4px;
 }

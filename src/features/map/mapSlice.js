@@ -15,6 +15,7 @@ export const mapSlice = createSlice({
       trim: 0,
       rudder_trim: 0
     },
+    isFollowing: true,
     zoom: 13,
     currentMap: 'OpenStreetMap',
     availableMaps: [
@@ -88,6 +89,9 @@ export const mapSlice = createSlice({
     },
     setCurrentMap: (state, action) => {
       state.currentMap = action.payload;
+    },
+    setIsFollowing: (state, action) => {
+      state.isFollowing = action.payload;
     }
   },
 });
@@ -95,7 +99,8 @@ export const mapSlice = createSlice({
 export const {
   updateMsfs,
   zoomChanged,
-  setCurrentMap
+  setCurrentMap,
+  setIsFollowing
 } = mapSlice.actions;
 
 export const connect = dispatch => {
@@ -122,5 +127,7 @@ export const selectPlaneInfo = state => ({
 export const selectCurrentMap = state => state.map.availableMaps.find(m => m.name === state.map.currentMap);
 
 export const selectAvailableMaps = state => state.map.availableMaps;
+
+export const selectIsFollowing = state => state.map.isFollowing;
 
 export default mapSlice.reducer;

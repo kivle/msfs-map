@@ -2,14 +2,21 @@ import * as React from 'react';
 import { useEffect } from 'react';
 import { useCallback } from 'react';
 import { FaPlay, FaPause, FaStepForward } from 'react-icons/fa';
+import { CgTrack } from 'react-icons/cg';
 import { useDispatch, useSelector } from 'react-redux';
-import { nextPage, selectCurrentPage, selectIsPlaying, selectVoice, setIsPlaying } from '../../wikipedia/wikipediaSlice';
+import { 
+  nextPage, selectCurrentPage, selectIsPlaying, 
+  selectVoice, setIsPlaying
+} from '../../wikipedia/wikipediaSlice';
+import {
+  selectIsFollowing, setIsFollowing
+} from '../mapSlice';
 import striptags from 'striptags';
 import { decode } from 'entities';
 
-import styles from './Playback.module.css';
+import styles from './ButtonBar.module.css';
 
-export default React.memo(function Playback() {
+export default React.memo(function ButtonBar() {
   const dispatch = useDispatch();
   const page = useSelector(selectCurrentPage);
   const { rating, title, extract } = page ?? {};
@@ -69,14 +76,24 @@ export default React.memo(function Playback() {
       return () => document.removeEventListener('keypress', keyHandler);
     }
   , [next, togglePlaybackState]);
+
+  const isFollowing = useSelector(selectIsFollowing);
+  const toggleFollow = useCallback(() => {
+    dispatch(setIsFollowing(!isFollowing));
+  }, [dispatch, isFollowing]);
   
   return (
     <div className={styles.main}>
-      <button className={styles.btn} onClick={togglePlaybackState}>
+      <button className={`${styles.btn} ${isFollowing ? styles.active : ''}`} onClick={toggleFollow}>
+        <CgTrack size="100%" />
+      </button>
+      <button className={`${styles.btn} ${styles.gap}`} onClick={togglePlaybackState}>
         {isPlaying && <FaPause size="100%" />}
         {!isPlaying && <FaPlay size="100%" />}
       </button>
-      <button className={`${styles.btn} ${styles.gap}`} onClick={next}><FaStepForward size="100%" /></button>
+      <button className={`${styles.btn}`} onClick={next}>
+        <FaStepForward size="100%" />
+      </button>
     </div>
   );
 });

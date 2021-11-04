@@ -7,7 +7,7 @@ import { FaPlane } from 'react-icons/fa';
 import UI from './UI';
 import Wikipedia from "./layers/Wikipedia";
 
-import { selectPlanePosition, selectPlaneInfo, selectZoom, connect, zoomChanged, selectCurrentMap } from "./mapSlice";
+import { selectPlanePosition, selectPlaneInfo, selectZoom, connect, zoomChanged, selectCurrentMap, selectIsFollowing } from "./mapSlice";
 import { getPages, selectSearchRadius } from '../wikipedia/wikipediaSlice';
 
 import styles from './Map.module.css';
@@ -20,6 +20,7 @@ export default function Map() {
   const zoom = useSelector(selectZoom);
   const currentMap = useSelector(selectCurrentMap);
   const searchRadius = useSelector(selectSearchRadius);
+  const isFollowing = useSelector(selectIsFollowing);
 
   useEffect(() => {
     dispatch(connect);
@@ -40,10 +41,11 @@ export default function Map() {
     <FaPlane size={32} stroke="white" strokeWidth="40" fill="#44F" />
   </div>;
 
-  const mapCenter = 
+  const mapCenter = isFollowing ? (
     planePosition?.length >= 2 
       ? planePosition 
-      : [51.505, -0.09];
+      : [51.505, -0.09]
+  ) : undefined;
   
   return (
     <>

@@ -3,7 +3,7 @@ import * as React from "react";
 import PlaneInfo from './ui/PlaneInfo';
 import Wikipedia from './ui/Wikipedia';
 import Preferences from './ui/Preferences';
-import Playback from './ui/Playback';
+import ButtonBar from './ui/ButtonBar';
 
 export default function UI() {
   return (
@@ -11,7 +11,7 @@ export default function UI() {
       <PlaneInfo />
       <Wikipedia />
       <Preferences />
-      <Playback />
+      <ButtonBar />
     </div>
   );
 }
