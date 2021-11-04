@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/msfs-map/static/css/main.16cbc4aa.chunk.css",
-    "main.js": "/msfs-map/static/js/main.7bc6617d.chunk.js",
-    "main.js.map": "/msfs-map/static/js/main.7bc6617d.chunk.js.map",
+    "main.js": "/msfs-map/static/js/main.b67b00fc.chunk.js",
+    "main.js.map": "/msfs-map/static/js/main.b67b00fc.chunk.js.map",
     "runtime-main.js": "/msfs-map/static/js/runtime-main.10dfa2d7.js",
     "runtime-main.js.map": "/msfs-map/static/js/runtime-main.10dfa2d7.js.map",
     "static/css/2.a4567992.chunk.css": "/msfs-map/static/css/2.a4567992.chunk.css",
-    "static/js/2.616ab5cd.chunk.js": "/msfs-map/static/js/2.616ab5cd.chunk.js",
-    "static/js/2.616ab5cd.chunk.js.map": "/msfs-map/static/js/2.616ab5cd.chunk.js.map",
+    "static/js/2.1ee762ba.chunk.js": "/msfs-map/static/js/2.1ee762ba.chunk.js",
+    "static/js/2.1ee762ba.chunk.js.map": "/msfs-map/static/js/2.1ee762ba.chunk.js.map",
     "index.html": "/msfs-map/index.html",
-    "precache-manifest.c0af6b3ae1e112c41a5a620aca82d63d.js": "/msfs-map/precache-manifest.c0af6b3ae1e112c41a5a620aca82d63d.js",
+    "precache-manifest.26a8b471b74823588249cbdf20cab88c.js": "/msfs-map/precache-manifest.26a8b471b74823588249cbdf20cab88c.js",
     "service-worker.js": "/msfs-map/service-worker.js",
     "static/css/2.a4567992.chunk.css.map": "/msfs-map/static/css/2.a4567992.chunk.css.map",
     "static/css/main.16cbc4aa.chunk.css.map": "/msfs-map/static/css/main.16cbc4aa.chunk.css.map",
-    "static/js/2.616ab5cd.chunk.js.LICENSE.txt": "/msfs-map/static/js/2.616ab5cd.chunk.js.LICENSE.txt"
+    "static/js/2.1ee762ba.chunk.js.LICENSE.txt": "/msfs-map/static/js/2.1ee762ba.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.10dfa2d7.js",
     "static/css/2.a4567992.chunk.css",
-    "static/js/2.616ab5cd.chunk.js",
+    "static/js/2.1ee762ba.chunk.js",
     "static/css/main.16cbc4aa.chunk.css",
-    "static/js/main.7bc6617d.chunk.js"
+    "static/js/main.b67b00fc.chunk.js"
   ]
 }
