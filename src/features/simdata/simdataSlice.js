@@ -16,7 +16,9 @@ export const simdataSlice = createSlice({
   reducers: {
     updateData: (state, action) => {
       const msg = action.payload;
-      state.position = [msg.latitude, msg.longitude];
+      if (!state.position || state.position[0] !== msg.latitude || state.position[1] !== msg.longitude) {
+        state.position = [msg.latitude, msg.longitude];
+      }
       state.altitude = msg.altitude;
       state.heading = msg.heading;
       state.airspeed = msg.airspeed;
