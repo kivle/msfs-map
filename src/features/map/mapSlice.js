@@ -5,14 +5,10 @@ export const mapSlice = createSlice({
   name: 'map',
   initialState: {
     isFollowing: true,
-    zoom: 13,
     currentMap: 'OpenStreetMap',
     availableMaps: servers
   },
   reducers: {
-    zoomChanged: (state, action) => {
-      state.zoom = action.payload;
-    },
     setCurrentMap: (state, action) => {
       state.currentMap = action.payload;
     },
@@ -24,12 +20,9 @@ export const mapSlice = createSlice({
 
 export const {
   updateMsfs,
-  zoomChanged,
   setCurrentMap,
   setIsFollowing
 } = mapSlice.actions;
-
-export const selectZoom = state => state.map.zoom;
 
 export const selectCurrentMap = state => state.map.availableMaps.find(m => m.name === state.map.currentMap);
 

@@ -50,5 +50,5 @@ export default React.memo(function WikipediaMarker({
         </div>
       </div>
     }
-  />);
+  />) ?? null;
 });
