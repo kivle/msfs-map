@@ -21,7 +21,7 @@ export default React.memo(function Wikipedia() {
           p?.coordinates?.map(c => {
             const { pageid, rating } = p;
             const { lat, lon } = c;
-            let cn = styles.marker
+            let cn = styles.marker;
             if (pageid === currentPage.pageid) {
               cn += ` ${styles.current}`;
             }
@@ -34,10 +34,12 @@ export default React.memo(function Wikipedia() {
                 key={pageid}
                 position={[lat, lon]}
                 icon={
-                  <div className={cn}>
-                    <WikipediaIcon 
-                      isReading={isPlaying && pageid === currentPage.pageid}
-                      tts={rating === 'good'} />
+                  <div className={styles.container}>
+                    <div className={cn}>
+                      <WikipediaIcon 
+                        isReading={isPlaying && pageid === currentPage.pageid}
+                        tts={rating === 'good'} />
+                    </div>
                   </div>
                 }
               />

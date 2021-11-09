@@ -1,5 +1,7 @@
 .plane {
   display: flex;
+  width: 100px;
+  height: 50px;
   justify-content: center;
   align-items: center;
   z-index: 900;
