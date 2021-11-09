@@ -7,16 +7,19 @@ import { FaPlane } from 'react-icons/fa';
 import UI from './UI';
 import Wikipedia from "./layers/Wikipedia";
 
-import { selectPlanePosition, selectPlaneInfo, selectZoom, connect, zoomChanged, selectCurrentMap, selectIsFollowing } from "./mapSlice";
+import { selectZoom, zoomChanged, selectCurrentMap, selectIsFollowing } from "./mapSlice";
 import { getPages, selectIsEnabled, selectSearchRadius } from '../wikipedia/wikipediaSlice';
 
 import styles from './Map.module.css';
 import { MainLayer } from "./layers/MainLayer";
+import { selectSimdata } from "../simdata/simdataSlice";
 
 export default function Map() {
   const dispatch = useDispatch();
-  const planePosition = useSelector(selectPlanePosition);
-  const { heading } = useSelector(selectPlaneInfo);
+  const {
+    position,
+    heading
+  } = useSelector(selectSimdata);
   const zoom = useSelector(selectZoom);
   const currentMap = useSelector(selectCurrentMap);
   const searchRadius = useSelector(selectSearchRadius);
@@ -24,13 +27,9 @@ export default function Map() {
   const isWikipediaEnabled = useSelector(selectIsEnabled);
 
   useEffect(() => {
-    dispatch(connect);
-  }, [dispatch]);
-
-  useEffect(() => {
-    if (isWikipediaEnabled && planePosition?.length >= 2)
-      dispatch(getPages(planePosition[0], planePosition[1], searchRadius));
-  }, [dispatch, planePosition, searchRadius, isWikipediaEnabled]);
+    if (isWikipediaEnabled && position?.length >= 2)
+      dispatch(getPages(position[0], position[1], searchRadius));
+  }, [dispatch, position, searchRadius, isWikipediaEnabled]);
 
   const viewportChangedHandler = useCallback((event) => {
     if (event.zoom !== zoom) {
@@ -43,8 +42,8 @@ export default function Map() {
   </div>;
 
   const mapCenter = isFollowing ? (
-    planePosition?.length >= 2 
-      ? planePosition 
+    position?.length >= 2 
+      ? position 
       : [51.505, -0.09]
   ) : undefined;
   
@@ -54,8 +53,8 @@ export default function Map() {
       <LeafletMap center={mapCenter} zoom={zoom} onViewportChanged={viewportChangedHandler}>
         <MainLayer currentMap={currentMap} />
         <Wikipedia />
-        {planePosition && isWikipediaEnabled && <Circle center={planePosition} radius={searchRadius} color="blue" fill={false} />}
-        {planePosition && <Marker position={planePosition} icon={plane} />}
+        {position && isWikipediaEnabled && <Circle center={position} radius={searchRadius} color="blue" fill={false} />}
+        {position && <Marker position={position} icon={plane} />}
       </LeafletMap>
     </>
   );

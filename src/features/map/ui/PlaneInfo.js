@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 import { useSelector } from "react-redux";
-import { selectPlaneInfo } from "../mapSlice";
 
 import { FaPlane } from 'react-icons/fa';
 import styles from './PlaneInfo.module.css';
+import { selectSimdata } from '../../simdata/simdataSlice';
 
 export default function PlaneInfo() {
   const {
@@ -16,7 +16,7 @@ export default function PlaneInfo() {
     flaps,
     trim,
     rudder_trim
-  } = useSelector(selectPlaneInfo);
+  } = useSelector(selectSimdata);
 
   return (
     <div className={styles.main}>
