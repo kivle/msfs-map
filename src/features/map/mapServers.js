@@ -1,4 +1,4 @@
-export default [
+const servers = [
   { 
     name: 'OpenStreetMap', 
     type: 'tileServer', 
@@ -50,3 +50,5 @@ export default [
     subdomains: '12'
   }
 ];
+
+export default servers;
