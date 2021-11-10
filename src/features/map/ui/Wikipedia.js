@@ -17,6 +17,21 @@ function Thumbnail({ page }) {
     : null;
 }
 
+const WikipediaPanelView = React.memo(({
+  link, page
+}) =>
+  <div className={styles.main}>
+    <div className={styles.title}>
+      <div><a href={link} target="_blank" rel="noopener noreferrer">{page.title}</a></div>
+      <Thumbnail page={page} />
+    </div>
+    <div className={styles.text}>
+      <Extract page={page} />
+    </div>
+    <RateArticle page={page} />
+  </div>
+);
+
 export default function WikipediaPanel() {
   const page = useSelector(selectCurrentPage);
   const edition = useSelector(selectEdition);
@@ -25,16 +40,5 @@ export default function WikipediaPanel() {
 
   const link = `https://${edition}.wikipedia.org/?curid=${page.pageid}`;
 
-  return (
-    <div className={styles.main}>
-      <div className={styles.title}>
-        <div><a href={link} target="_blank" rel="noopener noreferrer">{page.title}</a></div>
-        <Thumbnail page={page} />
-      </div>
-      <div className={styles.text}>
-        <Extract page={page} />
-      </div>
-      <RateArticle page={page} />
-    </div>
-  );
+  return <WikipediaPanelView link={link} page={page} />;
 }

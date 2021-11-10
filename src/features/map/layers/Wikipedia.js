@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { selectCurrentPage, selectIsPlaying, selectPages } from "../../wikipedia/wikipediaSlice";
 import WikipediaMarker from "./WikipediaMarker";
 
-export default React.memo(function Wikipedia() {
+export default function Wikipedia() {
   const pages = useSelector(selectPages);
   const currentPage = useSelector(selectCurrentPage);
   const isPlaying = useSelector(selectIsPlaying);
@@ -16,4 +16,4 @@ export default React.memo(function Wikipedia() {
       isPlaying={isPlaying} 
     />
   );
-});
+}

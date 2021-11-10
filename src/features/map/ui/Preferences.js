@@ -14,6 +14,58 @@ import { selectAvailableMaps, selectCurrentMap, setCurrentMap } from '../mapSlic
 import { FaCog, FaCaretRight } from 'react-icons/fa';
 import ML from '../../../utils/ml';
 
+const PreferencesPanel = React.memo(({
+  expanded, toggleExpanded, changeMap, currentMap, availableMaps,
+  changeEdition, edition, availableEditions, changeSearchRadius,
+  searchRadius, changeVoice, voice, availableVoices,
+  clearTrainingData
+}) =>
+  <div className={styles.main}>
+  <button 
+    className={`${styles.preferenceButton}${expanded ? ` ${styles.expanded}` : ''}`}
+    onClick={toggleExpanded}>
+    <FaCog size="100%" />
+    <FaCaretRight className={styles.caret} />
+  </button>
+  {expanded && <>
+    <div className={styles.preference}>
+      <label htmlFor="mapserver">Map</label>
+      <select id="mapserver" onChange={changeMap} value={currentMap.name}>
+        {availableMaps.map(({name}) => <option key={name} value={name}>{name}</option>)}
+      </select>
+    </div>
+    <div className={styles.preference}>
+      <label htmlFor="wikipedia-edition">Wikipedia Edition</label>
+      <select id="wikipedia-edition" onChange={changeEdition} value={edition}>
+        {availableEditions.map(
+          e => 
+            <option key={e} value={e}>
+              {ISO6391.getName(e) ? `${ISO6391.getName(e)} (${e})` : e}
+            </option>
+        )}
+      </select>
+    </div>
+    <div className={styles.preference}>
+      <label htmlFor="searchRadius">Wikipedia search radius</label>
+      <select id="searchRadius" onChange={changeSearchRadius} value={searchRadius}>
+        {[5000, 10000, 20000, 50000, 100000].map(r =>
+          <option key={r} value={r}>{`${r / 1000} km`}</option>
+        )}
+      </select>
+    </div>
+    <div className={styles.preference}>
+      <label htmlFor="voice">Voice</label>
+      <select id="voice" onChange={changeVoice} value={voice}>
+        {availableVoices.map(v => <option key={v} value={v}>{v}</option>)}
+      </select>
+    </div>
+    <div className={styles.preference}>
+      <button type="button" onClick={clearTrainingData}>Clear traning data</button>
+    </div>
+  </>}
+  </div>
+);
+
 export default function Preferences() {
   const dispatch = useDispatch();
   const [expanded, setExpanded] = useState(false);
@@ -76,50 +128,20 @@ export default function Preferences() {
     return () => window.speechSynthesis.removeEventListener('voiceschanged', voicesChanged);
   }, [dispatch]);
 
-  return (
-    <div className={styles.main}>
-      <button 
-        className={`${styles.preferenceButton}${expanded ? ` ${styles.expanded}` : ''}`}
-        onClick={toggleExpanded}>
-        <FaCog size="100%" />
-        <FaCaretRight className={styles.caret} />
-      </button>
-      {expanded && <>
-        <div className={styles.preference}>
-          <label htmlFor="mapserver">Map</label>
-          <select id="mapserver" onChange={changeMap} value={currentMap.name}>
-            {availableMaps.map(({name}) => <option key={name} value={name}>{name}</option>)}
-          </select>
-        </div>
-        <div className={styles.preference}>
-          <label htmlFor="wikipedia-edition">Wikipedia Edition</label>
-          <select id="wikipedia-edition" onChange={changeEdition} value={edition}>
-            {availableEditions.map(
-              e => 
-                <option key={e} value={e}>
-                  {ISO6391.getName(e) ? `${ISO6391.getName(e)} (${e})` : e}
-                </option>
-            )}
-          </select>
-        </div>
-        <div className={styles.preference}>
-          <label htmlFor="searchRadius">Wikipedia search radius</label>
-          <select id="searchRadius" onChange={changeSearchRadius} value={searchRadius}>
-            {[5000, 10000, 20000, 50000, 100000].map(r =>
-              <option key={r} value={r}>{`${r} meters`}</option>
-            )}
-          </select>
-        </div>
-        <div className={styles.preference}>
-          <label htmlFor="voice">Voice</label>
-          <select id="voice" onChange={changeVoice} value={voice}>
-            {availableVoices.map(v => <option key={v} value={v}>{v}</option>)}
-          </select>
-        </div>
-        <div className={styles.preference}>
-          <button type="button" onClick={clearTrainingData}>Clear traning data</button>
-        </div>
-      </>}
-    </div>
-  );
+  return <PreferencesPanel
+    expanded={expanded}
+    toggleExpanded={toggleExpanded}
+    changeMap={changeMap}
+    currentMap={currentMap}
+    availableMaps={availableMaps}
+    changeEdition={changeEdition}
+    edition={edition}
+    availableEditions={availableEditions}
+    changeSearchRadius={changeSearchRadius}
+    searchRadius={searchRadius}
+    changeVoice={changeVoice}
+    voice={voice}
+    availableVoices={availableVoices}
+    clearTrainingData={clearTrainingData}
+  />;
 };

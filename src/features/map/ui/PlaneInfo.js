@@ -6,51 +6,47 @@ import { FaPlane } from 'react-icons/fa';
 import styles from './PlaneInfo.module.css';
 import { selectSimdata } from '../../simdata/simdataSlice';
 
-export default function PlaneInfo() {
-  const {
-    airspeed,
-    airspeed_true,
-    altitude,
-    heading,
-    vertical_speed,
-    flaps,
-    trim,
-    rudder_trim
-  } = useSelector(selectSimdata);
-
-  return (
-    <div className={styles.main}>
-        <InfoField 
-          label="Airspeed" 
-          value={`${airspeed} kt (${airspeed_true} kt)`}
-        />
-        <InfoField 
-          label="Altitude" 
-          value={`${altitude} ft`}
-        />
-        <InfoField 
-          label="Heading" 
-          value={<><FaPlane style={{transform: `rotate(${heading - 90}deg)`}} />{` ${heading}°`}</>}
-        />
-        <InfoField 
-          label="V. speed" 
-          value={`${vertical_speed} ft/s`}
-        />
-        {parseFloat(flaps) !== 0 && <InfoField 
-          label="Flaps" 
-          value={`${flaps}`}
-        />}
-        {parseFloat(trim) !== 0 && <InfoField 
-          label="Trim" 
-          value={`${trim}%`}
-        />}
-        {parseFloat(rudder_trim) !== 0 && <InfoField 
-          label="R.Trim" 
-          value={`${rudder_trim}%`}
-        />}
-      </div>
-  );
-}
+const PlaneInfoPanel = React.memo(({
+  airspeed,
+  airspeed_true,
+  altitude,
+  heading,
+  vertical_speed,
+  flaps,
+  trim,
+  rudder_trim
+}) =>
+  <div className={styles.main}>
+    <InfoField 
+      label="Airspeed" 
+      value={`${airspeed} kt (${airspeed_true} kt)`}
+    />
+    <InfoField 
+      label="Altitude" 
+      value={`${altitude} ft`}
+    />
+    <InfoField 
+      label="Heading" 
+      value={<><FaPlane style={{transform: `rotate(${heading - 90}deg)`}} />{` ${heading}°`}</>}
+    />
+    <InfoField 
+      label="V. speed" 
+      value={`${vertical_speed} ft/s`}
+    />
+    {parseFloat(flaps) !== 0 && <InfoField 
+      label="Flaps" 
+      value={`${flaps}`}
+    />}
+    {parseFloat(trim) !== 0 && <InfoField 
+      label="Trim" 
+      value={`${trim}%`}
+    />}
+    {parseFloat(rudder_trim) !== 0 && <InfoField 
+      label="R.Trim" 
+      value={`${rudder_trim}%`}
+    />}
+  </div>
+);
 
 function InfoField({ label, value, unit }) {
   return (
@@ -59,4 +55,9 @@ function InfoField({ label, value, unit }) {
       <span>{value}</span>
     </span>
   )
+}
+
+export default function PlaneInfo() {
+  const simdata = useSelector(selectSimdata);
+  return <PlaneInfoPanel {...simdata} />;
 }

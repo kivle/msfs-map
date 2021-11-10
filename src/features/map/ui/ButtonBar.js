@@ -16,7 +16,29 @@ import { decode } from 'entities';
 
 import styles from './ButtonBar.module.css';
 
-export default React.memo(function ButtonBar() {
+const ButtonBarView = React.memo(({
+  isFollowing, toggleFollow, isWikipediaEnabled, toggleIsEnabled, togglePlaybackState, isPlaying, next 
+}) =>
+  <div className={styles.main}>
+  <button className={`${styles.btn} ${isFollowing ? styles.active : ''}`} onClick={toggleFollow}>
+    <CgTrack size="100%" />
+  </button>
+  <button className={`${styles.btn} ${styles.gap} ${isWikipediaEnabled ? styles.active : ''}`} onClick={toggleIsEnabled}>
+    <FaWikipediaW size="100%" />
+  </button>
+  {isWikipediaEnabled && <>
+    <button className={`${styles.btn} ${styles.gap}`} onClick={togglePlaybackState}>
+      {isPlaying && <FaPause size="100%" />}
+      {!isPlaying && <FaPlay size="100%" />}
+    </button>
+    <button className={`${styles.btn}`} onClick={next}>
+      <FaStepForward size="100%" />
+    </button>
+  </>}
+  </div>
+);
+
+export default function ButtonBar() {
   const dispatch = useDispatch();
   const page = useSelector(selectCurrentPage);
   const { rating, title, extract } = page ?? {};
@@ -56,7 +78,7 @@ export default React.memo(function ButtonBar() {
         };
       }
       else {
-        // Bad or unrated article.. just display it for 5 seconds
+        // Bad or unrated article.. just display it with a short timeout
         const timeout = setTimeout(() => next(), 8000);
         return () => clearTimeout(timeout);
       }
@@ -91,23 +113,13 @@ export default React.memo(function ButtonBar() {
     dispatch(setEnabled(!isWikipediaEnabled));
   }, [dispatch, isWikipediaEnabled]);
   
-  return (
-    <div className={styles.main}>
-      <button className={`${styles.btn} ${isFollowing ? styles.active : ''}`} onClick={toggleFollow}>
-        <CgTrack size="100%" />
-      </button>
-      <button className={`${styles.btn} ${styles.gap} ${isWikipediaEnabled ? styles.active : ''}`} onClick={toggleIsEnabled}>
-        <FaWikipediaW size="100%" />
-      </button>
-      {isWikipediaEnabled && <>
-        <button className={`${styles.btn} ${styles.gap}`} onClick={togglePlaybackState}>
-          {isPlaying && <FaPause size="100%" />}
-          {!isPlaying && <FaPlay size="100%" />}
-        </button>
-        <button className={`${styles.btn}`} onClick={next}>
-          <FaStepForward size="100%" />
-        </button>
-      </>}
-    </div>
-  );
-});
+  return <ButtonBarView 
+    isFollowing={isFollowing}
+    toggleFollow={toggleFollow}
+    isWikipediaEnabled={isWikipediaEnabled}
+    toggleIsEnabled={toggleIsEnabled}
+    togglePlaybackState={togglePlaybackState}
+    isPlaying={isPlaying}
+    next={next}
+  />;
+}
