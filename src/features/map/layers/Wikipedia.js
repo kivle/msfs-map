@@ -1,12 +1,23 @@
-import * as React from "react";
+import React from "react";
 import { useSelector } from "react-redux";
-import { selectCurrentPage, selectIsPlaying, selectPages } from "../../wikipedia/wikipediaSlice";
+import { selectSimdata } from "../../simdata/simdataSlice";
+import { usePeriodicWikipediaFetching } from "../../wikipedia/hooks";
+import { 
+  selectCurrentPage, selectIsPlaying, selectPages, selectSearchRadius
+} from "../../wikipedia/wikipediaSlice";
 import WikipediaMarker from "./WikipediaMarker";
 
 export default function Wikipedia() {
   const pages = useSelector(selectPages);
   const currentPage = useSelector(selectCurrentPage);
   const isPlaying = useSelector(selectIsPlaying);
+
+  const {
+    position
+  } = useSelector(selectSimdata);
+  const searchRadius = useSelector(selectSearchRadius);
+
+  usePeriodicWikipediaFetching(position, searchRadius);
 
   return pages?.map(p => 
     <WikipediaMarker 

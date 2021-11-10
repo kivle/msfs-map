@@ -4,39 +4,22 @@ import { decode } from 'entities';
 
 import repository from './repository';
 import ML from '../../utils/ml';
+import wikipediaEditions from './wikipediaEditions';
 
 export const wikipediaSlice = createSlice({
   name: 'wikipedia',
   initialState: {
     edition: 'en',
     isEnabled: true,
-    availableEditions: [
-      'en','ceb','sv','de','fr','nl','ru','it','es','pl','war','vi','ja','zh','arz','ar','uk',
-      'pt','fa','ca','sr','id','no','ko','fi','hu','cs','sh','ro','zh-min-nan','tr','eu','ms',
-      'ce','eo','he','hy','bg','da','azb','sk','kk','min','hr','et','lt','be','el','simple',
-      'az','sl','gl','ur','nn','tt','hi','ka','th','uz','la','cy','ta','vo','mk','ast','lv',
-      'zh-yue','tg','bn','af','mg','oc','bs','sq','ky','nds','new','be-tarask','ml','te','br',
-      'tl','vec','pms','mr','su','ht','sw','lb','jv','pnb','ba','ga','szl','is','my','sco','fy',
-      'cv','lmo','wuu','an','pa','ne','diq','ku','yo','bar','io','gu','ckb','als','kn','scn',
-      'bpy','qu','ia','mn','bat-smg','si','nv','or','cdo','ilo','gd','xmf','yi','am','nap','bug',
-      'wa','sd','hsb','mai','fo','map-bms','mzn','li','sah','eml','os','ps','sa','frr','bcl',
-      'zh-classical','ace','mrj','mhr','avk','hif','gor','hak','roa-tara','pam','hyw','km','nso',
-      'rue','crh','se','bh','as','shn','vls','mi','nds-nl','nah','sc','vep','gan','myv','sn',
-      'ab','glk','bo','lrc','co','so','tk','fiu-vro','csb','ha','kv','ie','gv','udm','pcd','ay',
-      'kab','zea','sat','nrm','ug','lij','zu','kw','frp','lez','ban','stq','lfn','gn','mwl',
-      'gom','rm','mt','lo','lad','koi','fur','olo','ang','dty','dsb','bjn','ext','ln','cbk-zam',
-      'dv','ksh','tyv','ary','gag','pfl','pag','pi','av','awa','haw','bxr','xal','krc','pap',
-      'za','pdc','rw','kaa','szy','arc','to','nov','jam','tpi','kbp','kbd','ig','inh','na',
-      'tet','wo','tcy','ki','atj','jbo','roa-rup','bi','lbe','kg','ty','lg','mdf','fj','srn',
-      'xh','gcr','ltg','lld','chr','ak','om','sm','kl','got','pih','st','cu','ny','nqo','tn',
-      'tw','ts','rmy','bm','mnw','chy','rn','tum','ss','ch','iu','pnt','ks','ady','ve','ee',
-      'ik','ff','sg','dz','ti','cr','din','ng','cho','kj','mh','ho','ii','aa','mus','hz','kr'
-    ],
+    availableEditions: wikipediaEditions,
     currentVoice: undefined,
     availableVoices: [],
-    currentPage: undefined,
+    currentPageid: undefined,
     pages: [],
     pagesViewed: [],
+    lastSearchPosition: undefined,
+    lastSearchRadius: undefined,
+    lastSearchTime: undefined,
     searchRadius: 10000,
     isPlaying: false
   },
@@ -48,13 +31,18 @@ export const wikipediaSlice = createSlice({
       else {
         state.isEnabled = false;
         state.isPlaying = false;
-        state.currentPage = undefined;
+        state.currentPageid = undefined;
         state.pages = [];
       }
     },
     addPages: (state, action) => {
-      const { data: { query: { pages } = {} } = {} } = action.payload;
+      const { 
+        data: { query: { pages } = {} } = {}, 
+        searchPosition, searchRadius, searchTime 
+      } = action.payload;
+      
       if (!pages) return;
+      
       const geosearch = Object.keys(pages).reduce((a, p) => {
         a.push(pages[p]);
         return a;
@@ -64,15 +52,18 @@ export const wikipediaSlice = createSlice({
              !state.pagesViewed.some(p2 => p.pageid === p2)
       );
       state.pages.push(...pagesToAdd);
-      if (pagesToAdd.length && state.currentPage === undefined) {
-        state.currentPage = pagesToAdd[0].pageid;
+      if (pagesToAdd.length && state.currentPageid === undefined) {
+        state.currentPageid = pagesToAdd[0].pageid;
       }
+      state.lastSearchPosition = searchPosition;
+      state.lastSearchRadius = searchRadius;
+      state.lastSearchTime = searchTime;
     },
     nextPage: (state) => {
       // Remove current page from backlog
-      if (state.currentPage !== undefined) {
-        state.pages = state.pages.filter(p => p.pageid !== state.currentPage);
-        state.pagesViewed.push(state.currentPage);
+      if (state.currentPageid !== undefined) {
+        state.pages = state.pages.filter(p => p.pageid !== state.currentPageid);
+        state.pagesViewed.push(state.currentPageid);
       }
 
       // Limit backlog if there are a lot of pages loaded
@@ -104,21 +95,24 @@ export const wikipediaSlice = createSlice({
           p => !state.pagesViewed.some(v => p.pageid === v)
         );
       if (unreadGoodPage) {
-        state.currentPage = unreadGoodPage.pageid;
+        state.currentPageid = unreadGoodPage.pageid;
       }
       else if (state.pages.length) {
-        state.currentPage = state.pages[0].pageid;
+        state.currentPageid = state.pages[0].pageid;
       }
       else {
-        state.currentPage = undefined;
+        state.currentPageid = undefined;
       }
     },
     setEdition: (state, action) => {
       const edition = action.payload;
       state.edition = edition;
-      state.currentPage = undefined;
+      state.currentPageid = undefined;
       state.pages = [];
       state.pagesViewed = [];
+      state.lastSearchPosition = undefined;
+      state.lastSearchRadius = undefined;
+      state.lastSearchTime = undefined;
     },
     setVoice: (state, action) => {
       const voice = action.payload;
@@ -167,7 +161,12 @@ export const getPages = (lat, lng, radius) => async (dispatch, getState) => {
   const edition = selectEdition(state);
   const data = await repository.getPagesByGeoLocation(edition, lat, lng, radius);
   if (data) {
-    dispatch(addPages({ data }));
+    dispatch(addPages({
+      data, 
+      searchPosition: [lat, lng],
+      searchRadius: radius,
+      searchTime: new Date().getTime()
+    }));
     dispatch(classifyPages());
   }
 };
@@ -175,8 +174,8 @@ export const getPages = (lat, lng, radius) => async (dispatch, getState) => {
 export const classifyPages = (force = false) => async (dispatch, getState) => {
   const state = getState();
   const pages = selectPages(state);
-  const unclassifiedPages = pages.filter(p => force || !p.rating);
-  const results = await Promise.all(unclassifiedPages.map(async p => {
+  const pagesToClassify = pages.filter(p => force || !p.rating);
+  const results = await Promise.all(pagesToClassify.map(async p => {
     const text = decode(striptags(p.extract));
     const rating = await ML.classify(text);
     return {
@@ -203,6 +202,7 @@ export const ratePage = (pageid, rating) => async (dispatch, getState) => {
   if (currentPage.pageid === pageid && rating === 'bad') {
     dispatch(nextPage());
   }
+  dispatch(classifyPages(true));
 };
 
 export const selectIsEnabled = (state) => state.wikipedia.isEnabled;
@@ -218,10 +218,16 @@ export const selectAvailableVoices = (state) => state.wikipedia.availableVoices;
 export const selectPages = (state) => state.wikipedia.pages;
 
 export const selectCurrentPage = (state) => 
-  state.wikipedia.currentPage && state.wikipedia.pages.find(p => p.pageid === state.wikipedia.currentPage);
+  state.wikipedia.currentPageid && state.wikipedia.pages.find(p => p.pageid === state.wikipedia.currentPageid);
 
 export const selectSearchRadius = (state) => state.wikipedia.searchRadius;
 
 export const selectIsPlaying = (state) => state.wikipedia.isPlaying;
+
+export const selectLastSearchPosition = (state) => state.wikipedia.lastSearchPosition;
+
+export const selectLastSearchRadius = (state) => state.wikipedia.lastSearchRadius;
+
+export const selectLastSearchTime = (state) => state.wikipedia.lastSearchTime;
 
 export default wikipediaSlice.reducer;
