@@ -1,0 +1,45 @@
+.sidebar {
+  width: 400px;
+  max-height: 100%;
+  border-left: 2px solid rgba(0,0,0,0.2);
+  padding: 4px;
+  overflow-y: scroll;
+  scrollbar-color: rgba(0, 0, 0, 0.5);;
+  scrollbar-width: thin;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.page {
+  border: 2px solid rgba(0,0,0,0.2);
+  padding: 4px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.title {
+  padding: 5px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.title a, .title a:visited {
+  background-color: unset;
+  border: none;
+  color: #33F;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.text {
+  padding: 0 4px;
+  font-size: 0.8em;
+  max-height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
