@@ -21,3 +21,7 @@ export function formatBearing(bearing) {
 
   return `${Math.round(bearing)}°`;
 }
+
+export function angleDiff(a, b) {
+  return ((((a - b) % 360) + 540) % 360) - 180;
+}

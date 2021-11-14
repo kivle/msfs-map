@@ -5,9 +5,11 @@ import { FaPlay, FaPause, FaStepForward, FaWikipediaW } from 'react-icons/fa';
 import { CgTrack } from 'react-icons/cg';
 import { useDispatch, useSelector } from 'react-redux';
 import { 
-  nextPage, selectCurrentPage, selectIsEnabled, selectIsPlaying, 
-  selectVoice, setEnabled, setIsPlaying
+  nextPage, selectCurrentPage, selectIsEnabled, setEnabled
 } from '../../wikipedia/wikipediaSlice';
+import {
+  selectVoice, selectIsPlaying, setIsPlaying
+} from '../../tts/ttsSlice';
 import {
   selectIsFollowing, setIsFollowing
 } from '../mapSlice';

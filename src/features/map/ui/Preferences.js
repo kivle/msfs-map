@@ -3,12 +3,20 @@ import { useCallback, useEffect, useState } from 'react';
 import ISO6391 from 'iso-639-1';
 import { batch, useDispatch, useSelector } from 'react-redux';
 import { 
-  selectAvailableEditions, selectEdition, setEdition, setVoice, 
-  setAvailableVoices, selectVoice, selectAvailableVoices, selectSearchRadius,
+  selectAvailableEditions, 
+  selectEdition, 
+  setEdition, 
+  selectSearchRadius,
   setSearchRadius,
   classifyPages,
   setEnabled
 } from '../../wikipedia/wikipediaSlice';
+import {
+  setVoice, 
+  setAvailableVoices, 
+  selectVoice, 
+  selectAvailableVoices
+} from '../../tts/ttsSlice';
 import styles from './Preferences.module.css';
 import { selectAvailableMaps, selectCurrentMap, setCurrentMap } from '../mapSlice';
 import { FaCog, FaCaretRight } from 'react-icons/fa';
@@ -69,6 +77,7 @@ const PreferencesPanel = React.memo(({
 export default function Preferences() {
   const dispatch = useDispatch();
   const [expanded, setExpanded] = useState(false);
+  
   const edition = useSelector(selectEdition);
   const availableEditions = useSelector(selectAvailableEditions);
   const voice = useSelector(selectVoice);

@@ -7,6 +7,7 @@ import ML from '../../utils/ml';
 import wikipediaEditions from './wikipediaEditions';
 import { createSelector } from 'reselect';
 import { getDistance, getRhumbLineBearing } from 'geolib';
+import { angleDiff } from '../../utils/geo';
 
 export const wikipediaSlice = createSlice({
   name: 'wikipedia',
@@ -14,16 +15,13 @@ export const wikipediaSlice = createSlice({
     edition: 'en',
     isEnabled: true,
     availableEditions: wikipediaEditions,
-    currentVoice: undefined,
-    availableVoices: [],
     currentPageid: undefined,
     pages: [],
     pagesViewed: [],
     lastSearchPosition: undefined,
     lastSearchRadius: undefined,
     lastSearchTime: undefined,
-    searchRadius: 10000,
-    isPlaying: false
+    searchRadius: 10000
   },
   reducers: {
     setEnabled: (state, action) => {
@@ -117,21 +115,8 @@ export const wikipediaSlice = createSlice({
       state.lastSearchRadius = undefined;
       state.lastSearchTime = undefined;
     },
-    setVoice: (state, action) => {
-      const voice = action.payload;
-      state.currentVoice = voice;
-    },
-    setAvailableVoices: (state, action) => {
-      const voices = action.payload;
-      state.availableVoices = voices;
-      if (state.voice && !state.availableVoices.some(v => v === state.voice))
-        state.voice = undefined;
-    },
     setSearchRadius: (state, action) => {
       state.searchRadius = parseInt(action.payload, 10);
-    },
-    setIsPlaying: (state, action) => {
-      state.isPlaying = action.payload;
     },
     updatePageRatings: (state, action) => {
       action.payload.forEach(element => {
@@ -147,10 +132,7 @@ export const {
   setEnabled,
   addPages,
   nextPage,
-  setVoice,
-  setAvailableVoices,
   setSearchRadius,
-  setIsPlaying,
   updatePageRatings
 } = wikipediaSlice.actions;
 
@@ -214,10 +196,6 @@ export const selectEdition = (state) => state.wikipedia.edition;
 
 export const selectAvailableEditions = (state) => state.wikipedia.availableEditions;
 
-export const selectVoice = (state) => state.wikipedia.currentVoice;
-
-export const selectAvailableVoices = (state) => state.wikipedia.availableVoices;
-
 export const selectPages = (state) => state.wikipedia.pages;
 
 export const selectCurrentPage = (state) => 
@@ -225,17 +203,11 @@ export const selectCurrentPage = (state) =>
 
 export const selectSearchRadius = (state) => state.wikipedia.searchRadius;
 
-export const selectIsPlaying = (state) => state.wikipedia.isPlaying;
-
 export const selectLastSearchPosition = (state) => state.wikipedia.lastSearchPosition;
 
 export const selectLastSearchRadius = (state) => state.wikipedia.lastSearchRadius;
 
 export const selectLastSearchTime = (state) => state.wikipedia.lastSearchTime;
-
-function angleDiff(a, b) {
-  return ((((a - b) % 360) + 540) % 360) - 180;
-}
 
 export const selectPagesWithDistances = createSelector(
   (state) => ({

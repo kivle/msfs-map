@@ -3,8 +3,11 @@ import { useSelector } from "react-redux";
 import { selectSimdata } from "../../simdata/simdataSlice";
 import { usePeriodicWikipediaFetching } from "../../wikipedia/hooks";
 import { 
-  selectCurrentPage, selectIsPlaying, selectPages, selectSearchRadius
+  selectCurrentPage, selectPages, selectSearchRadius
 } from "../../wikipedia/wikipediaSlice";
+import {
+  selectIsPlaying
+} from "../../tts/ttsSlice";
 import WikipediaMarker from "./WikipediaMarker";
 
 export default function Wikipedia() {
