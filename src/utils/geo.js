@@ -6,7 +6,7 @@ export function formatDistance(distance) {
   if (distance < 1000) {
     return `${Math.round(distance)} m`;
   }
-  else if (distance < 100000) {
+  else if (distance < 99999) {
     return `${(distance / 1000).toFixed(1)} km`
   }
   else {
