@@ -1,0 +1,56 @@
+.player {
+  display: flex;
+  border: 2px solid rgba(0,0,0,0.2);
+  justify-items: center;
+  align-items: center;
+}
+
+.player a, .player a:visited {
+  background-color: unset;
+  border: none;
+  color: #33F;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.image {
+  width: 64px;
+  height: 64px;
+  margin-right: 8px;
+}
+
+.image > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.controls {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.controls button {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+  border: none;
+  background: none;
+}
+
+.info {
+  margin-left: 8px;
+  margin-right: 8px;
+  flex-grow: 1;
+}
+
+.title {
+  font-size: 0.8em;
+}
+
+.next {
+  font-size: 0.6em;
+}

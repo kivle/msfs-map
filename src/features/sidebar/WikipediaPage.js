@@ -15,22 +15,29 @@ function Extract({ page }) {
 
 function Thumbnail({ page }) {
   return page?.thumbnail?.source
-    ? <img src={page.thumbnail.source} alt={page.title} />
-    : null;
+    ? (
+      <a href={page.thumbnail.source} target="_blank" rel="noopener noreferrer">
+        <img src={page.thumbnail.source} alt={page.title} />
+      </a>
+    ) : null;
 }
 
 const WikipediaPage = React.memo(({ page }) => {
   const dispatch = useDispatch();
   const link = useWikipediaPageLink(page);
+  
   const {
     distance, headingDifference
   } = page?.closestPoint ?? {};
+  
   const {
     pageid
   } = page;
+  
   const add = useCallback(() => {
     dispatch(addToPlayQueue({ pageid }));
   }, [dispatch, pageid]);
+  
   const mark = useCallback(() => {
     dispatch(markAsRead({ pageid }));
   }, [dispatch, pageid]);
