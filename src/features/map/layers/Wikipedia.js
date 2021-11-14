@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { selectSimdata } from "../../simdata/simdataSlice";
-import { usePeriodicWikipediaFetching } from "../../wikipedia/hooks";
+import { usePeriodicWikipediaFetching, usePeriodicWikipediaRemovePagesOutOfRange } from "../../wikipedia/hooks";
 import { 
   selectPagesWithDistances, selectSearchRadius
 } from "../../wikipedia/wikipediaSlice";
@@ -20,6 +20,7 @@ export default function Wikipedia() {
   const searchRadius = useSelector(selectSearchRadius);
 
   usePeriodicWikipediaFetching(position, searchRadius);
+  usePeriodicWikipediaRemovePagesOutOfRange();
 
   return pages?.map(p => 
     <WikipediaMarker 

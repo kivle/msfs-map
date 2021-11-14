@@ -7,6 +7,8 @@ import { decode } from 'entities';
 import { FaPlay, FaPause, FaStepForward } from 'react-icons/fa';
 import styles from './TtsPlayer.module.css';
 import { useWikipediaPageLink } from '../wikipedia/hooks';
+import { HiOutlineArrowNarrowUp } from 'react-icons/hi';
+import { formatDistance } from '../../utils/geo';
 
 function Thumbnail({ page }) {
   return page?.thumbnail?.source
@@ -23,6 +25,7 @@ export function TtsPlayer() {
   const currentPage = playQueue[0];
   const nextPage = playQueue[1];
   const { title, extract } = currentPage ?? {};
+  const { distance, headingDifference } = currentPage?.closestPoint ?? {};
   const voice = useSelector(selectVoice);
   const isPlaying = useSelector(selectIsPlaying);
 
@@ -94,7 +97,16 @@ export function TtsPlayer() {
       </div>
       <div className={styles.info}>
         {!currentPageLink && <article className={styles.title}>No articles in reading queue</article>}
-        {currentPageLink && <article className={styles.title}>{currentPageLink}</article>}
+        {currentPageLink && <article className={styles.title}>
+          <div>{currentPageLink}</div>
+          <div className={styles.distance}>
+            <HiOutlineArrowNarrowUp
+              size={12} 
+              style={{transform: `rotate(${headingDifference ?? 0}deg)`}}
+              />
+            <span>{formatDistance(distance)}</span>
+          </div>
+        </article>}
         {nextPageLink && <article className={styles.next}>next: {nextPageLink}</article>}
       </div>
       <div className={styles.controls}>

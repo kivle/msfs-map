@@ -52,6 +52,10 @@ export const wikipediaSlice = createSlice({
       state.lastSearchRadius = searchRadius;
       state.lastSearchTime = searchTime;
     },
+    removePages: (state, action) => {
+      const { pageids } = action.payload;
+      state.pages = state.pages.filter(p => !pageids.includes(p.pageid));
+    },
     addToPlayQueue: (state, action) => {
       const { pageid } = action.payload;
       state.playQueue.push(pageid);
@@ -86,6 +90,7 @@ export const {
   setEnabled,
   setEdition,
   receivePages,
+  removePages,
   addToPlayQueue,
   advancePlayQueue,
   markAsRead,
@@ -105,6 +110,13 @@ export const getPages = (lat, lng, radius) => async (dispatch, getState) => {
       searchTime: new Date().getTime()
     }));
   }
+};
+
+export const clearPagesOutOfRange = () => (dispatch, getState) => {
+  const state = getState();
+  const pages = selectPagesWithDistances(state);
+  const pagesToRemove = pages.filter(p => !p.closestPoint.isInFront && p.distance > 20000);
+  dispatch(removePages({ pageids: pagesToRemove.map(p => p.pageid) }));
 };
 
 export const selectIsEnabled = (state) => state.wikipedia.isEnabled;
@@ -144,14 +156,14 @@ export const selectPagesWithDistances = createSelector(
           distance,
           bearing,
           headingDifference,
-          isInFront: headingDifference >= -90 && headingDifference <= 90,
-          inPlayQueue: playQueue.includes(p.pageid)
+          isInFront: headingDifference >= -90 && headingDifference <= 90
         };
       }).sort((a, b) => a.distance - b.distance)[0];
-      
+
       return {
         ...p,
-        closestPoint
+        closestPoint,
+        isInPlayQueue: playQueue.includes(p.pageid)
       };
     }).sort((a, b) => a.closestPoint?.distance - b.closestPoint?.distance);
     

@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { 
+  clearPagesOutOfRange,
   getPages,
   selectEdition,
   selectIsEnabled,
-  selectLastSearchPosition, selectLastSearchRadius, selectLastSearchTime 
+  selectLastSearchPosition, selectLastSearchRadius, selectLastSearchTime, selectPagesWithDistances 
 } from "./wikipediaSlice";
 
 export function usePeriodicWikipediaFetching(position, searchRadius, minimumInterval = 20000) {
@@ -31,6 +32,19 @@ export function usePeriodicWikipediaFetching(position, searchRadius, minimumInte
     searchRadius, lastSearchRadius, 
     lastSearchTime, minimumInterval
   ]);
+}
+
+export function usePeriodicWikipediaRemovePagesOutOfRange() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      dispatch(clearPagesOutOfRange());
+    }, 10000);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [dispatch]);
 }
 
 export function useWikipediaPageLink(page) {
