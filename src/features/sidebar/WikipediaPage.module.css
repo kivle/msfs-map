@@ -1,0 +1,49 @@
+.page {
+  border: 2px solid rgba(0,0,0,0.2);
+  padding: 4px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.title {
+  padding: 5px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.title a, .title a:visited {
+  background-color: unset;
+  border: none;
+  color: #33F;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.title > img {
+  max-width: 100%;
+  max-height: 300px;
+  margin-top: 6px;
+}
+
+.text {
+  padding: 0 4px;
+  font-size: 0.8em;
+}
+
+.distance > * {
+  vertical-align: middle;
+}
+
+.distance > svg {
+  margin-right: 2px;
+}
+
+.buttonBar button {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  border-top: 2px solid rgba(0,0,0,0.2);
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+}

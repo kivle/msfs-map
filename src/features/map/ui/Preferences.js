@@ -8,7 +8,6 @@ import {
   setEdition, 
   selectSearchRadius,
   setSearchRadius,
-  classifyPages,
   setEnabled
 } from '../../wikipedia/wikipediaSlice';
 import {
@@ -20,13 +19,11 @@ import {
 import styles from './Preferences.module.css';
 import { selectAvailableMaps, selectCurrentMap, setCurrentMap } from '../mapSlice';
 import { FaCog, FaCaretRight } from 'react-icons/fa';
-import ML from '../../../utils/ml';
 
 const PreferencesPanel = React.memo(({
   expanded, toggleExpanded, changeMap, currentMap, availableMaps,
   changeEdition, edition, availableEditions, changeSearchRadius,
-  searchRadius, changeVoice, voice, availableVoices,
-  clearTrainingData
+  searchRadius, changeVoice, voice, availableVoices
 }) =>
   <div className={styles.main}>
   <button 
@@ -66,9 +63,6 @@ const PreferencesPanel = React.memo(({
       <select id="voice" onChange={changeVoice} value={voice}>
         {availableVoices.map(v => <option key={v} value={v}>{v}</option>)}
       </select>
-    </div>
-    <div className={styles.preference}>
-      <button type="button" onClick={clearTrainingData}>Clear traning data</button>
     </div>
   </>}
   </div>
@@ -121,11 +115,6 @@ export default function Preferences() {
     setExpanded(!expanded);
   }, [expanded]);
 
-  const clearTrainingData = useCallback(() => {
-    ML.clearClassifier();
-    dispatch(classifyPages(true));
-  }, [dispatch]);
-
   useEffect(() => {
     const voicesChanged = () => {
       const newVoices = window.speechSynthesis.getVoices();
@@ -151,6 +140,5 @@ export default function Preferences() {
     changeVoice={changeVoice}
     voice={voice}
     availableVoices={availableVoices}
-    clearTrainingData={clearTrainingData}
   />;
 };

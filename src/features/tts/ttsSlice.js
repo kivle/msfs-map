@@ -5,7 +5,7 @@ export const ttsSlice = createSlice({
   initialState: {
     currentVoice: undefined,
     availableVoices: [],
-    isPlaying: false
+    isPlaying: true
   },
   reducers: {
     setVoice: (state, action) => {

@@ -1,9 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-import striptags from 'striptags';
-import { decode } from 'entities';
 
 import repository from './repository';
-import ML from '../../utils/ml';
 import wikipediaEditions from './wikipediaEditions';
 import { createSelector } from 'reselect';
 import { getDistance, getRhumbLineBearing } from 'geolib';
@@ -15,9 +12,9 @@ export const wikipediaSlice = createSlice({
     edition: 'en',
     isEnabled: true,
     availableEditions: wikipediaEditions,
-    currentPageid: undefined,
     pages: [],
     pagesViewed: [],
+    playQueue: [],
     lastSearchPosition: undefined,
     lastSearchRadius: undefined,
     lastSearchTime: undefined,
@@ -30,12 +27,10 @@ export const wikipediaSlice = createSlice({
       }
       else {
         state.isEnabled = false;
-        state.isPlaying = false;
-        state.currentPageid = undefined;
         state.pages = [];
       }
     },
-    addPages: (state, action) => {
+    receivePages: (state, action) => {
       const { 
         data: { query: { pages } = {} } = {}, 
         searchPosition, searchRadius, searchTime 
@@ -53,141 +48,63 @@ export const wikipediaSlice = createSlice({
              p.coordinates
       );
       state.pages.push(...pagesToAdd);
-      if (pagesToAdd.length && state.currentPageid === undefined) {
-        state.currentPageid = pagesToAdd[0].pageid;
-      }
       state.lastSearchPosition = searchPosition;
       state.lastSearchRadius = searchRadius;
       state.lastSearchTime = searchTime;
     },
-    nextPage: (state) => {
-      // Remove current page from backlog
-      if (state.currentPageid !== undefined) {
-        state.pages = state.pages.filter(p => p.pageid !== state.currentPageid);
-        state.pagesViewed.push(state.currentPageid);
-      }
-
-      // Limit backlog if there are a lot of pages loaded
-      while (state.pages.length > 30) {
-        // Remove least worthwhile articles to not end up with a huge backlog
-        if (state.pages.some(p => p.rating === 'bad')) {
-          const badPages = state.pages.filter(p => p.rating === 'bad');
-          const shortestArticle = Math.min(
-            ...badPages.map(p => p.extract.length)
-          );
-          const leastInteresting = badPages.find(p => p.extract.length === shortestArticle);
-          state.pages = state.pages.filter(p => p.pageid !== leastInteresting.pageid);
-        }
-        else {
-          const shortestArticle = Math.min(...state.pages.map(p => p.extract.length));
-          const leastInteresting = state.pages.find(p => p.extract.length === shortestArticle);
-          state.pages = state.pages.filter(p => p.pageid !== leastInteresting.pageid);
-        }
-      }
-
-      // Find best candidate as next page
-      const unreadGoodPage = state.pages
-        .filter(
-          p => p.rating === 'good'
-        )
-        .sort(
-          (a, b) => b?.extract?.length - a?.extract?.length
-        ).find(
-          p => !state.pagesViewed.some(v => p.pageid === v)
-        );
-      if (unreadGoodPage) {
-        state.currentPageid = unreadGoodPage.pageid;
-      }
-      else if (state.pages.length) {
-        state.currentPageid = state.pages[0].pageid;
-      }
-      else {
-        state.currentPageid = undefined;
-      }
+    addToPlayQueue: (state, action) => {
+      const { pageid } = action.payload;
+      state.playQueue.push(pageid);
+    },
+    advancePlayQueue: (state) => {
+      const pageid = state.playQueue.shift();
+      state.pages = state.pages.filter(p => p.pageid !== pageid);
+      state.pagesViewed.push(pageid);
+    },
+    markAsRead: (state, action) => {
+      const { pageid } = action.payload;
+      state.pages = state.pages.filter(p => p.pageid !== pageid);
+      state.pagesViewed.push(pageid);
     },
     setEdition: (state, action) => {
       const edition = action.payload;
       state.edition = edition;
-      state.currentPageid = undefined;
       state.pages = [];
       state.pagesViewed = [];
+      state.playQueue = [];
       state.lastSearchPosition = undefined;
       state.lastSearchRadius = undefined;
       state.lastSearchTime = undefined;
     },
     setSearchRadius: (state, action) => {
       state.searchRadius = parseInt(action.payload, 10);
-    },
-    updatePageRatings: (state, action) => {
-      action.payload.forEach(element => {
-        const page = state.pages.find(p => p.pageid === element.pageid);
-        page.rating = element.rating;
-        page.userRated = !!element.userRated;
-      });
     }
-  },
+  }
 });
 
 export const {
   setEnabled,
-  addPages,
-  nextPage,
+  setEdition,
+  receivePages,
+  addToPlayQueue,
+  advancePlayQueue,
+  markAsRead,
   setSearchRadius,
   updatePageRatings
 } = wikipediaSlice.actions;
-
-export const setEdition = (edition) => async (dispatch, getState) => {
-  dispatch(wikipediaSlice.actions.setEdition(edition));
-  ML.setLanguage(edition);
-};
 
 export const getPages = (lat, lng, radius) => async (dispatch, getState) => {
   const state = getState();
   const edition = selectEdition(state);
   const data = await repository.getPagesByGeoLocation(edition, lat, lng, radius);
   if (data) {
-    dispatch(addPages({
+    dispatch(receivePages({
       data, 
       searchPosition: [lat, lng],
       searchRadius: radius,
       searchTime: new Date().getTime()
     }));
-    dispatch(classifyPages());
   }
-};
-
-export const classifyPages = (force = false) => async (dispatch, getState) => {
-  const state = getState();
-  const pages = selectPages(state);
-  const pagesToClassify = pages.filter(p => force || !p.rating);
-  const results = await Promise.all(pagesToClassify.map(async p => {
-    const text = decode(striptags(p.extract));
-    const rating = await ML.classify(text);
-    return {
-      pageid: p.pageid,
-      rating
-    };
-  }));
-  dispatch(updatePageRatings(results));
-};
-
-export const ratePage = (pageid, rating) => async (dispatch, getState) => {
-  const state = getState();
-  const pages = selectPages(state);
-  const page = pages.find(p => p.pageid === pageid);
-  if (!page) {
-    return;
-  }
-  const text = decode(striptags(page.extract));
-  ML.add(text, rating);
-  const updatedRating = await ML.classify(text);
-  dispatch(updatePageRatings([{ userRated: true, rating: updatedRating, pageid }]));
-  const updatedState = getState();
-  const currentPage = selectCurrentPage(updatedState);
-  if (currentPage.pageid === pageid && rating === 'bad') {
-    dispatch(nextPage());
-  }
-  dispatch(classifyPages(true));
 };
 
 export const selectIsEnabled = (state) => state.wikipedia.isEnabled;
@@ -197,9 +114,6 @@ export const selectEdition = (state) => state.wikipedia.edition;
 export const selectAvailableEditions = (state) => state.wikipedia.availableEditions;
 
 export const selectPages = (state) => state.wikipedia.pages;
-
-export const selectCurrentPage = (state) => 
-  state.wikipedia.currentPageid && state.wikipedia.pages.find(p => p.pageid === state.wikipedia.currentPageid);
 
 export const selectSearchRadius = (state) => state.wikipedia.searchRadius;
 
@@ -213,9 +127,10 @@ export const selectPagesWithDistances = createSelector(
   (state) => ({
     position: state.simdata?.position,
     heading: state.simdata?.heading, 
-    pages: state.wikipedia?.pages
+    pages: state.wikipedia?.pages,
+    playQueue: state.wikipedia?.playQueue
   }),
-  ({ position, heading, pages }) => {
+  ({ position, heading, pages, playQueue }) => {
     const pos = position ? { latitude: position[0], longitude: position[1] } : undefined;
 
     const pagesWithClosestPoints = pages?.map(p => {
@@ -229,7 +144,8 @@ export const selectPagesWithDistances = createSelector(
           distance,
           bearing,
           headingDifference,
-          isInFront: headingDifference >= -90 && headingDifference <= 90
+          isInFront: headingDifference >= -90 && headingDifference <= 90,
+          inPlayQueue: playQueue.includes(p.pageid)
         };
       }).sort((a, b) => a.distance - b.distance)[0];
       
@@ -245,5 +161,10 @@ export const selectPagesWithDistances = createSelector(
     ];
   }
 );
+
+export const selectPlayQueue = (state) =>  {
+  const pages = selectPagesWithDistances(state);
+  return state.wikipedia.playQueue.map(pageid => pages.find(p => p.pageid === pageid));
+}
 
 export default wikipediaSlice.reducer;

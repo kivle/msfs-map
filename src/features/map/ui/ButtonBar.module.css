@@ -11,7 +11,7 @@
   height: 32px;
 }
 
-.main .btn {
+.main button {
   display: flex;
   align-content: center;
   justify-content: center;
@@ -20,7 +20,7 @@
   padding: 2px;
 }
 
-.main .btn.active {
+.main button.active {
   filter: invert();
 }
 

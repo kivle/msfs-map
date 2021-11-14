@@ -7,7 +7,7 @@ import {
   selectLastSearchPosition, selectLastSearchRadius, selectLastSearchTime 
 } from "./wikipediaSlice";
 
-export function usePeriodicWikipediaFetching(position, searchRadius, minimumInterval = 10000) {
+export function usePeriodicWikipediaFetching(position, searchRadius, minimumInterval = 20000) {
   const dispatch = useDispatch();
   const isEnabled = useSelector(selectIsEnabled);
   const lastSearchPosition = useSelector(selectLastSearchPosition);

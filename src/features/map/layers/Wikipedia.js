@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { selectSimdata } from "../../simdata/simdataSlice";
 import { usePeriodicWikipediaFetching } from "../../wikipedia/hooks";
 import { 
-  selectCurrentPage, selectPages, selectSearchRadius
+  selectPagesWithDistances, selectSearchRadius
 } from "../../wikipedia/wikipediaSlice";
 import {
   selectIsPlaying
@@ -11,8 +11,7 @@ import {
 import WikipediaMarker from "./WikipediaMarker";
 
 export default function Wikipedia() {
-  const pages = useSelector(selectPages);
-  const currentPage = useSelector(selectCurrentPage);
+  const pages = useSelector(selectPagesWithDistances);
   const isPlaying = useSelector(selectIsPlaying);
 
   const {
@@ -25,8 +24,7 @@ export default function Wikipedia() {
   return pages?.map(p => 
     <WikipediaMarker 
       key={p.pageid} 
-      page={p} 
-      isCurrentPage={p.pageid === currentPage?.pageid} 
+      page={p}
       isPlaying={isPlaying} 
     />
   );
