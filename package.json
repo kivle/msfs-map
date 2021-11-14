@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "bayes": "^1.0.0",
     "entities": "^3.0.1",
+    "geolib": "^3.3.3",
     "html-react-parser": "^1.4.0",
     "iso-639-1": "^2.1.10",
     "leaflet": "^1.7.1",
@@ -20,6 +21,7 @@
     "react-leaflet-enhanced-marker": "^1.0.21",
     "react-redux": "^7.2.6",
     "react-scripts": "4.0.3",
+    "reselect": "^4.1.2",
     "striptags": "^3.2.0"
   },
   "scripts": {

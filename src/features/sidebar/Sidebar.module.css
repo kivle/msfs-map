@@ -36,10 +36,21 @@
   text-decoration: none;
 }
 
+.title > img {
+  max-width: 100%;
+  max-height: 300px;
+  margin-top: 6px;
+}
+
 .text {
   padding: 0 4px;
   font-size: 0.8em;
-  max-height: 100px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+}
+
+.distance > * {
+  vertical-align: middle;
+}
+
+.distance > svg {
+  margin-right: 2px;
 }

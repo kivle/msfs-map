@@ -5,6 +5,8 @@ import { decode } from 'entities';
 import repository from './repository';
 import ML from '../../utils/ml';
 import wikipediaEditions from './wikipediaEditions';
+import { createSelector } from 'reselect';
+import { getDistance, getRhumbLineBearing } from 'geolib';
 
 export const wikipediaSlice = createSlice({
   name: 'wikipedia',
@@ -49,7 +51,8 @@ export const wikipediaSlice = createSlice({
       }, []);
       const pagesToAdd = geosearch.filter(
         p => !state.pages.some(p2 => p.pageid === p2.pageid) &&
-             !state.pagesViewed.some(p2 => p.pageid === p2)
+             !state.pagesViewed.some(p2 => p.pageid === p2) &&
+             p.coordinates
       );
       state.pages.push(...pagesToAdd);
       if (pagesToAdd.length && state.currentPageid === undefined) {
@@ -229,5 +232,46 @@ export const selectLastSearchPosition = (state) => state.wikipedia.lastSearchPos
 export const selectLastSearchRadius = (state) => state.wikipedia.lastSearchRadius;
 
 export const selectLastSearchTime = (state) => state.wikipedia.lastSearchTime;
+
+function angleDiff(a, b) {
+  return ((((a - b) % 360) + 540) % 360) - 180;
+}
+
+export const selectPagesWithDistances = createSelector(
+  (state) => ({
+    position: state.simdata?.position,
+    heading: state.simdata?.heading, 
+    pages: state.wikipedia?.pages
+  }),
+  ({ position, heading, pages }) => {
+    const pos = position ? { latitude: position[0], longitude: position[1] } : undefined;
+
+    const pagesWithClosestPoints = pages?.map(p => {
+      const closestPoint = p.coordinates?.map((coord) => {
+        const distance = pos && getDistance(pos, { latitude: coord?.lat, longitude: coord?.lon });
+        const bearing = pos && Math.round(getRhumbLineBearing(pos, { latitude: coord?.lat, longitude: coord?.lon }));
+        const headingDifference = angleDiff(bearing ?? 0, heading ?? 0);
+
+        return { 
+          coord,
+          distance,
+          bearing,
+          headingDifference,
+          isInFront: headingDifference >= -90 && headingDifference <= 90
+        };
+      }).sort((a, b) => a.distance - b.distance)[0];
+      
+      return {
+        ...p,
+        closestPoint
+      };
+    }).sort((a, b) => a.closestPoint?.distance - b.closestPoint?.distance);
+    
+    return [
+      ...pagesWithClosestPoints.filter(p => p.closestPoint?.isInFront),
+      ...pagesWithClosestPoints.filter(p => !p.closestPoint?.isInFront),
+    ];
+  }
+);
 
 export default wikipediaSlice.reducer;
