@@ -23,7 +23,7 @@ export default function Sidebar() {
   return (
     <div className={styles.sidebar}>
       <div>
-        {pages?.map((page) => 
+        {pages?.filter(p => p.closestPoint?.isInFront).map((page) => 
           <Page 
             key={page.pageid} 
             page={page}
@@ -45,7 +45,7 @@ const Page = React.memo(({ page, edition }) => {
           {page.title}
         </a>
         <div className={styles.distance}>
-          <HiOutlineArrowNarrowUp size={24} style={{transform: `rotate(${closestPoint?.bearing ?? 0}deg)`}} />
+          <HiOutlineArrowNarrowUp size={24} style={{transform: `rotate(${closestPoint?.headingDifference ?? 0}deg)`}} />
           <span>{formatDistance(closestPoint?.distance)}</span>
         </div>
         <Thumbnail page={page} />
