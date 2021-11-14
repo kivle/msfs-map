@@ -4,8 +4,9 @@ import { useSelector } from 'react-redux';
 import parse from 'html-react-parser';
 
 import styles from './Wikipedia.module.css';
-import { selectCurrentPage, selectEdition } from '../../wikipedia/wikipediaSlice';
+import { selectCurrentPage } from '../../wikipedia/wikipediaSlice';
 import RateArticle from './components/RateArticle';
+import { useWikipediaPageLink } from '../../wikipedia/hooks';
 
 function Extract({ page }) {
   return page.extract ? parse(page.extract) : null;
@@ -34,11 +35,9 @@ const WikipediaPanelView = React.memo(({
 
 export default function WikipediaPanel() {
   const page = useSelector(selectCurrentPage);
-  const edition = useSelector(selectEdition);
+  const link = useWikipediaPageLink(page);
 
   if (!page) return null;
-
-  const link = `https://${edition}.wikipedia.org/?curid=${page.pageid}`;
 
   return <WikipediaPanelView link={link} page={page} />;
 }

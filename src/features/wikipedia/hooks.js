@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { 
   getPages,
+  selectEdition,
   selectIsEnabled,
   selectLastSearchPosition, selectLastSearchRadius, selectLastSearchTime 
 } from "./wikipediaSlice";
@@ -30,4 +31,9 @@ export function usePeriodicWikipediaFetching(position, searchRadius, minimumInte
     searchRadius, lastSearchRadius, 
     lastSearchTime, minimumInterval
   ]);
+}
+
+export function useWikipediaPageLink(page) {
+  const edition = useSelector(selectEdition);
+  return page ? `https://${edition}.wikipedia.org/?curid=${page.pageid}` : null;
 }
