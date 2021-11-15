@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import repository from './repository';
 import wikipediaEditions from './wikipediaEditions';
 import { createSelector } from 'reselect';
-import { getDistance, getRhumbLineBearing } from 'geolib';
+import { computeDestinationPoint, getDistance, getRhumbLineBearing } from 'geolib';
 import { angleDiff } from '../../utils/geo';
 
 export const wikipediaSlice = createSlice({
@@ -115,7 +115,7 @@ export const getPages = (lat, lng, radius) => async (dispatch, getState) => {
 export const clearPagesOutOfRange = () => (dispatch, getState) => {
   const state = getState();
   const pages = selectPagesWithDistances(state);
-  const pagesToRemove = pages.filter(p => !p.closestPoint.isInFront && p.distance > 20000);
+  const pagesToRemove = pages.filter(p => !p.closestPoint.isInFront && p.closestPoint.distance > 20000);
   dispatch(removePages({ pageids: pagesToRemove.map(p => p.pageid) }));
 };
 
@@ -178,5 +178,19 @@ export const selectPlayQueue = (state) =>  {
   const pages = selectPagesWithDistances(state);
   return state.wikipedia.playQueue.map(pageid => pages.find(p => p.pageid === pageid));
 }
+
+export const selectSearchCenterPoint = createSelector(
+  (state) => ({
+    position: state.simdata?.position,
+    heading: state.simdata?.heading,
+    searchRadius: state.wikipedia?.searchRadius
+  }),
+  ({ position, heading, searchRadius }) =>
+    computeDestinationPoint(
+      { latitude: position?.[0] ?? 0, longitude: position?.[1] ?? 0 }, 
+      searchRadius, 
+      heading
+    )
+);
 
 export default wikipediaSlice.reducer;

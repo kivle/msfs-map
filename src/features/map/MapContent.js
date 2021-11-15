@@ -7,7 +7,7 @@ import { FaPlane } from 'react-icons/fa';
 import Wikipedia from "./layers/Wikipedia";
 
 import { selectCurrentMap, selectIsFollowing } from "./mapSlice";
-import { selectIsEnabled, selectSearchRadius } from '../wikipedia/wikipediaSlice';
+import { selectIsEnabled, selectSearchCenterPoint, selectSearchRadius } from '../wikipedia/wikipediaSlice';
 
 import styles from './MapContent.module.css';
 import { MainLayer } from "./layers/MainLayer";
@@ -22,14 +22,16 @@ export default function MapContent() {
   } = useSelector(selectSimdata);
   const currentMap = useSelector(selectCurrentMap);
   const searchRadius = useSelector(selectSearchRadius);
+  const searchCenterPoint = useSelector(selectSearchCenterPoint);
+  const searchCenterPointArray = [searchCenterPoint.latitude ?? 0, searchCenterPoint.longitude ?? 0];
   const isFollowing = useSelector(selectIsFollowing);
   const isWikipediaEnabled = useSelector(selectIsEnabled);
 
   useEffect(() => {
-    if (isFollowing && position) {
-      map.setView(position, map.getZoom(), { animate: true });
+    if (isFollowing && searchCenterPoint) {
+      map.setView([searchCenterPoint.latitude, searchCenterPoint.longitude], map.getZoom(), { animate: true });
     }
-  }, [map, isFollowing, position]);
+  }, [map, isFollowing, searchCenterPoint]);
 
   const plane = <div className={styles.plane} style={{transform: `rotate(${heading - 90}deg)`}}>
     <FaPlane size={32} stroke="white" strokeWidth="40" fill="#44F" />
@@ -39,7 +41,7 @@ export default function MapContent() {
     <>
       <MainLayer currentMap={currentMap} />
       {isWikipediaEnabled && <Wikipedia />}
-      {position && isWikipediaEnabled && <Circle center={position} radius={searchRadius} color="blue" fill={false} />}
+      {position && isWikipediaEnabled && <Circle center={searchCenterPointArray} radius={searchRadius} color="blue" fill={false} />}
       {position && <Marker position={position} icon={plane} />}
     </>
   );

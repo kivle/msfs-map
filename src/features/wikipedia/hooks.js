@@ -5,7 +5,7 @@ import {
   getPages,
   selectEdition,
   selectIsEnabled,
-  selectLastSearchPosition, selectLastSearchRadius, selectLastSearchTime, selectPagesWithDistances 
+  selectLastSearchPosition, selectLastSearchRadius, selectLastSearchTime, selectSearchCenterPoint 
 } from "./wikipediaSlice";
 
 export function usePeriodicWikipediaFetching(position, searchRadius, minimumInterval = 20000) {
@@ -14,21 +14,23 @@ export function usePeriodicWikipediaFetching(position, searchRadius, minimumInte
   const lastSearchPosition = useSelector(selectLastSearchPosition);
   const lastSearchRadius = useSelector(selectLastSearchRadius);
   const lastSearchTime = useSelector(selectLastSearchTime);
+  const searchCenterPoint = useSelector(selectSearchCenterPoint);
 
   useEffect(() => {
-    if (!position || !isEnabled) return;
+    if (!searchCenterPoint || !isEnabled) return;
 
-    const positionChanged = position?.[0] !== lastSearchPosition?.[0] || position?.[1] !== lastSearchPosition?.[1];
+    const searchCenterPointArray = [searchCenterPoint.latitude ?? 0, searchCenterPoint.longitude ?? 0];
+    const positionChanged = searchCenterPointArray?.[0] !== lastSearchPosition?.[0] || searchCenterPointArray?.[1] !== lastSearchPosition?.[1];
     const searchRadiusChanged = searchRadius !== lastSearchRadius;
     const timeSinceLastSearch = new Date().getTime() - lastSearchTime;
 
     if ((positionChanged && timeSinceLastSearch > minimumInterval) || searchRadiusChanged) {
-      dispatch(getPages(position[0], position[1], searchRadius));
+      dispatch(getPages(searchCenterPointArray[0], searchCenterPointArray[1], searchRadius));
     }
   },
   [
     dispatch, isEnabled, 
-    position, lastSearchPosition,
+    searchCenterPoint, lastSearchPosition,
     searchRadius, lastSearchRadius, 
     lastSearchTime, minimumInterval
   ]);
@@ -40,7 +42,7 @@ export function usePeriodicWikipediaRemovePagesOutOfRange() {
   useEffect(() => {
     const interval = setInterval(() => {
       dispatch(clearPagesOutOfRange());
-    }, 10000);
+    }, 30000);
     return () => {
       clearInterval(interval);
     };

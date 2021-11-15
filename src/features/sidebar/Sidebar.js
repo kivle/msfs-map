@@ -12,7 +12,7 @@ export default function Sidebar() {
     <div className={styles.sidebar}>
       <TtsPlayer />
       <div>
-        {pages?.filter(p => p.closestPoint?.isInFront && !p.isInPlayQueue).map((page) => 
+        {pages?.filter(p => !p.isInPlayQueue).map((page) => 
           <WikipediaPage
             key={page.pageid} 
             page={page}
