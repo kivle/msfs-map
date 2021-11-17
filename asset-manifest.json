@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/msfs-map/static/css/main.44a9b7fd.chunk.css",
-    "main.js": "/msfs-map/static/js/main.45d52b57.chunk.js",
-    "main.js.map": "/msfs-map/static/js/main.45d52b57.chunk.js.map",
+    "main.css": "/msfs-map/static/css/main.d86d92cd.chunk.css",
+    "main.js": "/msfs-map/static/js/main.744909a4.chunk.js",
+    "main.js.map": "/msfs-map/static/js/main.744909a4.chunk.js.map",
     "runtime-main.js": "/msfs-map/static/js/runtime-main.e21ef5c4.js",
     "runtime-main.js.map": "/msfs-map/static/js/runtime-main.e21ef5c4.js.map",
     "static/css/2.68ba508b.chunk.css": "/msfs-map/static/css/2.68ba508b.chunk.css",
@@ -10,14 +10,14 @@
     "static/js/2.2a4ea631.chunk.js.map": "/msfs-map/static/js/2.2a4ea631.chunk.js.map",
     "index.html": "/msfs-map/index.html",
     "static/css/2.68ba508b.chunk.css.map": "/msfs-map/static/css/2.68ba508b.chunk.css.map",
-    "static/css/main.44a9b7fd.chunk.css.map": "/msfs-map/static/css/main.44a9b7fd.chunk.css.map",
+    "static/css/main.d86d92cd.chunk.css.map": "/msfs-map/static/css/main.d86d92cd.chunk.css.map",
     "static/js/2.2a4ea631.chunk.js.LICENSE.txt": "/msfs-map/static/js/2.2a4ea631.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e21ef5c4.js",
     "static/css/2.68ba508b.chunk.css",
     "static/js/2.2a4ea631.chunk.js",
-    "static/css/main.44a9b7fd.chunk.css",
-    "static/js/main.45d52b57.chunk.js"
+    "static/css/main.d86d92cd.chunk.css",
+    "static/js/main.744909a4.chunk.js"
   ]
 }
