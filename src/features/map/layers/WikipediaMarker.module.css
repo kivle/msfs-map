@@ -20,18 +20,13 @@
   border-style: solid;
   background-color: #ddd;
   z-index: 500;
-  opacity: 50%;
-}
-
-.ratedBad {
-  background-color: #777;
-  opacity: 30%;
+  opacity: 0.5;
 }
 
 .current {
   z-index: 600;
   background-color: white;
-  opacity: 100%;
+  opacity: 1;
 }
 
 .speaker {
