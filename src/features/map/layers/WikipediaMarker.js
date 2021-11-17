@@ -29,13 +29,10 @@ function WikipediaIcon({ isReading, tts }) {
 export default React.memo(function WikipediaMarker({
   page, isCurrentPage, isPlaying
 }) {
-  const { pageid, rating, coordinates } = page;
+  const { pageid, coordinates } = page;
   let cn = styles.marker;
   if (isCurrentPage) {
     cn += ` ${styles.current}`;
-  }
-  if (rating === 'bad') {
-    cn += ` ${styles.ratedBad}`;
   }
 
   return coordinates?.map((c, i) => <Marker
@@ -46,7 +43,7 @@ export default React.memo(function WikipediaMarker({
         <div className={cn}>
           <WikipediaIcon 
             isReading={isPlaying && isCurrentPage}
-            tts={rating === 'good'} />
+            tts={true} />
         </div>
       </div>
     }

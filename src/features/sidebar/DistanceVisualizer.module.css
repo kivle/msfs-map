@@ -1,0 +1,15 @@
+.distance {
+  font-weight: bold;
+}
+
+.distance > * {
+  vertical-align: middle;
+}
+
+.distance > svg {
+  margin-right: 2px;
+}
+
+.arrow {
+  padding-right: 6px;
+}

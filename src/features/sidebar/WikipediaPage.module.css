@@ -30,14 +30,6 @@
   font-size: 0.8em;
 }
 
-.distance > * {
-  vertical-align: middle;
-}
-
-.distance > svg {
-  margin-right: 2px;
-}
-
 .buttonBar {
   display: flex;
   justify-content: flex-end;

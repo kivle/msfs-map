@@ -1,13 +1,12 @@
 import React, { useCallback } from 'react';
-import { HiOutlineArrowNarrowUp } from 'react-icons/hi';
 import { BiTrash } from 'react-icons/bi';
 import { useWikipediaPageLink } from '../wikipedia/hooks';
 import parse from 'html-react-parser';
-import { formatDistance } from '../../utils/geo';
 import styles from './WikipediaPage.module.css';
 import { MdRecordVoiceOver } from 'react-icons/md';
 import { useDispatch } from 'react-redux';
 import { addToPlayQueue, markAsRead } from '../wikipedia/wikipediaSlice';
+import DistanceVisualizer from './DistanceVisualizer';
 
 function Extract({ page }) {
   return page.extract ? parse(page.extract) : null;
@@ -26,9 +25,7 @@ const WikipediaPage = React.memo(({ page }) => {
   const dispatch = useDispatch();
   const link = useWikipediaPageLink(page);
   
-  const {
-    distance, headingDifference
-  } = page?.closestPoint ?? {};
+  
   
   const {
     pageid
@@ -48,13 +45,7 @@ const WikipediaPage = React.memo(({ page }) => {
         <a href={link} target="_blank" rel="noreferrer">
           {page.title}
         </a>
-        <div className={styles.distance}>
-          <HiOutlineArrowNarrowUp
-            size={24} 
-            style={{transform: `rotate(${headingDifference ?? 0}deg)`}}
-          />
-          <span>{formatDistance(distance)}</span>
-        </div>
+        <DistanceVisualizer page={page} />
         <Thumbnail page={page} />
       </div>
       <div className={styles.text}>

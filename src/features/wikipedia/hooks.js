@@ -36,7 +36,7 @@ export function usePeriodicWikipediaFetching(position, searchRadius, minimumInte
   ]);
 }
 
-export function usePeriodicWikipediaRemovePagesOutOfRange() {
+export function usePeriodicRemoveWikipediaPagesOutOfRange() {
   const dispatch = useDispatch();
 
   useEffect(() => {
