@@ -115,7 +115,12 @@ export const getPages = (lat, lng, radius) => async (dispatch, getState) => {
 export const clearPagesOutOfRange = () => (dispatch, getState) => {
   const state = getState();
   const pages = selectPagesWithDistances(state);
-  const pagesToRemove = pages.filter(p => !p.closestPoint.isInFront && p.closestPoint.distance > 20000);
+  const playQueue = selectPlayQueue(state)?.map(pq => pq.pageid);
+  const pagesToRemove = pages.filter(
+    p => !p.closestPoint.isInFront && 
+          p.closestPoint.distance > 20000 &&
+         !playQueue?.includes(p.pageid)
+  );
   dispatch(removePages({ pageids: pagesToRemove.map(p => p.pageid) }));
 };
 
