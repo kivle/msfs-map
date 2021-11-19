@@ -118,7 +118,7 @@ export const clearPagesOutOfRange = () => (dispatch, getState) => {
   const playQueue = selectPlayQueue(state)?.map(pq => pq.pageid);
   const pagesToRemove = pages.filter(
     p => !p.closestPoint.isInFront && 
-          p.closestPoint.distance > 20000 &&
+          p.closestPoint.distance > 40000 &&
          !playQueue?.includes(p.pageid)
   );
   dispatch(removePages({ pageids: pagesToRemove.map(p => p.pageid) }));
