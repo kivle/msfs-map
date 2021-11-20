@@ -71,17 +71,16 @@ export function usePlaybackCallbacks(isPlaying) {
 export function useTtsState() {
   const playQueue = useSelector(selectPlayQueue);
   const currentPage = playQueue[0];
-  const nextPage = playQueue[1];
   const { title, extract } = currentPage ?? {};
   const voice = useSelector(selectVoice);
   const isPlaying = useSelector(selectIsPlaying);
 
   return {
     currentPage,
-    nextPage,
     title,
     extract,
     voice,
-    isPlaying
+    isPlaying,
+    playQueue
   };
 }

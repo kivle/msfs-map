@@ -18,7 +18,9 @@ export const wikipediaSlice = createSlice({
     lastSearchPosition: undefined,
     lastSearchRadius: undefined,
     lastSearchTime: undefined,
-    searchRadius: 10000
+    searchRadius: 10000,
+    autoPlay: true,
+    autoPlayDistance: 1000
   },
   reducers: {
     setEnabled: (state, action) => {
@@ -82,6 +84,11 @@ export const wikipediaSlice = createSlice({
     },
     setSearchRadius: (state, action) => {
       state.searchRadius = parseInt(action.payload, 10);
+    },
+    setAutoPlay(state, { payload }) {
+      const { enabled, distance } = payload;
+      state.autoPlay = enabled;
+      state.autoPlayDistance = distance;
     }
   }
 });
@@ -140,6 +147,10 @@ export const selectLastSearchRadius = (state) => state.wikipedia.lastSearchRadiu
 
 export const selectLastSearchTime = (state) => state.wikipedia.lastSearchTime;
 
+export const selectAutoPlay = (state) => state.wikipedia.autoPlay;
+
+export const selectAutoPlayDistance = (state) => state.wikipedia.autoPlayDistance;
+
 export const selectPagesWithDistances = createSelector(
   (state) => ({
     position: state.simdata?.position,
@@ -168,7 +179,8 @@ export const selectPagesWithDistances = createSelector(
       return {
         ...p,
         closestPoint,
-        isInPlayQueue: playQueue.includes(p.pageid)
+        isInPlayQueue: playQueue.includes(p.pageid),
+        isReading: playQueue[0] === p.pageid
       };
     }).sort((a, b) => a.closestPoint?.distance - b.closestPoint?.distance);
     

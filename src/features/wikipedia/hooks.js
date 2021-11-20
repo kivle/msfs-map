@@ -1,19 +1,28 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { 
+  addToPlayQueue,
   clearPagesOutOfRange,
   getPages,
+  selectAutoPlay,
+  selectAutoPlayDistance,
   selectEdition,
   selectIsEnabled,
-  selectLastSearchPosition, selectLastSearchRadius, selectLastSearchTime, selectSearchCenterPoint 
+  selectLastSearchPosition,
+  selectLastSearchRadius,
+  selectLastSearchTime,
+  selectPagesWithDistances,
+  selectSearchCenterPoint, 
+  selectSearchRadius
 } from "./wikipediaSlice";
 
-export function usePeriodicWikipediaFetching(position, searchRadius, minimumInterval = 20000) {
+export function usePeriodicWikipediaFetching(minimumInterval = 20000) {
   const dispatch = useDispatch();
   const isEnabled = useSelector(selectIsEnabled);
   const lastSearchPosition = useSelector(selectLastSearchPosition);
   const lastSearchRadius = useSelector(selectLastSearchRadius);
   const lastSearchTime = useSelector(selectLastSearchTime);
+  const searchRadius = useSelector(selectSearchRadius);
   const searchCenterPoint = useSelector(selectSearchCenterPoint);
 
   useEffect(() => {
@@ -47,6 +56,25 @@ export function usePeriodicRemoveWikipediaPagesOutOfRange() {
       clearInterval(interval);
     };
   }, [dispatch]);
+}
+
+export function useAutoPlayEffect() {
+  const dispatch = useDispatch();
+  const autoPlay = useSelector(selectAutoPlay);
+  const autoPlayDistance = useSelector(selectAutoPlayDistance);
+  const pages = useSelector(selectPagesWithDistances);
+
+  useEffect(() => {
+    if (!autoPlay || !pages) return;
+    const pagesToQueue = pages.filter(
+      page => page.closestPoint.isInFront 
+           && page.closestPoint.distance < autoPlayDistance
+           && !page.isInPlayQueue
+    );
+    for (const page of pagesToQueue) {
+      dispatch(addToPlayQueue({ pageid: page.pageid }));
+    }
+  }, [dispatch, autoPlay, autoPlayDistance, pages]);
 }
 
 export function useWikipediaPageLink(page) {

@@ -28,10 +28,10 @@ export default function MapContent() {
   const isWikipediaEnabled = useSelector(selectIsEnabled);
 
   useEffect(() => {
-    if (isFollowing && searchCenterPoint) {
-      map.setView([searchCenterPoint.latitude, searchCenterPoint.longitude], map.getZoom(), { animate: true });
+    if (isFollowing && position) {
+      map.setView(position, map.getZoom(), { animate: true });
     }
-  }, [map, isFollowing, searchCenterPoint]);
+  }, [map, isFollowing, position]);
 
   const plane = <div className={styles.plane} style={{transform: `rotate(${heading - 90}deg)`}}>
     <FaPlane size={32} stroke="white" strokeWidth="40" fill="#44F" />

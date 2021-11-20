@@ -1,40 +1,27 @@
 import React from 'react';
-import styles from './TtsPlayer.module.css';
-import DistanceVisualizer from '../DistanceVisualizer';
-import Thumbnail from './Thumbnail';
+import styles from './View.module.css';
 import ButtonBar from './ButtonBar';
+import WikipediaPage from '../WikipediaPage/WikipediaPage';
 
 const View = ({
-  currentPage, togglePlaybackState, isPlaying, next, linkCurrent, linkNext, nextPage
+  currentPage, togglePlaybackState, isPlaying, next, playQueue
 }) => {
   
-  const currentPageLink = currentPage
-  ? <a href={linkCurrent} target="_blank" rel="noopener noreferrer">{currentPage.title}</a>
-  : null;
-
-  const nextPageLink = nextPage
-    ? <a href={linkNext} target="_blank" rel="noopener noreferrer">{nextPage.title}</a>
-    : null;
-
   return (
-    <div className={styles.player}>
-      <div className={styles.image}>
-        <Thumbnail page={currentPage} />
+    <>
+      <div className={styles.player}>
+        <div className={styles.info}>
+          {!currentPage && `No articles in reading queue`}
+          {currentPage && `${playQueue.length} articles in reading queue`}
+        </div>
+        <ButtonBar
+          isPlaying={isPlaying}
+          togglePlaybackState={togglePlaybackState}
+          next={next}
+        />
       </div>
-      <div className={styles.info}>
-        {!currentPageLink && <article className={styles.title}>No articles in reading queue</article>}
-        {currentPageLink && <article className={styles.title}>
-          <div>{currentPageLink}</div>
-          <DistanceVisualizer page={currentPage} />
-        </article>}
-        {nextPageLink && <article className={styles.next}>next: {nextPageLink}</article>}
-      </div>
-      <ButtonBar
-        isPlaying={isPlaying}
-        togglePlaybackState={togglePlaybackState}
-        next={next}
-      />
-    </div>
+      {currentPage && <WikipediaPage page={currentPage} />}
+    </>
   );
 }
 

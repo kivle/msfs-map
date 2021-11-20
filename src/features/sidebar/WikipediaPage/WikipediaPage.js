@@ -1,12 +1,12 @@
 import React, { useCallback } from 'react';
 import { BiTrash } from 'react-icons/bi';
-import { useWikipediaPageLink } from '../wikipedia/hooks';
+import { useWikipediaPageLink } from '../../wikipedia/hooks';
 import parse from 'html-react-parser';
 import styles from './WikipediaPage.module.css';
 import { MdRecordVoiceOver } from 'react-icons/md';
 import { useDispatch } from 'react-redux';
-import { addToPlayQueue, markAsRead } from '../wikipedia/wikipediaSlice';
-import DistanceVisualizer from './DistanceVisualizer';
+import { addToPlayQueue, markAsRead } from '../../wikipedia/wikipediaSlice';
+import DistanceVisualizer from '../DistanceVisualizer';
 
 function Extract({ page }) {
   return page.extract ? parse(page.extract) : null;
@@ -40,6 +40,13 @@ const WikipediaPage = ({ page }) => {
   return (
     <article className={styles.page}>
       <div className={styles.title}>
+        {page.isReading && <MdRecordVoiceOver 
+          className={styles.speaker}
+          size={32} 
+          stroke="black"
+          strokeWidth={1}
+          color="#FFF" 
+        />}
         <a href={link} target="_blank" rel="noreferrer">
           {page.title}
         </a>
@@ -49,10 +56,10 @@ const WikipediaPage = ({ page }) => {
       <div className={styles.text}>
         <Extract page={page} />
       </div>
-      <div className={styles.buttonBar}>
+      {!page.isInPlayQueue && <div className={styles.buttonBar}>
         <button type="button" onClick={add}><MdRecordVoiceOver size="100%" /></button>
         <button type="button" onClick={mark}><BiTrash size="100%" /></button>
-      </div>
+      </div>}
     </article>
   );
 };

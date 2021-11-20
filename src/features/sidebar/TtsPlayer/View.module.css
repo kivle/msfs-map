@@ -1,6 +1,5 @@
 .player {
   display: flex;
-  border: 2px solid rgba(0,0,0,0.2);
   justify-items: center;
   align-items: center;
   margin-bottom: 10px;
@@ -12,21 +11,6 @@
   color: #33F;
   font-weight: bold;
   text-decoration: none;
-}
-
-.image {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  width: 64px;
-  height: 64px;
-  margin-right: 2px;
-  padding: 2px;
-}
-
-.image > a > img {
-  max-width: 100%;
-  max-height: 100%;
 }
 
 .controls {
@@ -50,8 +34,4 @@
   margin-left: 8px;
   margin-right: 8px;
   flex-grow: 1;
-}
-
-.next {
-  font-size: 0.6em;
 }

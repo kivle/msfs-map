@@ -1,9 +1,12 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { selectSimdata } from "../../simdata/simdataSlice";
-import { usePeriodicWikipediaFetching, usePeriodicRemoveWikipediaPagesOutOfRange } from "../../wikipedia/hooks";
 import { 
-  selectPagesWithDistances, selectPlayQueue, selectSearchRadius
+  usePeriodicWikipediaFetching, 
+  usePeriodicRemoveWikipediaPagesOutOfRange, 
+  useAutoPlayEffect
+} from "../../wikipedia/hooks";
+import { 
+  selectPagesWithDistances, selectPlayQueue
 } from "../../wikipedia/wikipediaSlice";
 import {
   selectIsPlaying
@@ -15,13 +18,9 @@ export default function Wikipedia() {
   const currentPageRead = useSelector(selectPlayQueue)?.[0];
   const isPlaying = useSelector(selectIsPlaying);
 
-  const {
-    position
-  } = useSelector(selectSimdata);
-  const searchRadius = useSelector(selectSearchRadius);
-
-  usePeriodicWikipediaFetching(position, searchRadius);
+  usePeriodicWikipediaFetching();
   usePeriodicRemoveWikipediaPagesOutOfRange();
+  useAutoPlayEffect();
 
   return pages?.map(p => 
     <WikipediaMarker 

@@ -2,8 +2,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { selectPagesWithDistances } from '../wikipedia/wikipediaSlice';
 import styles from './Sidebar.module.css';
-import { TtsPlayer } from './TtsPlayer';
-import WikipediaPage from './WikipediaPage';
+import TtsPlayer from './TtsPlayer/TtsPlayer';
+import WikipediaPage from './WikipediaPage/WikipediaPage';
 
 export default function Sidebar() {
   const pages = useSelector(selectPagesWithDistances);
