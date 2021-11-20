@@ -23,7 +23,7 @@
   opacity: 0.5;
 }
 
-.current {
+.current, .queued {
   z-index: 600;
   background-color: white;
   opacity: 1;

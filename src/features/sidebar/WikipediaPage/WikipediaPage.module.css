@@ -11,6 +11,10 @@
   text-align: center;
 }
 
+.title > * {
+  vertical-align: middle;
+}
+
 .title a, .title a:visited {
   background-color: unset;
   border: none;
