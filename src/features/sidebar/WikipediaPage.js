@@ -21,12 +21,10 @@ function Thumbnail({ page }) {
     ) : null;
 }
 
-const WikipediaPage = React.memo(({ page }) => {
+const WikipediaPage = ({ page }) => {
   const dispatch = useDispatch();
   const link = useWikipediaPageLink(page);
-  
-  
-  
+
   const {
     pageid
   } = page;
@@ -57,6 +55,6 @@ const WikipediaPage = React.memo(({ page }) => {
       </div>
     </article>
   );
-});
+};
 
-export default WikipediaPage;
+export default React.memo(WikipediaPage);
