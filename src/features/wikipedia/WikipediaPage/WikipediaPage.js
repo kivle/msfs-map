@@ -1,12 +1,12 @@
 import React, { useCallback } from 'react';
 import { BiTrash } from 'react-icons/bi';
-import { useWikipediaPageLink } from '../../wikipedia/hooks';
+import { useWikipediaPageLink } from '../hooks';
 import parse from 'html-react-parser';
 import styles from './WikipediaPage.module.css';
 import { MdRecordVoiceOver } from 'react-icons/md';
 import { useDispatch } from 'react-redux';
-import { addToPlayQueue, markAsRead } from '../../wikipedia/wikipediaSlice';
-import DistanceVisualizer from '../DistanceVisualizer';
+import { addToPlayQueue, markAsRead } from '../wikipediaSlice';
+import DistanceVisualizer from '../../sidebar/DistanceVisualizer';
 
 function Extract({ page }) {
   return page.extract ? parse(page.extract) : null;
