@@ -1,6 +1,6 @@
 import React from 'react';
 import { ImArrowUp } from 'react-icons/im';
-import { formatDistance } from '../../utils/geo';
+import { formatDistance } from '../../../utils/geo';
 import styles from './DistanceVisualizer.module.css';
 
 export default function DistanceVisualizer({

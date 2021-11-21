@@ -6,7 +6,7 @@ import styles from './WikipediaPage.module.css';
 import { MdRecordVoiceOver } from 'react-icons/md';
 import { useDispatch } from 'react-redux';
 import { addToPlayQueue, markAsRead } from '../wikipediaSlice';
-import DistanceVisualizer from '../../sidebar/DistanceVisualizer';
+import DistanceVisualizer from './DistanceVisualizer';
 
 function Extract({ page }) {
   return page.extract ? parse(page.extract) : null;
