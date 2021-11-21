@@ -90,7 +90,7 @@ export const wikipediaSlice = createSlice({
     setSearchRadius: (state, action) => {
       state.searchRadius = parseInt(action.payload, 10);
     },
-    setAutoPlay(state, { payload }) {
+    setAutoPlay: (state, { payload }) => {
       const { enabled, distance } = payload;
       state.autoPlay = enabled;
       state.autoPlayDistance = distance;
@@ -204,10 +204,15 @@ export const selectPagesWithDistances = createSelector(
   }
 );
 
-export const selectPlayQueue = (state) =>  {
-  const pages = selectPagesWithDistances(state);
-  return state.wikipedia.playQueue.map(pageid => pages.find(p => p.pageid === pageid));
-}
+export const selectPlayQueue = createSelector(
+  (state) =>  ({
+    pages: selectPagesWithDistances(state),
+    playQueue: state.wikipedia?.playQueue
+  }),
+  ({ pages, playQueue }) => {
+    return playQueue.map(pageid => pages.find(p => p.pageid === pageid));
+  }
+);
 
 export const selectSearchCenterPoint = createSelector(
   (state) => ({
