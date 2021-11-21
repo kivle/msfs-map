@@ -222,12 +222,14 @@ export const selectSearchCenterPoint = createSelector(
     searchRadius: state.wikipedia?.searchRadius
   }),
   ({ position, heading, searchRadius, speed }) =>
-    speed > 50 ?
-    computeDestinationPoint(
-      { latitude: position?.[0] ?? 0, longitude: position?.[1] ?? 0 }, 
-      searchRadius, 
-      heading
-    ) : { latitude: position?.[0] ?? 0, longitude: position?.[1] ?? 0 }
+    position ? (
+      speed > 50 ?
+      computeDestinationPoint(
+        { latitude: position[0], longitude: position[1] }, 
+        searchRadius, 
+        heading
+      ) : { latitude: position[0], longitude: position[1] }
+    ) : undefined
 );
 
 export default wikipediaSlice.reducer;
