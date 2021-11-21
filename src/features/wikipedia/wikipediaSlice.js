@@ -62,8 +62,13 @@ export const wikipediaSlice = createSlice({
       const { pageid } = action.payload;
       state.playQueue.push(pageid);
     },
-    advancePlayQueue: (state) => {
+    advancePlayQueue: (state, action) => {
+      const { nextPageId } = action.payload;
       const pageid = state.playQueue.shift();
+      state.playQueue = [
+        ...(nextPageId ? [nextPageId] : []),
+        ...state.playQueue.filter(p => p !== nextPageId)
+      ];
       state.pages = state.pages.filter(p => p.pageid !== pageid);
       state.pagesViewed.push(pageid);
     },
@@ -99,7 +104,6 @@ export const {
   receivePages,
   removePages,
   addToPlayQueue,
-  advancePlayQueue,
   markAsRead,
   setSearchRadius,
   updatePageRatings
@@ -129,6 +133,15 @@ export const clearPagesOutOfRange = () => (dispatch, getState) => {
          !playQueue?.includes(p.pageid)
   );
   dispatch(removePages({ pageids: pagesToRemove.map(p => p.pageid) }));
+};
+
+export const advancePlayQueue = () => (dispatch, getState) => {
+  const state = getState();
+  const [, ...remaining] = selectPlayQueue(state);
+  const orderedByDistance = remaining.sort(
+    (a, b) => a.closestPoint.distance - b.closestPoint.distance || a.title.compareTo(b.title)
+  );
+  dispatch(wikipediaSlice.actions.advancePlayQueue({ nextPageId: orderedByDistance[0]?.pageid }));
 };
 
 export const selectIsEnabled = (state) => state.wikipedia.isEnabled;
