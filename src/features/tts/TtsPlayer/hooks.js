@@ -2,7 +2,7 @@ import { useCallback, useEffect } from "react";
 import striptags from 'striptags';
 import { decode } from 'entities';
 import { useDispatch, useSelector } from "react-redux";
-import { selectIsPlaying, selectVoice, setIsPlaying } from "../../tts/ttsSlice";
+import { selectIsPlaying, selectVoice, setIsPlaying } from "../ttsSlice";
 import { advancePlayQueue, selectPlayQueue } from "../../wikipedia/wikipediaSlice";
 
 export function useKeyboardEffect(next, togglePlaybackState) {
