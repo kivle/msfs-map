@@ -92,8 +92,10 @@ export const wikipediaSlice = createSlice({
     },
     setAutoPlay: (state, { payload }) => {
       const { enabled, distance } = payload;
-      state.autoPlay = enabled;
-      state.autoPlayDistance = distance;
+      if (enabled !== undefined)
+        state.autoPlay = enabled;
+      if (distance !== undefined)
+        state.autoPlayDistance = distance;
     }
   }
 });
@@ -106,7 +108,8 @@ export const {
   addToPlayQueue,
   markAsRead,
   setSearchRadius,
-  updatePageRatings
+  updatePageRatings,
+  setAutoPlay
 } = wikipediaSlice.actions;
 
 function pageSort(a, b) {

@@ -1,29 +1,14 @@
 import * as React from 'react';
-import { useCallback, useEffect, useState } from 'react';
 import ISO6391 from 'iso-639-1';
-import { batch, useDispatch, useSelector } from 'react-redux';
-import { 
-  selectAvailableEditions, 
-  selectEdition, 
-  setEdition, 
-  selectSearchRadius,
-  setSearchRadius,
-  setEnabled
-} from '../../wikipedia/wikipediaSlice';
-import {
-  setVoice, 
-  setAvailableVoices, 
-  selectVoice, 
-  selectAvailableVoices
-} from '../../tts/ttsSlice';
 import styles from './Preferences.module.css';
-import { selectAvailableMaps, selectCurrentMap, setCurrentMap } from '../mapSlice';
 import { FaCog, FaCaretRight } from 'react-icons/fa';
+import { useAvailableVoicesEffect, useExpandedState, useLoadPreferencesEffect, usePreferenceCallbacks, usePreferenceState } from './hooks';
 
 const PreferencesPanel = React.memo(({
   expanded, toggleExpanded, changeMap, currentMap, availableMaps,
   changeEdition, edition, availableEditions, changeSearchRadius,
-  searchRadius, changeVoice, voice, availableVoices
+  searchRadius, changeVoice, voice, availableVoices, autoPlay, autoPlayDistance,
+  changeAutoPlay
 }) =>
   <div className={styles.main}>
   <button 
@@ -64,67 +49,51 @@ const PreferencesPanel = React.memo(({
         {availableVoices.map(v => <option key={v} value={v}>{v}</option>)}
       </select>
     </div>
+    <div className={styles.preference}>
+      <label htmlFor="autoPlay">Enable automatically reading articles</label>
+      <input id="autoPlay" type="checkbox" checked={autoPlay} onChange={(e) => changeAutoPlay(e.target.checked)} />
+    </div>
+    {autoPlay && <div className={styles.preference}>
+      <label htmlFor="autoPlayDistance">Read articles when they are in front and within distance</label>
+      <select id="autoPlayDistance" onChange={(e) => changeAutoPlay(undefined, parseInt(e.target.value, 10))} value={autoPlayDistance}>
+        {[100, 500, 1000, 2000, 5000, 10000, 20000].map(r =>
+          <option key={r} value={r}>{`${r} m`}</option>
+        )}
+      </select>
+    </div>}
   </>}
   </div>
 );
 
 export default function Preferences() {
-  const dispatch = useDispatch();
-  const [expanded, setExpanded] = useState(false);
   
-  const edition = useSelector(selectEdition);
-  const availableEditions = useSelector(selectAvailableEditions);
-  const voice = useSelector(selectVoice);
-  const availableVoices = useSelector(selectAvailableVoices);
-  const currentMap = useSelector(selectCurrentMap);
-  const availableMaps = useSelector(selectAvailableMaps);
-  const searchRadius = useSelector(selectSearchRadius);
+  const {
+    edition,
+    availableEditions,
+    voice,
+    availableVoices,
+    currentMap,
+    availableMaps,
+    searchRadius,
+    autoPlay,
+    autoPlayDistance
+  } = usePreferenceState();
 
-  useEffect(() => {
-    // Load preferences on startup
-    batch(() => {
-      if (localStorage['wikipedia-enabled']) dispatch(setEnabled(JSON.parse(localStorage['wikipedia-enabled'])));
-      if (localStorage['wikipedia-edition']) dispatch(setEdition(localStorage['wikipedia-edition']));
-      if (localStorage['voice']) dispatch(setVoice(localStorage['voice']));
-      if (localStorage['currentMap']) dispatch(setCurrentMap(localStorage['currentMap']));
-      if (localStorage['searchRadius']) dispatch(setSearchRadius(localStorage['searchRadius']));
-    });
-  }, [dispatch]);
+  useLoadPreferencesEffect();
+  useAvailableVoicesEffect();
 
-  const changeEdition = useCallback((e) => {
-    localStorage['wikipedia-edition'] = e.target.value;
-    dispatch(setEdition(e.target.value));
-  }, [dispatch]);
+  const {
+    changeEdition,
+    changeVoice,
+    changeMap,
+    changeSearchRadius,
+    changeAutoPlay
+  } = usePreferenceCallbacks();
 
-  const changeVoice = useCallback((e) => {
-    localStorage['voice'] = e.target.value;
-    dispatch(setVoice(e.target.value));
-  }, [dispatch]);
-
-  const changeMap = useCallback((e) => {
-    localStorage['currentMap'] = e.target.value;
-    dispatch(setCurrentMap(e.target.value));
-  }, [dispatch]);
-
-  const changeSearchRadius = useCallback((e) => {
-    localStorage['searchRadius'] = e.target.value;
-    dispatch(setSearchRadius(e.target.value));
-  }, [dispatch]);
-
-  const toggleExpanded = useCallback((e) => {
-    setExpanded(!expanded);
-  }, [expanded]);
-
-  useEffect(() => {
-    const voicesChanged = () => {
-      const newVoices = window.speechSynthesis.getVoices();
-      dispatch(setAvailableVoices(newVoices.map(v => v.name)));
-    };
-    voicesChanged();
-    window.speechSynthesis.addEventListener('voiceschanged', voicesChanged);
-    
-    return () => window.speechSynthesis.removeEventListener('voiceschanged', voicesChanged);
-  }, [dispatch]);
+  const {
+    toggleExpanded,
+    expanded
+  } = useExpandedState();
 
   return <PreferencesPanel
     expanded={expanded}
@@ -140,5 +109,8 @@ export default function Preferences() {
     changeVoice={changeVoice}
     voice={voice}
     availableVoices={availableVoices}
+    autoPlay={autoPlay}
+    autoPlayDistance={autoPlayDistance}
+    changeAutoPlay={changeAutoPlay}
   />;
 };

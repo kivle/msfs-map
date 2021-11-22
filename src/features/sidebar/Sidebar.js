@@ -15,7 +15,7 @@ export default function Sidebar() {
         {!pagesNotInQueue?.length && 
           <div className={styles.status}>No pages found. Results will show up here as you fly around the world.</div>
         }
-        {pagesNotInQueue?.length &&
+        {!!pagesNotInQueue?.length &&
           <div className={styles.status}>{pagesNotInQueue?.length} pages found.</div>
         }
         {pagesToShow?.map((page) => 
