@@ -37,6 +37,10 @@ export default function MapContent() {
     }
   }, [map, isFollowing, position]);
 
+  useEffect(() => {
+    map.invalidateSize();
+  }, [map, isWikipediaEnabled]);
+
   const plane = <div className={styles.plane} style={{transform: `rotate(${heading - 90}deg)`}}>
     <FaPlane size={32} stroke="white" strokeWidth="40" fill="#44F" />
   </div>;
