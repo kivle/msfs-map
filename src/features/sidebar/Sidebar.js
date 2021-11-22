@@ -13,7 +13,10 @@ export default function Sidebar() {
     <div className={styles.sidebar}>
       <div>
         {!pagesNotInQueue?.length && 
-          <div>No pages found. Results will show up here as you fly around the world.</div>
+          <div className={styles.status}>No pages found. Results will show up here as you fly around the world.</div>
+        }
+        {pagesNotInQueue?.length &&
+          <div className={styles.status}>{pagesNotInQueue?.length} pages found.</div>
         }
         {pagesToShow?.map((page) => 
           <div key={page.pageid} className={styles.pageContainer}>

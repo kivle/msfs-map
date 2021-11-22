@@ -8,6 +8,10 @@
   scrollbar-width: thin;
 }
 
+.status {
+  margin-bottom: 10px;
+}
+
 .pageContainer {
   margin-bottom: 10px;
 }
