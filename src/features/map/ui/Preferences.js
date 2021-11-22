@@ -8,7 +8,7 @@ const PreferencesPanel = React.memo(({
   expanded, toggleExpanded, changeMap, currentMap, availableMaps,
   changeEdition, edition, availableEditions, changeSearchRadius,
   searchRadius, changeVoice, voice, availableVoices, autoPlay, autoPlayDistance,
-  changeAutoPlay
+  changeAutoPlay, visualizeSearchRadius, changeVisualizeSearchRadius
 }) =>
   <div className={styles.main}>
   <button 
@@ -44,6 +44,10 @@ const PreferencesPanel = React.memo(({
       </select>
     </div>
     <div className={styles.preference}>
+      <label htmlFor="visualizeSearchRadius">Visualize search radius on map</label>
+      <input id="visualizeSearchRadius" type="checkbox" checked={visualizeSearchRadius} onChange={(e) => changeVisualizeSearchRadius(e.target.checked)} />
+    </div>
+    <div className={styles.preference}>
       <label htmlFor="voice">Voice</label>
       <select id="voice" onChange={changeVoice} value={voice}>
         {availableVoices.map(v => <option key={v} value={v}>{v}</option>)}
@@ -76,7 +80,8 @@ export default function Preferences() {
     availableMaps,
     searchRadius,
     autoPlay,
-    autoPlayDistance
+    autoPlayDistance,
+    visualizeSearchRadius
   } = usePreferenceState();
 
   useLoadPreferencesEffect();
@@ -87,7 +92,8 @@ export default function Preferences() {
     changeVoice,
     changeMap,
     changeSearchRadius,
-    changeAutoPlay
+    changeAutoPlay,
+    changeVisualizeSearchRadius
   } = usePreferenceCallbacks();
 
   const {
@@ -112,5 +118,7 @@ export default function Preferences() {
     autoPlay={autoPlay}
     autoPlayDistance={autoPlayDistance}
     changeAutoPlay={changeAutoPlay}
+    visualizeSearchRadius={visualizeSearchRadius}
+    changeVisualizeSearchRadius={changeVisualizeSearchRadius}
   />;
 };

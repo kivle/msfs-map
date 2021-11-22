@@ -6,7 +6,7 @@ import Marker from 'react-leaflet-enhanced-marker';
 import { FaPlane } from 'react-icons/fa';
 import Wikipedia from "./layers/Wikipedia";
 
-import { selectCurrentMap, selectIsFollowing } from "./mapSlice";
+import { selectCurrentMap, selectIsFollowing, selectVisualizeSearchRadius } from "./mapSlice";
 import { selectIsEnabled, selectSearchCenterPoint, selectSearchRadius } from '../wikipedia/wikipediaSlice';
 
 import styles from './MapContent.module.css';
@@ -29,6 +29,7 @@ export default function MapContent() {
   ] : undefined;
   const isFollowing = useSelector(selectIsFollowing);
   const isWikipediaEnabled = useSelector(selectIsEnabled);
+  const visualizeSearchRadius = useSelector(selectVisualizeSearchRadius);
 
   useEffect(() => {
     if (isFollowing && position) {
@@ -43,9 +44,15 @@ export default function MapContent() {
   return (
     <>
       <MainLayer currentMap={currentMap} />
-      {isWikipediaEnabled && <Wikipedia />}
-      {position && isWikipediaEnabled && <Circle center={searchCenterPointArray} radius={searchRadius} color="blue" fill={false} />}
-      {position && <Marker position={position} icon={plane} />}
+      {isWikipediaEnabled && 
+        <Wikipedia />
+      }
+      {position && isWikipediaEnabled && visualizeSearchRadius && 
+        <Circle center={searchCenterPointArray} radius={searchRadius} color="blue" fill={false} />
+      }
+      {position && 
+        <Marker position={position} icon={plane} />
+      }
     </>
   );
 }

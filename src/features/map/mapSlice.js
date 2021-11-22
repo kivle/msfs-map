@@ -6,7 +6,8 @@ export const mapSlice = createSlice({
   initialState: {
     isFollowing: true,
     currentMap: 'OpenStreetMap',
-    availableMaps: servers
+    availableMaps: servers,
+    visualizeSearchRadius: true
   },
   reducers: {
     setCurrentMap: (state, action) => {
@@ -14,6 +15,9 @@ export const mapSlice = createSlice({
     },
     setIsFollowing: (state, action) => {
       state.isFollowing = action.payload;
+    },
+    setVisualizeSearchRadius: (state, action) => {
+      state.visualizeSearchRadius = action.payload;
     }
   },
 });
@@ -21,7 +25,8 @@ export const mapSlice = createSlice({
 export const {
   updateMsfs,
   setCurrentMap,
-  setIsFollowing
+  setIsFollowing,
+  setVisualizeSearchRadius
 } = mapSlice.actions;
 
 export const selectCurrentMap = state => state.map.availableMaps.find(m => m.name === state.map.currentMap);
@@ -29,5 +34,7 @@ export const selectCurrentMap = state => state.map.availableMaps.find(m => m.nam
 export const selectAvailableMaps = state => state.map.availableMaps;
 
 export const selectIsFollowing = state => state.map.isFollowing;
+
+export const selectVisualizeSearchRadius = state => state.map.visualizeSearchRadius;
 
 export default mapSlice.reducer;

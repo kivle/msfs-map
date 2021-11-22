@@ -6,7 +6,7 @@ import {
   selectEdition, selectSearchRadius, setAutoPlay, setEdition, 
   setEnabled, setSearchRadius 
 } from "../../wikipedia/wikipediaSlice";
-import { selectAvailableMaps, selectCurrentMap, setCurrentMap } from "../mapSlice";
+import { selectAvailableMaps, selectCurrentMap, selectVisualizeSearchRadius, setCurrentMap, setVisualizeSearchRadius } from "../mapSlice";
 
 export function useLoadPreferencesEffect() {
   const dispatch = useDispatch();
@@ -28,6 +28,8 @@ export function useLoadPreferencesEffect() {
         dispatch(setAutoPlay({ enabled: JSON.parse(localStorage['autoPlay']) }));
       if (localStorage['autoPlayDistance']) 
         dispatch(setAutoPlay({ distance: JSON.parse(localStorage['autoPlayDistance']) }));
+      if (localStorage['visualizeSearchRadius'])
+        dispatch(setVisualizeSearchRadius(JSON.parse(localStorage['visualizeSearchRadius'])));
     });
   }, [dispatch]);
 }
@@ -78,12 +80,18 @@ export function usePreferenceCallbacks() {
     dispatch(setAutoPlay({ enabled, distance }));
   }, [dispatch]);
 
+  const changeVisualizeSearchRadius = useCallback((enabled) => {
+    localStorage['visualizeSearchRadius'] = JSON.stringify(enabled);
+    dispatch(setVisualizeSearchRadius(enabled));
+  }, [dispatch]);
+
   return {
     changeEdition,
     changeVoice,
     changeMap,
     changeSearchRadius,
-    changeAutoPlay
+    changeAutoPlay,
+    changeVisualizeSearchRadius
   };
 }
 
@@ -110,6 +118,7 @@ export function usePreferenceState() {
   const searchRadius = useSelector(selectSearchRadius);
   const autoPlay = useSelector(selectAutoPlay);
   const autoPlayDistance = useSelector(selectAutoPlayDistance);
+  const visualizeSearchRadius = useSelector(selectVisualizeSearchRadius);
 
   return {
     edition,
@@ -120,6 +129,7 @@ export function usePreferenceState() {
     availableMaps,
     searchRadius,
     autoPlay,
-    autoPlayDistance
+    autoPlayDistance,
+    visualizeSearchRadius
   };
 }
