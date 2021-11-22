@@ -109,6 +109,17 @@ export const {
   updatePageRatings
 } = wikipediaSlice.actions;
 
+function pageSort(a, b) {
+  let res = a.closestPoint.distance - b.closestPoint.distance;
+  if (res === 0) {
+    res = a.title.localeCompare(b.title);
+  }
+  if (res === 0) {
+    res = a.pageid - b.pageid;
+  }
+  return res;
+}
+
 export const getPages = (lat, lng, radius) => async (dispatch, getState) => {
   const state = getState();
   const edition = selectEdition(state);
@@ -124,23 +135,26 @@ export const getPages = (lat, lng, radius) => async (dispatch, getState) => {
 };
 
 export const clearPagesOutOfRange = () => (dispatch, getState) => {
+  const maxPagesInState = 80;
   const state = getState();
   const pages = selectPagesWithDistances(state);
   const playQueue = selectPlayQueue(state)?.map(pq => pq.pageid);
-  const pagesToRemove = pages.filter(
-    p => !p.closestPoint.isInFront && 
-          p.closestPoint.distance > 40000 &&
-         !playQueue?.includes(p.pageid)
-  );
+  const pagesToRemove = pages.length > 80
+    ? pages.filter(
+        (p, i) => i >= maxPagesInState && !playQueue?.includes(p.pageid)
+    )
+    : pages.filter(
+        p => !p.closestPoint.isInFront && 
+              p.closestPoint.distance > 40000 &&
+             !playQueue?.includes(p.pageid)
+    );
   dispatch(removePages({ pageids: pagesToRemove.map(p => p.pageid) }));
 };
 
 export const advancePlayQueue = () => (dispatch, getState) => {
   const state = getState();
   const [, ...remaining] = selectPlayQueue(state);
-  const orderedByDistance = remaining.sort(
-    (a, b) => a.closestPoint.distance - b.closestPoint.distance || a.title.compareTo(b.title)
-  );
+  const orderedByDistance = remaining.sort(pageSort);
   dispatch(wikipediaSlice.actions.advancePlayQueue({ nextPageId: orderedByDistance[0]?.pageid }));
 };
 
@@ -195,7 +209,7 @@ export const selectPagesWithDistances = createSelector(
         isInPlayQueue: playQueue.includes(p.pageid),
         isReading: playQueue[0] === p.pageid
       };
-    }).sort((a, b) => a.closestPoint?.distance - b.closestPoint?.distance);
+    }).sort(pageSort);
     
     return [
       ...pagesWithClosestPoints.filter(p => p.closestPoint?.isInFront),

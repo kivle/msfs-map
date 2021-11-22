@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './View.module.css';
 import ButtonBar from './ButtonBar';
-import WikipediaPage from '../../wikipedia/WikipediaPage/WikipediaPage';
 
 const View = ({
   currentPage, togglePlaybackState, isPlaying, next, playQueue
@@ -20,7 +19,6 @@ const View = ({
           next={next}
         />
       </div>
-      {currentPage && <WikipediaPage page={currentPage} />}
     </>
   );
 }

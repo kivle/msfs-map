@@ -23,7 +23,10 @@ export default function MapContent() {
   const currentMap = useSelector(selectCurrentMap);
   const searchRadius = useSelector(selectSearchRadius);
   const searchCenterPoint = useSelector(selectSearchCenterPoint);
-  const searchCenterPointArray = [searchCenterPoint.latitude ?? 0, searchCenterPoint.longitude ?? 0];
+  const searchCenterPointArray = searchCenterPoint ? [
+    searchCenterPoint.latitude ?? 0, 
+    searchCenterPoint.longitude ?? 0
+  ] : undefined;
   const isFollowing = useSelector(selectIsFollowing);
   const isWikipediaEnabled = useSelector(selectIsEnabled);
 

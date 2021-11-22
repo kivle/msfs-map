@@ -1,3 +1,4 @@
+import { getDistance } from "geolib";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { 
@@ -29,7 +30,9 @@ export function usePeriodicWikipediaFetching(minimumInterval = 20000) {
     if (!searchCenterPoint || !isEnabled) return;
 
     const searchCenterPointArray = [searchCenterPoint.latitude ?? 0, searchCenterPoint.longitude ?? 0];
-    const positionChanged = searchCenterPointArray?.[0] !== lastSearchPosition?.[0] || searchCenterPointArray?.[1] !== lastSearchPosition?.[1];
+    const positionChanged = 
+      !lastSearchPosition || 
+      getDistance(searchCenterPoint, { latitude: lastSearchPosition[0], longitude: lastSearchPosition[1] }) > 100;
     const searchRadiusChanged = searchRadius !== lastSearchRadius;
     const timeSinceLastSearch = new Date().getTime() - lastSearchTime;
 
