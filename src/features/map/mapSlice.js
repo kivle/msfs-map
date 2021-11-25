@@ -11,7 +11,7 @@ export const mapSlice = createSlice({
     currentMap: 'OpenStreetMap',
     availableMaps: servers,
     visualizeSearchRadius: true,
-    courseLine: true
+    courseLine: false
   },
   reducers: {
     setCurrentMap: (state, action) => {
