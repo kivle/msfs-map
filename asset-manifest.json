@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/msfs-map/static/css/main.0fffb780.chunk.css",
-    "main.js": "/msfs-map/static/js/main.470c68cd.chunk.js",
-    "main.js.map": "/msfs-map/static/js/main.470c68cd.chunk.js.map",
+    "main.js": "/msfs-map/static/js/main.a1aa89c1.chunk.js",
+    "main.js.map": "/msfs-map/static/js/main.a1aa89c1.chunk.js.map",
     "runtime-main.js": "/msfs-map/static/js/runtime-main.e21ef5c4.js",
     "runtime-main.js.map": "/msfs-map/static/js/runtime-main.e21ef5c4.js.map",
     "static/css/2.68ba508b.chunk.css": "/msfs-map/static/css/2.68ba508b.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.68ba508b.chunk.css",
     "static/js/2.e50b4e88.chunk.js",
     "static/css/main.0fffb780.chunk.css",
-    "static/js/main.470c68cd.chunk.js"
+    "static/js/main.a1aa89c1.chunk.js"
   ]
 }
