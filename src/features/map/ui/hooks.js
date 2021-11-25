@@ -3,8 +3,7 @@ import { batch, useDispatch, useSelector } from "react-redux";
 import { selectAvailableVoices, selectVoice, setAvailableVoices, setVoice } from "../../tts/ttsSlice";
 import { 
   selectAutoPlay, selectAutoPlayDistance, selectAvailableEditions, 
-  selectEdition, selectSearchRadius, setAutoPlay, setEdition, 
-  setEnabled, setSearchRadius 
+  selectEdition, setAutoPlay, setEdition, setEnabled
 } from "../../wikipedia/wikipediaSlice";
 import { selectAvailableMaps, selectCurrentMap, selectVisualizeSearchRadius, setCurrentMap, setVisualizeSearchRadius } from "../mapSlice";
 
@@ -22,8 +21,6 @@ export function useLoadPreferencesEffect() {
         dispatch(setVoice(localStorage['voice']));
       if (localStorage['currentMap']) 
         dispatch(setCurrentMap(localStorage['currentMap']));
-      if (localStorage['searchRadius']) 
-        dispatch(setSearchRadius(localStorage['searchRadius']));
       if (localStorage['autoPlay']) 
         dispatch(setAutoPlay({ enabled: JSON.parse(localStorage['autoPlay']) }));
       if (localStorage['autoPlayDistance']) 
@@ -67,11 +64,6 @@ export function usePreferenceCallbacks() {
     dispatch(setCurrentMap(e.target.value));
   }, [dispatch]);
 
-  const changeSearchRadius = useCallback((e) => {
-    localStorage['searchRadius'] = e.target.value;
-    dispatch(setSearchRadius(e.target.value));
-  }, [dispatch]);
-
   const changeAutoPlay = useCallback((enabled, distance) => {
     if (enabled !== undefined)
       localStorage['autoPlay'] = JSON.stringify(enabled);
@@ -89,7 +81,6 @@ export function usePreferenceCallbacks() {
     changeEdition,
     changeVoice,
     changeMap,
-    changeSearchRadius,
     changeAutoPlay,
     changeVisualizeSearchRadius
   };
@@ -115,7 +106,6 @@ export function usePreferenceState() {
   const availableVoices = useSelector(selectAvailableVoices);
   const currentMap = useSelector(selectCurrentMap);
   const availableMaps = useSelector(selectAvailableMaps);
-  const searchRadius = useSelector(selectSearchRadius);
   const autoPlay = useSelector(selectAutoPlay);
   const autoPlayDistance = useSelector(selectAutoPlayDistance);
   const visualizeSearchRadius = useSelector(selectVisualizeSearchRadius);
@@ -127,7 +117,6 @@ export function usePreferenceState() {
     availableVoices,
     currentMap,
     availableMaps,
-    searchRadius,
     autoPlay,
     autoPlayDistance,
     visualizeSearchRadius

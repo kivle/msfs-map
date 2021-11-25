@@ -6,9 +6,9 @@ import { useAvailableVoicesEffect, useExpandedState, useLoadPreferencesEffect, u
 
 const PreferencesPanel = React.memo(({
   expanded, toggleExpanded, changeMap, currentMap, availableMaps,
-  changeEdition, edition, availableEditions, changeSearchRadius,
-  searchRadius, changeVoice, voice, availableVoices, autoPlay, autoPlayDistance,
-  changeAutoPlay, visualizeSearchRadius, changeVisualizeSearchRadius
+  changeEdition, edition, availableEditions, changeVoice, voice, 
+  availableVoices, autoPlay, autoPlayDistance, changeAutoPlay, 
+  visualizeSearchRadius, changeVisualizeSearchRadius
 }) =>
   <div className={styles.main}>
   <button 
@@ -32,14 +32,6 @@ const PreferencesPanel = React.memo(({
             <option key={e} value={e}>
               {ISO6391.getName(e) ? `${ISO6391.getName(e)} (${e})` : e}
             </option>
-        )}
-      </select>
-    </div>
-    <div className={styles.preference}>
-      <label htmlFor="searchRadius">Wikipedia search radius</label>
-      <select id="searchRadius" onChange={changeSearchRadius} value={searchRadius}>
-        {[5000, 10000, 20000, 50000, 100000].map(r =>
-          <option key={r} value={r}>{`${r / 1000} km`}</option>
         )}
       </select>
     </div>
@@ -78,7 +70,6 @@ export default function Preferences() {
     availableVoices,
     currentMap,
     availableMaps,
-    searchRadius,
     autoPlay,
     autoPlayDistance,
     visualizeSearchRadius
@@ -91,7 +82,6 @@ export default function Preferences() {
     changeEdition,
     changeVoice,
     changeMap,
-    changeSearchRadius,
     changeAutoPlay,
     changeVisualizeSearchRadius
   } = usePreferenceCallbacks();
@@ -110,8 +100,6 @@ export default function Preferences() {
     changeEdition={changeEdition}
     edition={edition}
     availableEditions={availableEditions}
-    changeSearchRadius={changeSearchRadius}
-    searchRadius={searchRadius}
     changeVoice={changeVoice}
     voice={voice}
     availableVoices={availableVoices}
