@@ -47,6 +47,12 @@ export const selectVisualizeSearchRadius = state => state.map.visualizeSearchRad
 
 export const selectCourseLine = state => state.map.courseLine;
 
+function calculatePoints(position, heading) {
+  return [100, 200, 300, 400, 500]
+          .map(d => computeDestinationPoint(position, d * 1000, heading))
+          .map(p => [p.latitude, p.longitude]);
+}
+
 export const selectCourseLinePoint = createSelector(
   state => ({
     position: selectSimdata(state)?.position,
@@ -54,7 +60,7 @@ export const selectCourseLinePoint = createSelector(
   }),
   ({ position, heading }) => {
     const pos = position ? { latitude: position[0], longitude: position[1] } : undefined;
-    return pos && heading ? computeDestinationPoint(pos, 500000, heading) : undefined;
+    return pos && heading ? calculatePoints(pos, heading) : undefined;
   }
 );
 

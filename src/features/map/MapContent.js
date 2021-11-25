@@ -31,7 +31,7 @@ export default function MapContent() {
   const isWikipediaEnabled = useSelector(selectIsEnabled);
   const visualizeSearchRadius = useSelector(selectVisualizeSearchRadius);
   const courseLineEnabled = useSelector(selectCourseLine);
-  const destinationPoint = useSelector(selectCourseLinePoint);
+  const destinationPoints = useSelector(selectCourseLinePoint);
 
   useEffect(() => {
     if (isFollowing && position) {
@@ -56,9 +56,9 @@ export default function MapContent() {
       {position && isWikipediaEnabled && visualizeSearchRadius && 
         <Circle center={searchCenterPointArray} radius={searchRadius} color="blue" fill={false} />
       }
-      {!!position && !!courseLineEnabled && !!destinationPoint &&
+      {!!position && !!courseLineEnabled && !!destinationPoints &&
         <Polyline 
-          positions={[position, [destinationPoint.latitude, destinationPoint.longitude]]} 
+          positions={[position, ...destinationPoints]}
           pathOptions={{strokeWidth: 1, color: 'gray', opacity: 0.5, }} />
       }
       {position && 
