@@ -5,7 +5,7 @@ import {
   selectAutoPlay, selectAutoPlayDistance, selectAvailableEditions, 
   selectEdition, setAutoPlay, setEdition, setEnabled
 } from "../../wikipedia/wikipediaSlice";
-import { selectAvailableMaps, selectCurrentMap, selectVisualizeSearchRadius, setCurrentMap, setVisualizeSearchRadius } from "../mapSlice";
+import { selectAvailableMaps, selectCourseLine, selectCurrentMap, selectVisualizeSearchRadius, setCurrentMap, setShowCourseLine, setVisualizeSearchRadius } from "../mapSlice";
 
 export function useLoadPreferencesEffect() {
   const dispatch = useDispatch();
@@ -27,6 +27,8 @@ export function useLoadPreferencesEffect() {
         dispatch(setAutoPlay({ distance: JSON.parse(localStorage['autoPlayDistance']) }));
       if (localStorage['visualizeSearchRadius'])
         dispatch(setVisualizeSearchRadius(JSON.parse(localStorage['visualizeSearchRadius'])));
+      if (localStorage['courseLine'])
+        dispatch(setShowCourseLine(JSON.parse(localStorage['courseLine'])));
     });
   }, [dispatch]);
 }
@@ -77,12 +79,18 @@ export function usePreferenceCallbacks() {
     dispatch(setVisualizeSearchRadius(enabled));
   }, [dispatch]);
 
+  const changeShowCourseLine = useCallback((enabled) => {
+    localStorage['courseLine'] = JSON.stringify(enabled);
+    dispatch(setShowCourseLine(enabled));
+  }, [dispatch]);
+
   return {
     changeEdition,
     changeVoice,
     changeMap,
     changeAutoPlay,
-    changeVisualizeSearchRadius
+    changeVisualizeSearchRadius,
+    changeShowCourseLine
   };
 }
 
@@ -109,6 +117,7 @@ export function usePreferenceState() {
   const autoPlay = useSelector(selectAutoPlay);
   const autoPlayDistance = useSelector(selectAutoPlayDistance);
   const visualizeSearchRadius = useSelector(selectVisualizeSearchRadius);
+  const courseLine = useSelector(selectCourseLine);
 
   return {
     edition,
@@ -119,6 +128,7 @@ export function usePreferenceState() {
     availableMaps,
     autoPlay,
     autoPlayDistance,
-    visualizeSearchRadius
+    visualizeSearchRadius,
+    courseLine
   };
 }

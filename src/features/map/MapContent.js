@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
-import { Circle, useMap } from "react-leaflet";
+import { Circle, Polyline, useMap } from "react-leaflet";
 import { useSelector } from "react-redux";
 import Marker from 'react-leaflet-enhanced-marker';
 
 import { FaPlane } from 'react-icons/fa';
 import Wikipedia from "./layers/Wikipedia";
 
-import { selectCurrentMap, selectIsFollowing, selectVisualizeSearchRadius } from "./mapSlice";
+import { selectCourseLine, selectCourseLinePoint, selectCurrentMap, selectIsFollowing, selectVisualizeSearchRadius } from "./mapSlice";
 import { selectIsEnabled, selectSearchCenterPoint, selectSearchRadius } from '../wikipedia/wikipediaSlice';
 
 import styles from './MapContent.module.css';
@@ -30,6 +30,8 @@ export default function MapContent() {
   const isFollowing = useSelector(selectIsFollowing);
   const isWikipediaEnabled = useSelector(selectIsEnabled);
   const visualizeSearchRadius = useSelector(selectVisualizeSearchRadius);
+  const courseLineEnabled = useSelector(selectCourseLine);
+  const destinationPoint = useSelector(selectCourseLinePoint);
 
   useEffect(() => {
     if (isFollowing && position) {
@@ -53,6 +55,11 @@ export default function MapContent() {
       }
       {position && isWikipediaEnabled && visualizeSearchRadius && 
         <Circle center={searchCenterPointArray} radius={searchRadius} color="blue" fill={false} />
+      }
+      {!!position && !!courseLineEnabled && !!destinationPoint &&
+        <Polyline 
+          positions={[position, [destinationPoint.latitude, destinationPoint.longitude]]} 
+          pathOptions={{strokeWidth: 1, color: 'gray', opacity: 0.5, }} />
       }
       {position && 
         <Marker position={position} icon={plane} />

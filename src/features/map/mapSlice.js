@@ -1,5 +1,8 @@
+import { createSelector } from 'reselect';
 import { createSlice } from '@reduxjs/toolkit';
+import { computeDestinationPoint } from 'geolib';
 import servers from './mapServers';
+import { selectSimdata } from '../simdata/simdataSlice';
 
 export const mapSlice = createSlice({
   name: 'map',
@@ -7,7 +10,8 @@ export const mapSlice = createSlice({
     isFollowing: true,
     currentMap: 'OpenStreetMap',
     availableMaps: servers,
-    visualizeSearchRadius: true
+    visualizeSearchRadius: true,
+    courseLine: true
   },
   reducers: {
     setCurrentMap: (state, action) => {
@@ -18,6 +22,9 @@ export const mapSlice = createSlice({
     },
     setVisualizeSearchRadius: (state, action) => {
       state.visualizeSearchRadius = action.payload;
+    },
+    setShowCourseLine: (state, action) => {
+      state.courseLine = action.payload;
     }
   },
 });
@@ -26,7 +33,8 @@ export const {
   updateMsfs,
   setCurrentMap,
   setIsFollowing,
-  setVisualizeSearchRadius
+  setVisualizeSearchRadius,
+  setShowCourseLine
 } = mapSlice.actions;
 
 export const selectCurrentMap = state => state.map.availableMaps.find(m => m.name === state.map.currentMap);
@@ -36,5 +44,18 @@ export const selectAvailableMaps = state => state.map.availableMaps;
 export const selectIsFollowing = state => state.map.isFollowing;
 
 export const selectVisualizeSearchRadius = state => state.map.visualizeSearchRadius;
+
+export const selectCourseLine = state => state.map.courseLine;
+
+export const selectCourseLinePoint = createSelector(
+  state => ({
+    position: selectSimdata(state)?.position,
+    heading: selectSimdata(state)?.heading
+  }),
+  ({ position, heading }) => {
+    const pos = position ? { latitude: position[0], longitude: position[1] } : undefined;
+    return pos && heading ? computeDestinationPoint(pos, 500000, heading) : undefined;
+  }
+);
 
 export default mapSlice.reducer;
