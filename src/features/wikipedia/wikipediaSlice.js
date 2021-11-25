@@ -30,6 +30,11 @@ export const wikipediaSlice = createSlice({
       else {
         state.isEnabled = false;
         state.pages = [];
+        state.pagesViewed = [];
+        state.playQueue = [];
+        state.lastSearchPosition = undefined;
+        state.lastSearchRadius = undefined;
+        state.lastSearchTime = undefined;
       }
     },
     receivePages: (state, action) => {
