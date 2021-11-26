@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { computeDestinationPoint } from 'geolib';
 import servers from './mapServers';
 import { selectSimdata } from '../simdata/simdataSlice';
+import { arrayToGeolibPoint, geolibToArrayPoint } from '../../utils/geo';
 
 export const mapSlice = createSlice({
   name: 'map',
@@ -50,7 +51,7 @@ export const selectCourseLine = state => state.map.courseLine;
 function calculatePoints(position, heading) {
   return [100, 200, 300, 400, 500]
           .map(d => computeDestinationPoint(position, d * 1000, heading))
-          .map(p => [p.latitude, p.longitude]);
+          .map(geolibToArrayPoint);
 }
 
 export const selectCourseLinePoint = createSelector(
@@ -59,7 +60,7 @@ export const selectCourseLinePoint = createSelector(
     heading: selectSimdata(state)?.heading
   }),
   ({ position, heading }) => {
-    const pos = position ? { latitude: position[0], longitude: position[1] } : undefined;
+    const pos = arrayToGeolibPoint(position);
     return pos && heading ? calculatePoints(pos, heading) : undefined;
   }
 );

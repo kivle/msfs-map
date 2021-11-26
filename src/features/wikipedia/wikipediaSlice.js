@@ -4,7 +4,7 @@ import repository from './repository';
 import wikipediaEditions from './wikipediaEditions';
 import { createSelector } from 'reselect';
 import { computeDestinationPoint, getDistance, getRhumbLineBearing } from 'geolib';
-import { angleDiff } from '../../utils/geo';
+import { angleDiff, arrayToGeolibPoint, wikipediaPointToGeolibPoint } from '../../utils/geo';
 
 export const wikipediaSlice = createSlice({
   name: 'wikipedia',
@@ -194,12 +194,13 @@ export const selectPagesWithDistances = createSelector(
     playQueue: state.wikipedia?.playQueue
   }),
   ({ position, heading, pages, playQueue }) => {
-    const pos = position ? { latitude: position[0], longitude: position[1] } : undefined;
+    const pos = arrayToGeolibPoint(position);
 
     const pagesWithClosestPoints = pages?.map(p => {
       const closestPoint = p.coordinates?.map((coord) => {
-        const distance = pos && getDistance(pos, { latitude: coord?.lat, longitude: coord?.lon });
-        const bearing = pos && Math.round(getRhumbLineBearing(pos, { latitude: coord?.lat, longitude: coord?.lon }));
+        const coordGeolib = wikipediaPointToGeolibPoint(coord);
+        const distance = pos && getDistance(pos, coordGeolib);
+        const bearing = pos && Math.round(getRhumbLineBearing(pos, coordGeolib));
         const headingDifference = angleDiff(bearing ?? 0, heading ?? 0);
 
         return { 
@@ -247,10 +248,10 @@ export const selectSearchCenterPoint = createSelector(
     position ? (
       speed > 50 ?
       computeDestinationPoint(
-        { latitude: position[0], longitude: position[1] }, 
+        arrayToGeolibPoint(position),
         searchRadius, 
         heading
-      ) : { latitude: position[0], longitude: position[1] }
+      ) : arrayToGeolibPoint(position)
     ) : undefined
 );
 
