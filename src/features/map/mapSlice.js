@@ -61,7 +61,7 @@ export const selectCourseLinePoint = createSelector(
   }),
   ({ position, heading }) => {
     const pos = arrayToGeolibPoint(position);
-    return pos && heading ? calculatePoints(pos, heading) : undefined;
+    return pos && heading ? [position, ...calculatePoints(pos, heading)] : undefined;
   }
 );
 
