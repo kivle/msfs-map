@@ -35,16 +35,16 @@ export default function MapContent() {
   return (
     <>
       <MainLayer currentMap={currentMap} />
-      {isWikipediaEnabled && 
+      {!!isWikipediaEnabled && 
         <Wikipedia />
       }
-      {position && isWikipediaEnabled && visualizeSearchRadius && 
+      {!!position && !!isWikipediaEnabled && !!visualizeSearchRadius && 
         <SearchRadiusCircle />
       }
       {!!position && !!courseLineEnabled && 
         <CourseLine />
       }
-      {position && 
+      {!!position && 
         <Plane />
       }
     </>
