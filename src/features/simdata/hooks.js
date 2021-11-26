@@ -1,8 +1,9 @@
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { updateData } from "./simdataSlice";
+import { useDispatch, useStore } from "react-redux";
+import { setConnected, updateData } from "./simdataSlice";
 
 export function useVfrmapConnection(url = "ws://localhost:9000/ws") {
+  const store = useStore();
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -14,6 +15,11 @@ export function useVfrmapConnection(url = "ws://localhost:9000/ws") {
       ws = new WebSocket(url);
 
       ws.onmessage = (e) => {
+        const connected = store.getState().simdata.connected;
+        if (!connected) {
+          dispatch(setConnected(true));
+        }
+        
         const msg = JSON.parse(e.data);
         if (msg.latitude >= 0 && msg.latitude < 0.015 && msg.longitude >= 0 && msg.longitude < 0.015) {
           return;
@@ -26,6 +32,7 @@ export function useVfrmapConnection(url = "ws://localhost:9000/ws") {
       };
   
       ws.onclose = (e) => {
+        dispatch(setConnected(false));
         if (!closing) {
           timeout = setTimeout(createConnection, 2000);
         }
@@ -40,7 +47,8 @@ export function useVfrmapConnection(url = "ws://localhost:9000/ws") {
         closing = true;
         ws.close(); 
         ws = undefined;
+        dispatch(setConnected(false));
       } catch {}
     };
-  }, [dispatch, url]);
+  }, [dispatch, url, store]);
 }

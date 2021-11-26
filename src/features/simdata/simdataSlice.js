@@ -11,7 +11,8 @@ export const simdataSlice = createSlice({
     airspeed_true: 0,
     flaps: 0,
     trim: 0,
-    rudder_trim: 0
+    rudder_trim: 0,
+    connected: false
   },
   reducers: {
     updateData: (state, action) => {
@@ -27,12 +28,16 @@ export const simdataSlice = createSlice({
       state.flaps = msg.flaps;
       state.trim = msg.trim;
       state.rudder_trim = msg.rudder_trim;
+    },
+    setConnected: (state, action) => {
+      state.connected = action.payload;
     }
   }
 });
 
 export const {
-  updateData
+  updateData,
+  setConnected
 } = simdataSlice.actions;
 
 export const selectSimdata = state => state.simdata;
