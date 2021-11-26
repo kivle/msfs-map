@@ -15,7 +15,7 @@ export function useVfrmapConnection(url = "ws://localhost:9000/ws") {
       ws = new WebSocket(url);
 
       ws.onmessage = (e) => {
-        const connected = store.getState().simdata.connected;
+        const connected = store.getState()?.simdata?.connected;
         if (!connected) {
           dispatch(setConnected(true));
         }
