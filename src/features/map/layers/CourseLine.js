@@ -6,9 +6,9 @@ import { selectCourseLinePoint } from '../mapSlice';
 export default function CourseLine() {
   const destinationPoints = useSelector(selectCourseLinePoint);
 
-  return (
+  return destinationPoints ? (
     <Polyline
       positions={destinationPoints}
       pathOptions={{strokeWidth: 1, color: 'gray', opacity: 0.5, }} />
-  );
+  ) : null;
 }

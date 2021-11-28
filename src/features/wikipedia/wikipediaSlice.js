@@ -208,7 +208,7 @@ export const selectPagesWithDistances = createSelector(
           distance,
           bearing,
           headingDifference,
-          isInFront: headingDifference >= -90 && headingDifference <= 90
+          isInFront: headingDifference >= -45 && headingDifference <= 45
         };
       }).sort((a, b) => a.distance - b.distance)[0];
 
