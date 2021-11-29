@@ -62,7 +62,7 @@ export const selectCourseLinePoint = createSelector(
     heading: selectSimdata(state)?.heading
   }),
   ({ position, heading }) => {
-    return position && heading ? [position, ...calculatePoints(position, heading)] : undefined;
+    return position ? [position, ...calculatePoints(position, heading)] : undefined;
   }
 );
 
