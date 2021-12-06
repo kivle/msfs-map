@@ -5,7 +5,6 @@ import wikipediaEditions from './wikipediaEditions';
 import { createSelector } from 'reselect';
 import { computeDestinationPoint, getDistance, getRhumbLineBearing } from 'geolib';
 import { angleDiff, arrayToGeolibPoint, wikipediaPointToGeolibPoint } from '../../utils/geo';
-import { popup } from 'leaflet';
 
 export const wikipediaSlice = createSlice({
   name: 'wikipedia',
