@@ -64,6 +64,7 @@ export const wikipediaSlice = createSlice({
     removePages: (state, action) => {
       const { pageids } = action.payload;
       state.pages = state.pages.filter(p => !pageids.includes(p.pageid));
+      state.playQueue = state.playQueue.filter(p => !pageids.includes(p));
       pageids.forEach(p => {
         if (Object.hasOwnProperty.call(state.calculatedData, p)) {
           delete state.calculatedData[p];
@@ -199,19 +200,24 @@ export const getPages = (lat, lng, radius) => async (dispatch, getState) => {
 };
 
 export const clearPagesOutOfRange = () => (dispatch, getState) => {
-  const maxPagesInState = 80;
+  const maxPagesInState = 100;
+  const maxPagesInPlayQueue = 80;
+  const maxDistanceBehindPlayerBeforePageIsRemoved = 40000;
+  
   const state = getState();
   const pages = selectPagesWithDistances(state);
   const playQueue = selectPlayQueue(state)?.map(pq => pq.page?.pageid);
-  const pagesToRemove = pages.length > 80
-    ? pages.filter(
-        (p, i) => i >= maxPagesInState && !playQueue?.includes(p.page?.pageid)
-    )
-    : pages.filter(
-        p => !p?.closestPoint?.isInFront && 
-              p?.closestPoint?.distance > 40000 &&
-             !playQueue?.includes(p.page.pageid)
-    );
+  const pagesToRemove = pages.filter((p, i) => {
+    if (i >= maxPagesInState && !playQueue?.includes(p.page?.pageid)) {
+      return true;
+    }
+    const playQueueIndex = playQueue?.indexOf(p.page?.pageid);
+    if (playQueueIndex >= maxPagesInPlayQueue) {
+      return true;
+    }
+    return !p?.closestPoint?.isInFront && 
+            p?.closestPoint?.distance > maxDistanceBehindPlayerBeforePageIsRemoved;
+  });
   dispatch(removePages({ pageids: pagesToRemove.map(p => p.page?.pageid) }));
 };
 
