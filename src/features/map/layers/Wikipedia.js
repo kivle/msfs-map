@@ -3,7 +3,8 @@ import { useSelector } from "react-redux";
 import { 
   usePeriodicWikipediaFetching, 
   usePeriodicRemoveWikipediaPagesOutOfRange, 
-  useAutoPlayEffect
+  useAutoPlayEffect,
+  usePeriodicCalculateEffect
 } from "../../wikipedia/hooks";
 import { 
   selectPagesWithDistances, selectPlayQueue
@@ -21,13 +22,15 @@ export default function Wikipedia() {
   usePeriodicWikipediaFetching();
   usePeriodicRemoveWikipediaPagesOutOfRange();
   useAutoPlayEffect();
+  usePeriodicCalculateEffect();
 
   return pages?.map(p => 
     <WikipediaMarker 
-      key={p.pageid} 
-      page={p}
+      key={p?.page?.pageid} 
+      page={p?.page}
+      isInPlayQueue={p?.isInPlayQueue}
       isPlaying={isPlaying}
-      isCurrentPage={currentPageRead?.pageid === p?.pageid}
+      isCurrentPage={currentPageRead?.page?.pageid === p?.page?.pageid}
     />
   );
 }

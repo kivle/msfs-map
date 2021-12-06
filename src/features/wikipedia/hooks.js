@@ -1,6 +1,7 @@
 import { getDistance } from "geolib";
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector, useStore } from "react-redux";
+import { selectSimdata } from "../simdata/simdataSlice";
 import { 
   addToPlayQueue,
   clearPagesOutOfRange,
@@ -14,7 +15,8 @@ import {
   selectLastSearchTime,
   selectPagesWithDistances,
   selectSearchCenterPoint, 
-  selectSearchRadius
+  selectSearchRadius,
+  updateCalculatedData
 } from "./wikipediaSlice";
 
 export function usePeriodicWikipediaFetching(minimumInterval = 20000) {
@@ -61,6 +63,24 @@ export function usePeriodicRemoveWikipediaPagesOutOfRange() {
   }, [dispatch]);
 }
 
+export function usePeriodicCalculateEffect() {
+  const dispatch = useDispatch();
+  const store = useStore();
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const {
+        position,
+        heading
+      } = selectSimdata(store.getState());
+      dispatch(updateCalculatedData({ position, heading, currentTime: new Date().getTime() }));
+    }, 250);
+    return () => {
+      clearInterval(interval);
+    };
+  }, [dispatch, store]);
+}
+
 export function useAutoPlayEffect() {
   const dispatch = useDispatch();
   const autoPlay = useSelector(selectAutoPlay);
@@ -70,12 +90,11 @@ export function useAutoPlayEffect() {
   useEffect(() => {
     if (!autoPlay || !pages) return;
     const pagesToQueue = pages.filter(
-      page => page.closestPoint.isInFront 
-           && page.closestPoint.distance < autoPlayDistance
+      page => page.closestPoint?.distance < autoPlayDistance
            && !page.isInPlayQueue
     );
     for (const page of pagesToQueue) {
-      dispatch(addToPlayQueue({ pageid: page.pageid }));
+      dispatch(addToPlayQueue({ pageid: page.page.pageid }));
     }
   }, [dispatch, autoPlay, autoPlayDistance, pages]);
 }

@@ -22,9 +22,9 @@ function WikipediaIcon({ isReading }) {
 };
 
 export default React.memo(function WikipediaMarker({
-  page, isCurrentPage, isPlaying
+  page, isInPlayQueue, isCurrentPage, isPlaying
 }) {
-  const { pageid, coordinates, isInPlayQueue } = page;
+  const { pageid, coordinates } = page;
   let cn = styles.marker;
   if (isCurrentPage) {
     cn += ` ${styles.current}`;

@@ -7,7 +7,7 @@ import View from './View';
 
 export default function TtsPlayer() {
   const {
-    currentPage,
+    page,
     title,
     extract,
     voice,
@@ -25,7 +25,7 @@ export default function TtsPlayer() {
 
   return (
     <View
-      currentPage={currentPage}
+      page={page}
       togglePlaybackState={togglePlaybackState}
       isPlaying={isPlaying}
       next={next}

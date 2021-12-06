@@ -3,7 +3,7 @@ export function formatDistance(distance) {
     return '';
   }
 
-  if (distance < 1000) {
+  if (distance < 5000) {
     return `${Math.round(distance)} m`;
   }
   else if (distance < 99999) {

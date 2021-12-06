@@ -18,9 +18,13 @@ export default function Sidebar() {
         {!!pagesNotInQueue?.length &&
           <div className={styles.status}>{pagesNotInQueue?.length} pages found.</div>
         }
-        {pagesToShow?.map((page) => 
+        {pagesToShow?.map(({ page, closestPoint, isInPlayQueue }) => 
           <div key={page.pageid} className={styles.pageContainer}>
-            <WikipediaPage page={page} />
+            <WikipediaPage 
+              page={page} 
+              closestPoint={closestPoint} 
+              isInPlayQueue={isInPlayQueue} 
+            />
           </div>
         )}
       </div>

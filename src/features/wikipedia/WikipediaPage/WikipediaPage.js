@@ -21,7 +21,7 @@ function Thumbnail({ page }) {
     ) : null;
 }
 
-const WikipediaPage = ({ page }) => {
+const WikipediaPage = ({ page, closestPoint, isInPlayQueue }) => {
   const dispatch = useDispatch();
   const link = useWikipediaPageLink(page);
 
@@ -50,13 +50,13 @@ const WikipediaPage = ({ page }) => {
         <a href={link} target="_blank" rel="noreferrer">
           {page.title}
         </a>
-        <DistanceVisualizer page={page} />
+        <DistanceVisualizer point={closestPoint} />
         <Thumbnail page={page} />
       </div>
       <div className={styles.text}>
         <Extract page={page} />
       </div>
-      {!page.isInPlayQueue && <div className={styles.buttonBar}>
+      {!isInPlayQueue && <div className={styles.buttonBar}>
         <button type="button" onClick={add}><MdRecordVoiceOver size="100%" /></button>
         <button type="button" onClick={mark}><BiTrash size="100%" /></button>
       </div>}

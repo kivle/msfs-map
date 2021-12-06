@@ -7,12 +7,22 @@ import styles from './TtsPanel.module.css';
 
 export default function TtsPanel() {
   const isEnabled = useSelector(selectIsEnabled);
-  const currentPage = useSelector(selectPlayQueue)[0];
+  const {
+    page,
+    closestPoint,
+    isInPlayQueue,
+    isInFront
+  } = useSelector(selectPlayQueue)[0] ?? {};
 
   return isEnabled ? (
     <div className={styles.ttsPanel}>
       <TtsPlayer />
-      {currentPage && <WikipediaPage page={currentPage} />}
+      {page && <WikipediaPage 
+                page={page} 
+                closestPoint={closestPoint} 
+                isInPlayQueue={isInPlayQueue} 
+                isInFront={isInFront} 
+      />}
     </div>
   ) : null;
 }

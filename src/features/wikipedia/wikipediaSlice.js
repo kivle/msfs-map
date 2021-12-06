@@ -5,6 +5,7 @@ import wikipediaEditions from './wikipediaEditions';
 import { createSelector } from 'reselect';
 import { computeDestinationPoint, getDistance, getRhumbLineBearing } from 'geolib';
 import { angleDiff, arrayToGeolibPoint, wikipediaPointToGeolibPoint } from '../../utils/geo';
+import { popup } from 'leaflet';
 
 export const wikipediaSlice = createSlice({
   name: 'wikipedia',
@@ -13,6 +14,7 @@ export const wikipediaSlice = createSlice({
     isEnabled: true,
     availableEditions: wikipediaEditions,
     pages: [],
+    calculatedData: {},
     pagesViewed: [],
     playQueue: [],
     lastSearchPosition: undefined,
@@ -30,6 +32,7 @@ export const wikipediaSlice = createSlice({
       else {
         state.isEnabled = false;
         state.pages = [];
+        state.calculatedData = {};
         state.pagesViewed = [];
         state.playQueue = [];
         state.lastSearchPosition = undefined;
@@ -62,6 +65,11 @@ export const wikipediaSlice = createSlice({
     removePages: (state, action) => {
       const { pageids } = action.payload;
       state.pages = state.pages.filter(p => !pageids.includes(p.pageid));
+      pageids.forEach(p => {
+        if (Object.hasOwnProperty.call(state.calculatedData, p)) {
+          delete state.calculatedData[p];
+        }
+      });
     },
     addToPlayQueue: (state, action) => {
       const { pageid } = action.payload;
@@ -76,16 +84,23 @@ export const wikipediaSlice = createSlice({
       ];
       state.pages = state.pages.filter(p => p.pageid !== pageid);
       state.pagesViewed.push(pageid);
+      if (Object.hasOwnProperty.call(state.calculatedData, pageid)) {
+        delete state.calculatedData[pageid];
+      }
     },
     markAsRead: (state, action) => {
       const { pageid } = action.payload;
       state.pages = state.pages.filter(p => p.pageid !== pageid);
       state.pagesViewed.push(pageid);
+      if (Object.hasOwnProperty.call(state.calculatedData, pageid)) {
+        delete state.calculatedData[pageid];
+      }
     },
     setEdition: (state, action) => {
       const edition = action.payload;
       state.edition = edition;
       state.pages = [];
+      state.calculatedData = {};
       state.pagesViewed = [];
       state.playQueue = [];
       state.lastSearchPosition = undefined;
@@ -101,6 +116,47 @@ export const wikipediaSlice = createSlice({
         state.autoPlay = enabled;
       if (distance !== undefined)
         state.autoPlayDistance = distance;
+    },
+    updateCalculatedData: (state, action) => {
+      const { position, heading, currentTime } = action.payload;
+
+      const pos = arrayToGeolibPoint(position);
+
+      state.pages.forEach(p => {
+        const data = state.calculatedData[p.pageid];
+        const { closestPoint, lastUpdateTime } = data ?? {};
+        const shouldCalculate = 
+          !data ||
+          !closestPoint.distance ||
+          (closestPoint.distance < 5000 && closestPoint.distance > 0) ||
+          (closestPoint.distance < 10000 && (lastUpdateTime + 2000) > currentTime) ||
+          ((lastUpdateTime + 4000) < currentTime);
+        
+        if (shouldCalculate) {
+          const closestPoint = p.coordinates?.map((coord) => {
+            const coordGeolib = wikipediaPointToGeolibPoint(coord);
+            const distance = pos && getDistance(pos, coordGeolib);
+            const bearing = pos && Math.round(getRhumbLineBearing(pos, coordGeolib));
+            const headingDifference = angleDiff(bearing ?? 0, heading ?? 0);
+
+            return { 
+              coord,
+              distance,
+              bearing,
+              headingDifference,
+              isInFront: headingDifference >= -45 && headingDifference <= 45
+            };
+          }).sort((a, b) => a.distance - b.distance)[0];
+
+          if (closestPoint) {
+            state.calculatedData[p.pageid] = {
+              ...state.calculatedData[p.pageid],
+              closestPoint,
+              lastUpdateTime: currentTime
+            };
+          }
+        }
+      });
     }
   }
 });
@@ -114,16 +170,17 @@ export const {
   markAsRead,
   setSearchRadius,
   updatePageRatings,
-  setAutoPlay
+  setAutoPlay,
+  updateCalculatedData
 } = wikipediaSlice.actions;
 
 function pageSort(a, b) {
-  let res = a.closestPoint.distance - b.closestPoint.distance;
+  let res = a?.closestPoint && b?.closestPoint ? a.closestPoint.distance - b.closestPoint.distance : 0;
   if (res === 0) {
-    res = a.title.localeCompare(b.title);
+    res = a.page.title.localeCompare(b.page.title);
   }
   if (res === 0) {
-    res = a.pageid - b.pageid;
+    res = a.page.pageid - b.page.pageid;
   }
   return res;
 }
@@ -146,17 +203,17 @@ export const clearPagesOutOfRange = () => (dispatch, getState) => {
   const maxPagesInState = 80;
   const state = getState();
   const pages = selectPagesWithDistances(state);
-  const playQueue = selectPlayQueue(state)?.map(pq => pq.pageid);
+  const playQueue = selectPlayQueue(state)?.map(pq => pq.page?.pageid);
   const pagesToRemove = pages.length > 80
     ? pages.filter(
-        (p, i) => i >= maxPagesInState && !playQueue?.includes(p.pageid)
+        (p, i) => i >= maxPagesInState && !playQueue?.includes(p.page?.pageid)
     )
     : pages.filter(
-        p => !p.closestPoint.isInFront && 
-              p.closestPoint.distance > 40000 &&
-             !playQueue?.includes(p.pageid)
+        p => !p?.closestPoint?.isInFront && 
+              p?.closestPoint?.distance > 40000 &&
+             !playQueue?.includes(p.page.pageid)
     );
-  dispatch(removePages({ pageids: pagesToRemove.map(p => p.pageid) }));
+  dispatch(removePages({ pageids: pagesToRemove.map(p => p.page?.pageid) }));
 };
 
 export const advancePlayQueue = () => (dispatch, getState) => {
@@ -188,32 +245,16 @@ export const selectAutoPlayDistance = (state) => state.wikipedia.autoPlayDistanc
 
 export const selectPagesWithDistances = createSelector(
   (state) => ({
-    position: state.simdata?.position,
-    heading: state.simdata?.heading, 
     pages: state.wikipedia?.pages,
+    calculatedData: state.wikipedia?.calculatedData,
     playQueue: state.wikipedia?.playQueue
   }),
-  ({ position, heading, pages, playQueue }) => {
-    const pos = arrayToGeolibPoint(position);
-
+  ({ pages, playQueue, calculatedData }) => {
     const pagesWithClosestPoints = pages?.map(p => {
-      const closestPoint = p.coordinates?.map((coord) => {
-        const coordGeolib = wikipediaPointToGeolibPoint(coord);
-        const distance = pos && getDistance(pos, coordGeolib);
-        const bearing = pos && Math.round(getRhumbLineBearing(pos, coordGeolib));
-        const headingDifference = angleDiff(bearing ?? 0, heading ?? 0);
-
-        return { 
-          coord,
-          distance,
-          bearing,
-          headingDifference,
-          isInFront: headingDifference >= -45 && headingDifference <= 45
-        };
-      }).sort((a, b) => a.distance - b.distance)[0];
+      const { closestPoint } = calculatedData[p.pageid] ?? {};
 
       return {
-        ...p,
+        page: p,
         closestPoint,
         isInPlayQueue: playQueue.includes(p.pageid),
         isReading: playQueue[0] === p.pageid
@@ -233,7 +274,7 @@ export const selectPlayQueue = createSelector(
     playQueue: state.wikipedia?.playQueue
   }),
   ({ pages, playQueue }) => {
-    return playQueue.map(pageid => pages.find(p => p.pageid === pageid));
+    return playQueue.map(pageid => pages.find(p => p.page.pageid === pageid));
   }
 );
 
