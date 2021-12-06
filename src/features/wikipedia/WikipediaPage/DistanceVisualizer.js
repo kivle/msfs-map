@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { ImArrowUp } from 'react-icons/im';
 import { formatDistance } from '../../../utils/geo';
 import styles from './DistanceVisualizer.module.css';
@@ -9,6 +9,15 @@ export default function DistanceVisualizer({
   const {
     distance, headingDifference
   } = page?.closestPoint ?? {};
+
+  const style = useMemo(() => ({
+    transform: `perspective(64px) rotate3d(1, 0, 0, 55deg) rotate(${headingDifference ?? 0}deg)`
+  }), [headingDifference]);
+
+  const formattedDistance = useMemo(
+    () => formatDistance(distance), 
+    [distance]
+  );
   
   return (
     <div className={styles.distance}>
@@ -18,11 +27,9 @@ export default function DistanceVisualizer({
         fill="#AAA"
         stroke="black"
         strokeWidth={1}
-        style={{
-          transform: `perspective(64px) rotate3d(1, 0, 0, 55deg) rotate(${headingDifference ?? 0}deg)`
-        }}
+        style={style}
       />
-      <span>{formatDistance(distance)}</span>
+      <span>{formattedDistance}</span>
     </div>
   );
 }
