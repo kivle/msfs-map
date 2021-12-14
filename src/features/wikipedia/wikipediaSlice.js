@@ -39,6 +39,14 @@ export const wikipediaSlice = createSlice({
         state.lastSearchTime = undefined;
       }
     },
+    updateLastSearch: (state, action) => {
+      const {
+        searchPosition, searchRadius, searchTime 
+      } = action.payload;
+      state.lastSearchPosition = searchPosition;
+      state.lastSearchRadius = searchRadius;
+      state.lastSearchTime = searchTime;
+    },
     receivePages: (state, action) => {
       const { 
         data: { query: { pages } = {} } = {}, 
@@ -171,7 +179,8 @@ export const {
   setSearchRadius,
   updatePageRatings,
   setAutoPlay,
-  updateCalculatedData
+  updateCalculatedData,
+  updateLastSearch
 } = wikipediaSlice.actions;
 
 function pageSort(a, b) {
@@ -186,6 +195,11 @@ function pageSort(a, b) {
 }
 
 export const getPages = (lat, lng, radius) => async (dispatch, getState) => {
+  dispatch(updateLastSearch({
+    searchTime: new Date().getTime(),
+    searchPosition: [lat, lng],
+    searchRadius: radius
+  }));
   const state = getState();
   const edition = selectEdition(state);
   const data = await repository.getPagesByGeoLocation(edition, lat, lng, radius);

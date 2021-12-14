@@ -34,11 +34,10 @@ export function usePeriodicWikipediaFetching(minimumInterval = 20000) {
     const searchCenterPointArray = [searchCenterPoint.latitude ?? 0, searchCenterPoint.longitude ?? 0];
     const positionChanged = 
       !lastSearchPosition || 
-      getDistance(searchCenterPoint, { latitude: lastSearchPosition[0], longitude: lastSearchPosition[1] }) > 100;
-    const searchRadiusChanged = searchRadius !== lastSearchRadius;
-    const timeSinceLastSearch = new Date().getTime() - lastSearchTime;
-
-    if ((positionChanged && timeSinceLastSearch > minimumInterval) || searchRadiusChanged) {
+      getDistance(searchCenterPoint, { latitude: lastSearchPosition[0], longitude: lastSearchPosition[1] }) > 1000;
+    const timeSinceLastSearch = new Date().getTime() - (lastSearchTime ?? 0);
+    // console.log('position changed', positionChanged, 'time since last search', timeSinceLastSearch);
+    if (positionChanged && timeSinceLastSearch > minimumInterval) {
       dispatch(getPages(searchCenterPointArray[0], searchCenterPointArray[1], searchRadius));
     }
   },
