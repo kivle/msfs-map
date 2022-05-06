@@ -42,7 +42,7 @@ function ShortcutMapping({
           {gamepad ? gamepad.id : 'None'}
         </option>
       )}
-      {gamepadId && !connectedGamepads.some(g => g.id === gamepadId) &&
+      {gamepadId && !connectedGamepads.some(g => g?.id === gamepadId) &&
         <option value={gamepadId}>{gamepadId}</option>
       }
     </select>

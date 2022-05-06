@@ -2,25 +2,24 @@ import * as React from 'react';
 import ISO6391 from 'iso-639-1';
 import styles from './Preferences.module.css';
 import { FaCog, FaCaretRight } from 'react-icons/fa';
-import { useAvailableVoicesEffect, useConnectedGamepads, useExpandedState, useLoadPreferencesEffect, usePreferenceCallbacks, usePreferenceState } from './hooks';
+import { 
+  useAvailableVoicesEffect, 
+  useConnectedGamepads, 
+  useExpandedState, 
+  usePreferenceCallbacks, 
+  usePreferenceState 
+} from './hooks';
 import ShortcutMappings from './ShortcutMappings';
 
 const PreferencesPanel = React.memo(({
-  expanded, toggleExpanded, changeMap, currentMap, availableMaps,
+  changeMap, currentMap, availableMaps,
   changeEdition, edition, availableEditions, changeVoice, voice, 
   availableVoices, autoPlay, autoPlayDistance, changeAutoPlay, 
   visualizeSearchRadius, changeVisualizeSearchRadius,
   courseLine, changeShowCourseLine, connectedGamepads, shortcutMappings,
   changeShortcutMappings
 }) =>
-  <div className={styles.main}>
-  <button 
-    className={`${styles.preferenceButton}${expanded ? ` ${styles.expanded}` : ''}`}
-    onClick={toggleExpanded}>
-    <FaCog size="100%" />
-    <FaCaretRight className={styles.caret} />
-  </button>
-  {expanded && <>
+  <>
     <div className={styles.preference}>
       <label htmlFor="mapserver">Map</label>
       <select id="mapserver" onChange={changeMap} value={currentMap.name}>
@@ -71,12 +70,10 @@ const PreferencesPanel = React.memo(({
         changeShortcutMappings={changeShortcutMappings}
       />
     </div>
-  </>}
-  </div>
+  </>
 );
 
-export default function Preferences() {
-  
+function PreferencesPanelContainer() {
   const {
     edition,
     availableEditions,
@@ -91,7 +88,6 @@ export default function Preferences() {
     shortcutMappings
   } = usePreferenceState();
 
-  useLoadPreferencesEffect();
   useAvailableVoicesEffect();
 
   const {
@@ -103,17 +99,10 @@ export default function Preferences() {
     changeShowCourseLine,
     changeShortcutMappings
   } = usePreferenceCallbacks();
-
-  const {
-    toggleExpanded,
-    expanded
-  } = useExpandedState();
-
+  
   const connectedGamepads = useConnectedGamepads();
 
   return <PreferencesPanel
-    expanded={expanded}
-    toggleExpanded={toggleExpanded}
     changeMap={changeMap}
     currentMap={currentMap}
     availableMaps={availableMaps}
@@ -134,4 +123,23 @@ export default function Preferences() {
     shortcutMappings={shortcutMappings}
     changeShortcutMappings={changeShortcutMappings}
   />;
+}
+
+export default function Preferences() {
+  const {
+    toggleExpanded,
+    expanded
+  } = useExpandedState();
+
+  return (
+    <div className={styles.main}>
+      <button 
+        className={`${styles.preferenceButton}${expanded ? ` ${styles.expanded}` : ''}`}
+        onClick={toggleExpanded}>
+        <FaCog size="100%" />
+        <FaCaretRight className={styles.caret} />
+      </button>
+      {!!expanded && <PreferencesPanelContainer />}
+    </div>
+  );
 };
