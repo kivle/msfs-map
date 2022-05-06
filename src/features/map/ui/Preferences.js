@@ -2,14 +2,16 @@ import * as React from 'react';
 import ISO6391 from 'iso-639-1';
 import styles from './Preferences.module.css';
 import { FaCog, FaCaretRight } from 'react-icons/fa';
-import { useAvailableVoicesEffect, useExpandedState, useLoadPreferencesEffect, usePreferenceCallbacks, usePreferenceState } from './hooks';
+import { useAvailableVoicesEffect, useConnectedGamepads, useExpandedState, useLoadPreferencesEffect, usePreferenceCallbacks, usePreferenceState } from './hooks';
+import ShortcutMappings from './ShortcutMappings';
 
 const PreferencesPanel = React.memo(({
   expanded, toggleExpanded, changeMap, currentMap, availableMaps,
   changeEdition, edition, availableEditions, changeVoice, voice, 
   availableVoices, autoPlay, autoPlayDistance, changeAutoPlay, 
   visualizeSearchRadius, changeVisualizeSearchRadius,
-  courseLine, changeShowCourseLine
+  courseLine, changeShowCourseLine, connectedGamepads, shortcutMappings,
+  changeShortcutMappings
 }) =>
   <div className={styles.main}>
   <button 
@@ -62,6 +64,13 @@ const PreferencesPanel = React.memo(({
         )}
       </select>
     </div>}
+    <div className={styles.preference}>
+      <ShortcutMappings
+        connectedGamepads={connectedGamepads}
+        shortcutMappings={shortcutMappings}
+        changeShortcutMappings={changeShortcutMappings}
+      />
+    </div>
   </>}
   </div>
 );
@@ -78,7 +87,8 @@ export default function Preferences() {
     autoPlay,
     autoPlayDistance,
     visualizeSearchRadius,
-    courseLine
+    courseLine,
+    shortcutMappings
   } = usePreferenceState();
 
   useLoadPreferencesEffect();
@@ -90,13 +100,16 @@ export default function Preferences() {
     changeMap,
     changeAutoPlay,
     changeVisualizeSearchRadius,
-    changeShowCourseLine
+    changeShowCourseLine,
+    changeShortcutMappings
   } = usePreferenceCallbacks();
 
   const {
     toggleExpanded,
     expanded
   } = useExpandedState();
+
+  const connectedGamepads = useConnectedGamepads();
 
   return <PreferencesPanel
     expanded={expanded}
@@ -117,5 +130,8 @@ export default function Preferences() {
     changeVisualizeSearchRadius={changeVisualizeSearchRadius}
     courseLine={courseLine}
     changeShowCourseLine={changeShowCourseLine}
+    connectedGamepads={connectedGamepads}
+    shortcutMappings={shortcutMappings}
+    changeShortcutMappings={changeShortcutMappings}
   />;
 };

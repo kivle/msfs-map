@@ -12,7 +12,8 @@ export const mapSlice = createSlice({
     currentMap: 'OpenStreetMap',
     availableMaps: servers,
     visualizeSearchRadius: true,
-    courseLine: false
+    courseLine: false,
+    shortcutMappings: []
   },
   reducers: {
     setCurrentMap: (state, action) => {
@@ -26,6 +27,9 @@ export const mapSlice = createSlice({
     },
     setShowCourseLine: (state, action) => {
       state.courseLine = action.payload;
+    },
+    setShortcutMappings: (state, action) => {
+      state.shortcutMappings = action.payload;
     }
   },
 });
@@ -35,7 +39,8 @@ export const {
   setCurrentMap,
   setIsFollowing,
   setVisualizeSearchRadius,
-  setShowCourseLine
+  setShowCourseLine,
+  setShortcutMappings
 } = mapSlice.actions;
 
 export const selectCurrentMap = state => state.map.availableMaps.find(m => m.name === state.map.currentMap);
@@ -47,6 +52,8 @@ export const selectIsFollowing = state => state.map.isFollowing;
 export const selectVisualizeSearchRadius = state => state.map.visualizeSearchRadius;
 
 export const selectCourseLine = state => state.map.courseLine;
+
+export const selectShortcutMappings = state => state.map.shortcutMappings;
 
 function calculatePoints(position, heading) {
   const pos = arrayToGeolibPoint(position);

@@ -5,7 +5,7 @@ import {
   selectAutoPlay, selectAutoPlayDistance, selectAvailableEditions, 
   selectEdition, setAutoPlay, setEdition, setEnabled
 } from "../../wikipedia/wikipediaSlice";
-import { selectAvailableMaps, selectCourseLine, selectCurrentMap, selectVisualizeSearchRadius, setCurrentMap, setShowCourseLine, setVisualizeSearchRadius } from "../mapSlice";
+import { selectAvailableMaps, selectCourseLine, selectCurrentMap, selectShortcutMappings, selectVisualizeSearchRadius, setCurrentMap, setShortcutMappings, setShowCourseLine, setVisualizeSearchRadius } from "../mapSlice";
 
 export function useLoadPreferencesEffect() {
   const dispatch = useDispatch();
@@ -29,23 +29,38 @@ export function useLoadPreferencesEffect() {
         dispatch(setVisualizeSearchRadius(JSON.parse(localStorage['visualizeSearchRadius'])));
       if (localStorage['courseLine'])
         dispatch(setShowCourseLine(JSON.parse(localStorage['courseLine'])));
+      if (localStorage['shortcutMappings'])
+        dispatch(setShortcutMappings(JSON.parse(localStorage['shortcutMappings'])));
     });
   }, [dispatch]);
 }
 
-export function useAvailableVoicesEffect() {
-  const dispatch = useDispatch();
+export function usePreferenceState() {
+  const edition = useSelector(selectEdition);
+  const availableEditions = useSelector(selectAvailableEditions);
+  const voice = useSelector(selectVoice);
+  const availableVoices = useSelector(selectAvailableVoices);
+  const currentMap = useSelector(selectCurrentMap);
+  const availableMaps = useSelector(selectAvailableMaps);
+  const autoPlay = useSelector(selectAutoPlay);
+  const autoPlayDistance = useSelector(selectAutoPlayDistance);
+  const visualizeSearchRadius = useSelector(selectVisualizeSearchRadius);
+  const courseLine = useSelector(selectCourseLine);
+  const shortcutMappings = useSelector(selectShortcutMappings);
 
-  useEffect(() => {
-    const voicesChanged = () => {
-      const newVoices = window.speechSynthesis.getVoices();
-      dispatch(setAvailableVoices(newVoices.map(v => v.name)));
-    };
-    voicesChanged();
-    window.speechSynthesis.addEventListener('voiceschanged', voicesChanged);
-    
-    return () => window.speechSynthesis.removeEventListener('voiceschanged', voicesChanged);
-  }, [dispatch]);
+  return {
+    edition,
+    availableEditions,
+    voice,
+    availableVoices,
+    currentMap,
+    availableMaps,
+    autoPlay,
+    autoPlayDistance,
+    visualizeSearchRadius,
+    courseLine,
+    shortcutMappings
+  };
 }
 
 export function usePreferenceCallbacks() {
@@ -84,14 +99,35 @@ export function usePreferenceCallbacks() {
     dispatch(setShowCourseLine(enabled));
   }, [dispatch]);
 
+  const changeShortcutMappings = useCallback((mappings) => {
+    localStorage['shortcutMappings'] = JSON.stringify(mappings);
+    dispatch(setShortcutMappings(mappings));
+  }, [dispatch]);
+
   return {
     changeEdition,
     changeVoice,
     changeMap,
     changeAutoPlay,
     changeVisualizeSearchRadius,
-    changeShowCourseLine
+    changeShowCourseLine,
+    changeShortcutMappings
   };
+}
+
+export function useAvailableVoicesEffect() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const voicesChanged = () => {
+      const newVoices = window.speechSynthesis.getVoices();
+      dispatch(setAvailableVoices(newVoices.map(v => v.name)));
+    };
+    voicesChanged();
+    window.speechSynthesis.addEventListener('voiceschanged', voicesChanged);
+    
+    return () => window.speechSynthesis.removeEventListener('voiceschanged', voicesChanged);
+  }, [dispatch]);
 }
 
 export function useExpandedState() {
@@ -107,28 +143,21 @@ export function useExpandedState() {
   };
 }
 
-export function usePreferenceState() {
-  const edition = useSelector(selectEdition);
-  const availableEditions = useSelector(selectAvailableEditions);
-  const voice = useSelector(selectVoice);
-  const availableVoices = useSelector(selectAvailableVoices);
-  const currentMap = useSelector(selectCurrentMap);
-  const availableMaps = useSelector(selectAvailableMaps);
-  const autoPlay = useSelector(selectAutoPlay);
-  const autoPlayDistance = useSelector(selectAutoPlayDistance);
-  const visualizeSearchRadius = useSelector(selectVisualizeSearchRadius);
-  const courseLine = useSelector(selectCourseLine);
+export function useConnectedGamepads() {
+  const [connectedGamepads, setConnectedGamepads] = useState([]);
 
-  return {
-    edition,
-    availableEditions,
-    voice,
-    availableVoices,
-    currentMap,
-    availableMaps,
-    autoPlay,
-    autoPlayDistance,
-    visualizeSearchRadius,
-    courseLine
-  };
+  useEffect(() => {
+    const gamepadsChanged = () => {
+      setConnectedGamepads(navigator.getGamepads?.() ?? []);
+    };
+    window.addEventListener('gamepadconnected', gamepadsChanged);
+    window.addEventListener('gamepaddisconnected', gamepadsChanged);
+    gamepadsChanged();
+    return () => {
+      window.removeEventListener('gamepadconnected', gamepadsChanged);
+      window.removeEventListener('gamepaddisconnected', gamepadsChanged);
+    };
+  }, []);
+
+  return connectedGamepads;
 }
