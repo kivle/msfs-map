@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 function ShortcutMapping({
   index, connectedGamepads, gamepadId, buttonId, action, removeShortcutMapping, changeShortcutMapping
@@ -13,20 +13,55 @@ function ShortcutMapping({
       gamepadId: newGamepadId, buttonId, action
     });
   }, [changeShortcutMapping, index, buttonId, action]);
+  
+  const gamepad = connectedGamepads?.find(g => g?.id === gamepadId);
 
-  const onChangeButton = useCallback((e) => {
-    const newButtonId = e.target.value;
+  const changeButton = useCallback((newButtonId) => {
     changeShortcutMapping(index, {
       gamepadId, buttonId: newButtonId, action
     });
   }, [changeShortcutMapping, gamepadId, index, action]);
 
+  const onChangeButton = useCallback((e) => {
+    const newButtonId = e.target.value;
+    changeButton(newButtonId);
+  }, [changeButton]);
+
+  const [scanning, setScanning] = useState(false);
+  
+  const onScanButton = useCallback(() => {
+    setScanning(!scanning);
+  }, [scanning, setScanning]);
+  
+  useEffect(() => {
+    if (scanning) {
+      const getButtonStates = () => {
+        const gamepads = navigator.getGamepads?.() ?? [];
+        const gamepad = gamepads.find(g => g?.id === gamepadId);
+        return gamepad?.buttons.map(b => b.pressed);
+      };
+      const preState = getButtonStates();
+      console.log(preState);
+      const interval = setInterval(() => {
+        const currentState = getButtonStates();
+        console.log(currentState);
+        const changedButton = currentState?.findIndex?.((pressed, i) => pressed !== preState?.[i]);
+        if (changedButton !== undefined && changedButton !== null && changedButton !== -1) {
+          changeButton(changedButton);
+          setScanning(false);
+        }
+      }, 100);
+      return () => clearInterval(interval);
+    }
+  }, [scanning, changeButton, gamepadId]);
+  
   const onChangeAction = useCallback((e) => {
     const newAction = e.target.value;
     changeShortcutMapping(index, {
       gamepadId, buttonId, action: newAction
     });
   }, [changeShortcutMapping, gamepadId, index, buttonId]);
+
 
   const gamepadSelect = (
     <select 
@@ -48,8 +83,6 @@ function ShortcutMapping({
     </select>
   );
 
-  const gamepad = connectedGamepads?.find(g => g?.id === gamepadId);
-
   const buttonSelect = (
     <select
       id={`buttonSelect_${index}`}
@@ -63,6 +96,12 @@ function ShortcutMapping({
         <option value={buttonId}>{`Button ${parseInt(buttonId) + 1}`}</option>
       }
     </select>
+  );
+
+  const buttonScan = (
+    <button type="button" disabled={!gamepad} onClick={onScanButton}>
+      {!scanning ? 'Scan' : 'Stop scanning'}
+    </button>
   );
 
   const actionSelect = (
@@ -79,7 +118,7 @@ function ShortcutMapping({
   return (
     <tr>
       <td>{gamepadSelect}</td>
-      <td>{buttonSelect}</td>
+      <td>{buttonSelect} {buttonScan}</td>
       <td>{actionSelect}</td>
       <td><button type="button" onClick={onRemove}>Remove</button></td>
     </tr>
