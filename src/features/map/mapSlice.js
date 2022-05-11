@@ -55,9 +55,16 @@ export const selectCourseLine = state => state.map.courseLine;
 
 export const selectShortcutMappings = state => state.map.shortcutMappings;
 
+const courseLinePointInterval = 500;
+const courseLineLength = 10000;
+const courseLinePoints = [];
+for (let i = courseLinePointInterval; i <= courseLineLength; i += courseLinePointInterval) {
+  courseLinePoints.push(i);
+}
+
 function calculatePoints(position, heading) {
   const pos = arrayToGeolibPoint(position);
-  return [100, 200, 300, 400, 500]
+  return courseLinePoints
           .map(d => computeDestinationPoint(pos, d * 1000, heading))
           .map(geolibToArrayPoint)
           .filter(p => p);
