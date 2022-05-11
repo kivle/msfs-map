@@ -3,17 +3,13 @@ import { useEffect } from "react";
 import { useDispatch, useSelector, useStore } from "react-redux";
 import { selectSimdata } from "../simdata/simdataSlice";
 import { 
-  addToPlayQueue,
   clearPagesOutOfRange,
   getPages,
-  selectAutoPlay,
-  selectAutoPlayDistance,
   selectEdition,
   selectIsEnabled,
   selectLastSearchPosition,
   selectLastSearchRadius,
   selectLastSearchTime,
-  selectPagesWithDistances,
   selectSearchCenterPoint, 
   selectSearchRadius,
   updateCalculatedData
@@ -78,24 +74,6 @@ export function usePeriodicCalculateEffect() {
       clearInterval(interval);
     };
   }, [dispatch, store]);
-}
-
-export function useAutoPlayEffect() {
-  const dispatch = useDispatch();
-  const autoPlay = useSelector(selectAutoPlay);
-  const autoPlayDistance = useSelector(selectAutoPlayDistance);
-  const pages = useSelector(selectPagesWithDistances);
-
-  useEffect(() => {
-    if (!autoPlay || !pages) return;
-    const pagesToQueue = pages.filter(
-      page => page.closestPoint?.distance < autoPlayDistance
-           && !page.isInPlayQueue
-    );
-    for (const page of pagesToQueue) {
-      dispatch(addToPlayQueue({ pageid: page.page.pageid }));
-    }
-  }, [dispatch, autoPlay, autoPlayDistance, pages]);
 }
 
 export function useWikipediaPageLink(page) {

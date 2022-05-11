@@ -5,7 +5,7 @@ import parse from 'html-react-parser';
 import styles from './WikipediaPage.module.css';
 import { MdRecordVoiceOver } from 'react-icons/md';
 import { useDispatch } from 'react-redux';
-import { addToPlayQueue, markAsRead } from '../wikipediaSlice';
+import { markAsRead } from '../wikipediaSlice';
 import DistanceVisualizer from './DistanceVisualizer';
 
 function Extract({ page }) {
@@ -21,17 +21,13 @@ function Thumbnail({ page }) {
     ) : null;
 }
 
-const WikipediaPage = ({ page, closestPoint, isInPlayQueue }) => {
+const WikipediaPage = ({ page, closestPoint }) => {
   const dispatch = useDispatch();
   const link = useWikipediaPageLink(page);
 
   const {
     pageid
   } = page;
-  
-  const add = useCallback(() => {
-    dispatch(addToPlayQueue({ pageid }));
-  }, [dispatch, pageid]);
   
   const mark = useCallback(() => {
     dispatch(markAsRead({ pageid }));
@@ -56,10 +52,9 @@ const WikipediaPage = ({ page, closestPoint, isInPlayQueue }) => {
       <div className={styles.text}>
         <Extract page={page} />
       </div>
-      {!isInPlayQueue && <div className={styles.buttonBar}>
-        <button type="button" onClick={add}><MdRecordVoiceOver size="100%" /></button>
+      <div className={styles.buttonBar}>
         <button type="button" onClick={mark}><BiTrash size="100%" /></button>
-      </div>}
+      </div>
     </article>
   );
 };

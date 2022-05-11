@@ -5,7 +5,8 @@ export const ttsSlice = createSlice({
   initialState: {
     currentVoice: undefined,
     availableVoices: [],
-    isPlaying: true
+    isPlaying: false,
+    autoPlay: false
   },
   reducers: {
     setVoice: (state, action) => {
@@ -18,8 +19,13 @@ export const ttsSlice = createSlice({
       if (state.voice && !state.availableVoices.some(v => v === state.voice))
         state.voice = undefined;
     },
-    setIsPlaying: (state, action) => {
-      state.isPlaying = action.payload;
+    toggleIsPlaying: (state, action) => {
+      state.isPlaying = !state.isPlaying;
+    },
+    setAutoPlay: (state, action) => {
+      state.autoPlay = action.payload;
+      if (action.payload)
+        state.isPlaying = true;
     }
   },
 });
@@ -27,7 +33,8 @@ export const ttsSlice = createSlice({
 export const {
   setVoice,
   setAvailableVoices,
-  setIsPlaying
+  toggleIsPlaying,
+  setAutoPlay
 } = ttsSlice.actions;
 
 export const selectVoice = (state) => state.tts.currentVoice;
@@ -35,5 +42,7 @@ export const selectVoice = (state) => state.tts.currentVoice;
 export const selectAvailableVoices = (state) => state.tts.availableVoices;
 
 export const selectIsPlaying = (state) => state.tts.isPlaying;
+
+export const selectAutoPlay = (state) => state.tts.autoPlay;
 
 export default ttsSlice.reducer;

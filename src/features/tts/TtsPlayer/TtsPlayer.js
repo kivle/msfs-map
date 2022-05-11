@@ -7,29 +7,25 @@ import View from './View';
 
 export default function TtsPlayer() {
   const {
-    page,
     title,
     extract,
     voice,
-    isPlaying,
-    playQueue
+    isPlaying
   } = useTtsState();
 
   const {
     togglePlaybackState,
     next
-  } = usePlaybackCallbacks(isPlaying);
+  } = usePlaybackCallbacks();
   
-  useTtsPlaybackEffect(isPlaying, title, extract, next, voice);
+  useTtsPlaybackEffect(isPlaying, title, extract, next, voice, togglePlaybackState);
   useKeyboardEffect(next, togglePlaybackState);
 
   return (
     <View
-      page={page}
       togglePlaybackState={togglePlaybackState}
       isPlaying={isPlaying}
       next={next}
-      playQueue={playQueue}
     />
   );
 }

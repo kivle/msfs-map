@@ -1,11 +1,15 @@
 import { useCallback, useEffect, useState } from "react";
 import { batch, useDispatch, useSelector } from "react-redux";
-import { selectAvailableVoices, selectVoice, setAvailableVoices, setVoice } from "../../tts/ttsSlice";
+import { selectAutoPlay, selectAvailableVoices, selectVoice, setAutoPlay, setAvailableVoices, setVoice } from "../../tts/ttsSlice";
 import { 
-  selectAutoPlay, selectAutoPlayDistance, selectAvailableEditions, 
-  selectEdition, setAutoPlay, setEdition, setEnabled
+  selectAvailableEditions, 
+  selectEdition, setEdition, setEnabled
 } from "../../wikipedia/wikipediaSlice";
-import { selectAvailableMaps, selectCourseLine, selectCurrentMap, selectShortcutMappings, selectVisualizeSearchRadius, setCurrentMap, setShortcutMappings, setShowCourseLine, setVisualizeSearchRadius } from "../mapSlice";
+import { 
+  selectAvailableMaps, selectCourseLine, selectCurrentMap, 
+  selectShortcutMappings, selectVisualizeSearchRadius, setCurrentMap, 
+  setShortcutMappings, setShowCourseLine, setVisualizeSearchRadius 
+} from "../mapSlice";
 
 export function useLoadPreferencesEffect() {
   const dispatch = useDispatch();
@@ -22,9 +26,7 @@ export function useLoadPreferencesEffect() {
       if (localStorage['currentMap']) 
         dispatch(setCurrentMap(localStorage['currentMap']));
       if (localStorage['autoPlay']) 
-        dispatch(setAutoPlay({ enabled: JSON.parse(localStorage['autoPlay']) }));
-      if (localStorage['autoPlayDistance']) 
-        dispatch(setAutoPlay({ distance: JSON.parse(localStorage['autoPlayDistance']) }));
+        dispatch(setAutoPlay(JSON.parse(localStorage['autoPlay'])));
       if (localStorage['visualizeSearchRadius'])
         dispatch(setVisualizeSearchRadius(JSON.parse(localStorage['visualizeSearchRadius'])));
       if (localStorage['courseLine'])
@@ -43,7 +45,6 @@ export function usePreferenceState() {
   const currentMap = useSelector(selectCurrentMap);
   const availableMaps = useSelector(selectAvailableMaps);
   const autoPlay = useSelector(selectAutoPlay);
-  const autoPlayDistance = useSelector(selectAutoPlayDistance);
   const visualizeSearchRadius = useSelector(selectVisualizeSearchRadius);
   const courseLine = useSelector(selectCourseLine);
   const shortcutMappings = useSelector(selectShortcutMappings);
@@ -56,7 +57,6 @@ export function usePreferenceState() {
     currentMap,
     availableMaps,
     autoPlay,
-    autoPlayDistance,
     visualizeSearchRadius,
     courseLine,
     shortcutMappings
@@ -84,9 +84,7 @@ export function usePreferenceCallbacks() {
   const changeAutoPlay = useCallback((enabled, distance) => {
     if (enabled !== undefined)
       localStorage['autoPlay'] = JSON.stringify(enabled);
-    if (distance !== undefined)
-      localStorage['autoPlayDistance'] = JSON.stringify(distance);
-    dispatch(setAutoPlay({ enabled, distance }));
+    dispatch(setAutoPlay(enabled));
   }, [dispatch]);
 
   const changeVisualizeSearchRadius = useCallback((enabled) => {

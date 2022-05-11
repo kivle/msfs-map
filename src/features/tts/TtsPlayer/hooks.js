@@ -2,8 +2,8 @@ import { useCallback, useEffect } from "react";
 import striptags from 'striptags';
 import { decode } from 'entities';
 import { useDispatch, useSelector } from "react-redux";
-import { selectIsPlaying, selectVoice, setIsPlaying } from "../ttsSlice";
-import { advancePlayQueue, selectPlayQueue } from "../../wikipedia/wikipediaSlice";
+import { selectAutoPlay, selectIsPlaying, selectVoice, toggleIsPlaying } from "../ttsSlice";
+import { playNext, selectPlayingPage } from "../../wikipedia/wikipediaSlice";
 
 export function useKeyboardEffect(next, togglePlaybackState) {
   useEffect(
@@ -23,7 +23,9 @@ export function useKeyboardEffect(next, togglePlaybackState) {
   , [next, togglePlaybackState]);
 }
 
-export function useTtsPlaybackEffect(isPlaying, title, extract, next, voice) {
+export function useTtsPlaybackEffect(isPlaying, title, extract, next, voice, togglePlaybackState) {
+  const autoPlay = useSelector(selectAutoPlay);
+
   useEffect(() => {
     if (!isPlaying) {
       speechSynthesis.cancel();
@@ -47,19 +49,19 @@ export function useTtsPlaybackEffect(isPlaying, title, extract, next, voice) {
         speechSynthesis.cancel();
       };
     },
-    [isPlaying, title, extract, next, voice]
+    [isPlaying, title, extract, next, voice, autoPlay, togglePlaybackState]
   );
 }
 
-export function usePlaybackCallbacks(isPlaying) {
+export function usePlaybackCallbacks() {
   const dispatch = useDispatch();
 
   const togglePlaybackState = useCallback(() => {
-    dispatch(setIsPlaying(!isPlaying));
-  }, [dispatch, isPlaying]);
+    dispatch(toggleIsPlaying());
+  }, [dispatch]);
 
   const next = useCallback(() => {
-    dispatch(advancePlayQueue());
+    dispatch(playNext());
   }, [dispatch]);
 
   return {
@@ -69,13 +71,12 @@ export function usePlaybackCallbacks(isPlaying) {
 }
 
 export function useTtsState() {
-  const playQueue = useSelector(selectPlayQueue);
+  const playingPage = useSelector(selectPlayingPage);
   const {
     page,
     closestPoint,
-    isInPlayQueue,
     isInFront
-  } = playQueue[0] ?? {};
+  } = playingPage ?? {};
   const { title, extract } = page ?? {};
   const voice = useSelector(selectVoice);
   const isPlaying = useSelector(selectIsPlaying);
@@ -83,12 +84,10 @@ export function useTtsState() {
   return {
     page,
     closestPoint,
-    isInPlayQueue,
     isInFront,
     title,
     extract,
     voice,
-    isPlaying,
-    playQueue
+    isPlaying
   };
 }

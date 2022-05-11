@@ -5,6 +5,8 @@ import wikipediaEditions from './wikipediaEditions';
 import { createSelector } from 'reselect';
 import { computeDestinationPoint, getDistance, getRhumbLineBearing } from 'geolib';
 import { angleDiff, arrayToGeolibPoint, wikipediaPointToGeolibPoint } from '../../utils/geo';
+import { selectSimdata } from '../simdata/simdataSlice';
+import { selectAutoPlay, selectIsPlaying, toggleIsPlaying } from '../tts/ttsSlice';
 
 export const wikipediaSlice = createSlice({
   name: 'wikipedia',
@@ -15,13 +17,11 @@ export const wikipediaSlice = createSlice({
     pages: [],
     calculatedData: {},
     pagesViewed: [],
-    playQueue: [],
+    playingPageid: undefined,
     lastSearchPosition: undefined,
     lastSearchRadius: undefined,
     lastSearchTime: undefined,
-    searchRadius: 10000,
-    autoPlay: true,
-    autoPlayDistance: 1000
+    searchRadius: 10000
   },
   reducers: {
     setEnabled: (state, action) => {
@@ -33,7 +33,7 @@ export const wikipediaSlice = createSlice({
         state.pages = [];
         state.calculatedData = {};
         state.pagesViewed = [];
-        state.playQueue = [];
+        state.playingPageid = undefined;
         state.lastSearchPosition = undefined;
         state.lastSearchRadius = undefined;
         state.lastSearchTime = undefined;
@@ -72,26 +72,21 @@ export const wikipediaSlice = createSlice({
     removePages: (state, action) => {
       const { pageids } = action.payload;
       state.pages = state.pages.filter(p => !pageids.includes(p.pageid));
-      state.playQueue = state.playQueue.filter(p => !pageids.includes(p));
+      state.playingPageid = pageids.includes(state.playingPageid) ? undefined : state.playingPageid;
       pageids.forEach(p => {
         if (Object.hasOwnProperty.call(state.calculatedData, p)) {
           delete state.calculatedData[p];
         }
       });
     },
-    addToPlayQueue: (state, action) => {
-      const { pageid } = action.payload;
-      state.playQueue.push(pageid);
-    },
-    advancePlayQueue: (state, action) => {
-      const { nextPageId } = action.payload;
-      const pageid = state.playQueue.shift();
-      state.playQueue = [
-        ...(nextPageId ? [nextPageId] : []),
-        ...state.playQueue.filter(p => p !== nextPageId)
-      ];
-      state.pages = state.pages.filter(p => p.pageid !== pageid);
-      state.pagesViewed.push(pageid);
+    playNext: (state, action) => {
+      const { nextPageid } = action.payload;
+      const pageid = state.playingPageid;
+      if (pageid) {
+        state.pages = state.pages.filter(p => p.pageid !== pageid);
+        state.pagesViewed.push(pageid);
+      }
+      state.playingPageid = nextPageid;
       if (Object.hasOwnProperty.call(state.calculatedData, pageid)) {
         delete state.calculatedData[pageid];
       }
@@ -110,7 +105,7 @@ export const wikipediaSlice = createSlice({
       state.pages = [];
       state.calculatedData = {};
       state.pagesViewed = [];
-      state.playQueue = [];
+      state.playingPageid = undefined;
       state.lastSearchPosition = undefined;
       state.lastSearchRadius = undefined;
       state.lastSearchTime = undefined;
@@ -118,51 +113,33 @@ export const wikipediaSlice = createSlice({
     setSearchRadius: (state, action) => {
       state.searchRadius = parseInt(action.payload, 10);
     },
-    setAutoPlay: (state, { payload }) => {
-      const { enabled, distance } = payload;
-      if (enabled !== undefined)
-        state.autoPlay = enabled;
-      if (distance !== undefined)
-        state.autoPlayDistance = distance;
-    },
     updateCalculatedData: (state, action) => {
       const { position, heading, currentTime } = action.payload;
 
       const pos = arrayToGeolibPoint(position);
 
       state.pages.forEach(p => {
-        const data = state.calculatedData[p.pageid];
-        const { closestPoint, lastUpdateTime } = data ?? {};
-        const shouldCalculate = 
-          !data ||
-          !closestPoint.distance ||
-          (closestPoint.distance < 5000 && closestPoint.distance > 0) ||
-          (closestPoint.distance < 10000 && (lastUpdateTime + 2000) > currentTime) ||
-          ((lastUpdateTime + 4000) < currentTime);
-        
-        if (shouldCalculate) {
-          const closestPoint = p.coordinates?.map((coord) => {
-            const coordGeolib = wikipediaPointToGeolibPoint(coord);
-            const distance = pos && getDistance(pos, coordGeolib);
-            const bearing = pos && Math.round(getRhumbLineBearing(pos, coordGeolib));
-            const headingDifference = angleDiff(bearing ?? 0, heading ?? 0);
+        const closestPoint = p.coordinates?.map((coord) => {
+          const coordGeolib = wikipediaPointToGeolibPoint(coord);
+          const distance = pos && getDistance(pos, coordGeolib);
+          const bearing = pos && Math.round(getRhumbLineBearing(pos, coordGeolib));
+          const headingDifference = angleDiff(bearing ?? 0, heading ?? 0);
 
-            return { 
-              coord,
-              distance,
-              bearing,
-              headingDifference,
-              isInFront: headingDifference >= -45 && headingDifference <= 45
-            };
-          }).sort((a, b) => a.distance - b.distance)[0];
+          return { 
+            coord,
+            distance,
+            bearing,
+            headingDifference,
+            isInFront: headingDifference >= -90 && headingDifference <= 90
+          };
+        }).sort((a, b) => a.distance - b.distance)[0];
 
-          if (closestPoint) {
-            state.calculatedData[p.pageid] = {
-              ...state.calculatedData[p.pageid],
-              closestPoint,
-              lastUpdateTime: currentTime
-            };
-          }
+        if (closestPoint) {
+          state.calculatedData[p.pageid] = {
+            ...state.calculatedData[p.pageid],
+            closestPoint,
+            lastUpdateTime: currentTime
+          };
         }
       });
     }
@@ -174,11 +151,9 @@ export const {
   setEdition,
   receivePages,
   removePages,
-  addToPlayQueue,
   markAsRead,
   setSearchRadius,
   updatePageRatings,
-  setAutoPlay,
   updateCalculatedData,
   updateLastSearch
 } = wikipediaSlice.actions;
@@ -200,7 +175,7 @@ export const getPages = (lat, lng, radius) => async (dispatch, getState) => {
     searchPosition: [lat, lng],
     searchRadius: radius
   }));
-  const state = getState();
+  let state = getState();
   const edition = selectEdition(state);
   const data = await repository.getPagesByGeoLocation(edition, lat, lng, radius);
   if (data) {
@@ -210,23 +185,27 @@ export const getPages = (lat, lng, radius) => async (dispatch, getState) => {
       searchRadius: radius,
       searchTime: new Date().getTime()
     }));
+    state = getState();
+    const {
+      position,
+      heading
+    } = selectSimdata(state);
+    dispatch(updateCalculatedData({ position, heading, currentTime: new Date().getTime() }));
+    const playingPage = selectPlayingPage(state);
+    if (!playingPage) {
+      dispatch(playNext());
+    }
   }
 };
 
 export const clearPagesOutOfRange = () => (dispatch, getState) => {
   const maxPagesInState = 100;
-  const maxPagesInPlayQueue = 80;
   const maxDistanceBehindPlayerBeforePageIsRemoved = 40000;
   
   const state = getState();
   const pages = selectPagesWithDistances(state);
-  const playQueue = selectPlayQueue(state)?.map(pq => pq.page?.pageid);
   const pagesToRemove = pages.filter((p, i) => {
-    if (i >= maxPagesInState && !playQueue?.includes(p.page?.pageid)) {
-      return true;
-    }
-    const playQueueIndex = playQueue?.indexOf(p.page?.pageid);
-    if (playQueueIndex >= maxPagesInPlayQueue) {
+    if (i >= maxPagesInState && state.wikipedia.playingPageid !== p.page?.pageid) {
       return true;
     }
     return !p?.closestPoint?.isInFront && 
@@ -235,11 +214,15 @@ export const clearPagesOutOfRange = () => (dispatch, getState) => {
   dispatch(removePages({ pageids: pagesToRemove.map(p => p.page?.pageid) }));
 };
 
-export const advancePlayQueue = () => (dispatch, getState) => {
+export const playNext = () => (dispatch, getState) => {
   const state = getState();
-  const [, ...remaining] = selectPlayQueue(state);
-  const orderedByDistance = remaining.sort(pageSort);
-  dispatch(wikipediaSlice.actions.advancePlayQueue({ nextPageId: orderedByDistance[0]?.pageid }));
+  const autoPlay = selectAutoPlay(state);
+  const isPlaying = selectIsPlaying(state);
+  if (!autoPlay && isPlaying) {
+    dispatch(toggleIsPlaying());
+  }
+  const allPages = selectPagesWithDistances(state).filter(p => p.page.pageid !== state.wikipedia.playingPageid);
+  dispatch(wikipediaSlice.actions.playNext({ nextPageid: allPages[0]?.page?.pageid }));
 };
 
 export const selectIsEnabled = (state) => state.wikipedia.isEnabled;
@@ -258,25 +241,20 @@ export const selectLastSearchRadius = (state) => state.wikipedia.lastSearchRadiu
 
 export const selectLastSearchTime = (state) => state.wikipedia.lastSearchTime;
 
-export const selectAutoPlay = (state) => state.wikipedia.autoPlay;
-
-export const selectAutoPlayDistance = (state) => state.wikipedia.autoPlayDistance;
-
 export const selectPagesWithDistances = createSelector(
   (state) => ({
     pages: state.wikipedia?.pages,
     calculatedData: state.wikipedia?.calculatedData,
-    playQueue: state.wikipedia?.playQueue
+    playingPageid: state.wikipedia?.playingPageid
   }),
-  ({ pages, playQueue, calculatedData }) => {
+  ({ pages, playingPageid, calculatedData }) => {
     const pagesWithClosestPoints = pages?.map(p => {
       const { closestPoint } = calculatedData[p.pageid] ?? {};
 
       return {
         page: p,
         closestPoint,
-        isInPlayQueue: playQueue.includes(p.pageid),
-        isReading: playQueue[0] === p.pageid
+        isReading: playingPageid === p.pageid
       };
     }).sort(pageSort);
     
@@ -287,13 +265,13 @@ export const selectPagesWithDistances = createSelector(
   }
 );
 
-export const selectPlayQueue = createSelector(
+export const selectPlayingPage = createSelector(
   (state) =>  ({
     pages: selectPagesWithDistances(state),
-    playQueue: state.wikipedia?.playQueue
+    playingPageid: state.wikipedia?.playingPageid
   }),
-  ({ pages, playQueue }) => {
-    return playQueue.map(pageid => pages.find(p => p.page.pageid === pageid));
+  ({ pages, playingPageid }) => {
+    return pages.find(p => p.page.pageid === playingPageid);
   }
 );
 

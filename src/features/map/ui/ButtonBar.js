@@ -14,12 +14,12 @@ const ButtonBarView = React.memo(({
   isFollowing, toggleFollow, isWikipediaEnabled, toggleIsEnabled
 }) =>
   <div className={styles.main}>
-  <button className={`${isFollowing ? styles.active : ''}`} onClick={toggleFollow}>
-    <CgTrack size="100%" />
-  </button>
-  <button className={`${styles.gap} ${isWikipediaEnabled ? styles.active : ''}`} onClick={toggleIsEnabled}>
-    <FaWikipediaW size="100%" />
-  </button>
+    <button className={`${isFollowing ? styles.active : ''}`} onClick={toggleFollow}>
+      <CgTrack size="100%" />
+    </button>
+    <button className={`${styles.gap} ${isWikipediaEnabled ? styles.active : ''}`} onClick={toggleIsEnabled}>
+      <FaWikipediaW size="100%" />
+    </button>
   </div>
 );
 

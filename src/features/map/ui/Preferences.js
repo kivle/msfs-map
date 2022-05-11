@@ -52,17 +52,9 @@ const PreferencesPanel = React.memo(({
       </select>
     </div>
     <div className={styles.preference}>
-      <label htmlFor="autoPlay">Enable automatically reading articles</label>
+      <label htmlFor="autoPlay">Enable automatically reading next article</label>
       <input id="autoPlay" type="checkbox" checked={autoPlay} onChange={(e) => changeAutoPlay(e.target.checked)} />
     </div>
-    {autoPlay && <div className={styles.preference}>
-      <label htmlFor="autoPlayDistance">Read articles when they are in front and within distance</label>
-      <select id="autoPlayDistance" onChange={(e) => changeAutoPlay(undefined, parseInt(e.target.value, 10))} value={autoPlayDistance}>
-        {[100, 500, 1000, 2000, 5000, 10000, 20000].map(r =>
-          <option key={r} value={r}>{`${r} m`}</option>
-        )}
-      </select>
-    </div>}
     <div className={styles.preference}>
       <ShortcutMappings
         connectedGamepads={connectedGamepads}
@@ -82,7 +74,6 @@ function PreferencesPanelContainer() {
     currentMap,
     availableMaps,
     autoPlay,
-    autoPlayDistance,
     visualizeSearchRadius,
     courseLine,
     shortcutMappings
@@ -113,7 +104,6 @@ function PreferencesPanelContainer() {
     voice={voice}
     availableVoices={availableVoices}
     autoPlay={autoPlay}
-    autoPlayDistance={autoPlayDistance}
     changeAutoPlay={changeAutoPlay}
     visualizeSearchRadius={visualizeSearchRadius}
     changeVisualizeSearchRadius={changeVisualizeSearchRadius}

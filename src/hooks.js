@@ -1,17 +1,16 @@
 import { useEffect } from "react";
+import { useMap } from "react-leaflet";
 import { useSelector } from "react-redux";
 import { selectShortcutMappings } from "./features/map/mapSlice";
-import { usePlaybackCallbacks, useTtsState } from "./features/tts/TtsPlayer/hooks";
+import { usePlaybackCallbacks } from "./features/tts/TtsPlayer/hooks";
 
 export function useShortcutMappingsEffect() {
   const shortcutMappings = useSelector(selectShortcutMappings);
   const {
-    isPlaying
-  } = useTtsState();
-  const {
     togglePlaybackState,
     next
-  } = usePlaybackCallbacks(isPlaying);
+  } = usePlaybackCallbacks();
+  const map = useMap();
 
   useEffect(() => {
     let interval = null;
@@ -29,10 +28,16 @@ export function useShortcutMappingsEffect() {
             if (pressed && !mappingButtonStates[idx]) {
               switch (mapping.action) {
                 case "next":
-                  next?.();
+                  next();
                   break;
                 case "play":
-                  togglePlaybackState?.();
+                  togglePlaybackState();
+                  break;
+                case "zoomIn":
+                  map.zoomIn();
+                  break;
+                case "zoomOut":
+                  map.zoomOut();
                   break;
                 default:
                   console.log("Unknown action", mapping.action);
@@ -42,10 +47,10 @@ export function useShortcutMappingsEffect() {
             mappingButtonStates[idx] = pressed;
           }
         });
-      }, 100);
+      }, 50);
     }
     return () => {
       interval && clearInterval(interval);
     };
-  }, [shortcutMappings, togglePlaybackState, next]);
+  }, [shortcutMappings, togglePlaybackState, next, map]);
 }

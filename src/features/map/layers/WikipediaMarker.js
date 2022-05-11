@@ -22,15 +22,12 @@ function WikipediaIcon({ isReading }) {
 };
 
 export default React.memo(function WikipediaMarker({
-  page, isInPlayQueue, isCurrentPage, isPlaying
+  page, isCurrentPage, isPlaying
 }) {
   const { pageid, coordinates } = page;
   let cn = styles.marker;
   if (isCurrentPage) {
     cn += ` ${styles.current}`;
-  }
-  else if (isInPlayQueue) {
-    cn += ` ${styles.queued}`;
   }
 
   return coordinates?.map((c, i) => <Marker

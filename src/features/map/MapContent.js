@@ -9,9 +9,12 @@ import { selectSimdata } from "../simdata/simdataSlice";
 import CourseLine from "./layers/CourseLine";
 import SearchRadiusCircle from "./layers/SearchRadiusCircle";
 import Plane from "./layers/Plane";
+import { useShortcutMappingsEffect } from "../../hooks";
 
 export default function MapContent() {
   const map = useMap();
+
+  useShortcutMappingsEffect();
 
   const {
     position
