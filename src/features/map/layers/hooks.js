@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import ReactDOMServer from "react-dom/server";
+import L from 'leaflet';
 
 export function useLeafletIcon(jsx, zoom = "100%") {
   const html = useMemo(() => {
