@@ -4,7 +4,7 @@
   "version": "0.7.0",
   "private": true,
   "dependencies": {
-    "@reduxjs/toolkit": "^1.6.2",
+    "@reduxjs/toolkit": "^2.2.3",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -39,6 +39,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^3.2.3"
   }
 }
