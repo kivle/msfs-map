@@ -1,23 +1,13 @@
 {
   "files": {
-    "main.css": "/msfs-map/static/css/main.c9222307.chunk.css",
-    "main.js": "/msfs-map/static/js/main.97b65333.chunk.js",
-    "main.js.map": "/msfs-map/static/js/main.97b65333.chunk.js.map",
-    "runtime-main.js": "/msfs-map/static/js/runtime-main.e21ef5c4.js",
-    "runtime-main.js.map": "/msfs-map/static/js/runtime-main.e21ef5c4.js.map",
-    "static/css/2.68ba508b.chunk.css": "/msfs-map/static/css/2.68ba508b.chunk.css",
-    "static/js/2.7c83c954.chunk.js": "/msfs-map/static/js/2.7c83c954.chunk.js",
-    "static/js/2.7c83c954.chunk.js.map": "/msfs-map/static/js/2.7c83c954.chunk.js.map",
+    "main.css": "/msfs-map/static/css/main.bcfe543b.css",
+    "main.js": "/msfs-map/static/js/main.af18a9f9.js",
     "index.html": "/msfs-map/index.html",
-    "static/css/2.68ba508b.chunk.css.map": "/msfs-map/static/css/2.68ba508b.chunk.css.map",
-    "static/css/main.c9222307.chunk.css.map": "/msfs-map/static/css/main.c9222307.chunk.css.map",
-    "static/js/2.7c83c954.chunk.js.LICENSE.txt": "/msfs-map/static/js/2.7c83c954.chunk.js.LICENSE.txt"
+    "main.bcfe543b.css.map": "/msfs-map/static/css/main.bcfe543b.css.map",
+    "main.af18a9f9.js.map": "/msfs-map/static/js/main.af18a9f9.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.e21ef5c4.js",
-    "static/css/2.68ba508b.chunk.css",
-    "static/js/2.7c83c954.chunk.js",
-    "static/css/main.c9222307.chunk.css",
-    "static/js/main.97b65333.chunk.js"
+    "static/css/main.bcfe543b.css",
+    "static/js/main.af18a9f9.js"
   ]
 }
