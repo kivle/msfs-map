@@ -14,10 +14,10 @@ import ShortcutMappings from './ShortcutMappings';
 const PreferencesPanel = React.memo(({
   changeMap, currentMap, availableMaps,
   changeEdition, edition, availableEditions, changeVoice, voice, 
-  availableVoices, autoPlay, autoPlayDistance, changeAutoPlay, 
+  availableVoices, autoPlay, changeAutoPlay, 
   visualizeSearchRadius, changeVisualizeSearchRadius,
   courseLine, changeShowCourseLine, connectedGamepads, shortcutMappings,
-  changeShortcutMappings
+  changeShortcutMappings, websocketUrl, changeWebsocketUrl
 }) =>
   <>
     <div className={styles.preference}>
@@ -56,6 +56,10 @@ const PreferencesPanel = React.memo(({
       <input id="autoPlay" type="checkbox" checked={autoPlay} onChange={(e) => changeAutoPlay(e.target.checked)} />
     </div>
     <div className={styles.preference}>
+      <label htmlFor="websocketUrl">URL to vfrmap server (leave blank for default)</label>
+      <input id="websocketUrl" type="text" placeholder="ws://localhost:9000/ws" onChange={(e) => changeWebsocketUrl(e.target.value)} />
+    </div>
+    <div className={styles.preference}>
       <ShortcutMappings
         connectedGamepads={connectedGamepads}
         shortcutMappings={shortcutMappings}
@@ -76,7 +80,8 @@ function PreferencesPanelContainer() {
     autoPlay,
     visualizeSearchRadius,
     courseLine,
-    shortcutMappings
+    shortcutMappings,
+    websocketUrl
   } = usePreferenceState();
 
   useAvailableVoicesEffect();
@@ -88,7 +93,8 @@ function PreferencesPanelContainer() {
     changeAutoPlay,
     changeVisualizeSearchRadius,
     changeShowCourseLine,
-    changeShortcutMappings
+    changeShortcutMappings,
+    changeWebsocketUrl
   } = usePreferenceCallbacks();
   
   const connectedGamepads = useConnectedGamepads();
@@ -112,6 +118,8 @@ function PreferencesPanelContainer() {
     connectedGamepads={connectedGamepads}
     shortcutMappings={shortcutMappings}
     changeShortcutMappings={changeShortcutMappings}
+    websocketUrl={websocketUrl}
+    changeWebsocketUrl={changeWebsocketUrl}
   />;
 }
 

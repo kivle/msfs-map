@@ -1,8 +1,9 @@
 import * as React from 'react';
-import Marker from "react-leaflet-enhanced-marker";
+import { Marker } from "react-leaflet";
 import { FaWikipediaW } from "react-icons/fa";
 import { MdRecordVoiceOver } from 'react-icons/md';
 import styles from './WikipediaMarker.module.css';
+import { useLeafletIcon } from './hooks';
 
 function WikipediaIcon({ isReading }) {
   return (
@@ -30,17 +31,19 @@ export default React.memo(function WikipediaMarker({
     cn += ` ${styles.current}`;
   }
 
+  const icon = <div className={styles.container}>
+    <div className={cn}>
+      <WikipediaIcon 
+        isReading={isPlaying && isCurrentPage}
+      />
+    </div>
+  </div>;
+
+  const leafletIcon = useLeafletIcon(icon);
+
   return coordinates?.map((c, i) => <Marker
     key={`${pageid}-${i}`}
     position={c}
-    icon={
-      <div className={styles.container}>
-        <div className={cn}>
-          <WikipediaIcon 
-            isReading={isPlaying && isCurrentPage}
-          />
-        </div>
-      </div>
-    }
+    icon={leafletIcon}
   />) ?? null;
 });

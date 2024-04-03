@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const simdataSlice = createSlice({
   name: 'simdata',
   initialState: {
+    websocketUrl: '',
     position: undefined,
     altitude: 0,
     heading: 0,
@@ -31,15 +32,21 @@ export const simdataSlice = createSlice({
     },
     setConnected: (state, action) => {
       state.connected = action.payload;
+    },
+    setWebsocketUrl: (state, action) => {
+      state.websocketUrl = action.payload;
     }
   }
 });
 
 export const {
   updateData,
-  setConnected
+  setConnected,
+  setWebsocketUrl
 } = simdataSlice.actions;
 
 export const selectSimdata = state => state.simdata;
+
+export const selectWebsocketUrl = state => selectSimdata(state).websocketUrl;
 
 export default simdataSlice.reducer;

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { batch, useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectAutoPlay, selectAvailableVoices, selectVoice, setAutoPlay, setAvailableVoices, setVoice } from "../../tts/ttsSlice";
 import { 
   selectAvailableEditions, 
@@ -10,30 +10,31 @@ import {
   selectShortcutMappings, selectVisualizeSearchRadius, setCurrentMap, 
   setShortcutMappings, setShowCourseLine, setVisualizeSearchRadius 
 } from "../mapSlice";
+import { selectWebsocketUrl, setWebsocketUrl } from "../../simdata/simdataSlice";
 
 export function useLoadPreferencesEffect() {
   const dispatch = useDispatch();
 
   useEffect(() => {
     // Load preferences on startup
-    batch(() => {
-      if (localStorage['wikipedia-enabled'])
-        dispatch(setEnabled(JSON.parse(localStorage['wikipedia-enabled'])));
-      if (localStorage['wikipedia-edition'])
-        dispatch(setEdition(localStorage['wikipedia-edition']));
-      if (localStorage['voice']) 
-        dispatch(setVoice(localStorage['voice']));
-      if (localStorage['currentMap']) 
-        dispatch(setCurrentMap(localStorage['currentMap']));
-      if (localStorage['autoPlay']) 
-        dispatch(setAutoPlay(JSON.parse(localStorage['autoPlay'])));
-      if (localStorage['visualizeSearchRadius'])
-        dispatch(setVisualizeSearchRadius(JSON.parse(localStorage['visualizeSearchRadius'])));
-      if (localStorage['courseLine'])
-        dispatch(setShowCourseLine(JSON.parse(localStorage['courseLine'])));
-      if (localStorage['shortcutMappings'])
-        dispatch(setShortcutMappings(JSON.parse(localStorage['shortcutMappings'])));
-    });
+    if (localStorage['wikipedia-enabled'])
+      dispatch(setEnabled(JSON.parse(localStorage['wikipedia-enabled'])));
+    if (localStorage['wikipedia-edition'])
+      dispatch(setEdition(localStorage['wikipedia-edition']));
+    if (localStorage['voice']) 
+      dispatch(setVoice(localStorage['voice']));
+    if (localStorage['currentMap']) 
+      dispatch(setCurrentMap(localStorage['currentMap']));
+    if (localStorage['autoPlay']) 
+      dispatch(setAutoPlay(JSON.parse(localStorage['autoPlay'])));
+    if (localStorage['visualizeSearchRadius'])
+      dispatch(setVisualizeSearchRadius(JSON.parse(localStorage['visualizeSearchRadius'])));
+    if (localStorage['courseLine'])
+      dispatch(setShowCourseLine(JSON.parse(localStorage['courseLine'])));
+    if (localStorage['shortcutMappings'])
+      dispatch(setShortcutMappings(JSON.parse(localStorage['shortcutMappings'])));
+    if (localStorage['websocketUrl'])
+      dispatch(setWebsocketUrl(JSON.parse(localStorage['websocketUrl'])));
   }, [dispatch]);
 }
 
@@ -48,6 +49,7 @@ export function usePreferenceState() {
   const visualizeSearchRadius = useSelector(selectVisualizeSearchRadius);
   const courseLine = useSelector(selectCourseLine);
   const shortcutMappings = useSelector(selectShortcutMappings);
+  const websocketUrl = useSelector(selectWebsocketUrl);
 
   return {
     edition,
@@ -59,7 +61,8 @@ export function usePreferenceState() {
     autoPlay,
     visualizeSearchRadius,
     courseLine,
-    shortcutMappings
+    shortcutMappings,
+    websocketUrl
   };
 }
 
@@ -81,7 +84,7 @@ export function usePreferenceCallbacks() {
     dispatch(setCurrentMap(e.target.value));
   }, [dispatch]);
 
-  const changeAutoPlay = useCallback((enabled, distance) => {
+  const changeAutoPlay = useCallback((enabled) => {
     if (enabled !== undefined)
       localStorage['autoPlay'] = JSON.stringify(enabled);
     dispatch(setAutoPlay(enabled));
@@ -102,6 +105,11 @@ export function usePreferenceCallbacks() {
     dispatch(setShortcutMappings(mappings));
   }, [dispatch]);
 
+  const changeWebsocketUrl = useCallback((newUrl) => {
+    localStorage['websocketUrl'] = JSON.stringify(newUrl);
+    dispatch(setWebsocketUrl(newUrl));
+  }, [dispatch]);
+
   return {
     changeEdition,
     changeVoice,
@@ -109,7 +117,8 @@ export function usePreferenceCallbacks() {
     changeAutoPlay,
     changeVisualizeSearchRadius,
     changeShowCourseLine,
-    changeShortcutMappings
+    changeShortcutMappings,
+    changeWebsocketUrl
   };
 }
 

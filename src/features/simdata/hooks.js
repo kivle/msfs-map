@@ -2,7 +2,9 @@ import { useEffect } from "react";
 import { useDispatch, useStore } from "react-redux";
 import { setConnected, updateData } from "./simdataSlice";
 
-export function useVfrmapConnection(url = "ws://localhost:9000/ws") {
+const defaultUrl = "ws://localhost:9000/ws";
+
+export function useVfrmapConnection() {
   const store = useStore();
   const dispatch = useDispatch();
 
@@ -12,6 +14,7 @@ export function useVfrmapConnection(url = "ws://localhost:9000/ws") {
     let timeout = undefined;
 
     function createConnection() {
+      const url = store?.getState()?.simdata?.websocketUrl || defaultUrl;
       ws = new WebSocket(url);
 
       ws.onmessage = (e) => {
@@ -50,5 +53,5 @@ export function useVfrmapConnection(url = "ws://localhost:9000/ws") {
         dispatch(setConnected(false));
       } catch {}
     };
-  }, [dispatch, url, store]);
+  }, [dispatch, store]);
 }
