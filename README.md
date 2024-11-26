@@ -1,6 +1,8 @@
-# Wikipedia virtual tour guide for MSFS 2020
+# Wikipedia virtual tour guide for MSFS 2020/2024
 
-The aim of this project is to provide a "virtual" tour guide that reads Wikipedia articles about the places you fly over in Microsoft Flight Simulator 2020. A video is worth more than a thousand words, so here is a video of it in action over the island of Ibiza:
+NOTE: A new patched version of vfrmap.exe is required for MSFS 2024. Download from the release page below!
+
+The aim of this project is to provide a "virtual" tour guide that reads Wikipedia articles about the places you fly over in Microsoft Flight Simulator 2020/2024. A video is worth more than a thousand words, so here is a video of it in action over the island of Ibiza:
 
 https://www.youtube.com/watch?v=2rDPMjrYLFg
 
@@ -8,7 +10,7 @@ https://www.youtube.com/watch?v=2rDPMjrYLFg
 
 This project only contains the front-end code to display the actual map and query the Wikipedia API. The actual location from the simulator is provided by a patched version of [vfrmap by lian](https://github.com/lian/msfs2020-go) . The only thing changed in the patched version is to allow cross-origin requests to the websocket.
 
-1. Download the patched version of vfrmap from https://github.com/kivle/msfs2020-go/releases/tag/0.0.7-patched
+1. Download the patched version of vfrmap (separate version for MSFS 2024 has been added!) from https://github.com/kivle/msfs2020-go/releases/tag/0.0.7-patched
 2. Start MSFS 2020.
 3. Execute patched version of vfrmap.exe
 4. Open https://kivle.github.io/msfs-map/ 
