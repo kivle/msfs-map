@@ -16,8 +16,8 @@ export const ttsSlice = createSlice({
     setAvailableVoices: (state, action) => {
       const voices = action.payload;
       state.availableVoices = voices;
-      if (state.voice && !state.availableVoices.some(v => v === state.voice))
-        state.voice = undefined;
+      if (state.currentVoice && !state.availableVoices.some(v => v === state.currentVoice))
+        state.currentVoice = undefined;
     },
     toggleIsPlaying: (state, action) => {
       state.isPlaying = !state.isPlaying;
