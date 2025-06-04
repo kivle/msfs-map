@@ -153,7 +153,6 @@ export const {
   removePages,
   markAsRead,
   setSearchRadius,
-  updatePageRatings,
   updateCalculatedData,
   updateLastSearch
 } = wikipediaSlice.actions;
