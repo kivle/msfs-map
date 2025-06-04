@@ -30,3 +30,18 @@ It is also possible to map certain actions to gamepad controllers in the prefere
 ## Running the map on a different computer / device on the network
 
 It's possible to run the map on a different device than the computer running the simulator. To do this, vfrmap.exe still needs to be started on the computer running the sim. On the other device, open the map and go to preferences. You will need to put in the full websocket url to the computer running vfrmap.exe. For instance "ws://192.168.50.123:9000/ws". If you do not know the local ip address of the computer running the simulator, you can open a command prompt and type "ipconfig" to find it.
+
+
+## Development
+
+The project now uses [Vite](https://vitejs.dev/) instead of Create React App and is built with **React 19**. Start a development server with:
+
+```bash
+npm run dev
+```
+
+Create a production build with:
+
+```bash
+npm run build
+```
