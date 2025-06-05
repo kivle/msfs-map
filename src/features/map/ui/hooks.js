@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectAutoPlay, selectAvailableVoices, selectVoice, setAutoPlay, setAvailableVoices, setVoice } from "../../tts/ttsSlice";
-import { 
-  selectAvailableEditions, 
-  selectEdition, setEdition, setEnabled
-} from "../../wikipedia/wikipediaSlice";
+import {
+  selectAvailableEditions,
+  selectEdition,
+} from "../../wikipedia/wikipediaSelectors";
+import { setEdition, setEnabled } from "../../wikipedia/wikipediaSlice";
 import { 
   selectAvailableMaps, selectCourseLine, selectCurrentMap, 
   selectShortcutMappings, selectVisualizeSearchRadius, setCurrentMap, 

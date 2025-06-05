@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import TtsPlayer from '../../tts/TtsPlayer/TtsPlayer';
 import WikipediaPage from '../../wikipedia/WikipediaPage/WikipediaPage';
-import { selectIsEnabled, selectPlayingPage } from '../../wikipedia/wikipediaSlice';
+import { selectIsEnabled, selectPlayingPage } from '../../wikipedia/wikipediaSelectors';
 import styles from './TtsPanel.module.css';
 
 export default function TtsPanel() {

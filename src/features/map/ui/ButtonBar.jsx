@@ -8,7 +8,8 @@ import {
 } from '../mapSlice';
 
 import styles from './ButtonBar.module.css';
-import { selectIsEnabled, setEnabled } from '../../wikipedia/wikipediaSlice';
+import { selectIsEnabled } from '../../wikipedia/wikipediaSelectors';
+import { setEnabled } from '../../wikipedia/wikipediaSlice';
 
 const ButtonBarView = React.memo(({
   isFollowing, toggleFollow, isWikipediaEnabled, toggleIsEnabled

@@ -4,7 +4,7 @@ import './App.css';
 import { useVfrmapConnection } from './features/simdata/hooks';
 import Sidebar from './features/sidebar/Sidebar';
 import { useSelector } from 'react-redux';
-import { selectIsEnabled } from './features/wikipedia/wikipediaSlice';
+import { selectIsEnabled } from './features/wikipedia/wikipediaSelectors';
 import { useLoadPreferencesEffect } from './features/map/ui/hooks';
 
 function App() {
