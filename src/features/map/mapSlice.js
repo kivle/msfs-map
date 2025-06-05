@@ -70,12 +70,12 @@ function calculatePoints(position, heading) {
           .filter(p => p);
 }
 
+const selectSimdataPosition = state => selectSimdata(state)?.position;
+const selectSimdataHeading = state => selectSimdata(state)?.heading;
+
 export const selectCourseLinePoint = createSelector(
-  state => ({
-    position: selectSimdata(state)?.position,
-    heading: selectSimdata(state)?.heading
-  }),
-  ({ position, heading }) => {
+  [selectSimdataPosition, selectSimdataHeading],
+  (position, heading) => {
     return position ? [position, ...calculatePoints(position, heading)] : undefined;
   }
 );
