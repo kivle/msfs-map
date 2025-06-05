@@ -3,13 +3,13 @@ import { useMap } from "react-leaflet";
 import { useSelector } from "react-redux";
 import Wikipedia from "./layers/Wikipedia";
 import { selectCourseLine, selectCurrentMap, selectIsFollowing, selectVisualizeSearchRadius } from "./mapSlice";
-import { selectIsEnabled } from '../wikipedia/wikipediaSlice';
+import { selectIsEnabled } from '../wikipedia/wikipediaSelectors';
 import { MainLayer } from "./layers/MainLayer";
 import { selectSimdata } from "../simdata/simdataSlice";
 import CourseLine from "./layers/CourseLine";
 import SearchRadiusCircle from "./layers/SearchRadiusCircle";
 import Plane from "./layers/Plane";
-import { useShortcutMappingsEffect } from "../../hooks";
+import { useShortcutMappingsEffect } from "./shortcutHooks";
 
 export default function MapContent() {
   const map = useMap();

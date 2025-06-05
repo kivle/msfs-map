@@ -3,7 +3,8 @@ import striptags from 'striptags';
 import { decode } from 'entities';
 import { useDispatch, useSelector } from "react-redux";
 import { selectAutoPlay, selectIsPlaying, selectVoice, toggleIsPlaying } from "../ttsSlice";
-import { playNext, selectPlayingPage } from "../../wikipedia/wikipediaSlice";
+import { playNext } from "../../wikipedia/wikipediaThunks";
+import { selectPlayingPage } from "../../wikipedia/wikipediaSelectors";
 
 export function useKeyboardEffect(next, togglePlaybackState) {
   useEffect(

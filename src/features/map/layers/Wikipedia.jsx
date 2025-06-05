@@ -5,9 +5,10 @@ import {
   usePeriodicRemoveWikipediaPagesOutOfRange, 
   usePeriodicCalculateEffect
 } from "../../wikipedia/hooks";
-import { 
-  selectPagesWithDistances, selectPlayingPage
-} from "../../wikipedia/wikipediaSlice";
+import {
+  selectPagesWithDistances,
+  selectPlayingPage,
+} from "../../wikipedia/wikipediaSelectors";
 import {
   selectIsPlaying
 } from "../../tts/ttsSlice";

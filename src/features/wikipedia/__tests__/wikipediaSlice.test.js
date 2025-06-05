@@ -1,15 +1,19 @@
 import { configureStore } from '@reduxjs/toolkit';
 import wikipediaReducer, {
+  receivePages,
+  updateCalculatedData,
+  setEdition,
+} from '../wikipediaSlice';
+import {
   getPages,
   playNext,
   clearPagesOutOfRange,
+} from '../wikipediaThunks';
+import {
   selectPagesWithDistances,
   selectPlayingPage,
   selectSearchCenterPoint,
-  receivePages,
-  updateCalculatedData,
-  setEdition
-} from '../wikipediaSlice';
+} from '../wikipediaSelectors';
 import simdataReducer, { updateData } from '../../simdata/simdataSlice';
 import ttsReducer from '../../tts/ttsSlice';
 
