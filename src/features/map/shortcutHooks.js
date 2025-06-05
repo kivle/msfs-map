@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useMap } from "react-leaflet";
 import { useSelector } from "react-redux";
-import { selectShortcutMappings } from "./features/map/mapSlice";
-import { usePlaybackCallbacks } from "./features/tts/TtsPlayer/hooks";
+import { selectShortcutMappings } from "./mapSlice";
+import { usePlaybackCallbacks } from "../tts/TtsPlayer/hooks";
 
 export function useShortcutMappingsEffect() {
   const shortcutMappings = useSelector(selectShortcutMappings);
