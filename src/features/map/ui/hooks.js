@@ -11,30 +11,35 @@ import {
   setShortcutMappings, setShowCourseLine, setVisualizeSearchRadius 
 } from "../mapSlice";
 import { selectWebsocketUrl, setWebsocketUrl } from "../../simdata/simdataSlice";
+import { loadPreferences, savePreference } from "../../../utils/prefs";
 
 export function useLoadPreferencesEffect() {
   const dispatch = useDispatch();
 
   useEffect(() => {
     // Load preferences on startup
-    if (localStorage['wikipedia-enabled'])
-      dispatch(setEnabled(JSON.parse(localStorage['wikipedia-enabled'])));
-    if (localStorage['wikipedia-edition'])
-      dispatch(setEdition(localStorage['wikipedia-edition']));
-    if (localStorage['voice']) 
-      dispatch(setVoice(localStorage['voice']));
-    if (localStorage['currentMap']) 
-      dispatch(setCurrentMap(localStorage['currentMap']));
-    if (localStorage['autoPlay']) 
-      dispatch(setAutoPlay(JSON.parse(localStorage['autoPlay'])));
-    if (localStorage['visualizeSearchRadius'])
-      dispatch(setVisualizeSearchRadius(JSON.parse(localStorage['visualizeSearchRadius'])));
-    if (localStorage['courseLine'])
-      dispatch(setShowCourseLine(JSON.parse(localStorage['courseLine'])));
-    if (localStorage['shortcutMappings'])
-      dispatch(setShortcutMappings(JSON.parse(localStorage['shortcutMappings'])));
-    if (localStorage['websocketUrl'])
-      dispatch(setWebsocketUrl(JSON.parse(localStorage['websocketUrl'])));
+    async function load() {
+      const prefs = await loadPreferences();
+      if (prefs['wikipedia-enabled'] !== undefined)
+        dispatch(setEnabled(prefs['wikipedia-enabled']));
+      if (prefs['wikipedia-edition'])
+        dispatch(setEdition(prefs['wikipedia-edition']));
+      if (prefs['voice'])
+        dispatch(setVoice(prefs['voice']));
+      if (prefs['currentMap'])
+        dispatch(setCurrentMap(prefs['currentMap']));
+      if (prefs['autoPlay'] !== undefined)
+        dispatch(setAutoPlay(prefs['autoPlay']));
+      if (prefs['visualizeSearchRadius'] !== undefined)
+        dispatch(setVisualizeSearchRadius(prefs['visualizeSearchRadius']));
+      if (prefs['courseLine'] !== undefined)
+        dispatch(setShowCourseLine(prefs['courseLine']));
+      if (prefs['shortcutMappings'])
+        dispatch(setShortcutMappings(prefs['shortcutMappings']));
+      if (prefs['websocketUrl'])
+        dispatch(setWebsocketUrl(prefs['websocketUrl']));
+    }
+    load();
   }, [dispatch]);
 }
 
@@ -69,44 +74,44 @@ export function usePreferenceState() {
 export function usePreferenceCallbacks() {
   const dispatch = useDispatch();
 
-  const changeEdition = useCallback((e) => {
-    localStorage['wikipedia-edition'] = e.target.value;
+  const changeEdition = useCallback(async (e) => {
+    await savePreference('wikipedia-edition', e.target.value);
     dispatch(setEdition(e.target.value));
   }, [dispatch]);
 
-  const changeVoice = useCallback((e) => {
-    localStorage['voice'] = e.target.value;
+  const changeVoice = useCallback(async (e) => {
+    await savePreference('voice', e.target.value);
     dispatch(setVoice(e.target.value));
   }, [dispatch]);
 
-  const changeMap = useCallback((e) => {
-    localStorage['currentMap'] = e.target.value;
+  const changeMap = useCallback(async (e) => {
+    await savePreference('currentMap', e.target.value);
     dispatch(setCurrentMap(e.target.value));
   }, [dispatch]);
 
-  const changeAutoPlay = useCallback((enabled) => {
+  const changeAutoPlay = useCallback(async (enabled) => {
     if (enabled !== undefined)
-      localStorage['autoPlay'] = JSON.stringify(enabled);
+      await savePreference('autoPlay', enabled);
     dispatch(setAutoPlay(enabled));
   }, [dispatch]);
 
-  const changeVisualizeSearchRadius = useCallback((enabled) => {
-    localStorage['visualizeSearchRadius'] = JSON.stringify(enabled);
+  const changeVisualizeSearchRadius = useCallback(async (enabled) => {
+    await savePreference('visualizeSearchRadius', enabled);
     dispatch(setVisualizeSearchRadius(enabled));
   }, [dispatch]);
 
-  const changeShowCourseLine = useCallback((enabled) => {
-    localStorage['courseLine'] = JSON.stringify(enabled);
+  const changeShowCourseLine = useCallback(async (enabled) => {
+    await savePreference('courseLine', enabled);
     dispatch(setShowCourseLine(enabled));
   }, [dispatch]);
 
-  const changeShortcutMappings = useCallback((mappings) => {
-    localStorage['shortcutMappings'] = JSON.stringify(mappings);
+  const changeShortcutMappings = useCallback(async (mappings) => {
+    await savePreference('shortcutMappings', mappings);
     dispatch(setShortcutMappings(mappings));
   }, [dispatch]);
 
-  const changeWebsocketUrl = useCallback((newUrl) => {
-    localStorage['websocketUrl'] = JSON.stringify(newUrl);
+  const changeWebsocketUrl = useCallback(async (newUrl) => {
+    await savePreference('websocketUrl', newUrl);
     dispatch(setWebsocketUrl(newUrl));
   }, [dispatch]);
 
