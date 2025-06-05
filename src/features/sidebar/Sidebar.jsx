@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { selectPagesWithDistances } from '../wikipedia/wikipediaSlice';
+import { selectPagesWithDistances } from '../wikipedia/wikipediaSelectors';
 import styles from './Sidebar.module.css';
 import WikipediaPage from '../wikipedia/WikipediaPage/WikipediaPage';
 

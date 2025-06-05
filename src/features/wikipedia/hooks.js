@@ -2,18 +2,17 @@ import { getDistance } from "geolib";
 import { useEffect } from "react";
 import { useDispatch, useSelector, useStore } from "react-redux";
 import { selectSimdata } from "../simdata/simdataSlice";
-import { 
-  clearPagesOutOfRange,
-  getPages,
+import { clearPagesOutOfRange, getPages } from "./wikipediaThunks";
+import {
   selectEdition,
   selectIsEnabled,
   selectLastSearchPosition,
   selectLastSearchRadius,
   selectLastSearchTime,
-  selectSearchCenterPoint, 
+  selectSearchCenterPoint,
   selectSearchRadius,
-  updateCalculatedData
-} from "./wikipediaSlice";
+} from "./wikipediaSelectors";
+import { updateCalculatedData } from "./wikipediaSlice";
 
 export function usePeriodicWikipediaFetching(minimumInterval = 20000) {
   const dispatch = useDispatch();
