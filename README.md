@@ -34,7 +34,13 @@ It's possible to run the map on a different device than the computer running the
 
 ## Development
 
-The project now uses [Vite](https://vitejs.dev/) instead of Create React App and is built with **React 19**. Start a development server with:
+The project now uses [Vite](https://vitejs.dev/) instead of Create React App and is built with **React 19**. Make sure to install dependencies first:
+
+```bash
+npm install
+```
+
+Start a development server with:
 
 ```bash
 npm run dev
