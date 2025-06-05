@@ -3,6 +3,7 @@ import { useCallback } from 'react';
 import { FaWikipediaW } from 'react-icons/fa';
 import { CgTrack } from 'react-icons/cg';
 import { useDispatch, useSelector } from 'react-redux';
+import { savePreference } from '../../../utils/prefs';
 import {
   selectIsFollowing, setIsFollowing
 } from '../mapSlice';
@@ -32,8 +33,8 @@ export default function ButtonBar() {
   }, [dispatch, isFollowing]);
 
   const isWikipediaEnabled = useSelector(selectIsEnabled);
-  const toggleIsEnabled = useCallback(() => {
-    localStorage['wikipedia-enabled'] = JSON.stringify(!isWikipediaEnabled);
+  const toggleIsEnabled = useCallback(async () => {
+    await savePreference('wikipedia-enabled', !isWikipediaEnabled);
     dispatch(setEnabled(!isWikipediaEnabled));
   }, [dispatch, isWikipediaEnabled]);
   
