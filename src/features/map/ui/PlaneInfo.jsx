@@ -15,7 +15,8 @@ const PlaneInfoPanel = React.memo(({
   flaps,
   trim,
   rudder_trim,
-  connected
+  connected,
+  position
 }) =>
   <div className={styles.main}>
     {!connected && `Disconnected from simulator. Start vfrmap.exe.`}
@@ -47,6 +48,17 @@ const PlaneInfoPanel = React.memo(({
       {parseFloat(rudder_trim) !== 0 && <InfoField 
         label="R.Trim" 
         value={`${rudder_trim}%`}
+      />}
+      {position !== undefined && position.length >= 2 && <InfoField
+        label="Position"
+        value={
+          <a 
+            title="Open position in Google Maps" 
+            target="_blank" 
+            href={`https://www.google.com/maps/search/?api=1&query=${parseFloat(position[0]).toFixed(6)},${parseFloat(position[1]).toFixed(6)}`}>
+            {parseFloat(position[0]).toFixed(4)} {parseFloat(position[1]).toFixed(4)}
+          </a>
+        }
       />}
     </>}
   </div>
