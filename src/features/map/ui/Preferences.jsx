@@ -22,8 +22,8 @@ const PreferencesPanel = React.memo(({
   <>
     <div className={styles.preference}>
       <label htmlFor="mapserver">Map</label>
-      <select id="mapserver" onChange={changeMap} value={currentMap.name}>
-        {availableMaps.map(({name}) => <option key={name} value={name}>{name}</option>)}
+      <select id="mapserver" onChange={changeMap} value={currentMap.id}>
+        {availableMaps.map(({id, name}) => <option key={id} value={id}>{name}</option>)}
       </select>
     </div>
     <div className={styles.preference}>

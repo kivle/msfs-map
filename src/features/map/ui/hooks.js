@@ -86,8 +86,10 @@ export function usePreferenceCallbacks() {
   }, [dispatch]);
 
   const changeMap = useCallback(async (e) => {
-    await savePreference('currentMap', e.target.value);
-    dispatch(setCurrentMap(e.target.value));
+    const mapId = e.target.value;
+    dispatch(setCurrentMap(mapId));
+    // Persist asynchronously; failures should not block UI update
+    savePreference('currentMap', mapId).catch(() => {});
   }, [dispatch]);
 
   const changeAutoPlay = useCallback(async (enabled) => {

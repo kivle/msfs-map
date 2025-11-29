@@ -9,7 +9,7 @@ export const mapSlice = createSlice({
   name: 'map',
   initialState: {
     isFollowing: true,
-    currentMap: 'OpenStreetMap',
+    currentMap: servers[0]?.id ?? 'OpenStreetMap',
     availableMaps: servers,
     visualizeSearchRadius: true,
     courseLine: false,
@@ -43,7 +43,10 @@ export const {
   setShortcutMappings
 } = mapSlice.actions;
 
-export const selectCurrentMap = state => state.map.availableMaps.find(m => m.name === state.map.currentMap);
+export const selectCurrentMap = state => {
+  const available = state.map.availableMaps ?? [];
+  return available.find(m => m.id === state.map.currentMap) ?? available[0];
+};
 
 export const selectAvailableMaps = state => state.map.availableMaps;
 
