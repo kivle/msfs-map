@@ -13,7 +13,7 @@ export const mapSlice = createSlice({
     availableMaps: servers,
     visualizeSearchRadius: true,
     courseLine: false,
-    detectRetina: false,
+    detectRetinaByMap: {},
     shortcutMappings: []
   },
   reducers: {
@@ -30,7 +30,16 @@ export const mapSlice = createSlice({
       state.courseLine = action.payload;
     },
     setDetectRetina: (state, action) => {
-      state.detectRetina = action.payload;
+      const { mapId, enabled } = action.payload;
+      if (mapId) {
+        state.detectRetinaByMap = {
+          ...(state.detectRetinaByMap ?? {}),
+          [mapId]: enabled
+        };
+      }
+    },
+    setDetectRetinaMap: (state, action) => {
+      state.detectRetinaByMap = action.payload ?? {};
     },
     setShortcutMappings: (state, action) => {
       state.shortcutMappings = action.payload;
@@ -45,6 +54,7 @@ export const {
   setVisualizeSearchRadius,
   setShowCourseLine,
   setDetectRetina,
+  setDetectRetinaMap,
   setShortcutMappings
 } = mapSlice.actions;
 
@@ -61,7 +71,13 @@ export const selectVisualizeSearchRadius = state => state.map.visualizeSearchRad
 
 export const selectCourseLine = state => state.map.courseLine;
 
-export const selectDetectRetina = state => state.map.detectRetina;
+export const selectDetectRetinaByMap = state => state.map.detectRetinaByMap ?? {};
+
+export const selectDetectRetinaForCurrentMap = createSelector(
+  state => selectCurrentMap(state)?.id,
+  selectDetectRetinaByMap,
+  (mapId, detectMap) => (mapId ? detectMap[mapId] : undefined) ?? false
+);
 
 export const selectShortcutMappings = state => state.map.shortcutMappings;
 

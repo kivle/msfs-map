@@ -28,6 +28,10 @@ const PreferencesPanel = React.memo(({
       </select>
     </div>
     <div className={styles.preference}>
+      <label htmlFor="detectRetina">Use High-DPI tile for this map</label>
+      <input id="detectRetina" type="checkbox" checked={detectRetina} onChange={(e) => changeDetectRetina(e.target.checked)} />
+    </div>
+    <div className={styles.preference}>
       <label htmlFor="wikipedia-edition">Wikipedia Edition</label>
       <select id="wikipedia-edition" onChange={changeEdition} value={edition}>
         {availableEditions.map(
@@ -45,10 +49,6 @@ const PreferencesPanel = React.memo(({
     <div className={styles.preference}>
       <label htmlFor="showCourseLine">Show course line</label>
       <input id="showCourseLine" type="checkbox" checked={courseLine} onChange={(e) => changeShowCourseLine(e.target.checked)} />
-    </div>
-    <div className={styles.preference}>
-      <label htmlFor="detectRetina">Use high-DPI tiles (may reduce label legibility)</label>
-      <input id="detectRetina" type="checkbox" checked={detectRetina} onChange={(e) => changeDetectRetina(e.target.checked)} />
     </div>
     <div className={styles.preference}>
       <label htmlFor="voice">Voice</label>

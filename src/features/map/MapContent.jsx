@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useMap } from "react-leaflet";
 import { useSelector } from "react-redux";
 import Wikipedia from "./layers/Wikipedia";
-import { selectCourseLine, selectCurrentMap, selectDetectRetina, selectIsFollowing, selectVisualizeSearchRadius } from "./mapSlice";
+import { selectCourseLine, selectCurrentMap, selectDetectRetinaForCurrentMap, selectIsFollowing, selectVisualizeSearchRadius } from "./mapSlice";
 import { selectIsEnabled } from '../wikipedia/wikipediaSelectors';
 import { MainLayer } from "./layers/MainLayer";
 import { selectSimdata } from "../simdata/simdataSlice";
@@ -20,7 +20,7 @@ export default function MapContent() {
     position
   } = useSelector(selectSimdata);
   const currentMap = useSelector(selectCurrentMap);
-  const detectRetina = useSelector(selectDetectRetina);
+  const detectRetina = useSelector(selectDetectRetinaForCurrentMap);
   const isFollowing = useSelector(selectIsFollowing);
   const isWikipediaEnabled = useSelector(selectIsEnabled);
   const visualizeSearchRadius = useSelector(selectVisualizeSearchRadius);

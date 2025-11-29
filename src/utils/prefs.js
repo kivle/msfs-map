@@ -9,7 +9,7 @@ export const preferenceKeys = [
   'visualizeSearchRadius',
   'courseLine',
   'shortcutMappings',
-  'detectRetina',
+  'detectRetinaByMap',
   'websocketUrl'
 ];
 

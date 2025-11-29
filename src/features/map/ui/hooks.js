@@ -9,7 +9,7 @@ import { setEdition, setEnabled } from "../../wikipedia/wikipediaSlice";
 import { 
   selectAvailableMaps, selectCourseLine, selectCurrentMap, 
   selectShortcutMappings, selectVisualizeSearchRadius, setCurrentMap, 
-  setShortcutMappings, setShowCourseLine, setVisualizeSearchRadius, selectDetectRetina, setDetectRetina 
+  setShortcutMappings, setShowCourseLine, setVisualizeSearchRadius, selectDetectRetinaForCurrentMap, setDetectRetina, selectDetectRetinaByMap, setDetectRetinaMap 
 } from "../mapSlice";
 import { selectWebsocketUrl, setWebsocketUrl } from "../../simdata/simdataSlice";
 import { loadPreferences, savePreference } from "../../../utils/prefs";
@@ -35,8 +35,8 @@ export function useLoadPreferencesEffect() {
         dispatch(setVisualizeSearchRadius(prefs['visualizeSearchRadius']));
       if (prefs['courseLine'] !== undefined)
         dispatch(setShowCourseLine(prefs['courseLine']));
-      if (prefs['detectRetina'] !== undefined)
-        dispatch(setDetectRetina(prefs['detectRetina']));
+      if (prefs['detectRetinaByMap'] !== undefined)
+        dispatch(setDetectRetinaMap(prefs['detectRetinaByMap']));
       if (prefs['shortcutMappings'])
         dispatch(setShortcutMappings(prefs['shortcutMappings']));
       if (prefs['websocketUrl'])
@@ -56,7 +56,7 @@ export function usePreferenceState() {
   const autoPlay = useSelector(selectAutoPlay);
   const visualizeSearchRadius = useSelector(selectVisualizeSearchRadius);
   const courseLine = useSelector(selectCourseLine);
-  const detectRetina = useSelector(selectDetectRetina);
+  const detectRetina = useSelector(selectDetectRetinaForCurrentMap);
   const shortcutMappings = useSelector(selectShortcutMappings);
   const websocketUrl = useSelector(selectWebsocketUrl);
 
@@ -78,6 +78,8 @@ export function usePreferenceState() {
 
 export function usePreferenceCallbacks() {
   const dispatch = useDispatch();
+  const detectRetinaByMap = useSelector(selectDetectRetinaByMap);
+  const currentMap = useSelector(selectCurrentMap);
 
   const changeEdition = useCallback(async (e) => {
     await savePreference('wikipedia-edition', e.target.value);
@@ -113,9 +115,13 @@ export function usePreferenceCallbacks() {
   }, [dispatch]);
 
   const changeDetectRetina = useCallback(async (enabled) => {
-    dispatch(setDetectRetina(enabled));
-    savePreference('detectRetina', enabled).catch(() => {});
-  }, [dispatch]);
+    const mapId = currentMap?.id;
+    if (!mapId) return;
+    dispatch(setDetectRetina({ mapId, enabled }));
+    const updated = { ...(detectRetinaByMap ?? {}) };
+    updated[mapId] = enabled;
+    savePreference('detectRetinaByMap', updated).catch(() => {});
+  }, [dispatch, currentMap, detectRetinaByMap]);
 
   const changeShortcutMappings = useCallback(async (mappings) => {
     await savePreference('shortcutMappings', mappings);
