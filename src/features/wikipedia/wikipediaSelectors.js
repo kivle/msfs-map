@@ -22,13 +22,13 @@ function pageSort(a, b) {
   return res;
 }
 
+const selectPagesState = (state) => state.wikipedia?.pages;
+const selectCalculatedData = (state) => state.wikipedia?.calculatedData;
+const selectPlayingPageId = (state) => state.wikipedia?.playingPageid;
+
 export const selectPagesWithDistances = createSelector(
-  (state) => ({
-    pages: state.wikipedia?.pages,
-    calculatedData: state.wikipedia?.calculatedData,
-    playingPageid: state.wikipedia?.playingPageid,
-  }),
-  ({ pages, playingPageid, calculatedData }) => {
+  [selectPagesState, selectCalculatedData, selectPlayingPageId],
+  (pages, calculatedData, playingPageid) => {
     const pagesWithClosestPoints = pages?.map((p) => {
       const { closestPoint } = calculatedData[p.pageid] ?? {};
 
@@ -47,23 +47,17 @@ export const selectPagesWithDistances = createSelector(
 );
 
 export const selectPlayingPage = createSelector(
-  (state) => ({
-    pages: selectPagesWithDistances(state),
-    playingPageid: state.wikipedia?.playingPageid,
-  }),
-  ({ pages, playingPageid }) => {
-    return pages.find((p) => p.page.pageid === playingPageid);
-  }
+  [selectPagesWithDistances, selectPlayingPageId],
+  (pages, playingPageid) => pages.find((p) => p.page.pageid === playingPageid)
 );
 
+const selectPosition = (state) => state.simdata?.position;
+const selectHeading = (state) => state.simdata?.heading;
+const selectSpeed = (state) => state.simdata?.airspeed;
+
 export const selectSearchCenterPoint = createSelector(
-  (state) => ({
-    position: state.simdata?.position,
-    heading: state.simdata?.heading,
-    speed: state.simdata?.airspeed,
-    searchRadius: state.wikipedia?.searchRadius,
-  }),
-  ({ position, heading, searchRadius, speed }) =>
+  [selectPosition, selectHeading, selectSpeed, selectSearchRadius],
+  (position, heading, speed, searchRadius) =>
     position
       ? speed > 50
         ? computeDestinationPoint(arrayToGeolibPoint(position), searchRadius, heading)
