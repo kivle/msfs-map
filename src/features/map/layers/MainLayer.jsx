@@ -28,6 +28,11 @@ const VectorLayer = ({ currentMap, attribution }) => {
 
   React.useEffect(() => {
     if (!currentMap?.styleUrl || !L.maplibreGL) return;
+    
+    // Manually wire attribution for maplibre overlay because the plugin
+    // doesn't register it with Leaflet's attribution control.
+    map.attributionControl?.addAttribution?.(attribution);
+
     const layer = L.maplibreGL({
       style: currentMap.styleUrl,
       attribution,
@@ -55,6 +60,7 @@ const VectorLayer = ({ currentMap, attribution }) => {
       try {
         map.removeLayer(layer);
         layer._glMap?.remove?.();
+        map.attributionControl?.removeAttribution?.(attribution);
         if (glMap && onStyleImageMissing) {
           glMap.off('styleimagemissing', onStyleImageMissing);
         }
