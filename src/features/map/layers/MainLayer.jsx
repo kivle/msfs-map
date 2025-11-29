@@ -34,10 +34,30 @@ const VectorLayer = ({ currentMap, attribution }) => {
       maplibregl
     });
     layer.addTo(map);
+
+    const glMap = layer.getMaplibreMap?.();
+    let onStyleImageMissing;
+    if (glMap) {
+      onStyleImageMissing = (e) => {
+        if (glMap.hasImage(e.id)) return;
+        // Provide a 1x1 transparent placeholder to avoid console noise for missing sprites
+        const empty = new Uint8Array(4);
+        try {
+          glMap.addImage(e.id, { width: 1, height: 1, data: empty }, { pixelRatio: 1, sdf: false });
+        } catch {
+          // ignore if maplibre rejects duplicate or invalid ids
+        }
+      };
+      glMap.on('styleimagemissing', onStyleImageMissing);
+    }
+
     return () => {
       try {
         map.removeLayer(layer);
         layer._glMap?.remove?.();
+        if (glMap && onStyleImageMissing) {
+          glMap.off('styleimagemissing', onStyleImageMissing);
+        }
       } catch {}
     };
   }, [map, currentMap?.styleUrl, currentMap?.id, attribution]);
