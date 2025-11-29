@@ -30,10 +30,10 @@ export function useVfrmapConnection() {
         dispatch(updateData(msg));
       };
       
-      ws.onerror = (e) => {
-        console.debug(e);
+      ws.onerror = () => {
+        // Suppress noisy console errors when vfrmap.exe is not running; onclose will handle retries
       };
-  
+
       ws.onclose = (e) => {
         dispatch(setConnected(false));
         if (!closing) {
