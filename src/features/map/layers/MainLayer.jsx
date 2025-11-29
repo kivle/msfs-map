@@ -4,13 +4,30 @@ import L from 'leaflet';
 import maplibregl from 'maplibre-gl';
 import '@maplibre/maplibre-gl-leaflet';
 
+// Patch maplibre-gl-leaflet methods to guard against _map being null during teardown
+const patchMaplibrePrototype = () => {
+  const proto = L.MaplibreGL?.prototype;
+  if (!proto || proto.__patchedForNullMap) return;
+  const guard = (fn) => function guarded(...args) {
+    if (!this?._map) return;
+    return fn.apply(this, args);
+  };
+  ['_transitionEnd', '_resize', '_update', '_animateZoom', '_zoomStart', '_zoomEnd', '_pinchZoom', 'onRemove'].forEach((name) => {
+    if (typeof proto[name] === 'function') {
+      proto[name] = guard(proto[name]);
+    }
+  });
+  proto.__patchedForNullMap = true;
+};
+patchMaplibrePrototype();
+
 import packageJson from '../../../../package.json';
 
 const VectorLayer = ({ currentMap, attribution }) => {
   const map = useMap();
 
   React.useEffect(() => {
-    if (!currentMap?.styleUrl) return;
+    if (!currentMap?.styleUrl || !L.maplibreGL) return;
     const layer = L.maplibreGL({
       style: currentMap.styleUrl,
       attribution,
@@ -18,9 +35,10 @@ const VectorLayer = ({ currentMap, attribution }) => {
     });
     layer.addTo(map);
     return () => {
-      if (layer) {
+      try {
         map.removeLayer(layer);
-      }
+        layer._glMap?.remove?.();
+      } catch {}
     };
   }, [map, currentMap?.styleUrl, currentMap?.id, attribution]);
 

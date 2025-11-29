@@ -33,10 +33,6 @@ export default function MapContent() {
     }
   }, [map, isFollowing, position]);
 
-  useEffect(() => {
-    map.invalidateSize();
-  }, [map, isWikipediaEnabled]);
-
   return (
     <>
       <MapViewPersistence />
