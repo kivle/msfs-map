@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-30T10:38:33+01:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Faro</Name>
+        <Ident>LPFR</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-7.965842" Lat="37.014446" Alt="13.58"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Estádio Algarve</Name>
+        <Ident>POI1313</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-7.974575" Lat="37.088284" Alt="1583.62"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Guadiana International Bridge</Name>
+        <Ident>POI1322</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-7.419936" Lat="37.237617" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Alqueva Dam</Name>
+        <Ident>POI1292</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-7.496181" Lat="38.197128" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lusitania Bridge</Name>
+        <Ident>POI1333</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-6.353522" Lat="38.916824" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Las Hurdes</Name>
+        <Ident>POI1373</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-6.080403" Lat="40.389393" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Aldeadávila Dam</Name>
+        <Ident>POI1291</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-6.686069" Lat="41.211830" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Covão dos Conchos</Name>
+        <Ident>POI1310</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-7.610869" Lat="40.364052" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Estadio Citade de Coimbra</Name>
+        <Ident>POI1314</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-8.408706" Lat="40.203030" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Coimbra</Name>
+        <Ident>POI1380</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-8.410257" Lat="40.203316" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Estádio Municipal De Aveiro</Name>
+        <Ident>POI1319</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-8.593656" Lat="40.647663" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Maria Pia Bridge</Name>
+        <Ident>POI1335</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-8.596983" Lat="41.139824" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Luís I Bridge</Name>
+        <Ident>POI1332</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-8.609428" Lat="41.139896" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Freixo Bridge</Name>
+        <Ident>POI1321</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-8.580911" Lat="41.141933" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Estádio Do Dragão</Name>
+        <Ident>POI1317</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-8.583650" Lat="41.161755" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Casa da Música</Name>
+        <Ident>POI1297</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-8.630717" Lat="41.158798" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ponte de Barcelos</Name>
+        <Ident>POI1351</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-8.622283" Lat="41.527431" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Braga Cathedral</Name>
+        <Ident>POI1295</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-8.427350" Lat="41.549934" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bom Jesus do Monte</Name>
+        <Ident>POI1294</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-8.376883" Lat="41.554737" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Estádio D. Afonso Henriques</Name>
+        <Ident>POI1315</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-8.300875" Lat="41.445942" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rande Bridge</Name>
+        <Ident>POI1354</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-8.660428" Lat="42.288280" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cathedral of Santiago de Compostela</Name>
+        <Ident>POI1307</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-8.544131" Lat="42.881126" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>A Coruna</Name>
+        <Ident>LECO</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-8.377223" Lat="43.301922" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Torre de Hércules</Name>
+        <Ident>POI1363</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-8.406519" Lat="43.385921" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Playa de las Catedrales</Name>
+        <Ident>POI1375</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-7.145142" Lat="43.555260" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Oscar Niemeyer International Cultural Centre</Name>
+        <Ident>POI1346</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-5.917711" Lat="43.557434" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Catedral de León</Name>
+        <Ident>POI1303</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-5.566594" Lat="42.599518" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Episcopal Palace of Astorga</Name>
+        <Ident>POI1312</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-6.055872" Lat="42.457817" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Las Médulas</Name>
+        <Ident>POI1374</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-6.758669" Lat="42.458054" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Catedral de Burgos</Name>
+        <Ident>POI1302</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.704653" Lat="42.340618" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hotel Marques de Riscal</Name>
+        <Ident>POI1325</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-2.617708" Lat="42.511658" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bilbao</Name>
+        <Ident>POI1378</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-2.934985" Lat="43.263012" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Guggenheim Museum Bilbao</Name>
+        <Ident>POI1323</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-2.934033" Lat="43.268578" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Zubizuri Bridge</Name>
+        <Ident>POI1370</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-2.927814" Lat="43.266338" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Vizcaya Bridge</Name>
+        <Ident>POI1367</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.017053" Lat="43.323120" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>La ermita de San Juan de Gaztelugatxe</Name>
+        <Ident>POI1327</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-2.784586" Lat="43.447525" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>El Flysch Zumaia</Name>
+        <Ident>POI1371</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-2.259192" Lat="43.300919" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Palacio de Deportes de Santander</Name>
+        <Ident>POI1347</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.796092" Lat="43.475521" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>El Monumento Natural de los Mallos de Riglos</Name>
+        <Ident>POI1372</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.719344" Lat="42.348568" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Third Millennium Bridge</Name>
+        <Ident>POI1361</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.908347" Lat="41.665466" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Catedral-Basílica de Nuestra Señora del Pilar</Name>
+        <Ident>POI1305</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.878492" Lat="41.656746" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Les Ferreres Aqueduct</Name>
+        <Ident>POI1329</Ident>
+        <Type>USER</Type>
+        <Pos Lon="1.243856" Lat="41.145985" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Camp Nou</Name>
+        <Ident>POI1296</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.122822" Lat="41.380898" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Museu Nacional d Art de Catalunya</Name>
+        <Ident>POI1341</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.153631" Lat="41.368404" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Montjuic Castle</Name>
+        <Ident>POI1339</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.166114" Lat="41.363342" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>W Barcelona</Name>
+        <Ident>POI1368</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.190078" Lat="41.368492" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hotel Arts</Name>
+        <Ident>POI1324</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.196228" Lat="41.386909" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Torre Mapfre</Name>
+        <Ident>POI1364</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.197347" Lat="41.387798" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Santa Caterina Market</Name>
+        <Ident>POI1358</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.178497" Lat="41.386166" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Casa Mila</Name>
+        <Ident>POI1298</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.161828" Lat="41.395306" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Basílica De La Sagrada Família</Name>
+        <Ident>POI1293</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.174347" Lat="41.403587" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Torre Agbar</Name>
+        <Ident>POI1362</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.189522" Lat="41.403519" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Seo De Urgel</Name>
+        <Ident>LESU</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="1.414689" Lat="42.346107" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>City of Arts and Sciences</Name>
+        <Ident>POI1309</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.352939" Lat="39.456032" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castle of Almansa</Name>
+        <Ident>POI1301</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.093519" Lat="38.871552" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castillo de Santa Bárbara</Name>
+        <Ident>POI1300</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.478017" Lat="38.348774" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Catedral de Murcia</Name>
+        <Ident>POI1304</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.128714" Lat="37.984016" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>La Vicaria Arch Bridge</Name>
+        <Ident>POI1328</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-2.263386" Lat="38.354702" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Molinos de Campo de Criptana</Name>
+        <Ident>POI1338</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.123081" Lat="39.409939" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Alcazar of Toledo</Name>
+        <Ident>POI1290</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-4.020522" Lat="39.858116" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Puente De San Martín</Name>
+        <Ident>POI1353</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-4.034236" Lat="39.856621" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Royal Palace of Madrid</Name>
+        <Ident>POI1356</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.714228" Lat="40.418526" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>El Retiro Park</Name>
+        <Ident>POI1376</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.684042" Lat="40.416527" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Monumento a Alfonso XII</Name>
+        <Ident>POI1340</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.683075" Lat="40.417313" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wanda Metropolitano</Name>
+        <Ident>POI1369</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.599550" Lat="40.436134" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>MVRDV - Mirador</Name>
+        <Ident>POI1343</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.654819" Lat="40.487671" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>El Monasterio de El Escorial</Name>
+        <Ident>POI1311</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-4.147461" Lat="40.588982" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Roman Aqueduct Of Segovia</Name>
+        <Ident>POI1360</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-4.116636" Lat="40.946491" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Alcázar de Segovia</Name>
+        <Ident>POI1289</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-4.132525" Lat="40.952393" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>San Pablo Bridge</Name>
+        <Ident>POI1357</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-2.127517" Lat="40.078304" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mezquita-Catedral de Córdoba</Name>
+        <Ident>POI1337</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-4.779358" Lat="37.878891" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Roman bridge of Cordoba</Name>
+        <Ident>POI1355</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-4.778053" Lat="37.876755" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Metropol Parasol</Name>
+        <Ident>POI1336</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-5.991819" Lat="37.392967" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cathedral and Giralda in Seville</Name>
+        <Ident>POI1306</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-5.993158" Lat="37.385925" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Puente de Isabel II</Name>
+        <Ident>POI1352</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-6.002406" Lat="37.386288" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Plaza de Espana in Seville</Name>
+        <Ident>POI1349</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-5.986897" Lat="37.377090" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>La Constitución De 1812 Bridge</Name>
+        <Ident>POI1326</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-6.259544" Lat="36.524021" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Malaga</Name>
+        <Ident>POI1382</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-4.421266" Lat="36.721260" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Barreiro</Name>
+        <Ident>POI1377</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-9.079072" Lat="38.660816" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Christ The King</Name>
+        <Ident>POI1308</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-9.171050" Lat="38.678585" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ponte 25 de Abril Bridge</Name>
+        <Ident>POI1350</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-9.177325" Lat="38.690434" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Museum Of Art Architecture And Technology</Name>
+        <Ident>POI1342</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-9.193717" Lat="38.695995" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lisbon Harbour Control Tower</Name>
+        <Ident>POI1331</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-9.234278" Lat="38.693954" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Estádio Da Luz</Name>
+        <Ident>POI1316</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-9.184744" Lat="38.752754" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Estádio José Alvalade</Name>
+        <Ident>POI1318</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-9.160769" Lat="38.761169" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lisbon</Name>
+        <Ident>POI1381</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-9.139337" Lat="38.722252" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Oceanário de Lisboa</Name>
+        <Ident>POI1345</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-9.093775" Lat="38.763569" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Torre Vasco da Gama</Name>
+        <Ident>POI1365</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-9.091250" Lat="38.774788" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Vasco da Gama Bridge</Name>
+        <Ident>POI1366</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-9.056831" Lat="38.772411" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Leziria Bridge</Name>
+        <Ident>POI1330</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-8.934181" Lat="39.012886" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castelo dos Mouros </Name>
+        <Ident>POI1299</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-9.388625" Lat="38.792965" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pena Palace</Name>
+        <Ident>POI1348</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-9.390633" Lat="38.787655" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cascais</Name>
+        <Ident>POI1379</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-9.422295" Lat="38.697056" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fort of Sao Joao Baptista</Name>
+        <Ident>POI1320</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-9.509986" Lat="39.411331" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tenerife International Center For Fairs And Congresses</Name>
+        <Ident>POI1359</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-16.257877" Lat="28.454578" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Magma Arte &amp; Congresos</Name>
+        <Ident>POI1334</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-16.726997" Lat="28.069483" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Observatorio Roque de los Muchachos</Name>
+        <Ident>POI1344</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-17.890898" Lat="28.761326" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pico</Name>
+        <Ident>LPPI</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-28.441376" Lat="38.554447" Alt="103.70"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

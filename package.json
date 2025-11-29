@@ -26,8 +26,9 @@
     "dev": "vite",
     "start": "vite",
     "build": "vite build",
+    "postbuild": "npm run build:geojson",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist"
+    "build:geojson": "node scripts/build-pois-geojson.js"
   },
   "eslintConfig": {
     "extends": "react-app"

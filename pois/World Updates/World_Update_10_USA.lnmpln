@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-09T17:48:04+00:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Valdez Airport</Name>
+        <Ident>PAVD</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-146.244736" Lat="61.134205" Alt="84.41"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Seuss House in Talkeetna</Name>
+        <Ident>POI1545</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-150.085526" Lat="62.039326" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Arlington</Name>
+        <Ident>POI1579</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.138954" Lat="48.181095" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Seattle</Name>
+        <Ident>POI1589</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.332069" Lat="47.606209" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Olympia</Name>
+        <Ident>POI1587</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.895004" Lat="47.045101" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tillamook Air Museum Blimp Hangar</Name>
+        <Ident>POI1558</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-123.804955" Lat="45.420490" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Eugene</Name>
+        <Ident>POI1583</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-123.095055" Lat="44.050507" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wild Horse Renewable Energy Center</Name>
+        <Ident>POI1567</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-120.201675" Lat="47.012428" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Grand Coulee Dam</Name>
+        <Ident>POI1515</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-118.981689" Lat="47.955971" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Boise </Name>
+        <Ident>POI1580</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-116.200890" Lat="43.616615" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Metaphor: The Tree of Utah</Name>
+        <Ident>POI1526</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-113.551376" Lat="40.733646" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Old Faithful Inn</Name>
+        <Ident>POI1537</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-110.831413" Lat="44.459690" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Old Faithful Geyser</Name>
+        <Ident>POI1573</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-110.828186" Lat="44.460506" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Our Lady of the Rockies</Name>
+        <Ident>POI1538</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-112.446457" Lat="46.000362" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Montana State Capitol</Name>
+        <Ident>POI1528</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-112.018433" Lat="46.585762" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Will Rogers Shrine of the Sun</Name>
+        <Ident>POI1568</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-104.862602" Lat="38.772377" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Royal Gorge Bridge &amp; Park</Name>
+        <Ident>POI1543</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-105.325325" Lat="38.461407" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bishop Castle</Name>
+        <Ident>POI1503</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-105.094200" Lat="38.061382" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Chaco Culture National Historical Park</Name>
+        <Ident>POI1508</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-107.961685" Lat="36.060520" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wupatki National Monument</Name>
+        <Ident>POI1570</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-111.372871" Lat="35.521088" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Montezuma Castle National Monument</Name>
+        <Ident>POI1529</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-111.842178" Lat="34.612186" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Theodore Roosevelt Dam</Name>
+        <Ident>POI1556</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-111.162354" Lat="33.671158" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Biosphere 2</Name>
+        <Ident>POI1502</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-110.850761" Lat="32.578743" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>San Diego</Name>
+        <Ident>POI1588</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-117.162773" Lat="32.717419" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Catalina Casino</Name>
+        <Ident>POI1506</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-118.325661" Lat="33.348949" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Catalina</Name>
+        <Ident>KAVX</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-118.415771" Lat="33.405003" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Getty Museum</Name>
+        <Ident>POI1555</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-118.474739" Lat="34.077229" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hearst Castle</Name>
+        <Ident>POI1516</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-121.167625" Lat="35.685390" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Albany</Name>
+        <Ident>POI1578</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.297745" Lat="37.886871" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Point Reyes Lighthouse</Name>
+        <Ident>POI1575</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-123.023193" Lat="37.995625" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lake Tahoe</Name>
+        <Ident>KTVL</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-119.995331" Lat="38.893890" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Skydance Bridge</Name>
+        <Ident>POI1546</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-97.517433" Lat="35.456505" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Crystal Bridges Museum of American Art</Name>
+        <Ident>POI1511</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-94.203423" Lat="36.382401" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hot Springs Mountain Tower</Name>
+        <Ident>POI1519</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-93.046188" Lat="34.517242" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Little Rock Central High School National Historic Site</Name>
+        <Ident>POI1524</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-92.298729" Lat="34.736790" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St. Louis Arch</Name>
+        <Ident>POI1552</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-90.184952" Lat="38.624630" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cahokia Mounds State Historic Site</Name>
+        <Ident>POI1572</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-90.062126" Lat="38.660744" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Independence Temple</Name>
+        <Ident>POI1520</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-94.426331" Lat="39.091068" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Yerkes Observatory</Name>
+        <Ident>POI1571</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-88.556274" Lat="42.570381" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lansing</Name>
+        <Ident>POI1585</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-84.555382" Lat="42.733772" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Longaberger Company Headquarters</Name>
+        <Ident>POI1525</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-82.346359" Lat="40.063667" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Charleston</Name>
+        <Ident>POI1581</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.633278" Lat="38.350597" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lynchburg</Name>
+        <Ident>POI1586</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.142242" Lat="37.413754" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Steven F. Udvar-Hazy Center</Name>
+        <Ident>POI1553</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.444290" Lat="38.910885" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Washington National Cathedral</Name>
+        <Ident>POI1566</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.070496" Lat="38.930630" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>United States Marine Corps War Memorial</Name>
+        <Ident>POI1563</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.069725" Lat="38.890434" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Arlington Memorial Bridge</Name>
+        <Ident>POI1499</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.055252" Lat="38.887436" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>World War II Memorial</Name>
+        <Ident>POI1569</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.040527" Lat="38.889381" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>National Museum of African American History and Culture</Name>
+        <Ident>POI1534</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.032715" Lat="38.891048" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Smithsonian National Museum of American History</Name>
+        <Ident>POI1550</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.030022" Lat="38.891209" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Smithsonian National Museum of Natural History</Name>
+        <Ident>POI1551</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.025963" Lat="38.891243" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Smithsonian Castle Information Center</Name>
+        <Ident>POI1548</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.025986" Lat="38.888790" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Freer Gallery of Art</Name>
+        <Ident>POI1514</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.027336" Lat="38.888058" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>U.S. Department of Agriculture Patio</Name>
+        <Ident>POI1559</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.030006" Lat="38.888035" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Smithsonian Arts &amp; Industries Building</Name>
+        <Ident>POI1547</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.024452" Lat="38.888187" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hirshhorn Museum</Name>
+        <Ident>POI1518</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.022964" Lat="38.888149" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Smithsonian National Air and Space Museum</Name>
+        <Ident>POI1549</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.019836" Lat="38.888161" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>National Museum of the American Indian</Name>
+        <Ident>POI1535</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.016518" Lat="38.888298" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>United States Botanic Garden</Name>
+        <Ident>POI1562</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.012917" Lat="38.887981" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ulysses S. Grant Memorial</Name>
+        <Ident>POI1560</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.012917" Lat="38.889782" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>National Gallery of Art - East Building</Name>
+        <Ident>POI1533</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.016586" Lat="38.891178" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>National Gallery of Art</Name>
+        <Ident>POI1532</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.019882" Lat="38.891254" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Thomas Jefferson Memorial</Name>
+        <Ident>POI1557</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.036575" Lat="38.881363" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mount Vernon</Name>
+        <Ident>POI1530</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.086426" Lat="38.708118" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Delaware Memorial Bridge</Name>
+        <Ident>POI1513</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-75.519005" Lat="39.689167" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Philadelphia Museum of Art</Name>
+        <Ident>POI1540</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-75.181084" Lat="39.965797" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Union Watersphere</Name>
+        <Ident>POI1561</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-74.262138" Lat="40.693230" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>MetLife Stadium</Name>
+        <Ident>POI1527</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-74.074356" Lat="40.813526" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>High Point Monument</Name>
+        <Ident>POI1517</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-74.661659" Lat="41.320923" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bennington Battle Monument</Name>
+        <Ident>POI1501</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-73.215569" Lat="42.889194" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Vermont State House</Name>
+        <Ident>POI1565</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-72.580505" Lat="44.262459" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mount Washington Hotel</Name>
+        <Ident>POI1531</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-71.439445" Lat="44.257103" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Deer Isle Bridge</Name>
+        <Ident>POI1512</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-68.688812" Lat="44.293999" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pomham Rocks Lighthouse</Name>
+        <Ident>POI1576</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-71.369545" Lat="41.777645" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Breakers</Name>
+        <Ident>POI1554</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-71.298325" Lat="41.469971" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Beavertail Lighthouse Museum</Name>
+        <Ident>POI1500</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-71.399391" Lat="41.449379" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Block Island State</Name>
+        <Ident>KBID</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-71.577850" Lat="41.168137" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Indian River Inlet Bridge</Name>
+        <Ident>POI1521</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-75.063736" Lat="38.608070" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cape Hatteras Lighthouse</Name>
+        <Ident>POI1574</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-75.528816" Lat="35.250553" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Clingmans Dome Lookout Tower</Name>
+        <Ident>POI1509</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-83.498390" Lat="35.562813" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kentucky State Capitol</Name>
+        <Ident>POI1522</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-84.875389" Lat="38.186718" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ark Encounter - Life-size Noah's Ark</Name>
+        <Ident>POI1498</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-84.591690" Lat="38.621544" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kinzua Bridge State Park</Name>
+        <Ident>POI1523</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-78.589264" Lat="41.763657" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cecil B Day Butterfly Center</Name>
+        <Ident>POI1507</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-84.854042" Lat="32.831757" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>USS Alabama (BB-60)</Name>
+        <Ident>POI1564</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-88.014420" Lat="30.681850" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Crescent City Connection - New Orleans Bridges</Name>
+        <Ident>POI1510</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-90.057716" Lat="29.938206" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>San Antonio Missions</Name>
+        <Ident>POI1544</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-98.479782" Lat="29.362350" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bok Tower Gardens Tower</Name>
+        <Ident>POI1505</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.577530" Lat="27.935339" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Disney - Kissamme - Windermere</Name>
+        <Ident>POI1582</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.407585" Lat="28.291899" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pegasus and Dragon</Name>
+        <Ident>POI1539</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-80.140610" Lat="25.982267" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Key Largo</Name>
+        <Ident>POI1584</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-80.447243" Lat="25.087034" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Arecibo Telescope</Name>
+        <Ident>POI1497</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-66.752762" Lat="18.344208" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Blackbeard's Castle</Name>
+        <Ident>POI1504</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-64.929642" Lat="18.343884" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Point Udall</Name>
+        <Ident>POI1541</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-64.567253" Lat="17.755960" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Split Rock Lighthouse</Name>
+        <Ident>POI1577</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-91.366989" Lat="47.200031" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>National Park of American Samoa</Name>
+        <Ident>POI1536</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-170.671143" Lat="-14.236467" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Puntan Dos Amantes - Two Lovers Point</Name>
+        <Ident>POI1542</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.802765" Lat="13.535064" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Abandoned Pacific Barrier Radar III Site</Name>
+        <Ident>POI1496</Ident>
+        <Type>USER</Type>
+        <Pos Lon="145.796021" Lat="15.249072" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Francisco C Ada/Saipan Intl</Name>
+        <Ident>PGSN</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="145.729980" Lat="15.120275" Alt="209.00"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

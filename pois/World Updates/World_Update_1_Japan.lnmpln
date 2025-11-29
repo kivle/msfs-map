@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-09T17:42:22+00:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Miyako</Name>
+        <Ident>ROMY</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="125.294983" Lat="24.782745" Alt="138.41"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kerama</Name>
+        <Ident>ROKR</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="127.293312" Lat="26.168346" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Suwanosejima Airport</Name>
+        <Ident>RJX8</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="129.701874" Lat="29.606510" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hashima-Island</Name>
+        <Ident>POI730</Ident>
+        <Type>USER</Type>
+        <Pos Lon="129.737350" Lat="32.627327" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nagasaki</Name>
+        <Ident>RJFU</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="129.913605" Lat="32.916943" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nagasaki-Bridge</Name>
+        <Ident>POI740</Ident>
+        <Type>USER</Type>
+        <Pos Lon="129.930527" Lat="32.916248" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Chikugo-River-Lift-Bridge</Name>
+        <Ident>POI729</Ident>
+        <Type>USER</Type>
+        <Pos Lon="130.362122" Lat="33.214798" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kokonoe-Yume-Otsurihashi</Name>
+        <Ident>POI738</Ident>
+        <Type>USER</Type>
+        <Pos Lon="131.227051" Lat="33.173943" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kanmon-Bridge</Name>
+        <Ident>POI736</Ident>
+        <Type>USER</Type>
+        <Pos Lon="130.957382" Lat="33.962482" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Itsukushima-Shrine</Name>
+        <Ident>POI735</Ident>
+        <Type>USER</Type>
+        <Pos Lon="132.319321" Lat="34.296295" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tatara-Bridge</Name>
+        <Ident>POI743</Ident>
+        <Type>USER</Type>
+        <Pos Lon="133.063583" Lat="34.259621" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hitsuishijima-Bridge</Name>
+        <Ident>POI732</Ident>
+        <Type>USER</Type>
+        <Pos Lon="133.808105" Lat="34.405384" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Shimotsuisetoo-Bridge</Name>
+        <Ident>POI742</Ident>
+        <Type>USER</Type>
+        <Pos Lon="133.806046" Lat="34.430954" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bisan-Seto-Bridge</Name>
+        <Ident>POI728</Ident>
+        <Type>USER</Type>
+        <Pos Lon="133.820877" Lat="34.377525" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Takamatsu</Name>
+        <Ident>POI747</Ident>
+        <Type>USER</Type>
+        <Pos Lon="134.046539" Lat="34.342541" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tokushima</Name>
+        <Ident>POI748</Ident>
+        <Type>USER</Type>
+        <Pos Lon="134.554947" Lat="34.070366" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Akashi-Kaikyo-Bridge</Name>
+        <Ident>POI727</Ident>
+        <Type>USER</Type>
+        <Pos Lon="135.021027" Lat="34.617085" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kobe-Tower</Name>
+        <Ident>POI737</Ident>
+        <Type>USER</Type>
+        <Pos Lon="135.186768" Lat="34.682610" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Himeji-Castle</Name>
+        <Ident>POI731</Ident>
+        <Type>USER</Type>
+        <Pos Lon="134.692917" Lat="34.838966" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Horyu-ji</Name>
+        <Ident>POI733</Ident>
+        <Type>USER</Type>
+        <Pos Lon="135.734192" Lat="34.614418" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Yokohama</Name>
+        <Ident>POI751</Ident>
+        <Type>USER</Type>
+        <Pos Lon="139.637970" Lat="35.443672" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Yokohama-Bay-Bridge</Name>
+        <Ident>POI745</Ident>
+        <Type>USER</Type>
+        <Pos Lon="139.673813" Lat="35.454391" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rainbow-Bridge</Name>
+        <Ident>POI741</Ident>
+        <Type>USER</Type>
+        <Pos Lon="139.763397" Lat="35.636749" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tokyo</Name>
+        <Ident>POI749</Ident>
+        <Type>USER</Type>
+        <Pos Lon="139.769012" Lat="35.680401" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mode Gakuen Cocoon Tower</Name>
+        <Ident>POI739</Ident>
+        <Type>USER</Type>
+        <Pos Lon="139.696854" Lat="35.691517" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tokyo-Gate-Bridge</Name>
+        <Ident>POI744</Ident>
+        <Type>USER</Type>
+        <Pos Lon="139.826462" Lat="35.610405" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Utsunomiya</Name>
+        <Ident>POI750</Ident>
+        <Type>USER</Type>
+        <Pos Lon="139.882614" Lat="36.555077" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sendai</Name>
+        <Ident>POI746</Ident>
+        <Type>USER</Type>
+        <Pos Lon="140.869415" Lat="38.268196" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hachijojima</Name>
+        <Ident>RJTH</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="139.785934" Lat="33.115005" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ikitsuki-Bridge</Name>
+        <Ident>POI734</Ident>
+        <Type>USER</Type>
+        <Pos Lon="129.438461" Lat="33.352993" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kushiro</Name>
+        <Ident>RJCK</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="144.193069" Lat="43.040825" Alt="308.56"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

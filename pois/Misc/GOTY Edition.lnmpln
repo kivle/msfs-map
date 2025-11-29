@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-03T18:44:44+00:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Patrick SFB</Name>
+        <Ident>KCOF</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-80.609970" Lat="28.235004" Alt="8.58"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Miramar MCAS</Name>
+        <Ident>KNKX</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-117.143188" Lat="32.868526" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Derby</Name>
+        <Ident>POI1192</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.474619" Lat="52.922531" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nottingham</Name>
+        <Ident>POI1196</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.158109" Lat="52.954784" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Eastbourne</Name>
+        <Ident>POI1193</Ident>
+        <Type>USER</Type>
+        <Pos Lon="0.290472" Lat="50.768036" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Utrecht</Name>
+        <Ident>POI1197</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.121420" Lat="52.090736" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Calden</Name>
+        <Ident>EDVK</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="9.392163" Lat="51.420795" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Leipzig-Halle</Name>
+        <Ident>EDDP</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="12.236389" Lat="51.423996" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Memmingen</Name>
+        <Ident>EDJA</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="10.239415" Lat="47.988884" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Zurich</Name>
+        <Ident>LSZH</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="8.548059" Lat="47.458061" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Luzern-Beromunster</Name>
+        <Ident>LSZO</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="8.204722" Lat="47.189999" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Freiburg im Breisgau</Name>
+        <Ident>POI1194</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.842104" Lat="47.999008" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lugano</Name>
+        <Ident>LSZA</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="8.910276" Lat="46.003620" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Helsinki</Name>
+        <Ident>POI1195</Ident>
+        <Type>USER</Type>
+        <Pos Lon="24.938379" Lat="60.169857" Alt="0.00"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

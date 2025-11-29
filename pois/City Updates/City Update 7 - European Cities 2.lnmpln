@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-03T17:45:25+00:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Francisco Sa Carneiro</Name>
+        <Ident>LPPR</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-8.678056" Lat="41.235554" Alt="222.13"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Porto</Name>
+        <Ident>POI2245</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-8.583298" Lat="41.161819" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Barcelona</Name>
+        <Ident>POI2242</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.174590" Lat="41.405361" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nice</Name>
+        <Ident>POI2244</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.256524" Lat="43.696907" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Monaco</Name>
+        <Ident>POI2243</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.429553" Lat="43.738338" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stockholm</Name>
+        <Ident>POI2246</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.095844" Lat="59.324982" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bromma</Name>
+        <Ident>ESSB</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="17.942226" Lat="59.354458" Alt="22.14"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

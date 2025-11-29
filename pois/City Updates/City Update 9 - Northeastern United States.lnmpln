@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-03T17:55:50+00:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>St Louis Downtown</Name>
+        <Ident>KCPS</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-90.155083" Lat="38.570362" Alt="411.52"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>National Golf Link</Name>
+        <Ident>POI2267</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-90.145134" Lat="38.659649" Alt="1888.65"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Buffalo, NY</Name>
+        <Ident>POI2270</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-78.886047" Lat="42.933910" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Allentown,PY</Name>
+        <Ident>POI2268</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-75.471451" Lat="40.601791" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Long Island, NY</Name>
+        <Ident>POI2271</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-73.160896" Lat="40.789078" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Southampton, New York</Name>
+        <Ident>POI2272</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-72.387291" Lat="40.870453" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Annapolis, MD</Name>
+        <Ident>POI2269</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-76.500046" Lat="38.978325" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Washington DC</Name>
+        <Ident>POI2273</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.009186" Lat="38.889820" Alt="912.38"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ronald Reagan Washington National Airport</Name>
+        <Ident>KDCA</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-77.037720" Lat="38.851440" Alt="16.88"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

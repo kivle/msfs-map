@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-30T11:15:58+01:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Punta Raisi</Name>
+        <Ident>LICJ</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="13.099426" Lat="38.181946" Alt="46.10"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Scala Dei Turchi</Name>
+        <Ident>POI1478</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.472781" Lat="37.289814" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Temple of Concordia</Name>
+        <Ident>POI1461</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.592089" Lat="37.289665" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bastioni Di Siracusa</Name>
+        <Ident>POI1471</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.295400" Lat="37.053421" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stele della Madonna della Lettera</Name>
+        <Ident>POI1459</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.562822" Lat="38.196526" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Viadotto Sfalassà</Name>
+        <Ident>POI1469</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.803250" Lat="38.271130" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tropea Grotta Del Palombaro</Name>
+        <Ident>POI1480</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.895725" Lat="38.680096" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fausto Bisantis Bridge</Name>
+        <Ident>POI1417</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.584503" Lat="38.906704" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Isola Di Capo Rizzuto And The Aragonese Castle</Name>
+        <Ident>POI1476</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.021652" Lat="38.906807" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castle Of Corigliano Calabro</Name>
+        <Ident>POI1406</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.517006" Lat="39.596672" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Viadotto Italia</Name>
+        <Ident>POI1468</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.960572" Lat="39.938221" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Statua Del Redentore (Maratea)</Name>
+        <Ident>POI1458</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.720589" Lat="39.987766" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Paestum</Name>
+        <Ident>POI1489</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.005040" Lat="40.426987" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Napoli</Name>
+        <Ident>POI1487</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.268120" Lat="40.851799" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Museo Archeologico Di Napoli - Sezione Egizia</Name>
+        <Ident>POI1434</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.250475" Lat="40.853596" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castel Nuovo</Name>
+        <Ident>POI1395</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.253247" Lat="40.838345" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Diego Armando Maradona Stadium</Name>
+        <Ident>POI1411</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.192933" Lat="40.827915" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Napoli Afragola Railway Station</Name>
+        <Ident>POI1435</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.331064" Lat="40.931293" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Caserta Royal Palace</Name>
+        <Ident>POI1393</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.327167" Lat="41.073181" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castello Monforte</Name>
+        <Ident>POI1403</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.655025" Lat="41.563625" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castello Di Roccascalegna</Name>
+        <Ident>POI1400</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.304158" Lat="42.062202" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Le Morge</Name>
+        <Ident>POI1477</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.584108" Lat="42.215099" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rocca Calascio</Name>
+        <Ident>POI1446</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.688869" Lat="42.328907" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castello Di Celano</Name>
+        <Ident>POI1397</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.545222" Lat="42.084621" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rome</Name>
+        <Ident>POI1493</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.496366" Lat="41.902782" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Monument to Vittorio Emanuele II</Name>
+        <Ident>POI1432</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.483128" Lat="41.894596" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pantheon (Rome - Italy)</Name>
+        <Ident>POI1439</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.476839" Lat="41.898575" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Arch of Constantine</Name>
+        <Ident>POI1384</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.490667" Lat="41.889778" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Basilica di San Pietro</Name>
+        <Ident>POI1387</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.454400" Lat="41.902184" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Maxxi, The National Museum</Name>
+        <Ident>POI1425</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.466436" Lat="41.928665" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stadio Olimpico</Name>
+        <Ident>POI1456</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.454767" Lat="41.933956" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Torre Astura</Name>
+        <Ident>POI1463</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.764917" Lat="41.407818" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Civita di Bagnoregio</Name>
+        <Ident>POI1410</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.113231" Lat="42.627445" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Duomo di Orvieto</Name>
+        <Ident>POI1414</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.113597" Lat="42.717018" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Perugia</Name>
+        <Ident>POI1492</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.390828" Lat="43.110718" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Basilica San Francesco</Name>
+        <Ident>POI1389</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.605339" Lat="43.075035" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Santuario Di Loreto</Name>
+        <Ident>POI1450</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.609800" Lat="43.441078" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ancona</Name>
+        <Ident>POI1483</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.518915" Lat="43.615829" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Torri Di San Marino</Name>
+        <Ident>POI1466</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.449694" Lat="43.935440" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cathedral of Santa Maria del Fiore</Name>
+        <Ident>POI1408</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.256950" Lat="43.773083" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Palazzo Pitti</Name>
+        <Ident>POI1438</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.250231" Lat="43.764915" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Duomo di Siena</Name>
+        <Ident>POI1416</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.328803" Lat="43.317520" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Modigliani Forum</Name>
+        <Ident>POI1429</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.342358" Lat="43.555096" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Piazza Dei Miracoli (Torre Di Pisa)</Name>
+        <Ident>POI1441</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.396594" Lat="43.722923" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Marina Di Campo</Name>
+        <Ident>LIRJ</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="10.239752" Lat="42.761135" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stadio Renato Dall'Ara</Name>
+        <Ident>POI1457</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.309989" Lat="44.492310" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Basilica di San Petronio</Name>
+        <Ident>POI1386</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.343314" Lat="44.493328" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Torre Degli Asinelli E Garisenda</Name>
+        <Ident>POI1464</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.346786" Lat="44.494312" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Duomo di Modena</Name>
+        <Ident>POI1413</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.925628" Lat="44.646244" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Duomo Di Parma</Name>
+        <Ident>POI1415</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.331228" Lat="44.803162" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Parma</Name>
+        <Ident>POI1490</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.327904" Lat="44.801483" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stadio Marcantonio Bentegodi</Name>
+        <Ident>POI1455</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.968628" Lat="45.435322" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Arena Di Verona</Name>
+        <Ident>POI1385</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.994397" Lat="45.438972" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cittadella</Name>
+        <Ident>POI1485</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.786617" Lat="45.666039" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Padua</Name>
+        <Ident>POI1488</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.876761" Lat="45.406433" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Venice</Name>
+        <Ident>POI1495</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.328647" Lat="45.437595" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Saint Mark's Basilica</Name>
+        <Ident>POI1447</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.339722" Lat="45.434521" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Basilica Di Santa Maria Assunta</Name>
+        <Ident>POI1388</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.419081" Lat="45.498234" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Vajont Dam</Name>
+        <Ident>POI1467</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.328939" Lat="46.267387" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>MMM Corones</Name>
+        <Ident>POI1428</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.954378" Lat="46.737316" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>RAS Sendemast</Name>
+        <Ident>POI1444</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.959742" Lat="46.740021" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Brunico Castle</Name>
+        <Ident>POI1392</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.939119" Lat="46.794441" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St. Valentin (Kastelruth) Church</Name>
+        <Ident>POI1453</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.562847" Lat="46.549751" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bolzano</Name>
+        <Ident>LIPB</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="11.326375" Lat="46.460289" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Diga di Santa Giustina</Name>
+        <Ident>POI1472</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.061336" Lat="46.345612" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Timmelsjoch - Telescope Landmark</Name>
+        <Ident>POI1462</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.120708" Lat="46.892925" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kirchturm Von Altgraun</Name>
+        <Ident>POI1424</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.536594" Lat="46.810745" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sondrio Caiolo Airport</Name>
+        <Ident>LILO</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="9.795228" Lat="46.154587" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tempio Voltiano</Name>
+        <Ident>POI1460</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.075239" Lat="45.814808" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Villa Olmo - Como</Name>
+        <Ident>POI1470</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.065906" Lat="45.818989" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mi.Co. Gate 2</Name>
+        <Ident>POI1427</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.151331" Lat="45.481571" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>City Life</Name>
+        <Ident>POI1409</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.156617" Lat="45.478264" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castello Sforzesco</Name>
+        <Ident>POI1404</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.179314" Lat="45.470497" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Milan</Name>
+        <Ident>POI1486</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.189982" Lat="45.464203" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Duomo di Milano</Name>
+        <Ident>POI1412</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.191244" Lat="45.464176" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>San Siro Stadium</Name>
+        <Ident>POI1448</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.123981" Lat="45.478081" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pavia</Name>
+        <Ident>POI1491</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.158207" Lat="45.184727" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Biosfera</Name>
+        <Ident>POI1391</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.925503" Lat="44.409824" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bigo</Name>
+        <Ident>POI1390</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.926733" Lat="44.409191" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lighthouse of Genoa</Name>
+        <Ident>POI1482</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.904578" Lat="44.404499" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mole Antonelliana</Name>
+        <Ident>POI1430</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.693267" Lat="45.069004" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Turin</Name>
+        <Ident>POI1494</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.669289" Lat="45.063297" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Allianz Stadium (Turin - Italy)</Name>
+        <Ident>POI1383</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.641306" Lat="45.109493" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Reggia Di Venaria</Name>
+        <Ident>POI1445</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.624253" Lat="45.135601" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Forte Di Bard</Name>
+        <Ident>POI1421</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.744561" Lat="45.608215" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castello Di Verres</Name>
+        <Ident>POI1401</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.695381" Lat="45.669601" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castello Di Graines</Name>
+        <Ident>POI1398</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.754261" Lat="45.738338" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castel Savoia</Name>
+        <Ident>POI1396</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.826689" Lat="45.764065" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fénis Castle</Name>
+        <Ident>POI1418</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.488961" Lat="45.736958" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Place Moulin Dam</Name>
+        <Ident>POI1442</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.494175" Lat="45.897915" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Isola Bella</Name>
+        <Ident>POI1475</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.527247" Lat="45.895351" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castello Estense</Name>
+        <Ident>POI1402</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.619444" Lat="44.837635" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stadio Friuli</Name>
+        <Ident>POI1454</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.199919" Lat="46.081543" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gorizia Castle</Name>
+        <Ident>POI1422</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.627722" Lat="45.944267" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castello Di Miramare</Name>
+        <Ident>POI1399</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.712669" Lat="45.702694" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Monte Santo di Lussari</Name>
+        <Ident>POI1431</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.522639" Lat="46.480442" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castel del Monte</Name>
+        <Ident>POI1394</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.271000" Lat="41.084740" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bari</Name>
+        <Ident>POI1484</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.871872" Lat="41.117142" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Capo Santa Maria di Leuca Lighthouse</Name>
+        <Ident>POI1481</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.368475" Lat="39.795940" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Portomaso Business Tower</Name>
+        <Ident>POI1443</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.492244" Lat="35.922012" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fort Manoel</Name>
+        <Ident>POI1419</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.505200" Lat="35.902954" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Il-Forti Tigné</Name>
+        <Ident>POI1423</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.513286" Lat="35.906536" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fort St Angelo</Name>
+        <Ident>POI1420</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.517975" Lat="35.892361" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mosta Parish</Name>
+        <Ident>POI1433</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.425819" Lat="35.910004" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>National Stadium Ta'Qali</Name>
+        <Ident>POI1436</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.415239" Lat="35.894840" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St. Paul's Cathedral (Malta)</Name>
+        <Ident>POI1452</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.403836" Lat="35.886581" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mdina Old City</Name>
+        <Ident>POI1426</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.403147" Lat="35.885418" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Dingli Cliffs</Name>
+        <Ident>POI1479</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.387778" Lat="35.848495" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Parish Church of Mellieha</Name>
+        <Ident>POI1440</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.360869" Lat="35.960896" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St. Agatha's Tower (Red Tower)</Name>
+        <Ident>POI1451</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.342894" Lat="35.974682" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nuraghe Su Nuraxi</Name>
+        <Ident>POI1437</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.991147" Lat="39.705940" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castle of Serravalle</Name>
+        <Ident>POI1407</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.504689" Lat="40.297432" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Faro di Capo Caccia</Name>
+        <Ident>POI1473</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.162722" Lat="40.560760" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Grotta Di Nettuno</Name>
+        <Ident>POI1474</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.163108" Lat="40.562847" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Torre della Pelosa</Name>
+        <Ident>POI1465</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.207039" Lat="40.971024" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castelsardo</Name>
+        <Ident>POI1405</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.713117" Lat="40.916107" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Santissima Trinità Di Saccargia</Name>
+        <Ident>POI1449</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.689378" Lat="40.671284" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Campo di Volo Air Ardara&quot;&quot;</Name>
+        <Ident>LIAJ</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="8.866593" Lat="40.626492" Alt="742.01"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

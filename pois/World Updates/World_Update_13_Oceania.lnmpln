@@ -1,0 +1,983 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-09T18:18:19+00:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Barking Sands Pmrf</Name>
+        <Ident>PHBK</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-159.785080" Lat="22.022770" Alt="12.55"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Makaha Ridge Pacific Missile Range Facility</Name>
+        <Ident>POI1823</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-159.725510" Lat="22.130547" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hawaii Air National Guard Radar Site</Name>
+        <Ident>POI1788</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-159.644882" Lat="22.147903" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hanalei Bay Pier</Name>
+        <Ident>POI1786</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-159.497757" Lat="22.212643" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kilauea Point Lighthouse</Name>
+        <Ident>POI1893</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-159.401871" Lat="22.231647" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Royal Sonesta Kaua'i Resort</Name>
+        <Ident>POI1857</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-159.350250" Lat="21.961603" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ko Olina Resorts</Name>
+        <Ident>POI1815</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-158.122055" Lat="21.335133" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>USS Missouri (BB-63)</Name>
+        <Ident>POI1879</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.953384" Lat="21.362068" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pearl Harbor National Memorial Museum</Name>
+        <Ident>POI1851</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.938675" Lat="21.367502" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Aloha Stadium</Name>
+        <Ident>POI1758</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.930038" Lat="21.372810" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tripler Army Hospital</Name>
+        <Ident>POI1877</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.890244" Lat="21.359772" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Honolulu Park Place</Name>
+        <Ident>POI1797</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.860092" Lat="21.312857" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hawaii State Capitol</Name>
+        <Ident>POI1789</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.857315" Lat="21.307381" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hawaii State Library</Name>
+        <Ident>POI1790</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.857468" Lat="21.306007" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Honolulu City Hall</Name>
+        <Ident>POI1796</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.857101" Lat="21.305233" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Iolani Palace</Name>
+        <Ident>POI1807</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.858765" Lat="21.306810" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Aliiolani Hale</Name>
+        <Ident>POI1757</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.860077" Lat="21.305450" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>King Kalakaua Building</Name>
+        <Ident>POI1813</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.860764" Lat="21.306257" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Harbor Square</Name>
+        <Ident>POI1787</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.862335" Lat="21.306219" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Aloha Tower Marketplace</Name>
+        <Ident>POI1760</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.865662" Lat="21.306559" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Aloha Tower</Name>
+        <Ident>POI1759</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.865982" Lat="21.307051" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>One Waterfront Towers</Name>
+        <Ident>POI1843</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.861359" Lat="21.300175" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ala Moana Residential Towers</Name>
+        <Ident>POI1755</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.848801" Lat="21.292643" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Moana Pacific</Name>
+        <Ident>POI1834</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.846710" Lat="21.296015" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Waikiki Landmark</Name>
+        <Ident>POI1881</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.833496" Lat="21.287672" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hawaiian Monarch Hotel</Name>
+        <Ident>POI1791</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.832703" Lat="21.286770" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Ritz-Carlton Residences Waikiki Beach</Name>
+        <Ident>POI1870</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.829803" Lat="21.281992" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sheraton Waikiki Hotel</Name>
+        <Ident>POI1862</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.830322" Lat="21.277161" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Royal Hawaiian Hotel</Name>
+        <Ident>POI1871</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.829071" Lat="21.277130" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ali'i Tower</Name>
+        <Ident>POI1756</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.837067" Lat="21.282003" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hilton Hawaiian Resort</Name>
+        <Ident>POI1793</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.837006" Lat="21.282633" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Diamond Head Lighthouse</Name>
+        <Ident>POI1892</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.809555" Lat="21.255735" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Byodo-In Temple</Name>
+        <Ident>POI1767</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.832230" Lat="21.430708" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Maui Arts and Cultural Center</Name>
+        <Ident>POI1825</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-156.480209" Lat="20.893583" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Maui Ocean Center</Name>
+        <Ident>POI1826</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-156.512207" Lat="20.792343" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Haleakala High Altitude Observatory</Name>
+        <Ident>POI1785</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-156.257477" Lat="20.707418" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hapuna Heliport</Name>
+        <Ident>POI1884</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-155.795868" Lat="20.004992" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Blue HawaIIan Helicopters Waikoloa</Name>
+        <Ident>HI07</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-155.860779" Lat="19.920490" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ellison Onizuka Kona Intl At K</Name>
+        <Ident>PHKO</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-156.045639" Lat="19.738764" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Outrigger Kona Resort</Name>
+        <Ident>POI1844</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-155.965302" Lat="19.558640" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Captain Cook Monument</Name>
+        <Ident>POI1770</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-155.933441" Lat="19.481302" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mauna Loa Observatory</Name>
+        <Ident>POI1827</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-155.576370" Lat="19.536131" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Jaggar Museum</Name>
+        <Ident>POI1810</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-155.287903" Lat="19.420067" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>K?lauea Visitor Center</Name>
+        <Ident>HI52</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-155.259857" Lat="19.433275" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Imiloa Astronomy Center </Name>
+        <Ident>POI1802</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-155.088974" Lat="19.700800" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hilo Medical Center and Rainbow Falls</Name>
+        <Ident>POI1792</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-155.112183" Lat="19.718300" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Johnston Atoll JOC Building</Name>
+        <Ident>POI1812</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-169.523392" Lat="16.735607" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sand Island Structures, Midway Atoll</Name>
+        <Ident>POI1887</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-177.372864" Lat="28.212395" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cactus Test Dome</Name>
+        <Ident>POI1768</Ident>
+        <Type>USER</Type>
+        <Pos Lon="162.347198" Lat="11.552525" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mokil Airport</Name>
+        <Ident>PTMO</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="159.759842" Lat="6.678218" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pingelap Airport</Name>
+        <Ident>PTPI</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="160.704559" Lat="6.211347" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pohnpei Intl</Name>
+        <Ident>PTPN</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="158.209808" Lat="6.985084" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sapwuahfik</Name>
+        <Ident>PTNG</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="157.167145" Lat="5.783707" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Imagination Island Hotel</Name>
+        <Ident>POI1801</Ident>
+        <Type>USER</Type>
+        <Pos Lon="156.862015" Lat="-8.079233" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nusatupe Airport</Name>
+        <Ident>AGGN</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="156.863327" Lat="-8.098333" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sanbis Resort</Name>
+        <Ident>POI1859</Ident>
+        <Type>USER</Type>
+        <Pos Lon="156.878174" Lat="-8.115144" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kokoda Airport</Name>
+        <Ident>POI1754</Ident>
+        <Type>USER</Type>
+        <Pos Lon="147.731216" Lat="-8.884154" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Isurava Memorial</Name>
+        <Ident>POI1809</Ident>
+        <Type>USER</Type>
+        <Pos Lon="147.735214" Lat="-8.986422" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>National Parliament House, Port Moresby</Name>
+        <Ident>POI1837</Ident>
+        <Type>USER</Type>
+        <Pos Lon="147.191803" Lat="-9.428225" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Poreporena Stilt Villages</Name>
+        <Ident>POI1896</Ident>
+        <Type>USER</Type>
+        <Pos Lon="147.151001" Lat="-9.455678" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sir Hubert Murray Stadium</Name>
+        <Ident>POI1863</Ident>
+        <Type>USER</Type>
+        <Pos Lon="147.157043" Lat="-9.467078" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Noble Center</Name>
+        <Ident>POI1839</Ident>
+        <Type>USER</Type>
+        <Pos Lon="147.148849" Lat="-9.477614" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>APEC Haus</Name>
+        <Ident>POI1761</Ident>
+        <Type>USER</Type>
+        <Pos Lon="147.150589" Lat="-9.483192" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tapini</Name>
+        <Ident>AYTI</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="146.989471" Lat="-8.356460" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Markham Bridge</Name>
+        <Ident>POI1824</Ident>
+        <Type>USER</Type>
+        <Pos Lon="146.889679" Lat="-6.695242" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Coast Watchers Memorial Lighthouse</Name>
+        <Ident>POI1891</Ident>
+        <Type>USER</Type>
+        <Pos Lon="145.814850" Lat="-5.212456" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Guavi Airstrip</Name>
+        <Ident>AYGY</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="142.753586" Lat="-6.869956" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Youtefa Bridge</Name>
+        <Ident>POI1883</Ident>
+        <Type>USER</Type>
+        <Pos Lon="140.713547" Lat="-2.594367" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Capitol of Palau</Name>
+        <Ident>POI1769</Ident>
+        <Type>USER</Type>
+        <Pos Lon="134.624252" Lat="7.500222" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>US Naval Hospital Guam</Name>
+        <Ident>POI1878</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.736618" Lat="13.475178" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Guam Museum</Name>
+        <Ident>POI1783</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.751648" Lat="13.475136" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hotel Nikko and Crystal Chapel</Name>
+        <Ident>POI1800</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.804214" Lat="13.522056" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Tsubaki Tower</Name>
+        <Ident>POI1872</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.805954" Lat="13.521517" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lempuyang Temple Compounds</Name>
+        <Ident>POI1821</Ident>
+        <Type>USER</Type>
+        <Pos Lon="115.630707" Lat="-8.391358" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pura Ulun Danu Bratan Temple</Name>
+        <Ident>POI1855</Ident>
+        <Type>USER</Type>
+        <Pos Lon="115.166626" Lat="-8.275158" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sanggar Agung Temple Compounds</Name>
+        <Ident>POI1860</Ident>
+        <Type>USER</Type>
+        <Pos Lon="112.803329" Lat="-7.250294" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Siti Walidah UMS Main Building</Name>
+        <Ident>POI1864</Ident>
+        <Type>USER</Type>
+        <Pos Lon="110.771751" Lat="-7.557944" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Adi Soemarmo</Name>
+        <Ident>WAHQ</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="110.750565" Lat="-7.513590" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Prambanan Temple Compounds</Name>
+        <Ident>POI1853</Ident>
+        <Type>USER</Type>
+        <Pos Lon="110.491180" Lat="-7.752000" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Borobudur Temple Compounds</Name>
+        <Ident>POI1766</Ident>
+        <Type>USER</Type>
+        <Pos Lon="110.203812" Lat="-7.607953" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sam Poo Kong Temple Compounds</Name>
+        <Ident>POI1858</Ident>
+        <Type>USER</Type>
+        <Pos Lon="110.398529" Lat="-6.996247" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lawang Sewu</Name>
+        <Ident>POI1817</Ident>
+        <Type>USER</Type>
+        <Pos Lon="110.410454" Lat="-6.983961" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Great Mosque of Central Java</Name>
+        <Ident>POI1782</Ident>
+        <Type>USER</Type>
+        <Pos Lon="110.446190" Lat="-6.983942" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gama Tower</Name>
+        <Ident>POI1778</Ident>
+        <Type>USER</Type>
+        <Pos Lon="106.833786" Lat="-6.223983" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pacific Place, Jakarta</Name>
+        <Ident>POI1846</Ident>
+        <Type>USER</Type>
+        <Pos Lon="106.809868" Lat="-6.224783" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Treasury Tower</Name>
+        <Ident>POI1876</Ident>
+        <Type>USER</Type>
+        <Pos Lon="106.806305" Lat="-6.227997" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gelora Bung Karno Stadium</Name>
+        <Ident>POI1779</Ident>
+        <Type>USER</Type>
+        <Pos Lon="106.802589" Lat="-6.218572" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Menara TVRI Tower</Name>
+        <Ident>POI1829</Ident>
+        <Type>USER</Type>
+        <Pos Lon="106.800697" Lat="-6.212844" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wisma 46</Name>
+        <Ident>POI1882</Ident>
+        <Type>USER</Type>
+        <Pos Lon="106.820183" Lat="-6.203758" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Autograph Tower</Name>
+        <Ident>POI1763</Ident>
+        <Type>USER</Type>
+        <Pos Lon="106.821243" Lat="-6.199158" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The City Tower</Name>
+        <Ident>POI1869</Ident>
+        <Type>USER</Type>
+        <Pos Lon="106.823578" Lat="-6.199075" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Monas (National Monument)</Name>
+        <Ident>POI1835</Ident>
+        <Type>USER</Type>
+        <Pos Lon="106.827148" Lat="-6.175400" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Istiqlal Mosque</Name>
+        <Ident>POI1808</Ident>
+        <Type>USER</Type>
+        <Pos Lon="106.830978" Lat="-6.169872" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Jakarta Cathedral</Name>
+        <Ident>POI1811</Ident>
+        <Type>USER</Type>
+        <Pos Lon="106.833267" Lat="-6.169244" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lapangan Banteng</Name>
+        <Ident>POI1816</Ident>
+        <Type>USER</Type>
+        <Pos Lon="106.834892" Lat="-6.170333" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Indosiar Television Tower</Name>
+        <Ident>POI1804</Ident>
+        <Type>USER</Type>
+        <Pos Lon="106.768280" Lat="-6.193886" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lengkuas island Lighthouse</Name>
+        <Ident>POI1894</Ident>
+        <Type>USER</Type>
+        <Pos Lon="107.620850" Lat="-2.537264" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fort Teremba</Name>
+        <Ident>POI1776</Ident>
+        <Type>USER</Type>
+        <Pos Lon="165.715714" Lat="-21.728672" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pacific Arcade</Name>
+        <Ident>POI1845</Ident>
+        <Type>USER</Type>
+        <Pos Lon="166.440842" Lat="-22.266521" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pacific Plaza, Noumea</Name>
+        <Ident>POI1847</Ident>
+        <Type>USER</Type>
+        <Pos Lon="166.441696" Lat="-22.265984" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Numa-Daly Stadium</Name>
+        <Ident>POI1842</Ident>
+        <Type>USER</Type>
+        <Pos Lon="166.467819" Lat="-22.265572" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tjibaou Cultural Center</Name>
+        <Ident>POI1873</Ident>
+        <Type>USER</Type>
+        <Pos Lon="166.481674" Lat="-22.256472" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Le Méridien Noumea Resort</Name>
+        <Ident>POI1819</Ident>
+        <Type>USER</Type>
+        <Pos Lon="166.449265" Lat="-22.310450" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Amédée Lighthouse</Name>
+        <Ident>POI1890</Ident>
+        <Type>USER</Type>
+        <Pos Lon="166.467987" Lat="-22.477381" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Vanuatu Parliament House and Convention Centre</Name>
+        <Ident>POI1880</Ident>
+        <Type>USER</Type>
+        <Pos Lon="168.315094" Lat="-17.744572" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Grand Hotel and Casino Vanuatu</Name>
+        <Ident>POI1780</Ident>
+        <Type>USER</Type>
+        <Pos Lon="168.313950" Lat="-17.742220" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Grand Pacific Hotel</Name>
+        <Ident>POI1781</Ident>
+        <Type>USER</Type>
+        <Pos Lon="178.422409" Lat="-18.147181" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Parliament of the Republic of Fiji</Name>
+        <Ident>POI1850</Ident>
+        <Type>USER</Type>
+        <Pos Lon="178.424561" Lat="-18.145823" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Teufaiva Sport Stadium</Name>
+        <Ident>POI1868</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-175.207397" Lat="-21.141518" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Basilica of St. Anthony of Padua</Name>
+        <Ident>POI1764</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-175.201843" Lat="-21.136858" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Centennial Church</Name>
+        <Ident>POI1771</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-175.202759" Lat="-21.135225" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tonga Royal Palace</Name>
+        <Ident>POI1875</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-175.200562" Lat="-21.131390" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ha'amonga 'a Maui</Name>
+        <Ident>POI1784</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-175.048096" Lat="-21.136639" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Robert Louis Stevenson Museum</Name>
+        <Ident>POI1856</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-171.765610" Lat="-13.866542" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Immaculate Conception of Mary Cathedral</Name>
+        <Ident>POI1803</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-171.766464" Lat="-13.832169" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>FMFMII Government Building</Name>
+        <Ident>POI1775</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-171.766693" Lat="-13.830367" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Central Bank of Samoa</Name>
+        <Ident>POI1772</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-171.767700" Lat="-13.829790" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Apia Town Clock Tower</Name>
+        <Ident>POI1762</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-171.768478" Lat="-13.830381" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Taumeasina Island Resort</Name>
+        <Ident>POI1867</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-171.746597" Lat="-13.829019" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Aitutaki Airport</Name>
+        <Ident>NCAI</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-159.764023" Lat="-18.831104" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Aitutaki Lagoon Island Resort</Name>
+        <Ident>POI1885</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-159.757050" Lat="-18.849903" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Para O Tane</Name>
+        <Ident>POI1849</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-159.773224" Lat="-21.207169" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Te Rua Manga (The Needle)</Name>
+        <Ident>POI1889</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-159.789185" Lat="-21.239046" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Muri Beach Club Hotel</Name>
+        <Ident>POI1836</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-159.729324" Lat="-21.255386" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Conrad Bora Bora Nui</Name>
+        <Ident>POI1773</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-151.767395" Lat="-16.528730" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>InterContinental Le Moana Bora Bora</Name>
+        <Ident>POI1805</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-151.735931" Lat="-16.541979" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sofitel Bora Bora Private Island</Name>
+        <Ident>POI1888</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-151.727859" Lat="-16.539118" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Le Meridien Bora Bora</Name>
+        <Ident>POI1818</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-151.701843" Lat="-16.497267" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St. Regis Bora Bora Resorts</Name>
+        <Ident>POI1866</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-151.697647" Lat="-16.486725" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Four Seasons Resort Bora Bora</Name>
+        <Ident>POI1777</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-151.707260" Lat="-16.472565" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Motu Mute</Name>
+        <Ident>NTTB</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-151.752502" Lat="-16.443611" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bora-Bora Pearl Beach Resort</Name>
+        <Ident>POI1765</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-151.772400" Lat="-16.476084" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Le Taha'a Island Resort</Name>
+        <Ident>POI1820</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-151.563171" Lat="-16.608383" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>InterContinental Moorea Resort</Name>
+        <Ident>POI1806</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-149.894348" Lat="-17.490335" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hilton Moorea Lagoon Resort</Name>
+        <Ident>POI1795</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-149.844162" Lat="-17.484215" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hotel Manava Beach Resort</Name>
+        <Ident>POI1799</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-149.803421" Lat="-17.480335" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Temae</Name>
+        <Ident>NTTM</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-149.762253" Lat="-17.489422" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sofitel Kia Ora Moorea</Name>
+        <Ident>POI1865</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-149.764160" Lat="-17.500057" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hilton Hotel Tahiti</Name>
+        <Ident>POI1794</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-149.585770" Lat="-17.545065" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Presidential Palace, Papeete</Name>
+        <Ident>POI1854</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-149.569565" Lat="-17.544472" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Notre Dame Cathedral, Papeete</Name>
+        <Ident>POI1841</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-149.567032" Lat="-17.540232" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Papeete Town Hall</Name>
+        <Ident>POI1848</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-149.565857" Lat="-17.537355" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mairie de Pirae</Name>
+        <Ident>POI1822</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-149.547562" Lat="-17.535145" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tomb of King Pomare V</Name>
+        <Ident>POI1874</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-149.526260" Lat="-17.521461" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Point Venus Lighthouse</Name>
+        <Ident>POI1852</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-149.494324" Lat="-17.495062" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hotel Iorana</Name>
+        <Ident>POI1798</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-109.440811" Lat="-27.160067" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nayara Hangaroa Hotel</Name>
+        <Ident>POI1838</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-109.438019" Lat="-27.151194" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Moai Statues, Ahu Tahai</Name>
+        <Ident>POI1832</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-109.427383" Lat="-27.139845" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mataveri Intl</Name>
+        <Ident>SCIP</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-109.421684" Lat="-27.164726" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Moai Statues, Ahu Akivi</Name>
+        <Ident>POI1830</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-109.395058" Lat="-27.115030" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Moai Statues, Ahu Nau Nau</Name>
+        <Ident>POI1831</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-109.322479" Lat="-27.074436" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Moai Statues, Ahu Tongariki</Name>
+        <Ident>POI1833</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-109.276886" Lat="-27.125784" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Leon Dormido (Kicker Rock)</Name>
+        <Ident>POI1886</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-89.518585" Lat="-0.777864" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Scott Base (NZ), Antarctica</Name>
+        <Ident>POI1861</Ident>
+        <Type>USER</Type>
+        <Pos Lon="166.767227" Lat="-77.849350" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>McMurdo Station (US), Antarctica</Name>
+        <Ident>POI1828</Ident>
+        <Type>USER</Type>
+        <Pos Lon="166.670181" Lat="-77.847946" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>MV Ocean Giant</Name>
+        <Ident>POI1895</Ident>
+        <Type>USER</Type>
+        <Pos Lon="166.651138" Lat="-77.846016" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Davis Station (AU), Antarctica</Name>
+        <Ident>POI1774</Ident>
+        <Type>USER</Type>
+        <Pos Lon="77.969566" Lat="-68.575851" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Norfolk Island Convict Barracks</Name>
+        <Ident>POI1840</Ident>
+        <Type>USER</Type>
+        <Pos Lon="167.957001" Lat="-29.057693" Alt="857.05"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kingston and Arthurs Vale Historic Area</Name>
+        <Ident>POI1814</Ident>
+        <Type>USER</Type>
+        <Pos Lon="167.960663" Lat="-29.055714" Alt="787.71"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Norfolk Island Intl</Name>
+        <Ident>YSNF</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="167.938049" Lat="-29.042498" Alt="351.34"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

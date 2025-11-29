@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-03T17:28:51+00:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Cologne-Bonn</Name>
+        <Ident>EDDK</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="7.142748" Lat="50.865921" Alt="252.43"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rhine River</Name>
+        <Ident>POI2037</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.562663" Lat="50.358261" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Moselle River</Name>
+        <Ident>POI2036</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.168403" Lat="50.145782" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Luxembourg City</Name>
+        <Ident>POI2042</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.132132" Lat="49.610889" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Vosges Mountains</Name>
+        <Ident>POI2038</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.981738" Lat="47.999435" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Annemasse</Name>
+        <Ident>POI2039</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.235989" Lat="46.192944" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Geneva</Name>
+        <Ident>POI2040</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.141258" Lat="46.203983" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ghent</Name>
+        <Ident>POI2041</Ident>
+        <Type>USER</Type>
+        <Pos Lon="3.728129" Lat="51.052914" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rotterdam</Name>
+        <Ident>POI2043</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.479168" Lat="51.922428" Alt="834.65"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rotterdam</Name>
+        <Ident>EHRD</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="4.437222" Lat="51.956944" Alt="-14.41"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

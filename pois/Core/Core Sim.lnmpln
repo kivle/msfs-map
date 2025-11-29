@@ -1,0 +1,3113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-09T17:35:35+00:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Honolulu Intl</Name>
+        <Ident>PHNL</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-157.920227" Lat="21.317820" Alt="10.03"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>National Memorial Cemetery of the Pacific</Name>
+        <Ident>POI420</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-157.847321" Lat="21.313503" Alt="1584.37"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ukiah</Name>
+        <Ident>POI303</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-123.207787" Lat="39.150169" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Agua Caliente</Name>
+        <Ident>POI3</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.488037" Lat="38.324081" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fairfield</Name>
+        <Ident>POI79</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.040512" Lat="38.249195" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Concord (California - USA)</Name>
+        <Ident>POI53</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.031075" Lat="37.977978" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Antioch</Name>
+        <Ident>POI12</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-121.805786" Lat="38.004921" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castro Valley</Name>
+        <Ident>POI39</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.073868" Lat="37.695503" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fremont</Name>
+        <Ident>POI90</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-121.988586" Lat="37.548538" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Foster City</Name>
+        <Ident>POI89</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.271080" Lat="37.558548" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>San Francisco Intl</Name>
+        <Ident>KSFO</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-122.375427" Lat="37.618809" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>San Francisco</Name>
+        <Ident>POI255</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.419418" Lat="37.774929" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Richmond (California - USA)</Name>
+        <Ident>POI245</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.347748" Lat="37.935757" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>San Jose</Name>
+        <Ident>POI256</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-121.886330" Lat="37.338207" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Los Gatos</Name>
+        <Ident>POI145</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-121.962372" Lat="37.235809" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Santa Cruz</Name>
+        <Ident>POI261</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.030792" Lat="36.974117" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Salinas</Name>
+        <Ident>POI252</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-121.655502" Lat="36.677738" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hollister</Name>
+        <Ident>POI109</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-121.401604" Lat="36.852455" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Modesto</Name>
+        <Ident>POI177</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-120.996880" Lat="37.639095" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Manteca</Name>
+        <Ident>POI155</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-121.216049" Lat="37.797428" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stockton</Name>
+        <Ident>POI285</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-121.290779" Lat="37.957703" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lodi</Name>
+        <Ident>POI140</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-121.272217" Lat="38.134148" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Elk Grove</Name>
+        <Ident>POI77</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-121.371620" Lat="38.408798" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sacramento</Name>
+        <Ident>POI251</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-121.494400" Lat="38.581573" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Davis</Name>
+        <Ident>POI58</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-121.740517" Lat="38.544907" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Yuba City</Name>
+        <Ident>POI322</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-121.616913" Lat="39.140450" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Chico</Name>
+        <Ident>POI44</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-121.837479" Lat="39.728493" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Redding</Name>
+        <Ident>POI241</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.391678" Lat="40.586540" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Reno</Name>
+        <Ident>POI244</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-119.813805" Lat="39.529633" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Carson City</Name>
+        <Ident>POI38</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-119.767403" Lat="39.163799" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fly Geyser</Name>
+        <Ident>POI471</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-119.332367" Lat="40.859295" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Madera</Name>
+        <Ident>POI151</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-120.060715" Lat="36.961334" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fresno</Name>
+        <Ident>POI91</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-119.787125" Lat="36.737797" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Selma</Name>
+        <Ident>POI268</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-119.612076" Lat="36.570786" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Reedley</Name>
+        <Ident>POI242</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-119.450401" Lat="36.596340" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Visalia</Name>
+        <Ident>POI311</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-119.292061" Lat="36.330227" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hanford</Name>
+        <Ident>POI107</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-119.645683" Lat="36.327450" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Porterville</Name>
+        <Ident>POI230</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-119.016769" Lat="36.065231" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bakersfield</Name>
+        <Ident>POI18</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-119.018715" Lat="35.373291" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Santa Clarita</Name>
+        <Ident>POI260</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-118.542587" Lat="34.391663" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Simi Valley</Name>
+        <Ident>POI272</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-118.781479" Lat="34.269447" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Oxnard</Name>
+        <Ident>POI209</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-119.177055" Lat="34.197506" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Santa Barbara</Name>
+        <Ident>POI259</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-119.698189" Lat="34.420830" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Santa Monica</Name>
+        <Ident>POI263</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-118.491188" Lat="34.019455" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Los Angeles Intl</Name>
+        <Ident>KLAX</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-118.408066" Lat="33.942505" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Inglewood</Name>
+        <Ident>POI115</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-118.353134" Lat="33.961681" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Los Angeles</Name>
+        <Ident>POI144</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-118.243683" Lat="34.052235" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hollywood</Name>
+        <Ident>POI110</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-118.328659" Lat="34.092808" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Glendale</Name>
+        <Ident>POI95</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-118.255074" Lat="34.142509" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Downey</Name>
+        <Ident>POI69</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-118.133156" Lat="33.940109" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>La Habra</Name>
+        <Ident>POI126</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-117.946136" Lat="33.931858" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Anaheim</Name>
+        <Ident>POI8</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-117.914299" Lat="33.836594" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Santa Ana</Name>
+        <Ident>POI258</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-117.867653" Lat="33.745472" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Long Beach</Name>
+        <Ident>POI142</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-118.193741" Lat="33.770050" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Perris</Name>
+        <Ident>POI222</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-117.228645" Lat="33.782520" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Moreno Valley</Name>
+        <Ident>POI183</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-117.229675" Lat="33.942467" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>San Bernardino</Name>
+        <Ident>POI254</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-117.289764" Lat="34.108345" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Yucaipa</Name>
+        <Ident>POI323</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-117.043083" Lat="34.033627" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Desert Hot Springs</Name>
+        <Ident>POI65</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-116.501678" Lat="33.961124" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Palm Springs</Name>
+        <Ident>POI214</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-116.545296" Lat="33.830296" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Temecula</Name>
+        <Ident>POI292</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-117.148361" Lat="33.493641" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Oceanside</Name>
+        <Ident>POI200</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-117.379486" Lat="33.195869" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Palmdale</Name>
+        <Ident>POI215</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-118.116463" Lat="34.579433" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Las Vegas</Name>
+        <Ident>POI133</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-115.139832" Lat="36.169941" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lake Havasu City</Name>
+        <Ident>POI129</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-114.322456" Lat="34.483902" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Prescott</Name>
+        <Ident>POI234</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-112.468506" Lat="34.540024" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sedona</Name>
+        <Ident>KSEZ</Ident>
+        <Type>UNKNOWN</Type>
+        <Pos Lon="-111.788467" Lat="34.848610" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Flagstaff</Name>
+        <Ident>POI83</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-111.651299" Lat="35.198284" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Anthem</Name>
+        <Ident>POI11</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-112.135735" Lat="33.865231" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Carefree</Name>
+        <Ident>POI37</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-111.918205" Lat="33.822262" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Peoria</Name>
+        <Ident>POI221</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-112.237381" Lat="33.580597" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Phoenix</Name>
+        <Ident>POI224</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-112.074036" Lat="33.448376" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tempe</Name>
+        <Ident>POI293</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-111.940002" Lat="33.425510" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mesa</Name>
+        <Ident>POI164</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-111.831474" Lat="33.415184" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>San Tan Valley</Name>
+        <Ident>POI257</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-111.546829" Lat="33.177296" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Oro Valley</Name>
+        <Ident>POI206</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-110.966492" Lat="32.390907" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Catalina Foothills</Name>
+        <Ident>POI40</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-110.918701" Lat="32.297852" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tucson</Name>
+        <Ident>POI301</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-110.974709" Lat="32.222607" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Drexel Heights</Name>
+        <Ident>POI71</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-111.028427" Lat="32.141190" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Yuma</Name>
+        <Ident>POI324</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-114.627693" Lat="32.692650" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Las Cruces</Name>
+        <Ident>POI132</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-106.763657" Lat="32.319939" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>El Paso</Name>
+        <Ident>POI76</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-106.485023" Lat="31.761877" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Los Lunas</Name>
+        <Ident>POI146</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-106.733360" Lat="34.806168" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Albuquerque</Name>
+        <Ident>POI5</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-106.650421" Lat="35.084385" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bernalillo</Name>
+        <Ident>POI22</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-106.551140" Lat="35.300041" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Santa Fe</Name>
+        <Ident>POI262</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-105.937798" Lat="35.686974" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Telluride Regl</Name>
+        <Ident>KTEX</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-107.908768" Lat="37.953812" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Aspen-Pitkin Co/Sardy Field</Name>
+        <Ident>KASE</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-106.868225" Lat="39.221893" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Boulder</Name>
+        <Ident>POI27</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-105.270546" Lat="40.014984" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Denver</Name>
+        <Ident>POI63</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-104.990250" Lat="39.739235" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Denver Intl</Name>
+        <Ident>KDEN</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-104.673157" Lat="39.861668" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Colorado Springs</Name>
+        <Ident>POI48</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-104.821365" Lat="38.833881" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cheyenne</Name>
+        <Ident>POI42</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-104.820244" Lat="41.139980" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pierre</Name>
+        <Ident>POI225</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-100.353752" Lat="44.366787" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bismarck</Name>
+        <Ident>POI24</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-100.783737" Lat="46.808327" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fargo</Name>
+        <Ident>POI80</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-96.789803" Lat="46.877186" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Winnipeg</Name>
+        <Ident>POI316</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-97.138374" Lat="49.895138" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Minneapolis</Name>
+        <Ident>POI175</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-93.265015" Lat="44.977753" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Farmington</Name>
+        <Ident>POI81</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-93.143547" Lat="44.640244" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Des Moines</Name>
+        <Ident>POI64</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-93.624962" Lat="41.586834" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Omaha</Name>
+        <Ident>POI203</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-95.934502" Lat="41.256538" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lincoln</Name>
+        <Ident>POI138</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-96.702599" Lat="40.813618" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Topeka</Name>
+        <Ident>POI298</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-95.675156" Lat="39.047344" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kansas City</Name>
+        <Ident>POI121</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-94.578568" Lat="39.099728" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Columbia (Missouri - USA)</Name>
+        <Ident>POI49</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-92.334068" Lat="38.951706" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Jefferson City</Name>
+        <Ident>POI119</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-92.173515" Lat="38.576702" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St. Louis</Name>
+        <Ident>POI280</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-90.199402" Lat="38.627003" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Carbondale</Name>
+        <Ident>POI36</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-89.216751" Lat="37.727272" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Marion</Name>
+        <Ident>POI159</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-88.933128" Lat="37.730606" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Springfield (illinois - USA)</Name>
+        <Ident>POI277</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-89.650146" Lat="39.781719" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Champaign</Name>
+        <Ident>POI41</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-88.243385" Lat="40.116421" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kankakee</Name>
+        <Ident>POI120</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-87.861153" Lat="41.120033" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Chicago</Name>
+        <Ident>POI43</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-87.629799" Lat="41.878113" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Chicago-O'Hare Intl</Name>
+        <Ident>KORD</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-87.908157" Lat="41.976944" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Michigan City</Name>
+        <Ident>POI171</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-86.895027" Lat="41.707539" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>South Bend</Name>
+        <Ident>POI273</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-86.251991" Lat="41.676353" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fort Wayne</Name>
+        <Ident>POI87</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-85.139351" Lat="41.079273" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kokomo</Name>
+        <Ident>POI125</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-86.133606" Lat="40.486427" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Indianapolis</Name>
+        <Ident>POI114</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-86.158066" Lat="39.768402" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cincinnati</Name>
+        <Ident>POI45</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-84.512016" Lat="39.103119" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dayton</Name>
+        <Ident>POI59</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-84.191605" Lat="39.758949" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Columbus (Ohio - USA)</Name>
+        <Ident>POI52</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-82.998795" Lat="39.961178" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Toledo</Name>
+        <Ident>POI296</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-83.537865" Lat="41.652805" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ann Arbor</Name>
+        <Ident>POI9</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-83.743034" Lat="42.280827" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Detroit</Name>
+        <Ident>POI66</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-83.045753" Lat="42.331429" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Chrysler Headquarters &amp; Technology Center</Name>
+        <Ident>POI366</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-83.229889" Lat="42.654594" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>London (Ontario - Canda)</Name>
+        <Ident>POI141</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.245277" Lat="42.984924" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hamilton</Name>
+        <Ident>POI106</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.871101" Lat="43.255722" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Toronto/City Centre</Name>
+        <Ident>CYTZ</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-79.396217" Lat="43.628426" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Toronto</Name>
+        <Ident>POI299</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.383186" Lat="43.653225" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Niagara Falls</Name>
+        <Ident>POI194</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.037743" Lat="43.096214" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Syracuse</Name>
+        <Ident>POI287</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-76.147423" Lat="43.048122" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ottawa</Name>
+        <Ident>POI208</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-75.697189" Lat="45.421532" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Montreal</Name>
+        <Ident>POI182</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-73.567253" Lat="45.501690" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Quebec City</Name>
+        <Ident>POI239</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-71.207977" Lat="46.813877" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Augusta</Name>
+        <Ident>POI17</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-69.779488" Lat="44.310623" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Portland (Maine - USA)</Name>
+        <Ident>POI231</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-70.256821" Lat="43.659100" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Concord (New Hampshire - USA)</Name>
+        <Ident>POI54</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-71.537575" Lat="43.208138" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lowell</Name>
+        <Ident>POI148</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-71.316170" Lat="42.633427" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Boston</Name>
+        <Ident>POI26</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-71.058884" Lat="42.360085" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Brockton</Name>
+        <Ident>POI31</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-71.018379" Lat="42.083435" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Providence</Name>
+        <Ident>POI235</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-71.412834" Lat="41.823990" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Worcester</Name>
+        <Ident>POI321</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-71.802292" Lat="42.262592" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Springfield (Massechusetts - USA)</Name>
+        <Ident>POI278</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-72.589813" Lat="42.101482" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>New Haven</Name>
+        <Ident>POI188</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-72.927887" Lat="41.308273" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bridgeport</Name>
+        <Ident>POI30</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-73.189438" Lat="41.179226" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stamford</Name>
+        <Ident>POI283</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-73.538734" Lat="41.053429" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kennedy Intl</Name>
+        <Ident>KJFK</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-73.778702" Lat="40.639931" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Brooklyn Bridge</Name>
+        <Ident>POI350</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-73.996788" Lat="40.706116" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>New York</Name>
+        <Ident>POI191</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-74.005974" Lat="40.712776" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Governors Island</Name>
+        <Ident>POI384</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-74.016075" Lat="40.691399" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Statue of Liberty</Name>
+        <Ident>POI443</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-74.044540" Lat="40.689232" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Empire State Building</Name>
+        <Ident>POI375</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-73.985664" Lat="40.748436" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Newark</Name>
+        <Ident>POI192</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-74.172363" Lat="40.735657" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Edison</Name>
+        <Ident>POI74</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-74.412094" Lat="40.518715" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Middletown</Name>
+        <Ident>POI172</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-74.091599" Lat="40.396801" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Toms River</Name>
+        <Ident>POI297</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-74.197945" Lat="39.953735" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Trenton</Name>
+        <Ident>POI300</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-74.759720" Lat="40.220581" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Willingboro</Name>
+        <Ident>POI314</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-74.891647" Lat="40.028847" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Abington</Name>
+        <Ident>POI2</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-75.125351" Lat="40.119835" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Norristown</Name>
+        <Ident>POI196</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-75.339905" Lat="40.121498" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Philadelphia</Name>
+        <Ident>POI223</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-75.165222" Lat="39.952583" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wilmington</Name>
+        <Ident>POI315</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-75.548393" Lat="39.744656" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dover</Name>
+        <Ident>POI68</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-75.524368" Lat="39.158169" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Baltimore</Name>
+        <Ident>POI19</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-76.612190" Lat="39.290386" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lincoln Memorial</Name>
+        <Ident>POI404</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.050186" Lat="38.889404" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Pentagon</Name>
+        <Ident>POI453</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.055962" Lat="38.870991" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Richmond (Virginia - USA)</Name>
+        <Ident>POI246</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.436050" Lat="37.540726" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Norfolk</Name>
+        <Ident>POI195</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-76.285873" Lat="36.850769" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Raleigh</Name>
+        <Ident>POI240</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-78.638176" Lat="35.779591" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Durham</Name>
+        <Ident>POI73</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-78.898621" Lat="35.994034" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Greensboro</Name>
+        <Ident>POI99</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.791977" Lat="36.072636" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Winston-Salem</Name>
+        <Ident>POI317</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-80.244217" Lat="36.099861" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Greenville</Name>
+        <Ident>POI100</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-82.394012" Lat="34.852619" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gainesville (Georgia - USA)</Name>
+        <Ident>POI93</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-83.824066" Lat="34.297878" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Roswell</Name>
+        <Ident>POI249</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-84.361557" Lat="34.023243" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Marietta</Name>
+        <Ident>POI158</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-84.549934" Lat="33.952602" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Atlanta</Name>
+        <Ident>POI14</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-84.387985" Lat="33.748997" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Riverdale</Name>
+        <Ident>POI247</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-84.413261" Lat="33.572613" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Peachtree City</Name>
+        <Ident>POI219</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-84.596344" Lat="33.396854" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Griffin</Name>
+        <Ident>POI101</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-84.264091" Lat="33.246780" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Macon</Name>
+        <Ident>POI150</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-83.632401" Lat="32.840694" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>LaGrange</Name>
+        <Ident>POI127</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-85.032242" Lat="33.036221" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Auburn</Name>
+        <Ident>POI15</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-85.480782" Lat="32.609856" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Columbus (Georgia - USA)</Name>
+        <Ident>POI51</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-84.987709" Lat="32.460976" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Montgomery</Name>
+        <Ident>POI180</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-86.307739" Lat="32.379223" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Birmingham (USA)</Name>
+        <Ident>POI23</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-86.810356" Lat="33.518589" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Anniston</Name>
+        <Ident>POI10</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-85.831635" Lat="33.659824" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Huntsville</Name>
+        <Ident>POI112</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-86.586105" Lat="34.730370" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Decatur</Name>
+        <Ident>POI61</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-86.983345" Lat="34.605927" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nashville</Name>
+        <Ident>POI187</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-86.781601" Lat="36.162663" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Louisville</Name>
+        <Ident>POI147</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-85.758453" Lat="38.252666" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cleveland</Name>
+        <Ident>POI47</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.694359" Lat="41.499321" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>McCandless</Name>
+        <Ident>POI162</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-80.031136" Lat="40.588081" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pittsburgh</Name>
+        <Ident>POI226</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.995888" Lat="40.440624" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Harrisburg</Name>
+        <Ident>POI108</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-76.886703" Lat="40.273190" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Columbia (South Carolina, USA)</Name>
+        <Ident>POI50</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.034813" Lat="34.000710" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Summerville</Name>
+        <Ident>POI286</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-80.175652" Lat="33.018505" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Goose Creek</Name>
+        <Ident>POI97</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-80.032585" Lat="32.981007" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Savannah</Name>
+        <Ident>POI265</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.091202" Lat="32.080898" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Statesboro</Name>
+        <Ident>POI284</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.783165" Lat="32.448788" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sea Island</Name>
+        <Ident>POI266</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.349815" Lat="31.183565" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Brunswick (Georgia - USA)</Name>
+        <Ident>POI33</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.491486" Lat="31.149954" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St. Marys</Name>
+        <Ident>POI281</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.570610" Lat="30.747894" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Jacksonville</Name>
+        <Ident>POI117</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.655647" Lat="30.332184" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Orange Park</Name>
+        <Ident>POI204</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.706482" Lat="30.166075" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Palatka</Name>
+        <Ident>POI211</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.637581" Lat="29.648581" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Flagler Beach</Name>
+        <Ident>POI82</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.127007" Lat="29.474976" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Daytona Beach</Name>
+        <Ident>POI60</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.022835" Lat="29.210815" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>New Smyrna Beach</Name>
+        <Ident>POI190</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-80.926994" Lat="29.025820" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Deltona</Name>
+        <Ident>POI62</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.263672" Lat="28.900545" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Winter Park</Name>
+        <Ident>POI319</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.339233" Lat="28.600000" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Orlando</Name>
+        <Ident>POI205</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.379234" Lat="28.538336" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Universal Studios Florida</Name>
+        <Ident>POI304</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.468506" Lat="28.478970" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Walt Disney World Resort</Name>
+        <Ident>POI312</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.563873" Lat="28.385233" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Orlando Intl</Name>
+        <Ident>KMCO</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-81.309006" Lat="28.429392" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Poinciana</Name>
+        <Ident>POI227</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.470940" Lat="28.157373" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Winter Haven</Name>
+        <Ident>POI318</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.732857" Lat="28.022243" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lakeland</Name>
+        <Ident>POI130</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.949806" Lat="28.039465" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Zephyrhills</Name>
+        <Ident>POI325</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-82.181198" Lat="28.233620" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Brandon</Name>
+        <Ident>POI28</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-82.285927" Lat="27.937801" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tampa</Name>
+        <Ident>POI290</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-82.457176" Lat="27.950575" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St. Petersburg</Name>
+        <Ident>POI282</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-82.640289" Lat="27.767601" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tarpon Springs</Name>
+        <Ident>POI291</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-82.756767" Lat="28.146126" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Spring Hill</Name>
+        <Ident>POI276</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-82.536987" Lat="28.483168" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Leesburg</Name>
+        <Ident>POI135</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.877861" Lat="28.810823" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Clermont</Name>
+        <Ident>POI46</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.772858" Lat="28.549444" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ocala</Name>
+        <Ident>POI199</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-82.140091" Lat="29.187199" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gainesville (Florida - USA)</Name>
+        <Ident>POI92</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-82.324829" Lat="29.651634" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lake City</Name>
+        <Ident>POI128</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-82.639290" Lat="30.189676" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Valdosta</Name>
+        <Ident>POI305</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-83.278488" Lat="30.832703" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tallahassee</Name>
+        <Ident>POI289</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-84.280731" Lat="30.438255" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Panama City</Name>
+        <Ident>POI218</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-85.660210" Lat="30.158813" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dothan</Name>
+        <Ident>POI67</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-85.390488" Lat="31.223230" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pace</Name>
+        <Ident>POI210</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-87.161079" Lat="30.599360" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pensacola</Name>
+        <Ident>POI220</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-87.216911" Lat="30.421309" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gulf Breeze</Name>
+        <Ident>POI102</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-87.163857" Lat="30.357143" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Spanish Fort</Name>
+        <Ident>POI275</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-87.901886" Lat="30.671469" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mobile</Name>
+        <Ident>POI176</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-88.039894" Lat="30.695366" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gulfport</Name>
+        <Ident>POI103</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-89.092819" Lat="30.367420" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>New Orleans</Name>
+        <Ident>POI189</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-90.071533" Lat="29.951065" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Baton Rouge</Name>
+        <Ident>POI20</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-91.187149" Lat="30.451468" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Jackson</Name>
+        <Ident>POI116</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-90.184807" Lat="32.298756" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Laurel</Name>
+        <Ident>POI134</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-89.130615" Lat="31.694052" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Monroe</Name>
+        <Ident>POI179</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-92.119301" Lat="32.509312" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Shreveport</Name>
+        <Ident>POI271</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-93.750175" Lat="32.525150" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Longview</Name>
+        <Ident>POI143</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-94.740486" Lat="32.500706" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>AT&amp;T Stadium</Name>
+        <Ident>POI335</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-97.092865" Lat="32.747929" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fort Worth</Name>
+        <Ident>POI88</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-97.330765" Lat="32.755489" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Oklahoma City</Name>
+        <Ident>POI202</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-97.516426" Lat="35.467560" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tulsa</Name>
+        <Ident>POI302</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-95.992775" Lat="36.153980" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wichita</Name>
+        <Ident>POI313</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-97.330055" Lat="37.687176" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Springfield (Missouri - USA)</Name>
+        <Ident>POI279</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-93.292297" Lat="37.208958" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Little Rock</Name>
+        <Ident>POI139</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-92.289597" Lat="34.746483" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Memphis</Name>
+        <Ident>POI163</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-90.048981" Lat="35.149532" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rock Island</Name>
+        <Ident>POI248</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-90.578751" Lat="41.509476" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Janesville</Name>
+        <Ident>POI118</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-89.018723" Lat="42.682789" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Madison</Name>
+        <Ident>POI152</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-89.401230" Lat="43.073051" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fond du Lac</Name>
+        <Ident>POI84</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-88.447052" Lat="43.773045" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Oshkosh</Name>
+        <Ident>POI207</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-88.542618" Lat="44.024708" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Appleton</Name>
+        <Ident>POI13</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-88.415382" Lat="44.261932" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Green Bay</Name>
+        <Ident>POI98</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-88.013298" Lat="44.513317" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sheboygan</Name>
+        <Ident>POI270</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-87.714531" Lat="43.750828" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Milwaukee</Name>
+        <Ident>POI174</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-87.906471" Lat="43.038902" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Amarillo</Name>
+        <Ident>POI7</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-101.831299" Lat="35.221996" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lubbock</Name>
+        <Ident>POI149</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-101.855164" Lat="33.577862" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Midland</Name>
+        <Ident>POI173</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-102.077911" Lat="31.997347" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Laredo</Name>
+        <Ident>POI131</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-99.507553" Lat="27.503561" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>McAllen</Name>
+        <Ident>POI161</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-98.230011" Lat="26.203407" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Brownsville</Name>
+        <Ident>POI32</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-97.497482" Lat="25.901747" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Corpus Christi</Name>
+        <Ident>POI56</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-97.396378" Lat="27.800583" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Houston</Name>
+        <Ident>POI111</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-95.369804" Lat="29.760427" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kingwood</Name>
+        <Ident>POI124</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-95.184479" Lat="30.050026" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Woodlands</Name>
+        <Ident>POI294</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-95.461266" Lat="30.165821" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Galveston</Name>
+        <Ident>POI94</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-94.797699" Lat="29.301348" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Chichen Itza</Name>
+        <Ident>POI361</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-88.568611" Lat="20.683056" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Toncontin Intl</Name>
+        <Ident>MHTG</Ident>
+        <Type>UNKNOWN</Type>
+        <Pos Lon="-87.217415" Lat="14.060275" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sirena Station</Name>
+        <Ident>MRSN</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-83.590866" Lat="8.477985" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bicsa Financial Center</Name>
+        <Ident>POI346</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.522461" Lat="8.976156" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Megapolis Tower 1</Name>
+        <Ident>POI411</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.517677" Lat="8.977300" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>F&amp;F Tower</Name>
+        <Ident>POI378</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.518501" Lat="8.982764" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bahia Pacifica</Name>
+        <Ident>POI339</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.509521" Lat="8.977739" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>JW Marriott Panama</Name>
+        <Ident>POI400</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.506683" Lat="8.975258" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Point, Panama City</Name>
+        <Ident>POI473</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.517906" Lat="8.971011" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Rock of Guatape</Name>
+        <Ident>POI454</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-75.179474" Lat="6.220314" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mariscal Sucre Intl</Name>
+        <Ident>SEQM</Ident>
+        <Type>UNKNOWN</Type>
+        <Pos Lon="-78.354439" Lat="-0.124172" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Chagual Airport</Name>
+        <Ident>SPGL</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-77.651421" Lat="-7.797434" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Juancho E. Yrausquin</Name>
+        <Ident>TNCS</Ident>
+        <Type>UNKNOWN</Type>
+        <Pos Lon="-63.220566" Lat="17.645319" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St Barthelemy I</Name>
+        <Ident>TFFJ</Ident>
+        <Type>UNKNOWN</Type>
+        <Pos Lon="-62.843884" Lat="17.904455" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Miami</Name>
+        <Ident>POI170</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-80.191788" Lat="25.761681" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>American Airlines Arena</Name>
+        <Ident>POI331</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-80.188065" Lat="25.781389" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Palmetto Bay</Name>
+        <Ident>POI216</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-80.324776" Lat="25.621773" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fort Lauderdale</Name>
+        <Ident>POI85</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-80.137314" Lat="26.122438" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Palm Beach</Name>
+        <Ident>POI213</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-80.036430" Lat="26.705622" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Port St. Lucie</Name>
+        <Ident>POI229</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-80.358223" Lat="27.273048" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Okeechobee</Name>
+        <Ident>POI201</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-80.829781" Lat="27.243935" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sebring</Name>
+        <Ident>POI267</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.440910" Lat="27.495592" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Port Charlotte</Name>
+        <Ident>POI228</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-82.090645" Lat="26.976171" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Venice (Florida - USA)</Name>
+        <Ident>POI308</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-82.454262" Lat="27.099777" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sarasota</Name>
+        <Ident>POI264</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-82.530655" Lat="27.336435" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fort Myers</Name>
+        <Ident>POI86</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.872307" Lat="26.640629" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Immokalee</Name>
+        <Ident>POI113</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.417404" Lat="26.418526" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Marco Island</Name>
+        <Ident>POI157</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.707535" Lat="25.939741" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Key West</Name>
+        <Ident>POI122</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.779984" Lat="24.555059" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Palm Bay</Name>
+        <Ident>POI212</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-80.588661" Lat="28.034462" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Titusville</Name>
+        <Ident>POI295</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-80.807556" Lat="28.612219" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Salt Lake City</Name>
+        <Ident>POI253</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-111.891045" Lat="40.760780" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Portland (Oregon - USA)</Name>
+        <Ident>POI232</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.675026" Lat="45.505108" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Beaverton</Name>
+        <Ident>POI21</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.801376" Lat="45.488876" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tacoma</Name>
+        <Ident>POI288</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.444290" Lat="47.252876" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Seattle-Tacoma Intl</Name>
+        <Ident>KSEA</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-122.311783" Lat="47.449890" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Space Needle</Name>
+        <Ident>POI442</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.349281" Lat="47.620510" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Everett</Name>
+        <Ident>POI78</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.202080" Lat="47.978985" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Victoria</Name>
+        <Ident>POI309</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-123.365646" Lat="48.428421" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Vancouver</Name>
+        <Ident>POI307</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-123.120735" Lat="49.282730" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Calgary</Name>
+        <Ident>POI34</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-114.071884" Lat="51.044731" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Edmonton</Name>
+        <Ident>POI75</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-113.493820" Lat="53.546124" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stewart</Name>
+        <Ident>CZST</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-129.983383" Lat="55.933380" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nanwalek</Name>
+        <Ident>KEB</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-151.925110" Lat="59.352188" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tokyo Skytree</Name>
+        <Ident>POI457</Ident>
+        <Type>USER</Type>
+        <Pos Lon="139.810715" Lat="35.710049" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>National Diet Building</Name>
+        <Ident>POI419</Ident>
+        <Type>USER</Type>
+        <Pos Lon="139.745041" Lat="35.675926" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Yoyogi National Gymnasium</Name>
+        <Ident>POI468</Ident>
+        <Type>USER</Type>
+        <Pos Lon="139.700150" Lat="35.667629" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tokyo Metropolitan Government Building</Name>
+        <Ident>POI456</Ident>
+        <Type>USER</Type>
+        <Pos Lon="139.691528" Lat="35.689499" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Shinjuku Nomura Building</Name>
+        <Ident>POI438</Ident>
+        <Type>USER</Type>
+        <Pos Lon="139.695343" Lat="35.692944" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sompo Japan Building</Name>
+        <Ident>POI441</Ident>
+        <Type>USER</Type>
+        <Pos Lon="139.696213" Lat="35.692745" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tokyo (Haneda) Intl</Name>
+        <Ident>RJTT</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="139.781113" Lat="35.553329" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Yokohama Landmark Tower</Name>
+        <Ident>POI467</Ident>
+        <Type>USER</Type>
+        <Pos Lon="139.631485" Lat="35.454563" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Busan Tower</Name>
+        <Ident>POI351</Ident>
+        <Type>USER</Type>
+        <Pos Lon="129.032288" Lat="35.101215" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rungrado 1st of May Stadium</Name>
+        <Ident>POI432</Ident>
+        <Type>USER</Type>
+        <Pos Lon="125.775269" Lat="39.049442" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>China Zun</Name>
+        <Ident>POI364</Ident>
+        <Type>USER</Type>
+        <Pos Lon="116.460098" Lat="39.911621" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>China Media Group Headquarters</Name>
+        <Ident>POI362</Ident>
+        <Type>USER</Type>
+        <Pos Lon="116.457504" Lat="39.913628" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>China World Trade Center Tower III</Name>
+        <Ident>POI363</Ident>
+        <Type>USER</Type>
+        <Pos Lon="116.452179" Lat="39.910934" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Beijing Railway Station</Name>
+        <Ident>POI344</Ident>
+        <Type>USER</Type>
+        <Pos Lon="116.420982" Lat="39.902237" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Temple of Heaven</Name>
+        <Ident>POI450</Ident>
+        <Type>USER</Type>
+        <Pos Lon="116.406464" Lat="39.882240" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>National Centre for the Performing Arts</Name>
+        <Ident>POI418</Ident>
+        <Type>USER</Type>
+        <Pos Lon="116.383614" Lat="39.903336" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Beijing National Stadium</Name>
+        <Ident>POI343</Ident>
+        <Type>USER</Type>
+        <Pos Lon="116.390564" Lat="39.991669" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Summer Palace</Name>
+        <Ident>POI445</Ident>
+        <Type>USER</Type>
+        <Pos Lon="116.268898" Lat="39.997501" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Zifeng Tower</Name>
+        <Ident>POI469</Ident>
+        <Type>USER</Type>
+        <Pos Lon="118.778061" Lat="32.062473" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Oriental Pearl Tower</Name>
+        <Ident>POI423</Ident>
+        <Type>USER</Type>
+        <Pos Lon="121.495239" Lat="31.241947" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Shanghai IFC</Name>
+        <Ident>POI435</Ident>
+        <Type>USER</Type>
+        <Pos Lon="121.497063" Lat="31.238989" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bank of China Tower</Name>
+        <Ident>POI342</Ident>
+        <Type>USER</Type>
+        <Pos Lon="121.498863" Lat="31.240297" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Jin Mao Tower</Name>
+        <Ident>POI399</Ident>
+        <Type>USER</Type>
+        <Pos Lon="121.501205" Lat="31.237370" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Shanghai Tower</Name>
+        <Ident>POI436</Ident>
+        <Type>USER</Type>
+        <Pos Lon="121.501411" Lat="31.235617" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Shanghai World Financial Center</Name>
+        <Ident>POI437</Ident>
+        <Type>USER</Type>
+        <Pos Lon="121.503143" Lat="31.236687" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lupu Bridge</Name>
+        <Ident>POI407</Ident>
+        <Type>USER</Type>
+        <Pos Lon="121.475830" Lat="31.190556" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>National Palace Museum</Name>
+        <Ident>POI421</Ident>
+        <Type>USER</Type>
+        <Pos Lon="121.548615" Lat="25.101944" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Grand Hotel</Name>
+        <Ident>POI385</Ident>
+        <Type>USER</Type>
+        <Pos Lon="121.525772" Lat="25.077333" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Chiang Kai-Shek Memorial Hall</Name>
+        <Ident>POI360</Ident>
+        <Type>USER</Type>
+        <Pos Lon="121.521667" Lat="25.034445" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Grand Promenade</Name>
+        <Ident>POI388</Ident>
+        <Type>USER</Type>
+        <Pos Lon="114.224724" Lat="22.285177" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Highcliff</Name>
+        <Ident>POI392</Ident>
+        <Type>USER</Type>
+        <Pos Lon="114.184166" Lat="22.264999" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hopewell Centre</Name>
+        <Ident>POI395</Ident>
+        <Type>USER</Type>
+        <Pos Lon="114.171600" Lat="22.274513" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Central Plaza</Name>
+        <Ident>POI355</Ident>
+        <Type>USER</Type>
+        <Pos Lon="114.173706" Lat="22.279839" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hong Kong Convention and Exhibition Centre</Name>
+        <Ident>POI394</Ident>
+        <Type>USER</Type>
+        <Pos Lon="114.172882" Lat="22.284081" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Arch</Name>
+        <Ident>POI451</Ident>
+        <Type>USER</Type>
+        <Pos Lon="114.163055" Lat="22.303612" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>International Commerce Centre</Name>
+        <Ident>POI397</Ident>
+        <Type>USER</Type>
+        <Pos Lon="114.160156" Lat="22.303530" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wynn Macau</Name>
+        <Ident>POI466</Ident>
+        <Type>USER</Type>
+        <Pos Lon="113.547737" Lat="22.187937" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>MGM Macau</Name>
+        <Ident>POI414</Ident>
+        <Type>USER</Type>
+        <Pos Lon="113.547226" Lat="22.185833" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Praca de Ferreira do Amaral</Name>
+        <Ident>POI430</Ident>
+        <Type>USER</Type>
+        <Pos Lon="113.543549" Lat="22.188343" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Torre Lago Panoramico</Name>
+        <Ident>POI459</Ident>
+        <Type>USER</Type>
+        <Pos Lon="113.542107" Lat="22.188478" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bank of China Building</Name>
+        <Ident>POI341</Ident>
+        <Type>USER</Type>
+        <Pos Lon="113.542900" Lat="22.189861" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Grand Lisboa</Name>
+        <Ident>POI386</Ident>
+        <Type>USER</Type>
+        <Pos Lon="113.543076" Lat="22.190668" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Keangnam Hanoi Landmark Tower</Name>
+        <Ident>POI401</Ident>
+        <Type>USER</Type>
+        <Pos Lon="105.784058" Lat="21.017323" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Angkor Wat</Name>
+        <Ident>POI333</Ident>
+        <Type>USER</Type>
+        <Pos Lon="103.866875" Lat="13.412456" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wat Pho</Name>
+        <Ident>POI463</Ident>
+        <Type>USER</Type>
+        <Pos Lon="100.493256" Lat="13.746542" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bagan</Name>
+        <Ident>POI338</Ident>
+        <Type>USER</Type>
+        <Pos Lon="94.857826" Lat="21.161339" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Paro</Name>
+        <Ident>VQPR</Ident>
+        <Type>UNKNOWN</Type>
+        <Pos Lon="89.424828" Lat="27.403131" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lukla</Name>
+        <Ident>VNLK</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="86.731369" Lat="27.687826" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dhamek Stupa</Name>
+        <Ident>POI370</Ident>
+        <Type>USER</Type>
+        <Pos Lon="83.023300" Lat="25.381308" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Taj Mahal</Name>
+        <Ident>POI448</Ident>
+        <Type>USER</Type>
+        <Pos Lon="78.042114" Lat="27.174974" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lotus Temple</Name>
+        <Ident>POI405</Ident>
+        <Type>USER</Type>
+        <Pos Lon="77.258606" Lat="28.553326" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Golden Temple</Name>
+        <Ident>POI383</Ident>
+        <Type>USER</Type>
+        <Pos Lon="74.876503" Lat="31.619978" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Faisal Mosque</Name>
+        <Ident>POI379</Ident>
+        <Type>USER</Type>
+        <Pos Lon="73.037003" Lat="33.729630" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Potala Palace</Name>
+        <Ident>POI429</Ident>
+        <Type>USER</Type>
+        <Pos Lon="91.117226" Lat="29.657839" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Konark Sun Temple</Name>
+        <Ident>POI402</Ident>
+        <Type>USER</Type>
+        <Pos Lon="86.094719" Lat="19.887501" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ruwanwelisaya Stupa</Name>
+        <Ident>POI433</Ident>
+        <Type>USER</Type>
+        <Pos Lon="80.396385" Lat="8.350022" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sigiriya</Name>
+        <Ident>POI439</Ident>
+        <Type>USER</Type>
+        <Pos Lon="80.759972" Lat="7.957097" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mid Valley Megamall</Name>
+        <Ident>POI415</Ident>
+        <Type>USER</Type>
+        <Pos Lon="101.677223" Lat="3.117692" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Petronas Towers</Name>
+        <Ident>POI427</Ident>
+        <Type>USER</Type>
+        <Pos Lon="101.711853" Lat="3.157794" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Esplanade - Theatres on the Bay</Name>
+        <Ident>POI376</Ident>
+        <Type>USER</Type>
+        <Pos Lon="103.855583" Lat="1.289703" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>ArtScience Museum</Name>
+        <Ident>POI334</Ident>
+        <Type>USER</Type>
+        <Pos Lon="103.859085" Lat="1.286125" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Marina Bay Sands</Name>
+        <Ident>POI410</Ident>
+        <Type>USER</Type>
+        <Pos Lon="103.859886" Lat="1.283269" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Singapore Flyer</Name>
+        <Ident>POI440</Ident>
+        <Type>USER</Type>
+        <Pos Lon="103.863258" Lat="1.289392" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Indonesia Convention Exhibition</Name>
+        <Ident>POI396</Ident>
+        <Type>USER</Type>
+        <Pos Lon="106.636604" Lat="-6.300258" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Darwin City</Name>
+        <Ident>POI57</Ident>
+        <Type>USER</Type>
+        <Pos Lon="130.845642" Lat="-12.463440" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bugalaga Airstrip</Name>
+        <Ident>WX53</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="136.596451" Lat="-3.623443" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Uluru</Name>
+        <Ident>POI474</Ident>
+        <Type>USER</Type>
+        <Pos Lon="131.033936" Lat="-25.343849" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Canberra</Name>
+        <Ident>POI35</Ident>
+        <Type>USER</Type>
+        <Pos Lon="149.124420" Lat="-35.307499" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wollongong</Name>
+        <Ident>POI320</Ident>
+        <Type>USER</Type>
+        <Pos Lon="150.893066" Lat="-34.427811" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kingsford Smith Intl</Name>
+        <Ident>YSSY</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="151.177216" Lat="-33.946102" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sydney Opera House</Name>
+        <Ident>POI447</Ident>
+        <Type>USER</Type>
+        <Pos Lon="151.214981" Lat="-33.856800" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Newcastle (Australia)</Name>
+        <Ident>POI193</Ident>
+        <Type>USER</Type>
+        <Pos Lon="151.781677" Lat="-32.928272" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gold Coast</Name>
+        <Ident>POI96</Ident>
+        <Type>USER</Type>
+        <Pos Lon="153.400681" Lat="-28.014242" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cape Brett Lighthouse</Name>
+        <Ident>POI472</Ident>
+        <Type>USER</Type>
+        <Pos Lon="174.332596" Lat="-35.175301" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Queenstown</Name>
+        <Ident>NZQN</Ident>
+        <Type>UNKNOWN</Type>
+        <Pos Lon="168.739166" Lat="-45.021137" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Estadio Monumental Antonio Vespucio Liberti</Name>
+        <Ident>POI377</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-58.449722" Lat="-34.545357" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Christ the Redeemer</Name>
+        <Ident>POI365</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-43.210140" Lat="-22.952007" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Metropolitan Cathedral of Rio De Janeiro</Name>
+        <Ident>POI413</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-43.180702" Lat="-22.910769" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Galeao-Antonio C Jobim Intl</Name>
+        <Ident>SBGL</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-43.250557" Lat="-22.809999" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cape Town Intl</Name>
+        <Ident>FACT</Ident>
+        <Type>UNKNOWN</Type>
+        <Pos Lon="18.604252" Lat="-33.971321" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>First National Bank Stadium</Name>
+        <Ident>POI381</Ident>
+        <Type>USER</Type>
+        <Pos Lon="27.982639" Lat="-26.234819" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Entebbe Intl</Name>
+        <Ident>HUEN</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="32.440464" Lat="0.040780" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bahir Dar Stadium</Name>
+        <Ident>POI340</Ident>
+        <Type>USER</Type>
+        <Pos Lon="37.382854" Lat="11.584606" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fasil Ghebbi</Name>
+        <Ident>POI380</Ident>
+        <Type>USER</Type>
+        <Pos Lon="37.470108" Lat="12.608400" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Church of Our Lady Mary of Zion (ancient)</Name>
+        <Ident>POI367</Ident>
+        <Type>USER</Type>
+        <Pos Lon="38.719440" Lat="14.130278" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Abraj Al Bait</Name>
+        <Ident>POI326</Ident>
+        <Type>USER</Type>
+        <Pos Lon="39.825607" Lat="21.418215" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Great Mosque of Mecca</Name>
+        <Ident>POI389</Ident>
+        <Type>USER</Type>
+        <Pos Lon="39.826286" Lat="21.422581" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Al-Masjid an-Nabawi</Name>
+        <Ident>POI329</Ident>
+        <Type>USER</Type>
+        <Pos Lon="39.610832" Lat="24.468332" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Temple Mount</Name>
+        <Ident>POI449</Ident>
+        <Type>USER</Type>
+        <Pos Lon="35.235809" Lat="31.777971" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cairo Intl</Name>
+        <Ident>HECA</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="31.413870" Lat="30.111387" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Al-Rifa'i Mosque</Name>
+        <Ident>POI330</Ident>
+        <Type>USER</Type>
+        <Pos Lon="31.256859" Lat="30.032644" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Egyptian Museum</Name>
+        <Ident>POI373</Ident>
+        <Type>USER</Type>
+        <Pos Lon="31.233667" Lat="30.047812" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cairo Tower</Name>
+        <Ident>POI352</Ident>
+        <Type>USER</Type>
+        <Pos Lon="31.224321" Lat="30.045998" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Casino Barrière</Name>
+        <Ident>POI353</Ident>
+        <Type>USER</Type>
+        <Pos Lon="31.224468" Lat="30.038822" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Supreme Council of Universities</Name>
+        <Ident>POI446</Ident>
+        <Type>USER</Type>
+        <Pos Lon="31.208578" Lat="30.027264" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Great Sphinx of Giza</Name>
+        <Ident>POI390</Ident>
+        <Type>USER</Type>
+        <Pos Lon="31.137745" Lat="29.975262" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Giza Pyramid Complex</Name>
+        <Ident>POI382</Ident>
+        <Type>USER</Type>
+        <Pos Lon="31.130629" Lat="29.975853" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pyramid of Djoser</Name>
+        <Ident>POI431</Ident>
+        <Type>USER</Type>
+        <Pos Lon="31.216583" Lat="29.871197" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bent Pyramid</Name>
+        <Ident>POI345</Ident>
+        <Type>USER</Type>
+        <Pos Lon="31.209457" Lat="29.790253" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Meidum Pyramid</Name>
+        <Ident>POI412</Ident>
+        <Type>USER</Type>
+        <Pos Lon="31.157042" Lat="29.388464" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Borg El Arab Stadium</Name>
+        <Ident>POI347</Ident>
+        <Type>USER</Type>
+        <Pos Lon="29.729385" Lat="30.999439" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Acropolis of Athens</Name>
+        <Ident>POI327</Ident>
+        <Type>USER</Type>
+        <Pos Lon="23.726028" Lat="37.971985" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sultan Ahmed Mosque</Name>
+        <Ident>POI444</Ident>
+        <Type>USER</Type>
+        <Pos Lon="28.976826" Lat="41.005386" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hagia Sophia</Name>
+        <Ident>POI391</Ident>
+        <Type>USER</Type>
+        <Pos Lon="28.979992" Lat="41.008549" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dolmabahçe Palace</Name>
+        <Ident>POI371</Ident>
+        <Type>USER</Type>
+        <Pos Lon="29.001667" Lat="41.039440" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Istanbul Çağlayan Justice Palace</Name>
+        <Ident>POI398</Ident>
+        <Type>USER</Type>
+        <Pos Lon="28.980043" Lat="41.069195" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Vrelo Bune</Name>
+        <Ident>POI462</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.901232" Lat="43.256863" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Metropolitan City of Naples</Name>
+        <Ident>POI168</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.332644" Lat="40.901974" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Province of Palermo</Name>
+        <Ident>POI237</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.361486" Lat="38.115692" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Province of Catania</Name>
+        <Ident>POI236</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.083084" Lat="37.507881" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Metropolitan City of Florence</Name>
+        <Ident>POI166</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.252379" Lat="43.767918" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Metropolitan City of Bologna</Name>
+        <Ident>POI165</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.304784" Lat="44.500511" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Province of Verona</Name>
+        <Ident>POI238</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.073532" Lat="45.441849" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Metropolitan City of Venice</Name>
+        <Ident>POI169</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.315267" Lat="45.441467" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Innsbruck</Name>
+        <Ident>LOWI</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="11.343892" Lat="47.260284" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Neuschwanstein Castle</Name>
+        <Ident>POI422</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.749758" Lat="47.557590" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Munich</Name>
+        <Ident>POI184</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.581981" Lat="48.135124" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Augsburg</Name>
+        <Ident>POI16</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.897790" Lat="48.370544" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nuremberg</Name>
+        <Ident>POI197</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.076665" Lat="49.452103" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Frankfurt/Main</Name>
+        <Ident>EDDF</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="8.570461" Lat="50.033306" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cologne Cathedral</Name>
+        <Ident>POI369</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.957906" Lat="50.941242" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Monchengladbach</Name>
+        <Ident>POI178</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.442804" Lat="51.180458" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Duisburg</Name>
+        <Ident>POI72</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.762329" Lat="51.434406" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Oberhausen</Name>
+        <Ident>POI198</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.863777" Lat="51.496334" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Munster</Name>
+        <Ident>POI185</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.626135" Lat="51.960667" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bremen</Name>
+        <Ident>POI29</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.801694" Lat="53.079296" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hamburg</Name>
+        <Ident>POI105</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.993682" Lat="53.551086" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kiel</Name>
+        <Ident>POI123</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.122765" Lat="54.323292" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Magdeburg</Name>
+        <Ident>POI154</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.627624" Lat="52.120533" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Halle (Saale)</Name>
+        <Ident>POI104</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.968803" Lat="51.496979" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Leipzig</Name>
+        <Ident>POI136</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.373075" Lat="51.339695" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dresden</Name>
+        <Ident>POI70</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.737262" Lat="51.050407" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hohensalzburg Fortress</Name>
+        <Ident>POI393</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.047222" Lat="47.795002" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Metropolitan City of Milan</Name>
+        <Ident>POI167</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.181873" Lat="45.458626" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Courchevel</Name>
+        <Ident>LFLJ</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="6.632474" Lat="45.395828" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Aix-en-Provence</Name>
+        <Ident>POI4</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.447427" Lat="43.529743" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Marseille</Name>
+        <Ident>POI160</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.369780" Lat="43.296482" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pont du Gard</Name>
+        <Ident>POI428</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.535556" Lat="43.947224" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Montpellier</Name>
+        <Ident>POI181</Ident>
+        <Type>USER</Type>
+        <Pos Lon="3.876716" Lat="43.610767" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bordeaux</Name>
+        <Ident>POI25</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.579180" Lat="44.837788" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pamplona</Name>
+        <Ident>POI217</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.645775" Lat="42.812527" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Barajas</Name>
+        <Ident>LEMD</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-3.560809" Lat="40.472233" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Madrid</Name>
+        <Ident>POI153</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.703790" Lat="40.416775" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cordoba</Name>
+        <Ident>POI55</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-4.779384" Lat="37.888176" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Seville</Name>
+        <Ident>POI269</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-5.984459" Lat="37.389091" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Marbella</Name>
+        <Ident>POI156</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-4.882447" Lat="36.510071" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gibraltar AB</Name>
+        <Ident>LXGB</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-5.349821" Lat="36.151131" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Murcia</Name>
+        <Ident>POI186</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.130654" Lat="37.992241" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Alicante</Name>
+        <Ident>POI6</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.490686" Lat="38.345997" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Valencia</Name>
+        <Ident>POI306</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.376288" Lat="39.469910" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Vigo</Name>
+        <Ident>POI310</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-8.720727" Lat="42.240601" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rennes</Name>
+        <Ident>POI243</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.677793" Lat="48.117268" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mont Saint-Michel</Name>
+        <Ident>POI416</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.511256" Lat="48.636276" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Château de Saumur</Name>
+        <Ident>POI358</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.072500" Lat="47.256111" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Château d'Amboise</Name>
+        <Ident>POI356</Ident>
+        <Type>USER</Type>
+        <Pos Lon="0.986303" Lat="47.413589" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Château de Chambord</Name>
+        <Ident>POI357</Ident>
+        <Type>USER</Type>
+        <Pos Lon="1.516961" Lat="47.616341" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Château de Sully-sur-Loire</Name>
+        <Ident>POI359</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.375200" Lat="47.767704" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Palace of Versailles</Name>
+        <Ident>POI425</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.120300" Lat="48.804802" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Trocadero</Name>
+        <Ident>POI461</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.288294" Lat="48.862247" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Eiffel Tower</Name>
+        <Ident>POI374</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.294550" Lat="48.858299" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Les Invalides</Name>
+        <Ident>POI403</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.312553" Lat="48.855026" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Grand Palais</Name>
+        <Ident>POI387</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.312681" Lat="48.866096" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Louvre Museum</Name>
+        <Ident>POI406</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.336389" Lat="48.861111" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Luxembourg Palace</Name>
+        <Ident>POI408</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.337222" Lat="48.848335" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sacré-Cœur Basilica</Name>
+        <Ident>POI434</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.343058" Lat="48.886662" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Charles-de-Gaulle</Name>
+        <Ident>LFPG</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="2.547774" Lat="49.009808" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rouen</Name>
+        <Ident>POI250</Ident>
+        <Type>USER</Type>
+        <Pos Lon="1.099971" Lat="49.443233" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Brighton Palace Pier</Name>
+        <Ident>POI348</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.136944" Lat="50.814999" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Portsmouth</Name>
+        <Ident>POI233</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.087977" Lat="50.819767" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Southampton</Name>
+        <Ident>POI274</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.404351" Lat="50.909698" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Heathrow</Name>
+        <Ident>EGLL</Ident>
+        <Type>UNKNOWN</Type>
+        <Pos Lon="-0.461378" Lat="51.477497" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Shard</Name>
+        <Ident>POI455</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.086394" Lat="51.504494" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tower Bridge</Name>
+        <Ident>POI460</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.075358" Lat="51.505512" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The O2</Name>
+        <Ident>POI452</Ident>
+        <Type>USER</Type>
+        <Pos Lon="0.003211" Lat="51.502956" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lille</Name>
+        <Ident>POI137</Ident>
+        <Type>USER</Type>
+        <Pos Lon="3.057256" Lat="50.629250" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Atomium</Name>
+        <Ident>POI336</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.341542" Lat="50.894924" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Aachen</Name>
+        <Ident>POI1</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.083887" Lat="50.775345" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Schiphol</Name>
+        <Ident>EHAM</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="4.764172" Lat="52.308067" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Westerkerk</Name>
+        <Ident>POI464</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.883883" Lat="52.374470" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Amsterdam Centraal railway station</Name>
+        <Ident>POI332</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.900394" Lat="52.379326" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Donegal</Name>
+        <Ident>EIDL</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-8.341124" Lat="55.044182" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Broch of Mousa</Name>
+        <Ident>POI349</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.182133" Lat="59.995262" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Avicii Arena</Name>
+        <Ident>POI337</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.083237" Lat="59.293556" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Church of the Savior on Spilled Blood</Name>
+        <Ident>POI368</Ident>
+        <Type>USER</Type>
+        <Pos Lon="30.329098" Lat="59.940006" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cathedral of Christ the Saviour</Name>
+        <Ident>POI354</Ident>
+        <Type>USER</Type>
+        <Pos Lon="37.605556" Lat="55.744446" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Moscow State University</Name>
+        <Ident>POI417</Ident>
+        <Type>USER</Type>
+        <Pos Lon="37.530796" Lat="55.702915" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wilanów Palace</Name>
+        <Ident>POI465</Ident>
+        <Type>USER</Type>
+        <Pos Lon="21.090279" Lat="52.165276" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Palace of Culture and Science</Name>
+        <Ident>POI424</Ident>
+        <Type>USER</Type>
+        <Pos Lon="21.006390" Lat="52.231667" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Main Square</Name>
+        <Ident>POI409</Ident>
+        <Type>USER</Type>
+        <Pos Lon="19.937254" Lat="50.061668" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dur-Kurigalzu Ziggurat</Name>
+        <Ident>POI372</Ident>
+        <Type>USER</Type>
+        <Pos Lon="44.202282" Lat="33.353622" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ziggurat of Ur</Name>
+        <Ident>POI470</Ident>
+        <Type>USER</Type>
+        <Pos Lon="46.103161" Lat="30.962681" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Al Hamra Tower</Name>
+        <Ident>POI328</Ident>
+        <Type>USER</Type>
+        <Pos Lon="47.993198" Lat="29.379000" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Persian Gulf Complex</Name>
+        <Ident>POI426</Ident>
+        <Type>USER</Type>
+        <Pos Lon="52.433678" Lat="29.756506" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tomb of Cyrus</Name>
+        <Ident>POI458</Ident>
+        <Type>USER</Type>
+        <Pos Lon="53.167194" Lat="30.193890" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dubai Intl</Name>
+        <Ident>OMDB</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="55.364449" Lat="25.252769" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Madeira</Name>
+        <Ident>LPMA</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-16.778095" Lat="32.694183" Alt="162.40"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

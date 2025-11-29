@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-30T07:36:04+01:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Friday Harbor</Name>
+        <Ident>KFHR</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-123.024406" Lat="48.521938" Alt="95.29"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Astoria-Megler Bridge</Name>
+        <Ident>POI752</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-123.861275" Lat="46.213963" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Haystack Rock</Name>
+        <Ident>POI791</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-123.968315" Lat="45.884392" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lewis and Clark Bridge</Name>
+        <Ident>POI770</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.962105" Lat="46.104424" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dworshak Dam</Name>
+        <Ident>POI760</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-116.295982" Lat="46.514942" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Oroville Dam</Name>
+        <Ident>POI778</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-121.485168" Lat="39.536465" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Alcatraz </Name>
+        <Ident>POI788</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.423012" Lat="37.826813" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bixby Creek Bridge</Name>
+        <Ident>POI754</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-121.902100" Lat="36.371357" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Yosemite El Capitan</Name>
+        <Ident>POI795</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-119.636375" Lat="37.732723" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Half Dome</Name>
+        <Ident>POI790</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-119.534760" Lat="37.744610" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Las Vegas Strip</Name>
+        <Ident>POI769</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-115.173004" Lat="36.117245" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hoover Dam</Name>
+        <Ident>POI766</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-114.737244" Lat="36.016266" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Navajo Bridge</Name>
+        <Ident>POI776</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-111.631287" Lat="36.817390" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Glen Canyon Dam</Name>
+        <Ident>POI765</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-111.484215" Lat="36.937580" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Monument Valley</Name>
+        <Ident>POI793</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-110.092476" Lat="37.020351" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Shiprock</Name>
+        <Ident>POI794</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-108.836441" Lat="36.687824" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cliff Palace - Mesa Verde</Name>
+        <Ident>POI756</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-108.473007" Lat="37.166866" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Airport Graveyard</Name>
+        <Ident>POI796</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-110.872200" Lat="32.164997" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Monument Rocks National Natural</Name>
+        <Ident>POI792</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-100.763153" Lat="38.793213" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Coronado Heights Castle</Name>
+        <Ident>POI757</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-97.703369" Lat="38.613331" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Chimney Rock</Name>
+        <Ident>POI789</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-103.347725" Lat="41.703793" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Crazy Horse Memorial</Name>
+        <Ident>POI758</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-103.623711" Lat="43.836761" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mount Rushmore</Name>
+        <Ident>POI774</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-103.459122" Lat="43.878757" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Devils Tower</Name>
+        <Ident>POI759</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-104.714943" Lat="44.590435" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lowry Avenue Bridge</Name>
+        <Ident>POI771</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-93.274429" Lat="45.013084" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mackinac Bridge</Name>
+        <Ident>POI772</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-84.727974" Lat="45.815380" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Sault Ste. Marie International Bridge</Name>
+        <Ident>POI782</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-84.358620" Lat="46.512943" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rainbow Bridge Niagara Falls</Name>
+        <Ident>POI780</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.067543" Lat="43.090107" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stewart Intl</Name>
+        <Ident>KSWF</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-74.104828" Lat="41.504097" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fort McHenry</Name>
+        <Ident>POI764</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-76.579788" Lat="39.263157" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Chesapeake Bay Bridge</Name>
+        <Ident>POI755</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-76.367859" Lat="38.990532" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>United States National Arboretum</Name>
+        <Ident>POI784</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-76.967537" Lat="38.910244" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>United States Capitol</Name>
+        <Ident>POI783</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.009125" Lat="38.889805" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Washington Monument</Name>
+        <Ident>POI786</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.035248" Lat="38.889462" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wright Brothers National Memorial</Name>
+        <Ident>POI787</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-75.667961" Lat="36.014320" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>New River Gorge Bridge</Name>
+        <Ident>POI777</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.082550" Lat="38.068920" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>US Grant Bridge</Name>
+        <Ident>POI785</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-82.997292" Lat="38.727627" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fort Knox</Name>
+        <Ident>POI763</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-85.965286" Lat="37.883224" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Biltmore Estate</Name>
+        <Ident>POI753</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-82.553070" Lat="35.540768" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hartsfield - Jackson Atlanta I</Name>
+        <Ident>KATL</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-84.427864" Lat="33.636700" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kennedy Space Center</Name>
+        <Ident>POI768</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-80.682236" Lat="28.523970" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sunshine Skyway Bridge</Name>
+        <Ident>POI781</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-82.655609" Lat="27.620289" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fort Jefferson</Name>
+        <Ident>POI762</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-82.873215" Lat="24.628513" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Johnson Space Center</Name>
+        <Ident>POI767</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-95.097786" Lat="29.552000" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ellis County Courthouse</Name>
+        <Ident>POI761</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-96.847878" Lat="32.385406" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dallas-Ft Worth Intl</Name>
+        <Ident>KDFW</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-97.037697" Lat="32.897232" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pilgrim Monument</Name>
+        <Ident>POI779</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-70.188690" Lat="42.052277" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mauna Kea Observatory</Name>
+        <Ident>POI773</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-155.472260" Lat="19.823950" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>National Radio Astronomy Observatory</Name>
+        <Ident>POI775</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-155.455658" Lat="19.801517" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bradshaw Army Airfield</Name>
+        <Ident>PHSF</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-155.553696" Lat="19.760069" Alt="6136.67"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

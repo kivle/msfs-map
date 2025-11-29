@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-30T10:24:32+01:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Paraburdoo</Name>
+        <Ident>YPBO</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="117.745567" Lat="-23.171507" Alt="1387.06"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Murchison Radio-astronomy Observatory</Name>
+        <Ident>POI1230</Ident>
+        <Type>USER</Type>
+        <Pos Lon="116.636948" Lat="-26.696943" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Optus Stadium</Name>
+        <Ident>POI1232</Ident>
+        <Type>USER</Type>
+        <Pos Lon="115.889091" Lat="-31.951147" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The WACA Ground</Name>
+        <Ident>POI1258</Ident>
+        <Type>USER</Type>
+        <Pos Lon="115.879578" Lat="-31.959871" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Perth</Name>
+        <Ident>POI1286</Ident>
+        <Type>USER</Type>
+        <Pos Lon="115.861305" Lat="-31.952312" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>108 St Georges Terrace</Name>
+        <Ident>POI1199</Ident>
+        <Type>USER</Type>
+        <Pos Lon="115.857201" Lat="-31.954390" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Central Park</Name>
+        <Ident>POI1214</Ident>
+        <Type>USER</Type>
+        <Pos Lon="115.855537" Lat="-31.953764" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Brookfield Place</Name>
+        <Ident>POI1211</Ident>
+        <Type>USER</Type>
+        <Pos Lon="115.854759" Lat="-31.955013" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Perth Arena</Name>
+        <Ident>POI1236</Ident>
+        <Type>USER</Type>
+        <Pos Lon="115.852135" Lat="-31.948393" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Narrows Bridge</Name>
+        <Ident>POI1231</Ident>
+        <Type>USER</Type>
+        <Pos Lon="115.846962" Lat="-31.963350" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bathurst Point Lighthouse</Name>
+        <Ident>POI1268</Ident>
+        <Type>USER</Type>
+        <Pos Lon="115.540688" Lat="-31.989355" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wadjemup Lighthouse</Name>
+        <Ident>POI1276</Ident>
+        <Type>USER</Type>
+        <Pos Lon="115.504204" Lat="-32.007252" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bunbury</Name>
+        <Ident>POI1280</Ident>
+        <Type>USER</Type>
+        <Pos Lon="115.639648" Lat="-33.325638" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Longitude 131° Lodge</Name>
+        <Ident>POI1224</Ident>
+        <Type>USER</Type>
+        <Pos Lon="131.008347" Lat="-25.249994" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Adelaide Oval</Name>
+        <Ident>POI1203</Ident>
+        <Type>USER</Type>
+        <Pos Lon="138.596237" Lat="-34.915470" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Adelaide</Name>
+        <Ident>POI1278</Ident>
+        <Type>USER</Type>
+        <Pos Lon="138.600739" Lat="-34.928497" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cape Nelson Lighthouse</Name>
+        <Ident>POI1272</Ident>
+        <Type>USER</Type>
+        <Pos Lon="141.542999" Lat="-38.430965" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bay Of Islands</Name>
+        <Ident>POI1263</Ident>
+        <Type>USER</Type>
+        <Pos Lon="142.821701" Lat="-38.581329" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Twelve Apostles</Name>
+        <Ident>POI1267</Ident>
+        <Type>USER</Type>
+        <Pos Lon="143.067810" Lat="-38.649895" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Split Point Lighthouse</Name>
+        <Ident>POI1275</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.104431" Lat="-38.467979" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Phillip Island Grand Prix Circuit</Name>
+        <Ident>POI1237</Ident>
+        <Type>USER</Type>
+        <Pos Lon="145.232117" Lat="-38.502586" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Melbourne Square</Name>
+        <Ident>POI1228</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.963623" Lat="-37.825947" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Prima Pearl Tower</Name>
+        <Ident>POI1239</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.961380" Lat="-37.822910" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Eureka Tower</Name>
+        <Ident>POI1216</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.964600" Lat="-37.821674" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Flinders Street Railway Station</Name>
+        <Ident>POI1218</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.967117" Lat="-37.817722" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Federation Square</Name>
+        <Ident>POI1217</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.969208" Lat="-37.817741" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Melbourne</Name>
+        <Ident>POI1285</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.963058" Lat="-37.813629" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Aurora Melbourne Central</Name>
+        <Ident>POI1207</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.962341" Lat="-37.809704" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Queens Place North Tower</Name>
+        <Ident>POI1240</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.958969" Lat="-37.810051" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Swanston Central</Name>
+        <Ident>POI1248</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.961884" Lat="-37.806198" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>West Side Place</Name>
+        <Ident>POI1262</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.952957" Lat="-37.814426" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Premier Tower</Name>
+        <Ident>POI1238</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.953751" Lat="-37.817402" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>568 Collins Street</Name>
+        <Ident>POI1201</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.955429" Lat="-37.818348" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rialto Towers</Name>
+        <Ident>POI1241</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.957687" Lat="-37.818741" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Marvel Stadium</Name>
+        <Ident>POI1226</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.947556" Lat="-37.816544" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bolte Bridge</Name>
+        <Ident>POI1209</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.932327" Lat="-37.819382" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>West Gate Bridge</Name>
+        <Ident>POI1261</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.898911" Lat="-37.829975" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Melbourne Cricket Ground</Name>
+        <Ident>POI1227</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.983398" Lat="-37.819958" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Albion Viaduct</Name>
+        <Ident>POI1204</Ident>
+        <Type>USER</Type>
+        <Pos Lon="144.846115" Lat="-37.747410" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wilsons Promontory Lighthouse</Name>
+        <Ident>POI1277</Ident>
+        <Type>USER</Type>
+        <Pos Lon="146.424484" Lat="-39.130074" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cape Wickham Lighthouse</Name>
+        <Ident>POI1273</Ident>
+        <Type>USER</Type>
+        <Pos Lon="143.943024" Lat="-39.588554" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Devils Gate Dam</Name>
+        <Ident>POI1215</Ident>
+        <Type>USER</Type>
+        <Pos Lon="146.265106" Lat="-41.350563" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Batman Bridge</Name>
+        <Ident>POI1208</Ident>
+        <Type>USER</Type>
+        <Pos Lon="146.914612" Lat="-41.217148" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cascade Dam</Name>
+        <Ident>POI1213</Ident>
+        <Type>USER</Type>
+        <Pos Lon="147.822495" Lat="-41.170799" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>South Sister Lookout Antennae</Name>
+        <Ident>POI1265</Ident>
+        <Type>USER</Type>
+        <Pos Lon="148.171768" Lat="-41.534130" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tasman Bridge</Name>
+        <Ident>POI1252</Ident>
+        <Type>USER</Type>
+        <Pos Lon="147.345352" Lat="-42.864941" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hobart</Name>
+        <Ident>POI1283</Ident>
+        <Type>USER</Type>
+        <Pos Lon="147.325714" Lat="-42.882607" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gordon Dam</Name>
+        <Ident>POI1220</Ident>
+        <Type>USER</Type>
+        <Pos Lon="145.976105" Lat="-42.730282" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gabo Island Lighthouse</Name>
+        <Ident>POI1274</Ident>
+        <Type>USER</Type>
+        <Pos Lon="149.916855" Lat="-37.568752" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Canberra Deep Space Communication Complex</Name>
+        <Ident>POI1212</Ident>
+        <Type>USER</Type>
+        <Pos Lon="148.981247" Lat="-35.402439" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Big Merino</Name>
+        <Ident>POI1254</Ident>
+        <Type>USER</Type>
+        <Pos Lon="149.691391" Lat="-34.772507" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Shellharbour Airport</Name>
+        <Ident>YSHL</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="150.788605" Lat="-34.561077" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Warragamba Dam</Name>
+        <Ident>POI1260</Ident>
+        <Type>USER</Type>
+        <Pos Lon="150.595474" Lat="-33.883125" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Three Sisters</Name>
+        <Ident>POI1266</Ident>
+        <Type>USER</Type>
+        <Pos Lon="150.314682" Lat="-33.735725" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stadium Australia</Name>
+        <Ident>POI1245</Ident>
+        <Type>USER</Type>
+        <Pos Lon="151.063400" Lat="-33.847107" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gladesville Bridge</Name>
+        <Ident>POI1219</Ident>
+        <Type>USER</Type>
+        <Pos Lon="151.147903" Lat="-33.842186" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Anzac Bridge</Name>
+        <Ident>POI1206</Ident>
+        <Type>USER</Type>
+        <Pos Lon="151.185989" Lat="-33.869225" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sydney Tower</Name>
+        <Ident>POI1251</Ident>
+        <Type>USER</Type>
+        <Pos Lon="151.208878" Lat="-33.870426" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sydney</Name>
+        <Ident>POI1287</Ident>
+        <Type>USER</Type>
+        <Pos Lon="151.209290" Lat="-33.868820" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sydney Harbour Bridge</Name>
+        <Ident>POI1250</Ident>
+        <Type>USER</Type>
+        <Pos Lon="151.210709" Lat="-33.852123" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Luna Park</Name>
+        <Ident>POI1225</Ident>
+        <Type>USER</Type>
+        <Pos Lon="151.209839" Lat="-33.847904" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Allianz Stadium (Sydney - Australia)</Name>
+        <Ident>POI1205</Ident>
+        <Type>USER</Type>
+        <Pos Lon="151.225342" Lat="-33.888939" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sydney Cricket Ground</Name>
+        <Ident>POI1249</Ident>
+        <Type>USER</Type>
+        <Pos Lon="151.224854" Lat="-33.891636" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Peats Ferry Bridge</Name>
+        <Ident>POI1235</Ident>
+        <Type>USER</Type>
+        <Pos Lon="151.199203" Lat="-33.538082" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hawkesbury River Rail Bridge</Name>
+        <Ident>POI1221</Ident>
+        <Type>USER</Type>
+        <Pos Lon="151.228531" Lat="-33.533756" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mooney Mooney Bridge</Name>
+        <Ident>POI1229</Ident>
+        <Type>USER</Type>
+        <Pos Lon="151.253708" Lat="-33.432304" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Parkes Observatory</Name>
+        <Ident>POI1233</Ident>
+        <Type>USER</Type>
+        <Pos Lon="148.263596" Lat="-32.998390" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Siding Spring Observatory</Name>
+        <Ident>POI1242</Ident>
+        <Type>USER</Type>
+        <Pos Lon="149.067245" Lat="-31.275457" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Paul Wild Observatory</Name>
+        <Ident>POI1234</Ident>
+        <Type>USER</Type>
+        <Pos Lon="149.564423" Lat="-30.312893" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Big Banana Fun Park</Name>
+        <Ident>POI1253</Ident>
+        <Type>USER</Type>
+        <Pos Lon="153.133942" Lat="-30.274809" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Big Prawn</Name>
+        <Ident>POI1256</Ident>
+        <Type>USER</Type>
+        <Pos Lon="153.532593" Lat="-28.863731" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cape Byron Lighthouse</Name>
+        <Ident>POI1269</Ident>
+        <Type>USER</Type>
+        <Pos Lon="153.636368" Lat="-28.638592" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Gabba</Name>
+        <Ident>POI1257</Ident>
+        <Type>USER</Type>
+        <Pos Lon="153.038116" Lat="-27.485910" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>1 William Street</Name>
+        <Ident>POI1198</Ident>
+        <Type>USER</Type>
+        <Pos Lon="153.025803" Lat="-27.475201" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Brisbane Skytower</Name>
+        <Ident>POI1210</Ident>
+        <Type>USER</Type>
+        <Pos Lon="153.028732" Lat="-27.471840" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Brisbane</Name>
+        <Ident>POI1279</Ident>
+        <Type>USER</Type>
+        <Pos Lon="153.026031" Lat="-27.470453" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Infinity Tower</Name>
+        <Ident>POI1223</Ident>
+        <Type>USER</Type>
+        <Pos Lon="153.019562" Lat="-27.467842" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Suncorp Stadium</Name>
+        <Ident>POI1247</Ident>
+        <Type>USER</Type>
+        <Pos Lon="153.009567" Lat="-27.464828" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>443 Queen Street</Name>
+        <Ident>POI1200</Ident>
+        <Type>USER</Type>
+        <Pos Lon="153.031525" Lat="-27.464958" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Soleil Brisbane</Name>
+        <Ident>POI1244</Ident>
+        <Type>USER</Type>
+        <Pos Lon="153.032562" Lat="-27.462341" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Story Bridge</Name>
+        <Ident>POI1246</Ident>
+        <Type>USER</Type>
+        <Pos Lon="153.035736" Lat="-27.463837" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sir Leo Hielscher Bridges (Gateway Bridges)</Name>
+        <Ident>POI1243</Ident>
+        <Type>USER</Type>
+        <Pos Lon="153.101212" Lat="-27.445318" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Houghton Highway Viaduct</Name>
+        <Ident>POI1222</Ident>
+        <Type>USER</Type>
+        <Pos Lon="153.071091" Lat="-27.274433" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Big Pineapple</Name>
+        <Ident>POI1255</Ident>
+        <Type>USER</Type>
+        <Pos Lon="152.991318" Lat="-26.672667" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mackay</Name>
+        <Ident>POI1284</Ident>
+        <Type>USER</Type>
+        <Pos Lon="149.182144" Lat="-21.142496" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Abbot Point Coal Terminal</Name>
+        <Ident>POI1202</Ident>
+        <Type>USER</Type>
+        <Pos Lon="148.078445" Lat="-19.883636" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cape Cleveland Lighthouse</Name>
+        <Ident>POI1270</Ident>
+        <Type>USER</Type>
+        <Pos Lon="147.015518" Lat="-19.182964" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Townsville Port</Name>
+        <Ident>POI1259</Ident>
+        <Type>USER</Type>
+        <Pos Lon="146.834244" Lat="-19.249216" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Townsville</Name>
+        <Ident>POI1288</Ident>
+        <Type>USER</Type>
+        <Pos Lon="146.816956" Lat="-19.258965" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cairns</Name>
+        <Ident>POI1281</Ident>
+        <Type>USER</Type>
+        <Pos Lon="145.770950" Lat="-16.920347" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Green Island Jetty</Name>
+        <Ident>POI1264</Ident>
+        <Type>USER</Type>
+        <Pos Lon="145.969421" Lat="-16.757978" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Longreach</Name>
+        <Ident>YLRE</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="144.280273" Lat="-23.434168" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mount Beauty Airport</Name>
+        <Ident>YMBT</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="147.166672" Lat="-36.733334" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Darwin</Name>
+        <Ident>POI1282</Ident>
+        <Type>USER</Type>
+        <Pos Lon="130.843201" Lat="-12.464488" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cape Don Lighthouse</Name>
+        <Ident>POI1271</Ident>
+        <Type>USER</Type>
+        <Pos Lon="131.765213" Lat="-11.307900" Alt="1258.67"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cape Don Airport</Name>
+        <Ident>YCPD</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="131.826416" Lat="-11.298021" Alt="80.17"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-03T17:36:20+00:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Rota Navy</Name>
+        <Ident>LERT</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-6.349517" Lat="36.645226" Alt="84.22"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cadiz</Name>
+        <Ident>POI2145</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-6.280322" Lat="36.520939" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Brussels</Name>
+        <Ident>POI2144</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.379760" Lat="50.842445" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Hague</Name>
+        <Ident>POI2147</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.294505" Lat="52.090675" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Zagreb</Name>
+        <Ident>POI2148</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.983578" Lat="45.815384" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kosice</Name>
+        <Ident>POI2146</Ident>
+        <Type>USER</Type>
+        <Pos Lon="21.253601" Lat="48.718140" Alt="1855.19"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kosice</Name>
+        <Ident>LZKZ</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="21.241150" Lat="48.663078" Alt="748.02"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

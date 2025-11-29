@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-09T18:09:33+00:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Quintin Lodge</Name>
+        <Ident>T004</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="167.752716" Lat="-44.788982" Alt="786.24"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Milford Sound</Name>
+        <Ident>NZMF</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="167.923294" Lat="-44.673309" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Martins Bay Aerodrome</Name>
+        <Ident>NZMJ</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="168.015961" Lat="-44.366161" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gorge River Airstrip</Name>
+        <Ident>NZQE</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="168.192368" Lat="-44.184650" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Coronet Peak Ski Area</Name>
+        <Ident>POI1738</Ident>
+        <Type>USER</Type>
+        <Pos Lon="168.736282" Lat="-44.927032" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Edith Cavell Bridge</Name>
+        <Ident>POI1701</Ident>
+        <Type>USER</Type>
+        <Pos Lon="168.671936" Lat="-44.988258" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Skyline Queenstown</Name>
+        <Ident>POI1729</Ident>
+        <Type>USER</Type>
+        <Pos Lon="168.649292" Lat="-45.026627" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Queenstown</Name>
+        <Ident>POI1751</Ident>
+        <Type>USER</Type>
+        <Pos Lon="168.661514" Lat="-45.030151" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lake Wakatipu</Name>
+        <Ident>POI1711</Ident>
+        <Type>USER</Type>
+        <Pos Lon="168.638062" Lat="-45.051556" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Remarkables Ski Area</Name>
+        <Ident>POI1741</Ident>
+        <Type>USER</Type>
+        <Pos Lon="168.813995" Lat="-45.053421" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kawarau Gorge Suspension Bridge</Name>
+        <Ident>POI1709</Ident>
+        <Type>USER</Type>
+        <Pos Lon="168.900070" Lat="-45.008934" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cardrona Alpine Resort</Name>
+        <Ident>POI1737</Ident>
+        <Type>USER</Type>
+        <Pos Lon="168.949326" Lat="-44.873505" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cromwell Big Fruit Sculpture</Name>
+        <Ident>POI1697</Ident>
+        <Type>USER</Type>
+        <Pos Lon="169.197296" Lat="-45.035511" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mount Cargill Transmitter</Name>
+        <Ident>POI1715</Ident>
+        <Type>USER</Type>
+        <Pos Lon="170.555283" Lat="-45.813179" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Forsyth Barr Stadium</Name>
+        <Ident>POI1704</Ident>
+        <Type>USER</Type>
+        <Pos Lon="170.524429" Lat="-45.869453" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dunedin Railway Station</Name>
+        <Ident>POI1699</Ident>
+        <Type>USER</Type>
+        <Pos Lon="170.508835" Lat="-45.875381" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dunedin Law Courts</Name>
+        <Ident>POI1698</Ident>
+        <Type>USER</Type>
+        <Pos Lon="170.507416" Lat="-45.875481" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>First Church Of Otago</Name>
+        <Ident>POI1702</Ident>
+        <Type>USER</Type>
+        <Pos Lon="170.504715" Lat="-45.876011" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Larnach Castle</Name>
+        <Ident>POI1712</Ident>
+        <Type>USER</Type>
+        <Pos Lon="170.627243" Lat="-45.861618" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Taiaroa Head Lighthouse</Name>
+        <Ident>POI1746</Ident>
+        <Type>USER</Type>
+        <Pos Lon="170.728851" Lat="-45.773766" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Balclutha Road Bridge</Name>
+        <Ident>POI1692</Ident>
+        <Type>USER</Type>
+        <Pos Lon="169.745041" Lat="-46.235558" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Invercargill Water Tower</Name>
+        <Ident>POI1708</Ident>
+        <Type>USER</Type>
+        <Pos Lon="168.360748" Lat="-46.407501" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tiwai Point Aluminium Smelter</Name>
+        <Ident>POI1734</Ident>
+        <Type>USER</Type>
+        <Pos Lon="168.380722" Lat="-46.588348" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dog Island lighthouse</Name>
+        <Ident>POI1745</Ident>
+        <Type>USER</Type>
+        <Pos Lon="168.410461" Lat="-46.651871" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tekapo A Power Station</Name>
+        <Ident>POI1732</Ident>
+        <Type>USER</Type>
+        <Pos Lon="170.460403" Lat="-44.013817" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tekapo Aerodrome</Name>
+        <Ident>NZTL</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="170.443176" Lat="-44.004608" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mount John Observatory</Name>
+        <Ident>POI1716</Ident>
+        <Type>USER</Type>
+        <Pos Lon="170.464096" Lat="-43.985245" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Church of the Good Shepherd</Name>
+        <Ident>POI1696</Ident>
+        <Type>USER</Type>
+        <Pos Lon="170.482407" Lat="-44.003326" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rakaia Bridges</Name>
+        <Ident>POI1725</Ident>
+        <Type>USER</Type>
+        <Pos Lon="172.037735" Lat="-43.743641" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rugby League Park</Name>
+        <Ident>POI1726</Ident>
+        <Type>USER</Type>
+        <Pos Lon="172.603928" Lat="-43.543781" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Christchurch</Name>
+        <Ident>POI1749</Ident>
+        <Type>USER</Type>
+        <Pos Lon="172.630554" Lat="-43.532021" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>ChristChurch Cathedral</Name>
+        <Ident>POI1695</Ident>
+        <Type>USER</Type>
+        <Pos Lon="172.637222" Lat="-43.530937" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sugarloaf Transmitter</Name>
+        <Ident>POI1730</Ident>
+        <Type>USER</Type>
+        <Pos Lon="172.649429" Lat="-43.603516" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Akaroa Dolphins Cruise</Name>
+        <Ident>POI1687</Ident>
+        <Type>USER</Type>
+        <Pos Lon="172.953217" Lat="-43.809700" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Akaroa Waterfront</Name>
+        <Ident>POI1689</Ident>
+        <Type>USER</Type>
+        <Pos Lon="172.960175" Lat="-43.809044" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Akaroa St Patrick's Catholic Church</Name>
+        <Ident>POI1688</Ident>
+        <Type>USER</Type>
+        <Pos Lon="172.970032" Lat="-43.802670" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Otira Viaduct</Name>
+        <Ident>POI1724</Ident>
+        <Type>USER</Type>
+        <Pos Lon="171.555618" Lat="-42.885990" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Taramakau Road-Rail Bridge</Name>
+        <Ident>POI1731</Ident>
+        <Type>USER</Type>
+        <Pos Lon="171.144913" Lat="-42.561386" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Westport</Name>
+        <Ident>NZWS</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="171.580841" Lat="-41.738049" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nelson</Name>
+        <Ident>POI1750</Ident>
+        <Type>USER</Type>
+        <Pos Lon="173.244370" Lat="-41.298531" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Farewell Spit Lighthouse</Name>
+        <Ident>POI1739</Ident>
+        <Type>USER</Type>
+        <Pos Lon="173.009384" Lat="-40.546097" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cape Egmont Lighthouse</Name>
+        <Ident>POI1742</Ident>
+        <Type>USER</Type>
+        <Pos Lon="173.754974" Lat="-39.276283" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Durie Hill Memorial Tower</Name>
+        <Ident>POI1700</Ident>
+        <Type>USER</Type>
+        <Pos Lon="175.061523" Lat="-39.936939" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ohakune Carrot</Name>
+        <Ident>POI1723</Ident>
+        <Type>USER</Type>
+        <Pos Lon="175.403687" Lat="-39.420059" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hopwood Clock Tower</Name>
+        <Ident>POI1706</Ident>
+        <Type>USER</Type>
+        <Pos Lon="175.611313" Lat="-40.356468" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castle Point Lighthouse</Name>
+        <Ident>POI1744</Ident>
+        <Type>USER</Type>
+        <Pos Lon="176.231415" Lat="-40.900452" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Titahi Bay Transmitter</Name>
+        <Ident>POI1733</Ident>
+        <Type>USER</Type>
+        <Pos Lon="174.842926" Lat="-41.096001" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mount Kaukau Transmitter</Name>
+        <Ident>POI1717</Ident>
+        <Type>USER</Type>
+        <Pos Lon="174.779373" Lat="-41.233509" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sky Stadium</Name>
+        <Ident>POI1727</Ident>
+        <Type>USER</Type>
+        <Pos Lon="174.785934" Lat="-41.272800" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wellington Regional Stadium and Railway Station</Name>
+        <Ident>POI1736</Ident>
+        <Type>USER</Type>
+        <Pos Lon="174.783279" Lat="-41.276707" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>New Zealand Parliamentary Library</Name>
+        <Ident>POI1720</Ident>
+        <Type>USER</Type>
+        <Pos Lon="174.776413" Lat="-41.277191" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>New Zealand Parliament House</Name>
+        <Ident>POI1719</Ident>
+        <Type>USER</Type>
+        <Pos Lon="174.776321" Lat="-41.277744" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Beehive</Name>
+        <Ident>POI1693</Ident>
+        <Type>USER</Type>
+        <Pos Lon="174.776611" Lat="-41.278442" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Majestic Centre</Name>
+        <Ident>POI1713</Ident>
+        <Type>USER</Type>
+        <Pos Lon="174.774658" Lat="-41.288483" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wellington</Name>
+        <Ident>POI1753</Ident>
+        <Type>USER</Type>
+        <Pos Lon="174.778748" Lat="-41.292381" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Museum of New Zealand Te Papa Tongarewa</Name>
+        <Ident>POI1718</Ident>
+        <Type>USER</Type>
+        <Pos Lon="174.782059" Lat="-41.290359" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mohaka Viaduct</Name>
+        <Ident>POI1714</Ident>
+        <Type>USER</Type>
+        <Pos Lon="177.125854" Lat="-39.068512" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gisborne</Name>
+        <Ident>NZGS</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="177.978271" Lat="-38.663326" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ohaaki Power Station</Name>
+        <Ident>POI1722</Ident>
+        <Type>USER</Type>
+        <Pos Lon="176.293060" Lat="-38.528660" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rotorua</Name>
+        <Ident>NZRO</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="176.317245" Lat="-38.109142" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tauranga</Name>
+        <Ident>POI1752</Ident>
+        <Type>USER</Type>
+        <Pos Lon="176.165421" Lat="-37.686966" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hobbiton Movie Set</Name>
+        <Ident>POI1705</Ident>
+        <Type>USER</Type>
+        <Pos Lon="175.680893" Lat="-37.858059" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Big Lemon and Paeroa Bottle</Name>
+        <Ident>POI1694</Ident>
+        <Type>USER</Type>
+        <Pos Lon="175.674332" Lat="-37.383190" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Huntly Power Station</Name>
+        <Ident>POI1707</Ident>
+        <Type>USER</Type>
+        <Pos Lon="175.149811" Lat="-37.544411" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fo Guang Shan Temple</Name>
+        <Ident>POI1703</Ident>
+        <Type>USER</Type>
+        <Pos Lon="174.911224" Lat="-36.957203" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Auckland War Memorial Museum</Name>
+        <Ident>POI1691</Ident>
+        <Type>USER</Type>
+        <Pos Lon="174.777802" Lat="-36.860271" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Auckland</Name>
+        <Ident>POI1748</Ident>
+        <Type>USER</Type>
+        <Pos Lon="174.764481" Lat="-36.850883" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sky Tower</Name>
+        <Ident>POI1728</Ident>
+        <Type>USER</Type>
+        <Pos Lon="174.762177" Lat="-36.848457" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Auckland Harbour Bridge</Name>
+        <Ident>POI1690</Ident>
+        <Type>USER</Type>
+        <Pos Lon="174.746460" Lat="-36.829319" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>North Harbour Stadium</Name>
+        <Ident>POI1721</Ident>
+        <Type>USER</Type>
+        <Pos Lon="174.701492" Lat="-36.726906" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tiritiri Matangi Lighthouse</Name>
+        <Ident>POI1747</Ident>
+        <Type>USER</Type>
+        <Pos Lon="174.897385" Lat="-36.605595" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Whangarei</Name>
+        <Ident>NZWR</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="174.365036" Lat="-35.768322" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Waitangi Treaty Grounds</Name>
+        <Ident>POI1735</Ident>
+        <Type>USER</Type>
+        <Pos Lon="174.082733" Lat="-35.265671" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kerikeri Mission Station</Name>
+        <Ident>POI1710</Ident>
+        <Type>USER</Type>
+        <Pos Lon="173.962448" Lat="-35.217571" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hole in the Rock - Piercy Island</Name>
+        <Ident>POI1740</Ident>
+        <Type>USER</Type>
+        <Pos Lon="174.339081" Lat="-35.165829" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cape Reinga Lighthouse</Name>
+        <Ident>POI1743</Ident>
+        <Type>USER</Type>
+        <Pos Lon="172.677643" Lat="-34.426716" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Waitiki Aerodrome</Name>
+        <Ident>NZWQ</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="172.838043" Lat="-34.527821" Alt="198.41"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

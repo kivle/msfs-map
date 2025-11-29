@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-29T22:29:19+00:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Akureyri</Name>
+        <Ident>BIAR</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-18.071928" Lat="65.656662" Alt="6.70"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Saudanes Lighthouse</Name>
+        <Ident>POI2129</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-18.951063" Lat="66.186890" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Arctic Henge</Name>
+        <Ident>POI2107</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-15.962408" Lat="66.462212" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Streitisviti Lighthouse</Name>
+        <Ident>POI2133</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-13.985708" Lat="64.729858" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dyrhólaey Lighthouse</Name>
+        <Ident>POI2122</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-19.130039" Lat="63.402401" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Knarrarós Lighthouse</Name>
+        <Ident>POI2125</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-20.975737" Lat="63.823277" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Laugardalsvöllur Stadium</Name>
+        <Ident>POI2079</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-21.878811" Lat="64.143585" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Imagine Peace Tower</Name>
+        <Ident>POI2070</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-21.859211" Lat="64.163246" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Reykjanesviti Lighthouse</Name>
+        <Ident>POI2127</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-22.704319" Lat="63.815605" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ólafsvíkurkirkja Church</Name>
+        <Ident>POI2085</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-23.713291" Lat="64.895416" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Church of Stykkisholmskirkja</Name>
+        <Ident>POI2054</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-22.721786" Lat="65.073929" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tórsvøllur</Name>
+        <Ident>POI2111</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-6.778228" Lat="62.019184" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Skansin Fort</Name>
+        <Ident>POI2097</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-6.763086" Lat="62.007881" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nordhordland Bridge</Name>
+        <Ident>POI2084</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.265094" Lat="60.523537" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Askøy Bridge</Name>
+        <Ident>POI2049</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.214658" Lat="60.396313" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ulriken Cable Car</Name>
+        <Ident>POI2112</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.381214" Lat="60.377342" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Osterøy Bridge</Name>
+        <Ident>POI2088</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.536114" Lat="60.426136" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stegastein Viewpoint</Name>
+        <Ident>POI2117</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.212436" Lat="60.908684" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rjukan-Notodden Industrial Heritage Site</Name>
+        <Ident>POI2092</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.492044" Lat="59.870979" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Oslo</Name>
+        <Ident>POI2141</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.755570" Lat="59.913303" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Plus</Name>
+        <Ident>POI2109</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.167650" Lat="59.957172" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Läckö Castle</Name>
+        <Ident>POI2078</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.219342" Lat="58.675030" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sculpture in Pilane</Name>
+        <Ident>POI2096</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.551814" Lat="58.030327" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pater Noster Lighthouse</Name>
+        <Ident>POI2126</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.466225" Lat="57.895844" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Carlsten Fortress</Name>
+        <Ident>POI2053</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.578606" Lat="57.886070" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Böttö Lighthouse</Name>
+        <Ident>POI2121</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.719544" Lat="57.649071" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Älvsborg Bridge</Name>
+        <Ident>POI2045</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.901678" Lat="57.690842" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gothenburg</Name>
+        <Ident>POI2137</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.955774" Lat="57.706566" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Water Towers Albert &amp; Frida</Name>
+        <Ident>POI2116</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.242253" Lat="57.086929" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Grimeton Radio Station</Name>
+        <Ident>POI2065</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.404428" Lat="57.113930" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fredensborg Palace</Name>
+        <Ident>POI2061</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.395750" Lat="55.982018" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Frederikssund</Name>
+        <Ident>POI2136</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.062383" Lat="55.835556" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rosklide</Name>
+        <Ident>POI2142</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.083116" Lat="55.642059" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Valloe Castle</Name>
+        <Ident>POI2114</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.211261" Lat="55.402508" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Forest Tower, Camp Adventure Park</Name>
+        <Ident>POI2108</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.976789" Lat="55.253189" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Storstrøm Bridge</Name>
+        <Ident>POI2100</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.884872" Lat="54.966583" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Farø Island Bridges</Name>
+        <Ident>POI2060</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.974239" Lat="54.943172" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Great Belt Bridge</Name>
+        <Ident>POI2064</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.967550" Lat="55.332645" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Odense</Name>
+        <Ident>POI2140</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.380781" Lat="55.396538" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Old Little Belt Bridge</Name>
+        <Ident>POI2086</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.709406" Lat="55.517082" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Wave</Name>
+        <Ident>POI2110</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.556489" Lat="55.709549" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Himmelbjerg Tower</Name>
+        <Ident>POI2069</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.685089" Lat="56.105106" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Aarhus</Name>
+        <Ident>POI2134</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.199300" Lat="56.156776" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Aalborg Tower</Name>
+        <Ident>POI2044</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.904483" Lat="57.041794" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rubjerg Knude Lighthouse</Name>
+        <Ident>POI2128</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.775483" Lat="57.449001" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hirtshals Lighthouse</Name>
+        <Ident>POI2123</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.941928" Lat="57.584743" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Skagen Lighthouse</Name>
+        <Ident>POI2130</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.630250" Lat="57.735477" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Old Water Tower in Landskrona</Name>
+        <Ident>POI2087</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.843019" Lat="55.876789" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Copenhagen</Name>
+        <Ident>POI2135</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.590789" Lat="55.686707" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Malmo</Name>
+        <Ident>POI2139</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.003997" Lat="55.605633" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bosjökloster Castle &amp; Gardens</Name>
+        <Ident>POI2052</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.518442" Lat="55.877274" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kristianstad Vattenrike Biosphere Reserve</Name>
+        <Ident>POI2076</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.147178" Lat="56.028526" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Teleborg Castle</Name>
+        <Ident>POI2106</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.834075" Lat="56.857174" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Water Tower in Berga</Name>
+        <Ident>POI2115</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.339518" Lat="56.694969" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kalmar Castle</Name>
+        <Ident>POI2073</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.355465" Lat="56.657978" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Visby</Name>
+        <Ident>POI2143</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.295988" Lat="57.634613" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ekenäs Castle</Name>
+        <Ident>POI2058</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.945811" Lat="58.381996" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Linkoping</Name>
+        <Ident>POI2138</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.622625" Lat="58.410934" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stora Sundby Castle</Name>
+        <Ident>POI2099</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.126797" Lat="59.270260" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Strömsholm Palace</Name>
+        <Ident>POI2101</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.269772" Lat="59.524864" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Engelsberg Ironworks</Name>
+        <Ident>POI2059</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.010477" Lat="59.967583" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gripsholm Castle</Name>
+        <Ident>POI2066</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.219936" Lat="59.255867" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Djuro Bridge</Name>
+        <Ident>POI2055</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.667807" Lat="59.293777" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kökar Church</Name>
+        <Ident>POI2075</Ident>
+        <Type>USER</Type>
+        <Pos Lon="20.877792" Lat="59.947884" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bengtskär Lighthouse</Name>
+        <Ident>POI2120</Ident>
+        <Type>USER</Type>
+        <Pos Lon="22.499107" Lat="59.723221" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hanko Water Tower</Name>
+        <Ident>POI2068</Ident>
+        <Type>USER</Type>
+        <Pos Lon="22.970608" Lat="59.824902" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Paimio Sanatorium</Name>
+        <Ident>POI2089</Ident>
+        <Type>USER</Type>
+        <Pos Lon="22.735342" Lat="60.464874" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Söderskär Lighthouse</Name>
+        <Ident>POI2132</Ident>
+        <Type>USER</Type>
+        <Pos Lon="25.409822" Lat="60.109360" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mustankallio Water Tower</Name>
+        <Ident>POI2083</Ident>
+        <Type>USER</Type>
+        <Pos Lon="25.671925" Lat="60.992348" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tähtiniemi Bridge</Name>
+        <Ident>POI2105</Ident>
+        <Type>USER</Type>
+        <Pos Lon="26.008589" Lat="61.214352" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kärkisten Silta</Name>
+        <Ident>POI2074</Ident>
+        <Type>USER</Type>
+        <Pos Lon="25.674164" Lat="61.996284" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Puijo Tower</Name>
+        <Ident>POI2090</Ident>
+        <Type>USER</Type>
+        <Pos Lon="27.652252" Lat="62.908985" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Umeå City Church</Name>
+        <Ident>POI2113</Ident>
+        <Type>USER</Type>
+        <Pos Lon="20.267956" Lat="63.823563" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sandø Bridge</Name>
+        <Ident>POI2095</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.877689" Lat="62.883278" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sundsvall Bridge</Name>
+        <Ident>POI2103</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.341402" Lat="62.388309" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Skarnsund Bridge</Name>
+        <Ident>POI2098</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.075989" Lat="63.843224" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Munkholmen</Name>
+        <Ident>POI2082</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.383019" Lat="63.450989" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kjeungskjær Lighthouse</Name>
+        <Ident>POI2124</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.530900" Lat="63.726784" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>SalMar Ocean Farm 1</Name>
+        <Ident>POI2093</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.133361" Lat="63.941898" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gjemnessund Bridge</Name>
+        <Ident>POI2062</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.779689" Lat="62.971432" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lysgardsbakkene Ski Jumping Arena</Name>
+        <Ident>POI2080</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.487197" Lat="61.125362" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rossvoll</Name>
+        <Ident>ENRA</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="14.301379" Lat="66.363907" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Skrova Lighthouse</Name>
+        <Ident>POI2131</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.649472" Lat="68.153084" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Leknes</Name>
+        <Ident>ENLK</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="13.609427" Lat="68.152504" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hålogaland Bridge</Name>
+        <Ident>POI2067</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.481762" Lat="68.459404" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Aurora Sky Station</Name>
+        <Ident>POI2050</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.723389" Lat="68.361755" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kiruna</Name>
+        <Ident>ESNQ</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="20.335548" Lat="67.821388" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Arctic Bath</Name>
+        <Ident>POI2046</Ident>
+        <Type>USER</Type>
+        <Pos Lon="20.936604" Lat="66.088188" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Jätkänkynttilä Bridge</Name>
+        <Ident>POI2072</Ident>
+        <Type>USER</Type>
+        <Pos Lon="25.742702" Lat="66.502861" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Arctic Space Centre (FMI-ARC)</Name>
+        <Ident>POI2047</Ident>
+        <Type>USER</Type>
+        <Pos Lon="26.630587" Lat="67.363754" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ivalo</Name>
+        <Ident>EFIV</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="27.413885" Lat="68.610832" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sámi Parliament of Norway</Name>
+        <Ident>POI2094</Ident>
+        <Type>USER</Type>
+        <Pos Lon="25.496361" Lat="69.470879" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The North Cape</Name>
+        <Ident>POI2118</Ident>
+        <Type>USER</Type>
+        <Pos Lon="25.783482" Lat="71.169739" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Andenes Lighthouse</Name>
+        <Ident>POI2119</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.115982" Lat="69.323997" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bjørnøya Meteorological Station</Name>
+        <Ident>POI2051</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.997917" Lat="74.503876" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Isfjord Radio Adventure Hotel</Name>
+        <Ident>POI2071</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.615989" Lat="78.061981" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>KSAT Global Ground Station Network</Name>
+        <Ident>POI2077</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.393003" Lat="78.230080" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Svalbard Global Seed Vault</Name>
+        <Ident>POI2104</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.489644" Lat="78.235855" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>EastGRIP</Name>
+        <Ident>POI2057</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-35.983906" Lat="75.632919" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Summit Station</Name>
+        <Ident>POI2102</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-38.459179" Lat="72.579727" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Arctic Station</Name>
+        <Ident>POI2048</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-53.517223" Lat="69.253304" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dye-3</Name>
+        <Ident>POI2056</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-43.818321" Lat="65.182442" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ribe Cathedral</Name>
+        <Ident>POI2091</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.761483" Lat="55.328079" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Marsk Camp &amp; Tower</Name>
+        <Ident>POI2081</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.741436" Lat="55.152912" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gråsten Palace</Name>
+        <Ident>POI2063</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.595389" Lat="54.925709" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Vojens/Skrydstrup AB</Name>
+        <Ident>EKSP</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="9.263927" Lat="55.225555" Alt="134.59"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

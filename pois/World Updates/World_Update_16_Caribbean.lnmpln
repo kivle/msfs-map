@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-29T22:36:46+00:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Sangster Intl</Name>
+        <Ident>MKJS</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-77.913338" Lat="18.503609" Alt="1.59"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Montego Bay Convention Centre</Name>
+        <Ident>POI2187</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.821053" Lat="18.520050" Alt="1931.51"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rose Hall Great House</Name>
+        <Ident>POI2200</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.819191" Lat="18.516302" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Colbeck Castle</Name>
+        <Ident>POI2163</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.131554" Lat="17.952236" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>King's House Jamaica</Name>
+        <Ident>POI2185</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-76.784065" Lat="18.023167" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Independence Park</Name>
+        <Ident>POI2231</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-76.772591" Lat="18.001377" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Navassa Island Light</Name>
+        <Ident>POI2224</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-75.012840" Lat="18.397375" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cayes</Name>
+        <Ident>MTCA</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-73.788139" Lat="18.271017" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tour 2004 Bicentennial Monument</Name>
+        <Ident>POI2213</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-72.336899" Lat="18.543837" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Citadelle Laferrière</Name>
+        <Ident>POI2161</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-72.243607" Lat="19.572390" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sans-Souci Palace</Name>
+        <Ident>POI2206</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-72.218636" Lat="19.604786" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cathedral of Our Lady of the Assumption in Cap-Haïtien</Name>
+        <Ident>POI2158</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-72.200974" Lat="19.760696" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Monument to the Heroes of the Restoration</Name>
+        <Ident>POI2188</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-70.694710" Lat="19.450893" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Iglesia Sagrado Corazon de Jesus Moca</Name>
+        <Ident>POI2184</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-70.524155" Lat="19.393011" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gregorio Luperon Intl</Name>
+        <Ident>MDPP</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-70.570045" Lat="19.757874" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Félix Sánchez Olympic Stadium</Name>
+        <Ident>POI2169</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-69.918694" Lat="18.480433" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Palacio de los Deportes Virgilio Travieso Soto</Name>
+        <Ident>POI2192</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-69.918808" Lat="18.474903" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Presidencia de la República Dominicana</Name>
+        <Ident>POI2194</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-69.897789" Lat="18.474449" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Monasterio de San Francisco</Name>
+        <Ident>POI2186</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-69.885994" Lat="18.476801" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Church &amp; Convent of Los Dominicos</Name>
+        <Ident>POI2159</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-69.885147" Lat="18.471107" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Plaza de la Bandera</Name>
+        <Ident>POI2193</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-69.975067" Lat="18.449814" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Puente Mauricio Báez</Name>
+        <Ident>POI2195</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-69.337784" Lat="18.500547" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cathedral Basilica of Our Lady of Altagracia</Name>
+        <Ident>POI2156</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-68.716965" Lat="18.615564" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cabo Rojo Lighthouse</Name>
+        <Ident>POI2154</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-67.192261" Lat="17.933611" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Museo Castillo Serrallés</Name>
+        <Ident>POI2190</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-66.619278" Lat="18.018705" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fortín San Juan de la Cruz</Name>
+        <Ident>POI2179</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-66.136414" Lat="18.466347" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>San Felipe del Morro Castle</Name>
+        <Ident>POI2204</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-66.124283" Lat="18.471014" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castillo San Cristóbal</Name>
+        <Ident>POI2155</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-66.109299" Lat="18.467457" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Capitol of Puerto Rico</Name>
+        <Ident>POI2209</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-66.105957" Lat="18.466757" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fortín de San Jerónimo del Boquerón</Name>
+        <Ident>POI2178</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-66.084206" Lat="18.462835" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Puerto Ferro Lighthouse</Name>
+        <Ident>POI2225</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-65.423615" Lat="18.096277" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hams Bluff Lighthouse</Name>
+        <Ident>POI2221</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-64.870827" Lat="17.769186" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Government of the Virgin Islands Administration Complex</Name>
+        <Ident>POI2181</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-64.616348" Lat="18.421740" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Saba Rock</Name>
+        <Ident>POI2214</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-64.357735" Lat="18.503218" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sandy Island</Name>
+        <Ident>POI2205</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-63.118256" Lat="18.212729" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fort Louis</Name>
+        <Ident>POI2174</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-63.085285" Lat="18.070768" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gustavia Lighthouse</Name>
+        <Ident>POI2220</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-62.851353" Lat="17.901108" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Energy LP Storage Terminal</Name>
+        <Ident>POI2166</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-62.996521" Lat="17.503994" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fort Oranje</Name>
+        <Ident>POI2176</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-62.986538" Lat="17.481956" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Brimstone Hill Fortress</Name>
+        <Ident>POI2153</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-62.836044" Lat="17.347633" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Queen of The Holy Rosary Church</Name>
+        <Ident>POI2198</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-63.229652" Lat="17.639008" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Communications Tower</Name>
+        <Ident>POI2164</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-63.237614" Lat="17.634571" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>National Museum of Montserrat</Name>
+        <Ident>POI2191</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-62.201828" Lat="16.800301" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Saint John's Cathedral</Name>
+        <Ident>POI2203</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-61.841877" Lat="17.122761" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sir Vivian Richards Cricket Grounds</Name>
+        <Ident>POI2208</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-61.784943" Lat="17.103369" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fort Napoléon des Saintes</Name>
+        <Ident>POI2175</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-61.582310" Lat="15.875250" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Les Saintes Airport</Name>
+        <Ident>POI2149</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-61.579857" Lat="15.864919" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Roussel-Trianon Plantation</Name>
+        <Ident>POI2201</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-61.323090" Lat="15.897686" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fort Shirley</Name>
+        <Ident>POI2177</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-61.473557" Lat="15.583389" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sacré-Coeur de Balata</Name>
+        <Ident>POI2202</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-61.078896" Lat="14.649156" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Church of Saint-Michael</Name>
+        <Ident>POI2160</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-60.903027" Lat="14.614703" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Vieux Fort Lighthouse</Name>
+        <Ident>POI2228</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-60.941826" Lat="13.711150" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cathedral of Our Lady of the Assumption</Name>
+        <Ident>POI2157</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-61.229088" Lat="13.157417" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fort Charlotte, Saint Vincent</Name>
+        <Ident>POI2171</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-61.242260" Lat="13.157847" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The new Parliament Building in Grenada</Name>
+        <Ident>POI2211</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-61.745323" Lat="12.053886" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fort Frederick</Name>
+        <Ident>POI2173</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-61.737259" Lat="12.047936" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>A.N.R Robinson International Airport</Name>
+        <Ident>TTCP</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-60.832226" Lat="11.149731" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Galera Point - Toco Lighthouse</Name>
+        <Ident>POI2218</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-60.909843" Lat="10.834178" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Red House</Name>
+        <Ident>POI2199</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-61.511681" Lat="10.653211" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Faro Punta Ballenas</Name>
+        <Ident>POI2168</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-63.777664" Lat="10.997558" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>City of la Asunción Gymnasium</Name>
+        <Ident>POI2162</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-63.857899" Lat="11.025103" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hotel Hesperia Isla Margarita</Name>
+        <Ident>POI2183</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-63.916866" Lat="11.128853" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Faro de Punta Zaragoza</Name>
+        <Ident>POI2217</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-63.932568" Lat="11.125019" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Faro Holandés, Los Roques</Name>
+        <Ident>POI2167</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-66.676544" Lat="11.951989" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Spelonk Lighthouse</Name>
+        <Ident>POI2226</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-68.196609" Lat="12.212242" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Willemstoren Lighthouse</Name>
+        <Ident>POI2229</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-68.237297" Lat="12.028306" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lighthouse Klein Curaçao</Name>
+        <Ident>POI2222</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-68.643181" Lat="11.989797" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fort Beekenburg</Name>
+        <Ident>POI2170</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-68.862160" Lat="12.072425" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Handelskade</Name>
+        <Ident>POI2182</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-68.934006" Lat="12.106092" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Queen Emma Bridge</Name>
+        <Ident>POI2196</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-68.935387" Lat="12.106086" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Queen Juliana Bridge</Name>
+        <Ident>POI2197</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-68.931961" Lat="12.111228" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Alto Vista Chapel</Name>
+        <Ident>POI2150</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-70.010963" Lat="12.575967" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Aruba - California Lighthouse</Name>
+        <Ident>POI2215</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-70.051384" Lat="12.613925" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Grand Turk Lighthouse</Name>
+        <Ident>POI2219</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-71.133629" Lat="21.511608" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>North Eleuthera</Name>
+        <Ident>MYEH</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-76.681358" Lat="25.475645" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Atlantis Bahamas</Name>
+        <Ident>POI2151</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.323677" Lat="25.084274" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Cove at Atlantis</Name>
+        <Ident>POI2210</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.326706" Lat="25.086153" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sidney Poitier Bridge</Name>
+        <Ident>POI2207</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.324043" Lat="25.077875" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fort Fincastle</Name>
+        <Ident>POI2172</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.338493" Lat="25.073610" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Government House</Name>
+        <Ident>POI2180</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.344604" Lat="25.075733" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nassau Harbor Lighthouse</Name>
+        <Ident>POI2223</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.351486" Lat="25.086946" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Thomas Robinson Stadium</Name>
+        <Ident>POI2212</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.360222" Lat="25.054361" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Breezy Palms</Name>
+        <Ident>POI2152</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-76.979042" Lat="26.500914" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Elbow Reef Lighthouse</Name>
+        <Ident>POI2216</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-76.962135" Lat="26.539743" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cooper's Castle</Name>
+        <Ident>POI2165</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-78.675652" Lat="26.501822" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Vilo Acuna Intl</Name>
+        <Ident>MUCL</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-81.545509" Lat="21.616156" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The East End Lighthouse</Name>
+        <Ident>POI2227</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.723495" Lat="19.751205" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Farley Hill National Park</Name>
+        <Ident>POI2230</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-59.594898" Lat="13.264814" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Morgan Lewis Windmill</Name>
+        <Ident>POI2189</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-59.574654" Lat="13.268442" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Grantley Adams Intl</Name>
+        <Ident>TBPB</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-59.492107" Lat="13.074642" Alt="163.63"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

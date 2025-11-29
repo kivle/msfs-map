@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-09T18:28:46+00:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Karlovy Vary</Name>
+        <Ident>LKKV</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="12.914982" Lat="50.203041" Alt="1974.24"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Diana Observation Tower</Name>
+        <Ident>POI1928</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.871592" Lat="50.218746" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Loket Castle</Name>
+        <Ident>POI1957</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.754419" Lat="50.186932" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Plzen</Name>
+        <Ident>POI2032</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.378349" Lat="49.747784" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Karlštejn Castle</Name>
+        <Ident>POI1941</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.188061" Lat="49.939438" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Prague</Name>
+        <Ident>POI2033</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.437751" Lat="50.075619" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Průhonice Castle</Name>
+        <Ident>POI1978</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.557589" Lat="50.000443" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Konopiště Castle</Name>
+        <Ident>POI1944</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.656611" Lat="49.779591" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St Barbara’s Cathedral</Name>
+        <Ident>POI1996</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.263500" Lat="49.944931" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Church of Assumption of our Lady and St John the Baptist</Name>
+        <Ident>POI1924</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.290361" Lat="49.959827" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kunětická Hora Castle</Name>
+        <Ident>POI1952</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.811606" Lat="50.080235" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Litomyšl Castle</Name>
+        <Ident>POI1956</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.313335" Lat="49.873116" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pilgrimage Church of Saint John of Nepomuk</Name>
+        <Ident>POI1976</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.941992" Lat="49.580154" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Brno</Name>
+        <Ident>POI2027</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.607841" Lat="49.200222" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lednice Castle</Name>
+        <Ident>POI1954</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.805256" Lat="48.801205" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cairn of Milan Rastislav Štefánik</Name>
+        <Ident>POI1920</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.563765" Lat="48.679382" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Čachtice Castle</Name>
+        <Ident>POI1919</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.761120" Lat="48.725067" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bojnice Castle</Name>
+        <Ident>POI1913</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.577789" Lat="48.779961" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Calvary Banská Štiavnica</Name>
+        <Ident>POI1921</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.913677" Lat="48.461803" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Visegrád Citadel</Name>
+        <Ident>POI2017</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.980455" Lat="47.793594" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Esztergom Basilica</Name>
+        <Ident>POI1930</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.736601" Lat="47.799202" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>ORFK Tower</Name>
+        <Ident>POI1972</Ident>
+        <Type>USER</Type>
+        <Pos Lon="19.001497" Lat="47.550144" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hungarian Parliament Building</Name>
+        <Ident>POI1938</Ident>
+        <Type>USER</Type>
+        <Pos Lon="19.045643" Lat="47.507111" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Budapest</Name>
+        <Ident>POI2028</Ident>
+        <Type>USER</Type>
+        <Pos Lon="19.040161" Lat="47.497890" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Miska Huszar Statue</Name>
+        <Ident>POI1963</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.553862" Lat="47.217049" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tata Castle</Name>
+        <Ident>POI2004</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.319353" Lat="47.648766" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Monostori Bridge</Name>
+        <Ident>POI1964</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.084667" Lat="47.757301" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pannonhalma Archabbey</Name>
+        <Ident>POI1974</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.761139" Lat="47.552666" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tihany Abbey</Name>
+        <Ident>POI2009</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.889706" Lat="46.913807" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Szigliget Castle</Name>
+        <Ident>POI2003</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.436369" Lat="46.804554" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sümeg Castle</Name>
+        <Ident>POI2002</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.282461" Lat="46.982101" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ujudvar TV Tower</Name>
+        <Ident>POI2014</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.018650" Lat="46.562840" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Maribor</Name>
+        <Ident>POI2031</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.645585" Lat="46.557644" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Veliki Tabor Castle</Name>
+        <Ident>POI2015</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.651475" Lat="46.154716" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rajhenburg Castle</Name>
+        <Ident>POI1979</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.466656" Lat="45.989037" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castle Sevnica</Name>
+        <Ident>POI1923</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.314050" Lat="46.007992" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Otočec Castle</Name>
+        <Ident>POI1973</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.234783" Lat="45.837975" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>žužemberk Castle</Name>
+        <Ident>POI2022</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.929158" Lat="45.830227" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Vzletišče Zagorje ob Savi</Name>
+        <Ident>LJZA</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="14.998575" Lat="46.142464" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ljubljana</Name>
+        <Ident>POI2030</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.506929" Lat="46.050026" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Škofja Loka Castle</Name>
+        <Ident>POI1988</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.305161" Lat="46.165298" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Brdo Castle</Name>
+        <Ident>POI1917</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.377083" Lat="46.273094" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bled Castle</Name>
+        <Ident>POI1912</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.100261" Lat="46.369736" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Church of the Assumption</Name>
+        <Ident>POI1926</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.090200" Lat="46.362389" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Solkan Bridge</Name>
+        <Ident>POI1992</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.651750" Lat="45.978771" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rihemberk Castle</Name>
+        <Ident>POI1981</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.791503" Lat="45.851143" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Predjama Castle</Name>
+        <Ident>POI1977</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.127386" Lat="45.815601" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Snežnik Castle</Name>
+        <Ident>POI1990</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.469178" Lat="45.682743" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rječina Bridge</Name>
+        <Ident>POI1982</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.457169" Lat="45.334675" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Trsat Castle</Name>
+        <Ident>POI2013</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.455481" Lat="45.332512" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Krk Bridge</Name>
+        <Ident>POI1949</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.570928" Lat="45.247562" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rijeka</Name>
+        <Ident>LDRI</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="14.570257" Lat="45.216892" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nehaj Fortress</Name>
+        <Ident>POI1970</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.903461" Lat="44.986546" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kostel Castle</Name>
+        <Ident>POI1946</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.910417" Lat="45.508839" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dubovac Castle</Name>
+        <Ident>POI1929</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.527989" Lat="45.495178" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St. Mark's Church</Name>
+        <Ident>POI1998</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.973675" Lat="45.816387" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Maksimir Stadium</Name>
+        <Ident>POI1959</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.017958" Lat="45.818657" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sljeme Tower</Name>
+        <Ident>POI1989</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.948031" Lat="45.899509" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Prijedor Urije Airport</Name>
+        <Ident>LQPD</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="16.735277" Lat="44.993332" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kozara Memorial Monument</Name>
+        <Ident>POI1947</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.909081" Lat="45.013866" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Banja Luka</Name>
+        <Ident>POI2026</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.191765" Lat="44.772083" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Brod Fortress</Name>
+        <Ident>POI1918</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.007019" Lat="45.156448" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Srebrenik Fortress</Name>
+        <Ident>POI1995</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.531681" Lat="44.703438" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Brčko City Hall</Name>
+        <Ident>POI1916</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.809675" Lat="44.878155" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Vukovar Water Tower</Name>
+        <Ident>POI2019</Ident>
+        <Type>USER</Type>
+        <Pos Lon="19.012272" Lat="45.343990" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castle of Siklós</Name>
+        <Ident>POI1922</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.295738" Lat="45.852322" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pécs-Pogány Airport</Name>
+        <Ident>LHPP</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="18.242220" Lat="45.989162" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mosque of Pasha Gazi Kassim</Name>
+        <Ident>POI1965</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.227924" Lat="46.077087" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pécs Cathedral</Name>
+        <Ident>POI1975</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.223553" Lat="46.078682" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Pécs TV Tower</Name>
+        <Ident>POI2007</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.220150" Lat="46.099113" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Votive Church of Szeged</Name>
+        <Ident>POI2018</Ident>
+        <Type>USER</Type>
+        <Pos Lon="20.149132" Lat="46.248920" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>KékestetőTV Tower</Name>
+        <Ident>POI1942</Ident>
+        <Type>USER</Type>
+        <Pos Lon="20.009144" Lat="47.872719" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Šomoška Castle</Name>
+        <Ident>POI1993</Ident>
+        <Type>USER</Type>
+        <Pos Lon="19.856594" Lat="48.171535" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Betliar Manor House</Name>
+        <Ident>POI1911</Ident>
+        <Type>USER</Type>
+        <Pos Lon="20.510353" Lat="48.706299" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Krásna Hôrka Castle</Name>
+        <Ident>POI1948</Ident>
+        <Type>USER</Type>
+        <Pos Lon="20.600504" Lat="48.658260" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Spiš Castle</Name>
+        <Ident>POI1994</Ident>
+        <Type>USER</Type>
+        <Pos Lon="20.768127" Lat="49.000149" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Poprad–Tatry Airport</Name>
+        <Ident>LZTT</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="20.241114" Lat="49.073608" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lomnický Peak Observatory</Name>
+        <Ident>POI1958</Ident>
+        <Type>USER</Type>
+        <Pos Lon="20.213205" Lat="49.195183" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Orava Castle</Name>
+        <Ident>POI1971</Ident>
+        <Type>USER</Type>
+        <Pos Lon="19.358862" Lat="49.262299" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Strečno Castle</Name>
+        <Ident>POI2001</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.862356" Lat="49.174538" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kroměříž Gardens</Name>
+        <Ident>POI1951</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.380821" Lat="49.297123" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bouzov Castle</Name>
+        <Ident>POI1914</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.889481" Lat="49.705040" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Trosky State Castle</Name>
+        <Ident>POI2012</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.230853" Lat="50.516548" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hruboskalsko</Name>
+        <Ident>POI2023</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.179506" Lat="50.553982" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kost Castle</Name>
+        <Ident>POI1945</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.135150" Lat="50.490330" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ještěd Television Tower</Name>
+        <Ident>POI1939</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.984614" Lat="50.732670" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hluboká Castle</Name>
+        <Ident>POI1937</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.441422" Lat="49.051262" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kamzík Tower</Name>
+        <Ident>POI1940</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.094427" Lat="48.182407" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tehelné pole Stadium</Name>
+        <Ident>POI2005</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.136883" Lat="48.163246" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bratislava Castle</Name>
+        <Ident>POI1915</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.100128" Lat="48.142353" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Füzér Castle</Name>
+        <Ident>POI1932</Ident>
+        <Type>USER</Type>
+        <Pos Lon="21.459345" Lat="48.541752" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Reformed Great Church of Debrecen</Name>
+        <Ident>POI1980</Ident>
+        <Type>USER</Type>
+        <Pos Lon="21.624228" Lat="47.532272" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mehmed Paša Sokolović Bridge</Name>
+        <Ident>POI1961</Ident>
+        <Type>USER</Type>
+        <Pos Lon="19.288008" Lat="43.782265" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tjentište War Memorial</Name>
+        <Ident>POI2011</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.686899" Lat="43.346130" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sarajevo Tunnel</Name>
+        <Ident>POI1985</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.428152" Lat="43.857086" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Latin Bridge</Name>
+        <Ident>POI1953</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.428930" Lat="43.857643" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Baščaršija</Name>
+        <Ident>POI1910</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.431299" Lat="43.860043" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Clock Tower</Name>
+        <Ident>POI1927</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.428122" Lat="43.864140" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sarajevo Meeting of Cultures</Name>
+        <Ident>POI1984</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.427769" Lat="43.864372" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Museum of Crimes Against Humanity</Name>
+        <Ident>POI1968</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.427778" Lat="43.864620" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gazi Husrev-beg Mosque</Name>
+        <Ident>POI1934</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.428432" Lat="43.864746" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sebilj</Name>
+        <Ident>POI1986</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.430525" Lat="43.864933" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sarajevo City Hall</Name>
+        <Ident>POI1983</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.433649" Lat="43.864441" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Yellow Fortress</Name>
+        <Ident>POI2021</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.437614" Lat="43.866348" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Viewpoint of Sarajevo</Name>
+        <Ident>POI2016</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.438852" Lat="43.866177" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>War Childhood Museum</Name>
+        <Ident>POI2020</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.427258" Lat="43.866070" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gallery 11/07/95</Name>
+        <Ident>POI1933</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.425716" Lat="43.865036" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hamze Hume</Name>
+        <Ident>POI1935</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.413170" Lat="43.855949" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>National Museum of Bosnia and Herzegovina</Name>
+        <Ident>POI1969</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.402681" Lat="43.860012" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Avaz Twist Tower</Name>
+        <Ident>POI1909</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.401836" Lat="43.860775" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sarajevo</Name>
+        <Ident>POI2034</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.386686" Lat="43.851978" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Hum Tower</Name>
+        <Ident>POI2006</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.386534" Lat="43.872433" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mostar Old Bridge</Name>
+        <Ident>POI1966</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.815037" Lat="43.337242" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mount Križevac</Name>
+        <Ident>POI1967</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.668139" Lat="43.175617" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Počitelj Clock Tower</Name>
+        <Ident>POI2008</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.731718" Lat="43.134369" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stolac Fortress</Name>
+        <Ident>POI2000</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.955584" Lat="43.080593" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dubrovnik</Name>
+        <Ident>POI2029</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.092495" Lat="42.650246" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hercegovačka Gračanica</Name>
+        <Ident>POI1936</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.359880" Lat="42.710705" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tivat - Seagulls</Name>
+        <Ident>POI2010</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.622999" Lat="42.437000" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Skadar Lake - Geese</Name>
+        <Ident>POI1987</Ident>
+        <Type>USER</Type>
+        <Pos Lon="19.209143" Lat="42.340900" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Palagruža Lighthouse</Name>
+        <Ident>POI2025</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.259264" Lat="42.392315" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fortress Kamerlengo</Name>
+        <Ident>POI1931</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.247164" Lat="43.515236" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Split</Name>
+        <Ident>POI2035</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.439966" Lat="43.511639" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Star Village Mosor</Name>
+        <Ident>POI1999</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.614168" Lat="43.503796" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Krka Bridge</Name>
+        <Ident>POI1950</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.915675" Lat="43.808617" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St Nicholas' Fortress</Name>
+        <Ident>POI1997</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.854650" Lat="43.721451" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Knin Fortress</Name>
+        <Ident>POI1943</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.193489" Lat="44.034031" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Maslenica bridge</Name>
+        <Ident>POI1960</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.531222" Lat="44.224827" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Church of St. Nicholas</Name>
+        <Ident>POI1925</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.178525" Lat="44.230858" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Memorial Park Garavice</Name>
+        <Ident>POI1962</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.840219" Lat="44.822231" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lighthouse of Porer</Name>
+        <Ident>POI2024</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.890761" Lat="44.757988" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Limska Draga Viaduct</Name>
+        <Ident>POI1955</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.800736" Lat="45.120907" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Socerb Castle</Name>
+        <Ident>POI1991</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.860844" Lat="45.589607" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Portoroz</Name>
+        <Ident>LJPZ</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="13.614994" Lat="45.473335" Alt="2.52"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-03T17:16:06+00:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Austin-Bergstrom Intl</Name>
+        <Ident>KAUS</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-97.669876" Lat="30.194529" Alt="497.10"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Austin</Name>
+        <Ident>POI1903</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-97.734474" Lat="30.269117" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cedar Park</Name>
+        <Ident>POI1904</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-97.817719" Lat="30.505112" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Temple</Name>
+        <Ident>POI1907</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-97.342300" Lat="31.098352" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Waco</Name>
+        <Ident>POI1908</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-97.146042" Lat="31.550377" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Schertz</Name>
+        <Ident>POI1906</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-98.265068" Lat="29.559757" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>San Antonio</Name>
+        <Ident>POI1905</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-98.483360" Lat="29.423477" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Abilene</Name>
+        <Ident>POI1902</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-99.731583" Lat="32.449600" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Abilene Rgnl</Name>
+        <Ident>KABI</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-99.681892" Lat="32.411335" Alt="1792.88"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

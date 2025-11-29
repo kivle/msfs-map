@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-03T17:40:52+00:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Friedrichshafen</Name>
+        <Ident>EDNY</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="9.511500" Lat="47.671314" Alt="1351.48"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lake Constance</Name>
+        <Ident>POI2232</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.427550" Lat="47.607452" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Insel Mainau</Name>
+        <Ident>POI2235</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.195738" Lat="47.705482" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sankt Peter</Name>
+        <Ident>POI2239</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.035880" Lat="48.017719" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Strasbourg</Name>
+        <Ident>POI2240</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.755641" Lat="48.572887" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kehl</Name>
+        <Ident>POI2237</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.816337" Lat="48.584965" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Karlsruhe</Name>
+        <Ident>POI2236</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.401582" Lat="49.006119" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Heidelburg</Name>
+        <Ident>POI2234</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.673136" Lat="49.398975" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mannheim</Name>
+        <Ident>POI2238</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.475692" Lat="49.484005" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stuttgart</Name>
+        <Ident>POI2241</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.184321" Lat="48.776409" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Esslingen</Name>
+        <Ident>POI2233</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.314252" Lat="48.742512" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stuttgart Airport</Name>
+        <Ident>EDDS</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="9.221304" Lat="48.689754" Alt="1258.33"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-01T17:57:58+00:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Le Bourget</Name>
+        <Ident>LFPB</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="2.441389" Lat="48.969444" Alt="178.67"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Amiens</Name>
+        <Ident>POI1897</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.302140" Lat="49.894699" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Reims</Name>
+        <Ident>POI1901</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.033819" Lat="49.257095" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Angers</Name>
+        <Ident>POI1898</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.553151" Lat="47.471680" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nantes</Name>
+        <Ident>POI1899</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.556561" Lat="47.218388" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nimes</Name>
+        <Ident>POI1900</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.358992" Lat="43.835594" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Montpellier / Mediterranee</Name>
+        <Ident>LFMT</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="3.961389" Lat="43.583332" Alt="10.31"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

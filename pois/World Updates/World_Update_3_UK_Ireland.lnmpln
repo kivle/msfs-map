@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-30T07:47:06+01:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Barra</Name>
+        <Ident>EGPR</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-7.441667" Lat="57.023613" Alt="0.25"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Eilean Donan Castle</Name>
+        <Ident>POI825</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-5.516142" Lat="57.273964" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Glenfinnan Viaduct</Name>
+        <Ident>POI832</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-5.431578" Lat="56.876251" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Blair Castle</Name>
+        <Ident>POI809</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.857261" Lat="56.773388" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Balmoral Castle</Name>
+        <Ident>POI805</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.230061" Lat="57.040504" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Glamis Castle</Name>
+        <Ident>POI831</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.002028" Lat="56.620365" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Forth Road Bridge</Name>
+        <Ident>POI829</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.404192" Lat="56.002048" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Queensferry Crossing</Name>
+        <Ident>POI857</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.414597" Lat="56.001694" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Forth Rail Bridge</Name>
+        <Ident>POI828</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.387517" Lat="55.997612" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Edinburgh Castle</Name>
+        <Ident>POI824</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.200561" Lat="55.948380" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Palace of Holyroodhouse</Name>
+        <Ident>POI853</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.172025" Lat="55.952755" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Kelpies</Name>
+        <Ident>POI876</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.755753" Lat="56.019257" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stirling Castle</Name>
+        <Ident>POI871</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.947269" Lat="56.123566" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The National Wallace Monument</Name>
+        <Ident>POI879</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.917772" Lat="56.138836" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mount Stuart House</Name>
+        <Ident>POI848</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-5.018847" Lat="55.791737" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Samson &amp; Goliath Belfast</Name>
+        <Ident>POI863</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-5.899206" Lat="54.608952" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Titanic Belfast</Name>
+        <Ident>POI882</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-5.909944" Lat="54.608124" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hillsborough Castle</Name>
+        <Ident>POI837</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-6.085775" Lat="54.461182" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dublin Castle</Name>
+        <Ident>POI821</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-6.267389" Lat="53.343174" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rose Fitzgerald Kennedy Bridge</Name>
+        <Ident>POI859</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-6.994269" Lat="52.355804" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rock of Cashel</Name>
+        <Ident>POI858</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-7.890478" Lat="52.520039" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Blarney Castle</Name>
+        <Ident>POI810</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-8.570903" Lat="51.929054" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St Just</Name>
+        <Ident>EGHC</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-5.670599" Lat="50.102768" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Eden Project</Name>
+        <Ident>POI823</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-4.744003" Lat="50.360626" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wales Millennium Centre</Name>
+        <Ident>POI889</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.163122" Lat="51.464867" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Principality Stadium</Name>
+        <Ident>POI856</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.183728" Lat="51.477680" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Clifton Suspension Bridge</Name>
+        <Ident>POI820</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-2.627875" Lat="51.454918" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stonehenge</Name>
+        <Ident>POI872</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.826206" Lat="51.178848" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Salisbury Cathedral</Name>
+        <Ident>POI862</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.797286" Lat="51.064964" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wolvesey Castle</Name>
+        <Ident>POI896</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.310469" Lat="51.059059" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Spinnaker Tower</Name>
+        <Ident>POI899</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.108450" Lat="50.795574" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>British Airways i360 </Name>
+        <Ident>POI812</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.150956" Lat="50.821339" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hampton Court Palace</Name>
+        <Ident>POI835</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.337972" Lat="51.403538" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Twickenham Stadium</Name>
+        <Ident>POI885</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.341575" Lat="51.456059" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Royal Botanical Gardens</Name>
+        <Ident>POI860</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.295489" Lat="51.474655" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>All England Lawn Tennis Club Centre Court</Name>
+        <Ident>POI800</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.214069" Lat="51.433754" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wandsworth Bridge</Name>
+        <Ident>POI890</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.187806" Lat="51.465015" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Battersea Railway Bridge</Name>
+        <Ident>POI807</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.179392" Lat="51.473068" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Battersea Bridge</Name>
+        <Ident>POI806</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.172558" Lat="51.481125" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Albert Bridge</Name>
+        <Ident>POI799</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.166694" Lat="51.482262" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Chelsea Bridge</Name>
+        <Ident>POI818</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.149800" Lat="51.484516" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Grosvenor Bridge</Name>
+        <Ident>POI834</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.147353" Lat="51.484646" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St George Wharf Tower</Name>
+        <Ident>POI866</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.128022" Lat="51.485031" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>AYKON London One</Name>
+        <Ident>POI804</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.124531" Lat="51.484104" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Vauxhall Bridge</Name>
+        <Ident>POI887</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.127300" Lat="51.487591" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lambeth Bridge</Name>
+        <Ident>POI842</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.122961" Lat="51.494591" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Palace of Westminster</Name>
+        <Ident>POI854</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.124689" Lat="51.499405" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Westminster Bridge</Name>
+        <Ident>POI894</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.121850" Lat="51.500874" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>London Eye</Name>
+        <Ident>POI845</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.119733" Lat="51.503307" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hungerford Bridge and Golden Jubilee Bridges</Name>
+        <Ident>POI840</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.119933" Lat="51.506126" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Waterloo Bridge</Name>
+        <Ident>POI892</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.116756" Lat="51.508537" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>London (UK)</Name>
+        <Ident>POI903</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.127758" Lat="51.507351" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St. James's Palace</Name>
+        <Ident>POI868</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.138142" Lat="51.504417" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Buckingham Palace</Name>
+        <Ident>POI814</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.142525" Lat="51.501064" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>BT Tower</Name>
+        <Ident>POI813</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.138853" Lat="51.521465" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Blackfriars Railway Bridge</Name>
+        <Ident>POI808</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.103414" Lat="51.509655" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>One Blackfriars</Name>
+        <Ident>POI850</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.104772" Lat="51.507923" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Millennium Bridge</Name>
+        <Ident>POI847</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.098556" Lat="51.509663" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Southwark Bridge</Name>
+        <Ident>POI865</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.094169" Lat="51.508854" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cannon Street Railway Bridge</Name>
+        <Ident>POI816</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.091939" Lat="51.508320" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Walkie-Talkie</Name>
+        <Ident>POI881</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.083594" Lat="51.511196" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Scalpel</Name>
+        <Ident>POI880</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.080969" Lat="51.513081" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Leadenhall Building</Name>
+        <Ident>POI877</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.082289" Lat="51.514076" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Gherkin</Name>
+        <Ident>POI875</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.080325" Lat="51.514526" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>100 Bishopsgate</Name>
+        <Ident>POI798</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.081514" Lat="51.515717" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Heron Tower</Name>
+        <Ident>POI836</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.081075" Lat="51.516354" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tower 42</Name>
+        <Ident>POI883</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.083789" Lat="51.515198" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tower of London</Name>
+        <Ident>POI884</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.076031" Lat="51.508080" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St. Paul's Cathedral (London - UK)</Name>
+        <Ident>POI869</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.098369" Lat="51.513786" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Strata</Name>
+        <Ident>POI873</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.099564" Lat="51.492851" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Landmark Pinnacle</Name>
+        <Ident>POI843</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.025531" Lat="51.502731" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>One Canada Square</Name>
+        <Ident>POI851</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.019519" Lat="51.504971" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>HSBC Tower</Name>
+        <Ident>POI838</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.017508" Lat="51.505371" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Citigroup Center</Name>
+        <Ident>POI819</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.017875" Lat="51.503983" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>One Park Drive</Name>
+        <Ident>POI852</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.015103" Lat="51.502262" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Madison</Name>
+        <Ident>POI878</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.013711" Lat="51.500023" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Maritime Greenwich</Name>
+        <Ident>POI846</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.005236" Lat="51.482845" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Emirates Stadium</Name>
+        <Ident>POI826</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.108425" Lat="51.555042" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stamford Bridge</Name>
+        <Ident>POI870</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.190989" Lat="51.481754" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wembley Stadium</Name>
+        <Ident>POI893</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.279669" Lat="51.556011" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Windsor Castle</Name>
+        <Ident>POI895</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.604403" Lat="51.483833" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Oxford</Name>
+        <Ident>POI904</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.257726" Lat="51.752022" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Blenheim Palace</Name>
+        <Ident>POI811</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.361200" Lat="51.841595" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Warwick Castle</Name>
+        <Ident>POI891</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.585272" Lat="52.279530" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Birmingham (UK)</Name>
+        <Ident>POI901</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.890401" Lat="52.486244" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Villa Park</Name>
+        <Ident>POI888</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.883347" Lat="52.508163" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Jodrell Bank Observatory</Name>
+        <Ident>POI841</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-2.308564" Lat="53.236454" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Old Trafford</Name>
+        <Ident>POI849</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-2.291269" Lat="53.463074" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Barton</Name>
+        <Ident>EGCB</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-2.389700" Lat="53.471684" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Liverpool John Lennon Airport</Name>
+        <Ident>EGGP</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-2.849703" Lat="53.333633" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Royal Liver Building</Name>
+        <Ident>POI861</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-2.995881" Lat="53.405807" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Anfield Stadium</Name>
+        <Ident>POI801</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-2.960861" Lat="53.430813" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Goodison Park</Name>
+        <Ident>POI833</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-2.966281" Lat="53.438824" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Blackpool Tower</Name>
+        <Ident>POI898</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.055275" Lat="53.815868" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pontcysyllte Aqueduct</Name>
+        <Ident>POI855</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.087783" Lat="52.970497" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Caernarfon Castle</Name>
+        <Ident>POI815</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-4.276792" Lat="53.139412" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fountain Abbey</Name>
+        <Ident>POI830</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.581533" Lat="54.109661" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>York Minster</Name>
+        <Ident>POI897</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.082142" Lat="53.962288" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Humber Bridge</Name>
+        <Ident>POI839</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.449928" Lat="53.706161" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lincoln Cathedral</Name>
+        <Ident>POI844</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.536294" Lat="53.234306" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cambridge</Name>
+        <Ident>POI902</Ident>
+        <Type>USER</Type>
+        <Pos Lon="0.121817" Lat="52.205338" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Southend Pier</Name>
+        <Ident>POI864</Ident>
+        <Type>USER</Type>
+        <Pos Lon="0.716447" Lat="51.530342" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Archbishop's Palace Maidstone</Name>
+        <Ident>POI803</Ident>
+        <Type>USER</Type>
+        <Pos Lon="0.520992" Lat="51.271069" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Canterbury Cathedral</Name>
+        <Ident>POI817</Ident>
+        <Type>USER</Type>
+        <Pos Lon="1.082767" Lat="51.279804" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cliffs of Dover</Name>
+        <Ident>POI900</Ident>
+        <Type>USER</Type>
+        <Pos Lon="1.354250" Lat="51.133678" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tees Transporter Bridge</Name>
+        <Ident>POI874</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.228008" Lat="54.584446" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Durham Cathedral</Name>
+        <Ident>POI822</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.576294" Lat="54.773457" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Angel of the North</Name>
+        <Ident>POI802</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.589503" Lat="54.914124" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tyne Bridge</Name>
+        <Ident>POI886</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.605994" Lat="54.967922" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St. James' Park</Name>
+        <Ident>POI867</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.621694" Lat="54.975548" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Floors Castle</Name>
+        <Ident>POI827</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-2.460436" Lat="55.605030" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Out Skerries Airstrip</Name>
+        <Ident>POI797</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.751135" Lat="60.425171" Alt="66.59"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Out Skerries</Name>
+        <Ident>EG78</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-0.748556" Lat="60.425117" Alt="40.53"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

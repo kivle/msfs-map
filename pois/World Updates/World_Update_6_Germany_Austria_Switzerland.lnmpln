@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-30T09:21:02+01:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Helgoland Airport</Name>
+        <Ident>EDXH</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="7.915911" Lat="54.185349" Alt="4.20"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Heligoland</Name>
+        <Ident>POI1183</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.882958" Lat="54.181374" Alt="385.47"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Volksparkstadion</Name>
+        <Ident>POI1175</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.898592" Lat="53.587166" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Elbphilharmonie</Name>
+        <Ident>POI1114</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.984075" Lat="53.541344" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Flughafen Luebeck LBC</Name>
+        <Ident>POI1089</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.701433" Lat="53.805141" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Blankensee</Name>
+        <Ident>EDHL</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="10.719247" Lat="53.805370" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Museum Holstentor</Name>
+        <Ident>POI1146</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.679617" Lat="53.866238" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St. Nicholas Church (Wismar)</Name>
+        <Ident>POI1163</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.465267" Lat="53.895561" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Schwerin Castle</Name>
+        <Ident>POI1155</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.418775" Lat="53.624500" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Groß Raden Archaeological Open Air Museum</Name>
+        <Ident>POI1122</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.878400" Lat="53.737000" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fehmarn Sound Bridge</Name>
+        <Ident>POI1116</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.112686" Lat="54.401718" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St. Mary's Church</Name>
+        <Ident>POI1161</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.088122" Lat="54.310207" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St. Nicholas Church (Stralsund)</Name>
+        <Ident>POI1162</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.090775" Lat="54.315308" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Jasmund National Park</Name>
+        <Ident>POI1184</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.678528" Lat="54.549587" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rheinsberg Palace</Name>
+        <Ident>POI1152</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.889469" Lat="53.098461" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Olympiastadion Berlin</Name>
+        <Ident>POI1149</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.239447" Lat="52.514633" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Parliament Building</Name>
+        <Ident>POI1172</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.376114" Lat="52.518604" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Brandenburg Gate</Name>
+        <Ident>POI1101</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.377664" Lat="52.516289" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sanssouci and Park</Name>
+        <Ident>POI1154</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.038439" Lat="52.404190" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tropical Island Resort</Name>
+        <Ident>POI1173</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.747939" Lat="52.038971" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Moritzburg Castle</Name>
+        <Ident>POI1144</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.679453" Lat="51.167557" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kath. Hofkirche</Name>
+        <Ident>POI1130</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.737344" Lat="51.053490" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Frauenkirche</Name>
+        <Ident>POI1118</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.741589" Lat="51.051941" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bastei</Name>
+        <Ident>POI1097</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.072731" Lat="50.961735" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Monument to the Battle of the Nations</Name>
+        <Ident>POI1143</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.413289" Lat="51.312344" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>State Museum of Pre-History</Name>
+        <Ident>POI1168</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.962381" Lat="51.498238" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kyffhäuserdenkmal</Name>
+        <Ident>POI1134</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.108572" Lat="51.413284" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wernigerode Castle</Name>
+        <Ident>POI1178</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.794967" Lat="51.830563" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Brunswick (Germany)</Name>
+        <Ident>POI1188</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.526770" Lat="52.268875" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Autostadt</Name>
+        <Ident>POI1096</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.793564" Lat="52.432652" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Green Citadel</Name>
+        <Ident>POI1121</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.634264" Lat="52.126968" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Magdeburg Cathedral</Name>
+        <Ident>POI1138</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.633956" Lat="52.124729" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Marienburg Castle</Name>
+        <Ident>POI1139</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.766794" Lat="52.172264" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Herrenhäuser Garten</Name>
+        <Ident>POI1185</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.697453" Lat="52.390347" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hermannsdenkmal</Name>
+        <Ident>POI1124</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.839472" Lat="51.911659" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bielefeld</Name>
+        <Ident>POI1187</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.532471" Lat="52.030228" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Münster Cathedral</Name>
+        <Ident>POI1145</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.625497" Lat="51.963036" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Signal Iduna Park</Name>
+        <Ident>POI1156</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.451883" Lat="51.492584" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Veltins-Arena</Name>
+        <Ident>POI1174</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.067561" Lat="51.554596" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Zollverein Coal Mine Industrial Complex</Name>
+        <Ident>POI1182</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.043964" Lat="51.487041" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wuppertal</Name>
+        <Ident>POI1191</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.150764" Lat="51.256214" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Merkur Spiel-Arena</Name>
+        <Ident>POI1142</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.733019" Lat="51.261692" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Borussia-Park</Name>
+        <Ident>POI1100</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.385461" Lat="51.174618" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rheinenergiestadion</Name>
+        <Ident>POI1151</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.874994" Lat="50.933521" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Great St. Martin's Church</Name>
+        <Ident>POI1120</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.961642" Lat="50.938507" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hohenzollern Bridge</Name>
+        <Ident>POI1127</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.965700" Lat="50.941437" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>South Bridge</Name>
+        <Ident>POI1157</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.973144" Lat="50.917065" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Drachenburg Castle</Name>
+        <Ident>POI1110</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.206300" Lat="50.668705" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Drachenfels Castle</Name>
+        <Ident>POI1111</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.210361" Lat="50.664661" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Deutsches Eck</Name>
+        <Ident>POI1109</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.605608" Lat="50.364117" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Katz Castle</Name>
+        <Ident>POI1131</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.723889" Lat="50.152187" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Niederwalddenkmal</Name>
+        <Ident>POI1148</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.899808" Lat="49.981098" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Deutsche Bank Park</Name>
+        <Ident>POI1108</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.645308" Lat="50.068687" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>New Opera</Name>
+        <Ident>POI1147</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.674197" Lat="50.108276" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Frankfurt Cathedral</Name>
+        <Ident>POI1117</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.685383" Lat="50.110680" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cochem Castle</Name>
+        <Ident>POI1107</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.166975" Lat="50.142345" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Saar Polygon</Name>
+        <Ident>POI1153</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.785617" Lat="49.317986" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Freiburger Minster</Name>
+        <Ident>POI1119</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.852150" Lat="47.995670" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Basel</Name>
+        <Ident>POI1186</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.588576" Lat="47.559601" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St. Jakob Park</Name>
+        <Ident>POI1160</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.620050" Lat="47.541622" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stadion Wankdorf</Name>
+        <Ident>POI1167</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.464831" Lat="46.963093" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Zentrum Paul Klee</Name>
+        <Ident>POI1181</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.474211" Lat="46.948799" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bern Minster</Name>
+        <Ident>POI1099</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.451644" Lat="46.947235" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stade de Maladiere</Name>
+        <Ident>POI1166</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.944133" Lat="46.995178" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lausanne Cathedral</Name>
+        <Ident>POI1136</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.635303" Lat="46.522614" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Chillon Castle</Name>
+        <Ident>POI1106</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.927583" Lat="46.414127" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Brunswick Monument</Name>
+        <Ident>POI1102</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.148961" Lat="46.208458" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Batiment des Forces Motrices</Name>
+        <Ident>POI1098</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.136564" Lat="46.204533" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stade de Geneve</Name>
+        <Ident>POI1165</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.127489" Lat="46.177822" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sphinx Observatory</Name>
+        <Ident>POI1158</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.984961" Lat="46.547634" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Swissporarena</Name>
+        <Ident>POI1170</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.305139" Lat="47.032932" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kapellbrücke</Name>
+        <Ident>POI1129</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.307553" Lat="47.051662" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Einsiedeln Abbey</Name>
+        <Ident>POI1113</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.751708" Lat="47.126759" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Grossmünster</Name>
+        <Ident>POI1123</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.544214" Lat="47.370190" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Swiss National Museum</Name>
+        <Ident>POI1169</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.540267" Lat="47.379391" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Letzigrund</Name>
+        <Ident>POI1137</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.503750" Lat="47.382725" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Konstanz</Name>
+        <Ident>POI1190</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.173238" Lat="47.677952" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kybunpark</Name>
+        <Ident>POI1133</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.305544" Lat="47.408257" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Abbey of Saint Gall</Name>
+        <Ident>POI1094</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.377494" Lat="47.423527" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St. Gallen-Altenrhein Airport</Name>
+        <Ident>POI1091</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.560018" Lat="47.485874" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Landwasser Viaduct</Name>
+        <Ident>POI1135</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.676400" Lat="46.680878" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tarasp Castle</Name>
+        <Ident>POI1171</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.261667" Lat="46.778927" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castello di Montebello</Name>
+        <Ident>POI1104</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.026297" Lat="46.191719" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castelgrande</Name>
+        <Ident>POI1103</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.021994" Lat="46.193016" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castello di Sasso Corbaro</Name>
+        <Ident>POI1105</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.030033" Lat="46.188019" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hohenzollern Castle</Name>
+        <Ident>POI1128</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.967378" Lat="48.323582" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stuttgart Airport</Name>
+        <Ident>POI1092</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.198216" Lat="48.688812" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stuttgart Airport</Name>
+        <Ident>EDDS</Ident>
+        <Type>UNKNOWN</Type>
+        <Pos Lon="9.221304" Lat="48.689754" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mercedes-Benz Arena</Name>
+        <Ident>POI1141</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.232025" Lat="48.792191" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Olympiastadion Munich</Name>
+        <Ident>POI1150</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.546544" Lat="48.173088" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Allianz Arena</Name>
+        <Ident>POI1095</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.624647" Lat="48.218815" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kufstein Fortress</Name>
+        <Ident>POI1132</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.169458" Lat="47.581272" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St. Bartholomew's Church</Name>
+        <Ident>POI1159</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.972028" Lat="47.544743" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hohenwerfen Castle</Name>
+        <Ident>POI1126</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.188833" Lat="47.482845" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Klagenfurt Airport</Name>
+        <Ident>POI1090</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.324858" Lat="46.650013" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wörthersee Stadion</Name>
+        <Ident>POI1180</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.278333" Lat="46.608936" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Eggenberg Palace</Name>
+        <Ident>POI1112</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.391358" Lat="47.073906" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Graz</Name>
+        <Ident>POI1189</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.439504" Lat="47.070713" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Melk Abbey</Name>
+        <Ident>POI1140</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.331356" Lat="48.228359" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hofburg Wien</Name>
+        <Ident>POI1125</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.364788" Lat="48.205410" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St. Stephan's Cathedral</Name>
+        <Ident>POI1164</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.373011" Lat="48.208549" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wiener Riesenrad</Name>
+        <Ident>POI1179</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.395910" Lat="48.216640" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ernst-Happel-Stadion</Name>
+        <Ident>POI1115</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.420933" Lat="48.207218" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Walhalla</Name>
+        <Ident>POI1176</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.224081" Lat="49.031345" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wartburg</Name>
+        <Ident>POI1177</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.306344" Lat="50.966579" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Aachener Cathedral</Name>
+        <Ident>POI1093</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.083881" Lat="50.774734" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Maastricht-Aachen</Name>
+        <Ident>EHBK</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="5.776954" Lat="50.915833" Alt="373.35"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

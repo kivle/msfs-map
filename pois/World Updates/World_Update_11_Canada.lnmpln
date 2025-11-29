@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-09T17:59:26+00:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Dawson City Airport</Name>
+        <Ident>CYDA</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-139.130081" Lat="64.042168" Alt="1210.24"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>S.S. Klondike National Historic Site</Name>
+        <Ident>POI1655</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-135.047653" Lat="60.713387" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Green Island Lighthouse</Name>
+        <Ident>POI1676</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-130.708633" Lat="54.568607" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bella Coola</Name>
+        <Ident>CYBD</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-126.595863" Lat="52.387474" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cloudraker Skybridge</Name>
+        <Ident>POI1616</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.958740" Lat="50.059578" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lions Gate Bridge</Name>
+        <Ident>POI1637</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-123.138649" Lat="49.315350" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Burrard Street Bridge</Name>
+        <Ident>POI1606</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-123.137260" Lat="49.275379" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bloedel Conservatory</Name>
+        <Ident>POI1605</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-123.113853" Lat="49.242077" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Playground Of The Gods</Name>
+        <Ident>POI1648</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.936111" Lat="49.283245" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Alex Fraser Bridge</Name>
+        <Ident>POI1597</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.942978" Lat="49.160259" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Abbotsford</Name>
+        <Ident>POI1680</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.304466" Lat="49.050438" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hell's Gate Airtram</Name>
+        <Ident>POI1632</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-121.446831" Lat="49.781971" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Craigdarroch Castle</Name>
+        <Ident>POI1620</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-123.343636" Lat="48.422634" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Legislative Assembly of British Columbia</Name>
+        <Ident>POI1635</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-123.370216" Lat="48.419632" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fort Rodd Hill &amp; Fisgard Lighthouse National Historic Sites</Name>
+        <Ident>POI1675</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-123.447701" Lat="48.430382" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hatley Park National Historic Site of Canada</Name>
+        <Ident>POI1631</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-123.472710" Lat="48.434414" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castlegar</Name>
+        <Ident>CYCG</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-117.632408" Lat="49.296337" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Banff Springs Hotel</Name>
+        <Ident>POI1600</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-115.561768" Lat="51.164272" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Chateau Lake Louise</Name>
+        <Ident>POI1615</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-116.216171" Lat="51.418030" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Columbia Icefield Skywalk</Name>
+        <Ident>POI1617</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-117.277939" Lat="52.259632" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rogers Place Arena</Name>
+        <Ident>POI1654</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-113.497826" Lat="53.546974" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Commonwealth Stadium</Name>
+        <Ident>POI1618</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-113.476120" Lat="53.559708" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lethbridge Viaduct</Name>
+        <Ident>POI1636</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-112.868614" Lat="49.697563" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cardston Alberta Temple</Name>
+        <Ident>POI1612</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-113.309242" Lat="49.198261" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Prince of Wales Hotel National Historic Site</Name>
+        <Ident>POI1649</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-113.904083" Lat="49.058411" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Saskatoon</Name>
+        <Ident>POI1684</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-106.670158" Lat="52.157902" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Regina</Name>
+        <Ident>POI1683</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-104.618896" Lat="50.445210" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Regina Legislature Building</Name>
+        <Ident>POI1653</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-104.615181" Lat="50.432480" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>First Nations University of Canada</Name>
+        <Ident>POI1624</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-104.582123" Lat="50.419342" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Canadian Museum for Human Rights</Name>
+        <Ident>POI1611</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-97.130730" Lat="49.890732" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Esplanade Riel Bridge</Name>
+        <Ident>POI1623</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-97.127182" Lat="49.890682" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Longitudinal Centre of Canada</Name>
+        <Ident>POI1662</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-96.817635" Lat="49.772038" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pinawa Dam Provincial Heritage Park</Name>
+        <Ident>POI1647</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-95.925728" Lat="50.215328" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Inco Superstack</Name>
+        <Ident>POI1633</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.056396" Lat="46.480240" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Big Nickel</Name>
+        <Ident>POI1602</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.033707" Lat="46.473450" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Spirit Catcher</Name>
+        <Ident>POI1660</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.689308" Lat="44.386395" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>David Dunlap Observatory</Name>
+        <Ident>POI1621</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.422432" Lat="43.862488" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The One</Name>
+        <Ident>POI1663</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.387009" Lat="43.669868" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>R.C. Harris Water Treatment Plant</Name>
+        <Ident>POI1652</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.278915" Lat="43.673386" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Absolute World Towers</Name>
+        <Ident>POI1596</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.635536" Lat="43.594707" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St. Catharines</Name>
+        <Ident>POI1686</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.246864" Lat="43.159374" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Great Wolf Lodge</Name>
+        <Ident>POI1627</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.070702" Lat="43.116482" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Skylon Tower</Name>
+        <Ident>POI1659</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.079697" Lat="43.085121" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Peace Bridge (Buffalo - New York - USA)</Name>
+        <Ident>POI1645</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-78.905586" Lat="42.906918" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Point Abino Lighthouse</Name>
+        <Ident>POI1679</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.095276" Lat="42.835438" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Trent-Severn Waterway National Historic Site</Name>
+        <Ident>POI1670</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-78.300591" Lat="44.307880" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Thousand Islands Bridge</Name>
+        <Ident>POI1664</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-75.980614" Lat="44.359829" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Parliament of Canada</Name>
+        <Ident>POI1644</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-75.699608" Lat="45.424789" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Alexandra Bridge</Name>
+        <Ident>POI1666</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-75.703934" Lat="45.429993" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Laval</Name>
+        <Ident>POI1682</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-73.712410" Lat="45.606647" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Olympic Stadium</Name>
+        <Ident>POI1642</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-73.551651" Lat="45.557861" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Biodôme</Name>
+        <Ident>POI1603</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-73.549507" Lat="45.559700" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Jacques Cartier Bridge</Name>
+        <Ident>POI1634</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-73.542908" Lat="45.521992" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Montreal Biosphere</Name>
+        <Ident>POI1639</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-73.531441" Lat="45.514084" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Habitat 67</Name>
+        <Ident>POI1628</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-73.543472" Lat="45.499725" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Basilique Notre-Dame (Montreal - Canada)</Name>
+        <Ident>POI1601</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-73.556252" Lat="45.504536" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mount Royal Cross</Name>
+        <Ident>POI1640</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-73.587921" Lat="45.508835" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Samuel De Champlain bridge</Name>
+        <Ident>POI1657</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-73.514252" Lat="45.469337" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sherbrooke</Name>
+        <Ident>POI1685</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-71.893677" Lat="45.404266" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pierre-Laporte Bridge</Name>
+        <Ident>POI1646</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-71.290657" Lat="46.745491" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Québec Bridge</Name>
+        <Ident>POI1651</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-71.288025" Lat="46.745872" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Château Frontenac</Name>
+        <Ident>POI1614</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-71.205238" Lat="46.811905" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Montmorency Falls Suspension Bridge</Name>
+        <Ident>POI1638</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-71.147995" Lat="46.890968" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hartland Covered Bridge</Name>
+        <Ident>POI1630</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-67.530502" Lat="46.296658" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>World's Largest Axe</Name>
+        <Ident>POI1665</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-67.232903" Lat="45.994129" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Burton Bridge</Name>
+        <Ident>POI1607</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-66.451347" Lat="45.864803" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Carleton Martello Tower National Historic Site</Name>
+        <Ident>POI1613</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-66.076317" Lat="45.252052" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cape Enrage Lighthouse</Name>
+        <Ident>POI1672</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-64.780205" Lat="45.594986" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Confederation Bridge</Name>
+        <Ident>POI1619</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-63.754929" Lat="46.207737" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>A. Murray MacKay Bridge</Name>
+        <Ident>POI1595</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-63.612057" Lat="44.677769" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Angus L. Macdonald Bridge</Name>
+        <Ident>POI1599</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-63.585419" Lat="44.662868" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Halifax Citadel National Historic Site</Name>
+        <Ident>POI1629</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-63.580532" Lat="44.647392" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Halifax</Name>
+        <Ident>POI1681</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-63.572769" Lat="44.647579" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Georges Island National Historic Site</Name>
+        <Ident>POI1668</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-63.559120" Lat="44.640850" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Prince of Wales Tower National Historic Site</Name>
+        <Ident>POI1650</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-63.569706" Lat="44.621510" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Maugher Beach Lighthouse</Name>
+        <Ident>POI1677</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-63.533585" Lat="44.602299" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Peggys Point Lighthouse</Name>
+        <Ident>POI1678</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-63.918629" Lat="44.491749" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cape Forchu Lighthouse</Name>
+        <Ident>POI1673</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-66.155342" Lat="43.794132" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Seal Island Bridge</Name>
+        <Ident>POI1658</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-60.489906" Lat="46.232784" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fortress of Louisbourg National Historic Site</Name>
+        <Ident>POI1626</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-59.986099" Lat="45.890953" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Deer Lake</Name>
+        <Ident>CYDF</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-57.394409" Lat="49.209183" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bishop's Falls Trestle Bridge</Name>
+        <Ident>POI1604</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-55.489918" Lat="49.008018" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fogo Island</Name>
+        <Ident>POI1625</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-54.178295" Lat="49.730431" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cape Bonavista Lighthouse Provincial Historic Site</Name>
+        <Ident>POI1671</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-53.085625" Lat="48.701473" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ocean Sciences Centre</Name>
+        <Ident>POI1641</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-52.662540" Lat="47.624836" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cabot Tower</Name>
+        <Ident>POI1608</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-52.681957" Lat="47.569958" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St Thomas Anglican Church</Name>
+        <Ident>POI1661</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-52.702564" Lat="47.571938" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cape Spear Lighthouse National Historic Site</Name>
+        <Ident>POI1674</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-52.622482" Lat="47.521183" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>L'Anse aux Meadows National Historic Site</Name>
+        <Ident>POI1669</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-55.533249" Lat="51.596462" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Saint Jude's Anglican Cathedral</Name>
+        <Ident>POI1656</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-68.516106" Lat="63.747654" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Iqaluit</Name>
+        <Ident>CYFB</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-68.556122" Lat="63.756573" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Canadian High Arctic Research Station</Name>
+        <Ident>POI1610</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-105.042252" Lat="69.121117" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>CAM-Main Radar Site, Cambridge Bay</Name>
+        <Ident>POI1609</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-105.120087" Lat="69.116386" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Diavik Diamond Mine</Name>
+        <Ident>POI1667</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-110.241165" Lat="64.495781" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Deh Cho Bridge</Name>
+        <Ident>POI1622</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-117.525528" Lat="61.264729" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Our Lady of Victory Catholic Church</Name>
+        <Ident>POI1643</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-133.722092" Lat="68.357979" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ambassador Bridge</Name>
+        <Ident>POI1598</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-83.074135" Lat="42.312054" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Detroit Metro Wayne Co</Name>
+        <Ident>KDTW</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-83.353386" Lat="42.212444" Alt="640.01"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

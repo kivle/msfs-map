@@ -1,0 +1,1535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-03T18:27:16+00:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Grey Lake (Chile)</Name>
+        <Ident>POI546</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-73.226700" Lat="-51.049267" Alt="0.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Torres del Paine (Chile)</Name>
+        <Ident>POI710</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-73.021568" Lat="-50.973705" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>North of Chalten (Argentina)</Name>
+        <Ident>POI618</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-72.948807" Lat="-49.226170" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Villa O'Higgins (Chile)</Name>
+        <Ident>POI719</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-72.595284" Lat="-48.452381" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nef River (Chile)</Name>
+        <Ident>POI611</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-72.858437" Lat="-47.135818" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pucon (Chile)</Name>
+        <Ident>POI645</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-71.900948" Lat="-39.287853" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Andes - San Juan Province (Argentina)</Name>
+        <Ident>POI483</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-69.817284" Lat="-32.530811" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Chiquitos Airport (Bolivia)</Name>
+        <Ident>POI516</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-61.777596" Lat="-18.417381" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>La Paz (Bolivia)</Name>
+        <Ident>POI561</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-68.137840" Lat="-16.527205" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Colca Canyon (Peru)</Name>
+        <Ident>POI517</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-71.836884" Lat="-15.601280" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Colta (Peru)</Name>
+        <Ident>POI519</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-73.310905" Lat="-15.177939" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Apurimac River (Peru)</Name>
+        <Ident>POI485</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-73.414589" Lat="-13.155323" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Over Quito Airport (Ecuador)</Name>
+        <Ident>POI631</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-78.370293" Lat="-0.115826" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>National Park Corcovado Airfield la sirena (Costa Rica)</Name>
+        <Ident>POI608</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-83.589508" Lat="8.480218" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Canas (Costa Rica)</Name>
+        <Ident>POI504</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-85.025810" Lat="10.356402" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Florida Keys (USA)</Name>
+        <Ident>POI538</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-80.756454" Lat="24.864658" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Miami Beach (USA)</Name>
+        <Ident>POI593</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-80.147942" Lat="25.659792" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Miami International Airport (USA)</Name>
+        <Ident>POI594</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-80.258423" Lat="25.791189" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bonita Springs (USA)</Name>
+        <Ident>POI499</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.814781" Lat="26.441172" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cape Coral (USA)</Name>
+        <Ident>POI506</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-82.037956" Lat="26.573036" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dunedin (USA)</Name>
+        <Ident>POI527</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-82.787369" Lat="28.014399" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Disneyworld Florida (USA)</Name>
+        <Ident>POI523</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.551254" Lat="28.375980" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Orlando Int'l Airport (USA)</Name>
+        <Ident>POI627</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.311012" Lat="28.439199" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Orlando (USA)</Name>
+        <Ident>POI626</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-81.381706" Lat="28.539169" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stone Moutain Atlanta (USA)</Name>
+        <Ident>POI692</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-84.146339" Lat="33.814091" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lake Norman (USA)</Name>
+        <Ident>POI570</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-80.903625" Lat="35.572582" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Washington DC (USA)</Name>
+        <Ident>POI722</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-77.054726" Lat="38.884533" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Baltimore Washington Int'l Airport (USA)</Name>
+        <Ident>POI493</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-76.670563" Lat="39.183743" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>New York (USA)</Name>
+        <Ident>POI615</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-74.048378" Lat="40.714455" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Manhatten (USA)</Name>
+        <Ident>POI585</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-73.975456" Lat="40.757580" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>New York John F. Kennedy International Airport (USA)</Name>
+        <Ident>POI616</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-73.779495" Lat="40.643078" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rockland Knox County Regional Airport</Name>
+        <Ident>POI657</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-69.117287" Lat="44.062393" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Toronto (Canada</Name>
+        <Ident>POI709</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-79.367821" Lat="43.618801" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ohio Stadium Columbus (USA)</Name>
+        <Ident>POI622</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-83.018661" Lat="39.999268" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Indianpolis Motor Speedway (USA)</Name>
+        <Ident>POI555</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-86.239929" Lat="39.805740" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Chicago O'Hare Airport (USA)</Name>
+        <Ident>POI515</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-87.931046" Lat="41.965813" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Peoria Mount hawley Airport (USA)</Name>
+        <Ident>POI639</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-89.617088" Lat="40.803883" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Oshkosh Airport (USA)</Name>
+        <Ident>POI628</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-88.556641" Lat="43.966557" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lexington - Nebraska (USA)</Name>
+        <Ident>POI575</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-99.796364" Lat="40.744328" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pike National Forest (USA)</Name>
+        <Ident>POI642</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-105.393303" Lat="38.982082" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Aspen (USA)</Name>
+        <Ident>POI489</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-106.821678" Lat="39.186657" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tellirude Peak (USA)</Name>
+        <Ident>POI701</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-107.745735" Lat="37.939072" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Telluride Regional Airport (USA)</Name>
+        <Ident>POI702</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-107.902061" Lat="37.953873" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Potash Evaporation Ponds (USA)</Name>
+        <Ident>POI644</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-109.682999" Lat="38.487495" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Arches National Park (USA)</Name>
+        <Ident>POI487</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-109.677269" Lat="38.788212" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>North Wash - Utah (USA)</Name>
+        <Ident>POI619</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-110.500229" Lat="37.956963" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lake Powell (USA)</Name>
+        <Ident>POI571</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-111.234871" Lat="37.069550" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Page (USA)</Name>
+        <Ident>POI633</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-111.439545" Lat="36.928623" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Grand-Canyon (USA)</Name>
+        <Ident>POI545</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-112.378632" Lat="36.216789" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Barringer Crater Arizona (USA)</Name>
+        <Ident>POI495</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-111.021126" Lat="35.037403" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Phoenix (USA)</Name>
+        <Ident>POI641</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-112.269424" Lat="33.611916" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sunsites (USA)</Name>
+        <Ident>POI695</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-109.790092" Lat="31.997026" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>White Sands Missile Range (USA)</Name>
+        <Ident>POI724</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-106.435303" Lat="32.402870" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Colorado River Delta (Mexico)</Name>
+        <Ident>POI518</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-114.752754" Lat="31.890100" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>San Diego (USA)</Name>
+        <Ident>POI664</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-117.158501" Lat="32.709221" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>SDCCU Stadium - San Diego (USA)</Name>
+        <Ident>POI673</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-117.123917" Lat="32.785652" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Orange County John Wayne Airport (USA)</Name>
+        <Ident>POI625</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-117.864693" Lat="33.677788" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Santa Clarita (USA)</Name>
+        <Ident>POI670</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-118.553223" Lat="34.438942" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Edwards Air Base (USA)</Name>
+        <Ident>POI528</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-117.810127" Lat="34.960587" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Owens Valley (USA)</Name>
+        <Ident>POI632</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-118.076683" Lat="36.677975" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fish Lake Valley - Nevada (USA)</Name>
+        <Ident>POI534</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-117.890472" Lat="37.386990" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lake Las Vegas (USA)</Name>
+        <Ident>POI568</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-114.957649" Lat="36.090118" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Big Sur coastline (USA)</Name>
+        <Ident>POI498</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-121.695564" Lat="36.211567" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>San Francisco Bay salt ponds (USA)</Name>
+        <Ident>POI667</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.060204" Lat="37.505718" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>San Francisco Airport (USA)</Name>
+        <Ident>POI666</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.383392" Lat="37.611713" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>San Francisco (USA)</Name>
+        <Ident>POI665</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.408623" Lat="37.824638" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Oakland (USA)</Name>
+        <Ident>POI621</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.226982" Lat="37.838352" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Santa Rosa (USA)</Name>
+        <Ident>POI671</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.822334" Lat="38.535645" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lake Almanor (USA)</Name>
+        <Ident>POI563</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-121.130432" Lat="40.279732" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Trout Lake (USA)</Name>
+        <Ident>POI713</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-121.510101" Lat="45.999344" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Seattle tacoma Int'l Airport (USA)</Name>
+        <Ident>POI676</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.311203" Lat="47.444267" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Renton Municipal Airport (USA)</Name>
+        <Ident>POI653</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.214058" Lat="47.492256" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Seattle (USA)</Name>
+        <Ident>POI674</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.337959" Lat="47.545452" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Seattle Harbor (USA)</Name>
+        <Ident>POI675</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.395935" Lat="47.588051" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Discovery Bay (USA)</Name>
+        <Ident>POI522</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-122.780609" Lat="48.000446" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Olympic National Park (USA)</Name>
+        <Ident>POI623</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-123.762505" Lat="47.815331" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Vancouver (Canada)</Name>
+        <Ident>POI716</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-123.099152" Lat="49.291527" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mount Baker - Snoqualmie National Forest (USA)</Name>
+        <Ident>POI602</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-121.375122" Lat="47.889820" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sandpoint (USA)</Name>
+        <Ident>POI668</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-116.643776" Lat="48.240234" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hidden Lake - Montana (USA)</Name>
+        <Ident>POI549</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-113.740173" Lat="48.688351" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lake Abraham (Canada)</Name>
+        <Ident>POI562</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-116.406006" Lat="52.254047" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Grand Teton National Park (USA)</Name>
+        <Ident>POI544</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-110.752502" Lat="43.734779" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Thurston Peak (USA)</Name>
+        <Ident>POI704</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-111.856453" Lat="41.103107" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hill Air Force Base Utah (USA)</Name>
+        <Ident>POI550</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-111.977745" Lat="41.130886" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Monterrey (Mexico)</Name>
+        <Ident>POI600</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-100.468674" Lat="25.650486" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Marismas Nacionales Nayarit (Mexico)</Name>
+        <Ident>POI589</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-105.574600" Lat="21.923777" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Golden Meadow (USA)</Name>
+        <Ident>POI543</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-90.288116" Lat="29.356400" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>New Orleans (USA)</Name>
+        <Ident>POI614</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-90.080452" Lat="29.949764" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Long Island (Bahamas)</Name>
+        <Ident>POI580</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-75.318588" Lat="23.184189" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ambergris Cay - Turks and Caicos Islands</Name>
+        <Ident>POI481</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-71.654625" Lat="21.293955" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pueblo Viejo mine (Dominican Republic)</Name>
+        <Ident>POI646</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-70.184937" Lat="18.946554" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Punta Cana Airport (Dominican Republic)</Name>
+        <Ident>POI647</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-68.345055" Lat="18.570616" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Saba Juancho Airport (Netherlands)</Name>
+        <Ident>POI660</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-63.219967" Lat="17.647146" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sint Maarten</Name>
+        <Ident>POI681</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-63.121346" Lat="18.020416" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Airport Remy de Haenen (Saint-Barthelemy)</Name>
+        <Ident>POI477</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-62.847042" Lat="17.904535" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Union Island (Saint Vincent and the Grenadines)</Name>
+        <Ident>POI715</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-61.407650" Lat="12.603702" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Manaus (Brazil)</Name>
+        <Ident>POI584</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-60.778381" Lat="-3.198670" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sao Paulo (Brazil)</Name>
+        <Ident>POI672</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-46.415611" Lat="-23.393932" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Caraguatatuba (Brazil)</Name>
+        <Ident>POI508</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-45.424515" Lat="-23.659607" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cristo Redentor (Brazil)</Name>
+        <Ident>POI521</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-43.210098" Lat="-22.951742" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rio de Janeiro (Brazil)</Name>
+        <Ident>POI655</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-43.192612" Lat="-22.936293" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rio de Janeiro Galeao Airport (Brazil)</Name>
+        <Ident>POI656</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-43.263058" Lat="-22.816240" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fogo (Cape Verde)</Name>
+        <Ident>POI539</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-24.330757" Lat="14.950817" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Richat Structure (Mauritania)</Name>
+        <Ident>POI654</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-11.393775" Lat="21.131077" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Anaga Mountains - Tenerife (Spain)</Name>
+        <Ident>POI482</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-16.306030" Lat="28.572498" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>El hierro (Spain)</Name>
+        <Ident>POI529</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-18.024405" Lat="27.754560" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Marrakesh Menara Airport (Morocco)</Name>
+        <Ident>POI591</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-8.026196" Lat="31.604025" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>South of Marrakesh (Morocco)</Name>
+        <Ident>POI688</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-7.916981" Lat="31.598078" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Strait of Gibraltar (Morocco)</Name>
+        <Ident>POI693</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-5.527009" Lat="35.870110" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gribraltar (UK)</Name>
+        <Ident>POI547</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-5.336732" Lat="36.149551" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tavira (Portugal)</Name>
+        <Ident>POI700</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-7.635482" Lat="37.116936" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lisbon Humberto Delgado Airport (Portugal)</Name>
+        <Ident>POI576</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-9.138919" Lat="38.774586" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Benedita (Portugal)</Name>
+        <Ident>POI496</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-8.978453" Lat="39.372921" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Vigo (spain)</Name>
+        <Ident>POI718</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-8.742724" Lat="42.203644" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Luanco Gozon (spain)</Name>
+        <Ident>POI581</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-5.850787" Lat="43.622810" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cantabria (Spain)</Name>
+        <Ident>POI505</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.957027" Lat="43.448212" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sad Hill (Spain)</Name>
+        <Ident>POI661</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.411497" Lat="41.991165" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castilla (Spain)</Name>
+        <Ident>POI509</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.677908" Lat="40.477444" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Irun (Spain)</Name>
+        <Ident>POI556</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.799034" Lat="43.317699" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Biarritz (France)</Name>
+        <Ident>POI497</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.570128" Lat="43.500500" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Souraide (France)</Name>
+        <Ident>POI687</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.448964" Lat="43.316917" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Saint Etienne-de-Baigorry (France)</Name>
+        <Ident>POI662</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.362617" Lat="43.189667" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sorde-l'Abbaye (France)</Name>
+        <Ident>POI685</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.110773" Lat="43.524200" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mirepeix (France)</Name>
+        <Ident>POI597</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.267233" Lat="43.193077" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Argeles-Gazost (France)</Name>
+        <Ident>POI488</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.051930" Lat="43.006207" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Chalet Refuge du clot (France)</Name>
+        <Ident>POI513</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.148123" Lat="42.860947" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Marignac (France)</Name>
+        <Ident>POI587</Ident>
+        <Type>USER</Type>
+        <Pos Lon="0.699625" Lat="42.989601" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Garonne (France)</Name>
+        <Ident>POI542</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.527409" Lat="44.756741" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Arcachon (France)</Name>
+        <Ident>POI486</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.161762" Lat="44.696346" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Millau (France)</Name>
+        <Ident>POI596</Ident>
+        <Type>USER</Type>
+        <Pos Lon="3.110574" Lat="44.106815" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Endoume (France)</Name>
+        <Ident>POI531</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.353547" Lat="43.282688" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Notre-Dame de la Garde (France)</Name>
+        <Ident>POI620</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.369120" Lat="43.284740" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>French Riviera (France)</Name>
+        <Ident>POI540</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.993020" Lat="43.448383" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nice Airport (France)</Name>
+        <Ident>POI617</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.179479" Lat="43.629810" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Maritime Alps (Italy and France)</Name>
+        <Ident>POI590</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.988816" Lat="44.273457" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mont Cenis (France)</Name>
+        <Ident>POI599</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.996478" Lat="45.285503" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Courchevel Airport (France)</Name>
+        <Ident>POI520</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.633313" Lat="45.396511" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bozel (France)</Name>
+        <Ident>POI500</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.662022" Lat="45.443394" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mont Blanc (France)</Name>
+        <Ident>POI598</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.844373" Lat="45.827351" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sion Airport (Switzerland)</Name>
+        <Ident>POI683</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.269178" Lat="46.200104" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sion (Swizterland)</Name>
+        <Ident>POI682</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.371934" Lat="46.229191" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Reichenbach (Switzerland)</Name>
+        <Ident>POI652</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.678879" Lat="46.614784" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lake Lucerne (Switzerland)</Name>
+        <Ident>POI569</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.330192" Lat="47.039810" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Zurich (Switzerland)</Name>
+        <Ident>POI725</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.536766" Lat="47.375324" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Zurich  Airport (Switzerland)</Name>
+        <Ident>POI726</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.558734" Lat="47.445942" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ostheim (France)</Name>
+        <Ident>POI629</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.366235" Lat="48.156158" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lake Geneva and Mont Blanc (Switzerland/France)</Name>
+        <Ident>POI567</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.178076" Lat="46.196545" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Aix-les-Bains (France)</Name>
+        <Ident>POI478</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.868621" Lat="45.657288" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Chambery Airport (France)</Name>
+        <Ident>POI514</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.879360" Lat="45.647747" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lake Como (Italy)</Name>
+        <Ident>POI564</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.381513" Lat="46.160175" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lake Garda (Italy)</Name>
+        <Ident>POI566</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.242178" Lat="45.620697" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cavarzere (Italy)</Name>
+        <Ident>POI511</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.109764" Lat="45.146206" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Florence Preetola Airport (Italy)</Name>
+        <Ident>POI537</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.213279" Lat="43.815109" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Florence (Italy)</Name>
+        <Ident>POI536</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.258674" Lat="43.770065" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Plage de l'Ostriconi - Corsica (France)</Name>
+        <Ident>POI643</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.038271" Lat="42.640835" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ajaccio Corse (France)</Name>
+        <Ident>POI479</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.716887" Lat="41.906452" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Figari corsica (France)</Name>
+        <Ident>POI533</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.021407" Lat="41.463028" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rom (Italy)</Name>
+        <Ident>POI658</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.476565" Lat="41.887165" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fuorigrotta (Italy)</Name>
+        <Ident>POI541</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.170888" Lat="40.776985" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Neapel (Italy)</Name>
+        <Ident>POI610</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.254227" Lat="40.843418" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Vesuvio (italy)</Name>
+        <Ident>POI717</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.376913" Lat="40.730644" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Parlermo (Italy)</Name>
+        <Ident>POI637</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.278346" Lat="38.178719" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Catania (Italy)</Name>
+        <Ident>POI510</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.107729" Lat="37.519943" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Athens (Greece)</Name>
+        <Ident>POI490</Ident>
+        <Type>USER</Type>
+        <Pos Lon="23.730524" Lat="37.973125" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hagia Sophia and Blue Mosque (Turkey)</Name>
+        <Ident>POI548</Ident>
+        <Type>USER</Type>
+        <Pos Lon="28.975454" Lat="41.008297" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Istanbul (Turkey)</Name>
+        <Ident>POI557</Ident>
+        <Type>USER</Type>
+        <Pos Lon="29.197838" Lat="41.143120" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bucharest (Romania)</Name>
+        <Ident>POI501</Ident>
+        <Type>USER</Type>
+        <Pos Lon="26.104956" Lat="44.428501" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Szombathelyi Airfield (Hungary)</Name>
+        <Ident>POI698</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.633045" Lat="47.272720" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Salzburg (Austria)</Name>
+        <Ident>POI663</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.047982" Lat="47.796509" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wallberg (Germany)</Name>
+        <Ident>POI720</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.782107" Lat="47.658081" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Neuschwanstein Castle (Germany)</Name>
+        <Ident>POI613</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.749358" Lat="47.557442" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rathen - Elbe (Germany)</Name>
+        <Ident>POI650</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.095529" Lat="50.942131" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Warsaw Palace of Culture (Poland)</Name>
+        <Ident>POI721</Ident>
+        <Type>USER</Type>
+        <Pos Lon="21.009024" Lat="52.235313" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Naarden (Netherlands)</Name>
+        <Ident>POI606</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.183045" Lat="52.289761" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ilford - London (UK)</Name>
+        <Ident>POI554</Ident>
+        <Type>USER</Type>
+        <Pos Lon="0.081905" Lat="51.564533" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>London City Airport (UK)</Name>
+        <Ident>POI577</Ident>
+        <Type>USER</Type>
+        <Pos Lon="0.089869" Lat="51.504025" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>London Heathrow Airport (UK)</Name>
+        <Ident>POI579</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.450086" Lat="51.470497" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>London Gatwick Airport (UK)</Name>
+        <Ident>POI578</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.173080" Lat="51.158813" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Southampton Airport (UK)</Name>
+        <Ident>POI690</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.359956" Lat="50.945076" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Southampton (UK)</Name>
+        <Ident>POI689</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.438923" Lat="50.897678" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cerne Giant (UK)</Name>
+        <Ident>POI512</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-2.474770" Lat="50.812420" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Silverstone Circuit (UK)</Name>
+        <Ident>POI680</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.029155" Lat="52.076443" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Leeds - Waterloo Lake (UK)</Name>
+        <Ident>POI574</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.494745" Lat="53.837048" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lake District (UK)</Name>
+        <Ident>POI565</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.411268" Lat="54.426575" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rouen (France)</Name>
+        <Ident>POI659</Ident>
+        <Type>USER</Type>
+        <Pos Lon="1.088792" Lat="49.435143" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Paris (France)</Name>
+        <Ident>POI636</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.312505" Lat="48.843300" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Chateau de Chambord - Loir-et-Cher (France)</Name>
+        <Ident>POI703</Ident>
+        <Type>USER</Type>
+        <Pos Lon="1.519821" Lat="47.617615" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cabane Vauban (France)</Name>
+        <Ident>POI503</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.536358" Lat="48.731995" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Palma de Mallorca Airport (Spain)</Name>
+        <Ident>POI634</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.757000" Lat="39.569603" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ibiza (Spain)</Name>
+        <Ident>POI553</Ident>
+        <Type>USER</Type>
+        <Pos Lon="1.437860" Lat="38.936432" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sant Antoni de Portmany Ibiza (Spain)</Name>
+        <Ident>POI669</Ident>
+        <Type>USER</Type>
+        <Pos Lon="1.296988" Lat="38.995232" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tondimina Niger Delta (Mali)</Name>
+        <Ident>POI707</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.900026" Lat="15.216505" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pyramids of Giza (Egypt)</Name>
+        <Ident>POI648</Ident>
+        <Type>USER</Type>
+        <Pos Lon="31.127914" Lat="29.979158" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Jabal Ram (Jordan)</Name>
+        <Ident>POI558</Ident>
+        <Type>USER</Type>
+        <Pos Lon="35.455433" Lat="29.618727" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Red Sea near Sawakin (Sudan)</Name>
+        <Ident>POI651</Ident>
+        <Type>USER</Type>
+        <Pos Lon="37.415352" Lat="18.923107" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sheikh Zayed Mosque Abu Dhabi (UAE)</Name>
+        <Ident>POI679</Ident>
+        <Type>USER</Type>
+        <Pos Lon="54.475079" Lat="24.411097" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dubai (UAE)</Name>
+        <Ident>POI525</Ident>
+        <Type>USER</Type>
+        <Pos Lon="55.177753" Lat="25.099886" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Burj Khalifa Dubai (UAE)</Name>
+        <Ident>POI502</Ident>
+        <Type>USER</Type>
+        <Pos Lon="55.273712" Lat="25.198584" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Oman Mountains (Oman)</Name>
+        <Ident>POI624</Ident>
+        <Type>USER</Type>
+        <Pos Lon="59.232414" Lat="23.009066" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ahmedabad (India)</Name>
+        <Ident>POI476</Ident>
+        <Type>USER</Type>
+        <Pos Lon="72.534866" Lat="23.079292" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Taj Mahal (India)</Name>
+        <Ident>POI699</Ident>
+        <Type>USER</Type>
+        <Pos Lon="78.044334" Lat="27.176514" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Trisul (India)</Name>
+        <Ident>POI712</Ident>
+        <Type>USER</Type>
+        <Pos Lon="79.506790" Lat="30.328354" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Skadur (Pakistan)</Name>
+        <Ident>POI684</Ident>
+        <Type>USER</Type>
+        <Pos Lon="75.550415" Lat="35.353382" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Southeast of Islamabad (Pakistan)</Name>
+        <Ident>POI691</Ident>
+        <Type>USER</Type>
+        <Pos Lon="72.858612" Lat="33.495529" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lukla Tenzing Hillary Airport (Nepal)</Name>
+        <Ident>POI582</Ident>
+        <Type>USER</Type>
+        <Pos Lon="86.731323" Lat="27.686596" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mera Peak (Nepal)</Name>
+        <Ident>POI592</Ident>
+        <Type>USER</Type>
+        <Pos Lon="86.817230" Lat="27.690018" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tumlingatar Airport (Nepal)</Name>
+        <Ident>POI714</Ident>
+        <Type>USER</Type>
+        <Pos Lon="87.194496" Lat="27.314629" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Paro Airport (Buthan)</Name>
+        <Ident>POI638</Ident>
+        <Type>USER</Type>
+        <Pos Lon="89.421898" Lat="27.404877" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Torsa River (Bhutan and India)</Name>
+        <Ident>POI711</Ident>
+        <Type>USER</Type>
+        <Pos Lon="89.378059" Lat="26.898138" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bankok (Thailand)</Name>
+        <Ident>POI494</Ident>
+        <Type>USER</Type>
+        <Pos Lon="100.492538" Lat="13.740892" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Marina bay hotel (Singapur)</Name>
+        <Ident>POI588</Ident>
+        <Type>USER</Type>
+        <Pos Lon="103.858841" Lat="1.286738" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pangulasian Island (Philippines)</Name>
+        <Ident>POI635</Ident>
+        <Type>USER</Type>
+        <Pos Lon="119.334686" Lat="11.111219" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hong Kong (China)</Name>
+        <Ident>POI551</Ident>
+        <Type>USER</Type>
+        <Pos Lon="114.150696" Lat="22.301188" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sha Tin (Hong Kong)</Name>
+        <Ident>POI677</Ident>
+        <Type>USER</Type>
+        <Pos Lon="114.228973" Lat="22.407982" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Macau (china)</Name>
+        <Ident>POI583</Ident>
+        <Type>USER</Type>
+        <Pos Lon="113.546860" Lat="22.187799" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Shanghai (China)</Name>
+        <Ident>POI678</Ident>
+        <Type>USER</Type>
+        <Pos Lon="121.504341" Lat="31.235525" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Soul (South Korea)</Name>
+        <Ident>POI686</Ident>
+        <Type>USER</Type>
+        <Pos Lon="126.792030" Lat="37.595604" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dongxingpucun (China)</Name>
+        <Ident>POI524</Ident>
+        <Type>USER</Type>
+        <Pos Lon="115.889565" Lat="40.730721" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mount Fuji (Japan)</Name>
+        <Ident>POI603</Ident>
+        <Type>USER</Type>
+        <Pos Lon="138.726578" Lat="35.349083" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tokyo (Japan)</Name>
+        <Ident>POI705</Ident>
+        <Type>USER</Type>
+        <Pos Lon="139.781815" Lat="35.687691" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tokyo Skytree (Japan)</Name>
+        <Ident>POI706</Ident>
+        <Type>USER</Type>
+        <Pos Lon="139.819412" Lat="35.709583" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Avachinsky - Kamchatka (Russia)</Name>
+        <Ident>POI491</Ident>
+        <Type>USER</Type>
+        <Pos Lon="158.848801" Lat="53.236790" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>over Mount Pavlof (USA)</Name>
+        <Ident>POI630</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-161.904968" Lat="55.412334" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Larson Bay (USA)</Name>
+        <Ident>POI573</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-153.955200" Lat="57.546696" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Moscow (Russia)</Name>
+        <Ident>POI601</Ident>
+        <Type>USER</Type>
+        <Pos Lon="37.616737" Lat="55.750084" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sulak Canyon (Russia)</Name>
+        <Ident>POI694</Ident>
+        <Type>USER</Type>
+        <Pos Lon="46.736526" Lat="42.776909" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Marangu (Tanzania)</Name>
+        <Ident>POI586</Ident>
+        <Type>USER</Type>
+        <Pos Lon="37.605827" Lat="-3.687567" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>African Savanna</Name>
+        <Ident>POI475</Ident>
+        <Type>USER</Type>
+        <Pos Lon="28.826712" Lat="-22.343998" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fish River Canyon (Namibia)</Name>
+        <Ident>POI535</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.594591" Lat="-27.582018" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Namib Naukluft Park (Namibia)</Name>
+        <Ident>POI607</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.522229" Lat="-25.674025" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Naukluft Park (Namibia)</Name>
+        <Ident>POI609</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.619824" Lat="-25.408270" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dune 45 (Namibia)</Name>
+        <Ident>POI526</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.433735" Lat="-24.718086" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Elim Dune (Namibia)</Name>
+        <Ident>POI530</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.812990" Lat="-24.455240" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Farm Whitwater East Landing Strip (Namibia)</Name>
+        <Ident>POI532</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.949802" Lat="-24.631050" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cape Town (South Africa)</Name>
+        <Ident>POI507</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.500799" Lat="-33.864697" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hout Bay (South Africa)</Name>
+        <Ident>POI552</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.334234" Lat="-34.058537" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Swartberg mountains (South Africa)</Name>
+        <Ident>POI696</Ident>
+        <Type>USER</Type>
+        <Pos Lon="22.073174" Lat="-33.221298" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Androy region (Madagascar)</Name>
+        <Ident>POI484</Ident>
+        <Type>USER</Type>
+        <Pos Lon="45.311848" Lat="-25.510607" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kadhdhoo (Maldives)</Name>
+        <Ident>POI559</Ident>
+        <Type>USER</Type>
+        <Pos Lon="73.522804" Lat="1.865491" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Perth (Australia)</Name>
+        <Ident>POI640</Ident>
+        <Type>USER</Type>
+        <Pos Lon="115.862640" Lat="-31.950895" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mundaring Weir (Austraila)</Name>
+        <Ident>POI605</Ident>
+        <Type>USER</Type>
+        <Pos Lon="116.191917" Lat="-31.969730" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kalgoorlie (Australia)</Name>
+        <Ident>POI560</Ident>
+        <Type>USER</Type>
+        <Pos Lon="121.484390" Lat="-30.749748" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ayers Rock (Australia)</Name>
+        <Ident>POI492</Ident>
+        <Type>USER</Type>
+        <Pos Lon="131.038742" Lat="-25.348505" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Alice Springs Airport (Austrailia)</Name>
+        <Ident>POI480</Ident>
+        <Type>USER</Type>
+        <Pos Lon="133.891281" Lat="-23.800816" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sydney (Australia</Name>
+        <Ident>POI697</Ident>
+        <Type>USER</Type>
+        <Pos Lon="151.235092" Lat="-33.868164" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Milford Sound (New Zealand)</Name>
+        <Ident>POI595</Ident>
+        <Type>USER</Type>
+        <Pos Lon="167.911819" Lat="-44.667034" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Queenstown Airport (New Zealand)</Name>
+        <Ident>POI649</Ident>
+        <Type>USER</Type>
+        <Pos Lon="168.742050" Lat="-45.021538" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lake Tekapo (New Zealand)</Name>
+        <Ident>POI572</Ident>
+        <Type>USER</Type>
+        <Pos Lon="170.535233" Lat="-43.808563" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nelson Lakes National Park (New Zealand)</Name>
+        <Ident>POI612</Ident>
+        <Type>USER</Type>
+        <Pos Lon="172.578781" Lat="-42.097935" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mount Taranaki (New Zealand)</Name>
+        <Ident>POI604</Ident>
+        <Type>USER</Type>
+        <Pos Lon="173.997284" Lat="-39.272362" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tongariro National ParkIsland (New Zealand)</Name>
+        <Ident>POI708</Ident>
+        <Type>USER</Type>
+        <Pos Lon="175.544434" Lat="-39.378708" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wewak Island (Papua New Guinea)</Name>
+        <Ident>POI723</Ident>
+        <Type>USER</Type>
+        <Pos Lon="143.704803" Lat="-3.547392" Alt="0.00"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

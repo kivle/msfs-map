@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-01T17:49:06+00:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Dusseldorf</Name>
+        <Ident>EDDL</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="6.757309" Lat="51.280930" Alt="118.76"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dusseldorf</Name>
+        <Ident>POI1593</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.783310" Lat="51.221935" Alt="1306.46"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cologne</Name>
+        <Ident>POI1591</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.960384" Lat="50.939316" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bonn</Name>
+        <Ident>POI1590</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.097943" Lat="50.739067" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dortmund</Name>
+        <Ident>POI1592</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.463454" Lat="51.515785" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hanover</Name>
+        <Ident>POI1594</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.737257" Lat="52.376095" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hannover</Name>
+        <Ident>EDDV</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="9.683518" Lat="52.460220" Alt="171.55"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

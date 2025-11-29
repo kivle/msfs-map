@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-30T08:26:08+01:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Isafjordur</Name>
+        <Ident>BIIS</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-23.135290" Lat="66.058006" Alt="5.76"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hvitserkur</Name>
+        <Ident>POI1087</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-20.635233" Lat="65.606422" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hallgrímskirkja Church</Name>
+        <Ident>POI1036</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-21.926910" Lat="64.141930" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Perlan</Name>
+        <Ident>POI1058</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-21.918854" Lat="64.129234" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Storseisundet Bridge</Name>
+        <Ident>POI1069</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.354389" Lat="63.016781" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lerkendal stadion</Name>
+        <Ident>POI1049</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.404492" Lat="63.412334" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nidaros Cathedral</Name>
+        <Ident>POI1052</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.397017" Lat="63.426903" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tyholttårnet</Name>
+        <Ident>POI1079</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.432022" Lat="63.422356" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Urnes Stave Church</Name>
+        <Ident>POI1083</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.322700" Lat="61.298084" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hardanger Bridge</Name>
+        <Ident>POI1037</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.830108" Lat="60.478661" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fyksesund Bridge</Name>
+        <Ident>POI1034</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.260942" Lat="60.400215" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Brann Stadion, Bergen</Name>
+        <Ident>POI1021</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.357439" Lat="60.366974" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bryggen</Name>
+        <Ident>POI1023</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.323564" Lat="60.397415" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Preikestolen</Name>
+        <Ident>POI1088</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.190389" Lat="58.985443" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Viking Stadion / SR-Bank, Stavanger</Name>
+        <Ident>POI1085</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.731025" Lat="58.914604" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Heddal stave church</Name>
+        <Ident>POI1038</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.176289" Lat="59.579552" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Frogner Park / Sculptures</Name>
+        <Ident>POI1033</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.698906" Lat="59.927677" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Royal Palace Oslo</Name>
+        <Ident>POI1063</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.727122" Lat="59.917221" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Oslo Opera House</Name>
+        <Ident>POI1056</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.753356" Lat="59.907471" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Intility Arena, Oslo</Name>
+        <Ident>POI1045</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.806694" Lat="59.917835" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ullevaal Stadion, Oslo</Name>
+        <Ident>POI1081</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.734303" Lat="59.949181" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Holmenkollbakken</Name>
+        <Ident>POI1044</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.668722" Lat="59.963718" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Svinesund Bridge</Name>
+        <Ident>POI1071</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.251900" Lat="59.094357" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Uddevalla Bridge</Name>
+        <Ident>POI1080</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.844003" Lat="58.325691" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tjörn Bridge</Name>
+        <Ident>POI1074</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.781117" Lat="58.059288" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ullevi Gothenburg</Name>
+        <Ident>POI1082</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.987286" Lat="57.705875" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Boras Arena</Name>
+        <Ident>POI1020</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.934797" Lat="57.734421" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kullen Lighthouse</Name>
+        <Ident>POI1086</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.451561" Lat="56.301010" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kronborg Castle</Name>
+        <Ident>POI1047</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.620833" Lat="56.038887" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Frederiksborg Castle</Name>
+        <Ident>POI1031</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.299578" Lat="55.933945" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Parken Stadium, Copenhagen</Name>
+        <Ident>POI1057</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.572353" Lat="55.702728" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rosenborg Castle</Name>
+        <Ident>POI1061</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.577442" Lat="55.685680" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Amalienborg</Name>
+        <Ident>POI1015</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.593211" Lat="55.683998" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Copenhagen Opera House</Name>
+        <Ident>POI1026</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.600947" Lat="55.681938" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Brøndby Stadium</Name>
+        <Ident>POI1022</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.418647" Lat="55.648945" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Roskilde Cathedral</Name>
+        <Ident>POI1062</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.080169" Lat="55.642612" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Øresund Bridge</Name>
+        <Ident>POI1055</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.827178" Lat="55.574924" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Eleda Stadion, Malmö</Name>
+        <Ident>POI1030</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.987811" Lat="55.583611" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Turning Torso</Name>
+        <Ident>POI1078</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.976386" Lat="55.613285" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Church of Holy Trinity</Name>
+        <Ident>POI1025</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.152781" Lat="56.031879" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sölvesborg Bridge</Name>
+        <Ident>POI1065</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.592825" Lat="56.051540" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ronne</Name>
+        <Ident>EKRN</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="14.759536" Lat="55.063259" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Guldfågeln Arena</Name>
+        <Ident>POI1035</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.314943" Lat="56.691261" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Öland Bridge</Name>
+        <Ident>POI1053</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.395428" Lat="56.678917" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Drottningholm Palace</Name>
+        <Ident>POI1028</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.885756" Lat="59.321495" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Friends Arena</Name>
+        <Ident>POI1032</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.000528" Lat="59.372684" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stockholm City Hall</Name>
+        <Ident>POI1066</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.054831" Lat="59.327469" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Storkyrkan Stockholm Cathedral</Name>
+        <Ident>POI1068</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.069992" Lat="59.325672" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stockholm Palace</Name>
+        <Ident>POI1067</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.071716" Lat="59.326763" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Royal Swedish Opera</Name>
+        <Ident>POI1064</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.069864" Lat="59.329636" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tele2 Arena, Stockholm</Name>
+        <Ident>POI1073</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.084541" Lat="59.291058" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stockholm Arlanda Airport</Name>
+        <Ident>POI1012</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.923780" Lat="59.649761" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dragon Gate</Name>
+        <Ident>POI1027</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.415068" Lat="60.462387" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bomarsund Bridge</Name>
+        <Ident>POI1019</Ident>
+        <Type>USER</Type>
+        <Pos Lon="20.242313" Lat="60.211941" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Turku Castle</Name>
+        <Ident>POI1076</Ident>
+        <Type>USER</Type>
+        <Pos Lon="22.228598" Lat="60.435349" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Turku Cathedral</Name>
+        <Ident>POI1077</Ident>
+        <Type>USER</Type>
+        <Pos Lon="22.278297" Lat="60.452457" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Näsinneula</Name>
+        <Ident>POI1051</Ident>
+        <Type>USER</Type>
+        <Pos Lon="23.743275" Lat="61.505001" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Petäjävesi Old Church</Name>
+        <Ident>POI1059</Ident>
+        <Type>USER</Type>
+        <Pos Lon="25.184011" Lat="62.250072" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Vaasa Airport</Name>
+        <Ident>POI1013</Ident>
+        <Type>USER</Type>
+        <Pos Lon="21.762712" Lat="63.051247" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Replot Bridge</Name>
+        <Ident>POI1060</Ident>
+        <Type>USER</Type>
+        <Pos Lon="21.473528" Lat="63.206642" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tallberg Bridges</Name>
+        <Ident>POI1072</Ident>
+        <Type>USER</Type>
+        <Pos Lon="19.347885" Lat="63.794701" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Höga Kusten Bridge</Name>
+        <Ident>POI1043</Ident>
+        <Type>USER</Type>
+        <Pos Lon="17.937893" Lat="62.797626" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Helgeland Bridge</Name>
+        <Ident>POI1039</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.720394" Lat="66.038017" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kiruna Church</Name>
+        <Ident>POI1046</Ident>
+        <Type>USER</Type>
+        <Pos Lon="20.233093" Lat="67.852051" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Arctic Cathedral</Name>
+        <Ident>POI1016</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.987429" Lat="69.648064" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tromsø Bridge</Name>
+        <Ident>POI1075</Ident>
+        <Type>USER</Type>
+        <Pos Lon="18.979057" Lat="69.651024" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Longyear</Name>
+        <Ident>ENSB</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="15.465558" Lat="78.246109" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Olavinlinna</Name>
+        <Ident>POI1054</Ident>
+        <Type>USER</Type>
+        <Pos Lon="28.901108" Lat="61.863922" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Helsinki Ice Hall</Name>
+        <Ident>POI1041</Ident>
+        <Type>USER</Type>
+        <Pos Lon="24.922672" Lat="60.189465" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bolt Arena</Name>
+        <Ident>POI1018</Ident>
+        <Type>USER</Type>
+        <Pos Lon="24.922762" Lat="60.187702" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Helsinki Olympic Stadium</Name>
+        <Ident>POI1042</Ident>
+        <Type>USER</Type>
+        <Pos Lon="24.927202" Lat="60.186954" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Helsinki Cathedral</Name>
+        <Ident>POI1040</Ident>
+        <Type>USER</Type>
+        <Pos Lon="24.952162" Lat="60.170357" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Uspenski Cathedral</Name>
+        <Ident>POI1084</Ident>
+        <Type>USER</Type>
+        <Pos Lon="24.959913" Lat="60.168537" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Suomenlinna</Name>
+        <Ident>POI1070</Ident>
+        <Type>USER</Type>
+        <Pos Lon="24.987206" Lat="60.143055" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Aalborg Stadium</Name>
+        <Ident>POI1014</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.898564" Lat="57.052074" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ceres Park, Aarhus</Name>
+        <Ident>POI1024</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.196594" Lat="56.132030" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>LEGO House</Name>
+        <Ident>POI1048</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.114897" Lat="55.730671" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Blue Water Arena, Esbjerg</Name>
+        <Ident>POI1017</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.439453" Lat="55.481922" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Men at Sea</Name>
+        <Ident>POI1050</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.411131" Lat="55.487789" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Egeskov Castle</Name>
+        <Ident>POI1029</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.489197" Lat="55.176281" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Roskilde</Name>
+        <Ident>EKRK</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="12.131425" Lat="55.585567" Alt="135.96"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

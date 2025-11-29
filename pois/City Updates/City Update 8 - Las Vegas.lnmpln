@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-03T17:51:53+00:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>North Las Vegas</Name>
+        <Ident>KVGT</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-115.194443" Lat="36.210701" Alt="2181.70"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hoover Dam Bridge</Name>
+        <Ident>POI2250</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-114.741425" Lat="36.012531" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Boulder City</Name>
+        <Ident>POI2264</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-114.834358" Lat="35.977283" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Las Vegas Lake</Name>
+        <Ident>POI2260</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-114.915199" Lat="36.118870" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Frenchman Mountain</Name>
+        <Ident>POI2259</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-114.997765" Lat="36.180027" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sunrise Manor</Name>
+        <Ident>POI2266</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-115.069016" Lat="36.212585" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Downtown Las Vegas</Name>
+        <Ident>POI2265</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-115.149567" Lat="36.169346" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stratosphere Tower</Name>
+        <Ident>POI2257</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-115.156700" Lat="36.147644" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wynn Golf Club</Name>
+        <Ident>POI2263</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-115.159172" Lat="36.125885" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sphere</Name>
+        <Ident>POI2256</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-115.162041" Lat="36.121288" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Linq Promenade</Name>
+        <Ident>POI2251</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-115.170883" Lat="36.118210" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Mirage Hotel</Name>
+        <Ident>POI2258</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-115.175285" Lat="36.121307" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bellagio</Name>
+        <Ident>POI2248</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-115.173943" Lat="36.112850" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>MGM Grand</Name>
+        <Ident>POI2253</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-115.167618" Lat="36.103828" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>New York New York Hotel</Name>
+        <Ident>POI2254</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-115.174377" Lat="36.102322" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Excalibur Hotel Casino</Name>
+        <Ident>POI2249</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-115.175461" Lat="36.098961" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Luxor Las Vegas</Name>
+        <Ident>POI2252</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-115.176071" Lat="36.095650" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Allegiant Stadium</Name>
+        <Ident>POI2247</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-115.183327" Lat="36.091042" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rio Convention Centre</Name>
+        <Ident>POI2255</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-115.188011" Lat="36.117729" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Southern Highlands Golf Club</Name>
+        <Ident>POI2262</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-115.193611" Lat="35.972385" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Red Rock Canyon</Name>
+        <Ident>POI2261</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-115.438339" Lat="36.194580" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>North Las Vegas</Name>
+        <Ident>KVGT</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-115.194443" Lat="36.210701" Alt="2181.70"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

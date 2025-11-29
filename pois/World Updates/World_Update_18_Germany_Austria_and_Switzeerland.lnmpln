@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-29T22:53:48+00:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Salzburg</Name>
+        <Ident>LOWS</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="13.003332" Lat="47.794445" Alt="1410.27"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Red Bull Arena</Name>
+        <Ident>POI2442</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.998342" Lat="47.816456" Alt="1844.95"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Salzburg</Name>
+        <Ident>POI2490</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.046650" Lat="47.800217" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gaisberg Transmitter</Name>
+        <Ident>POI2394</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.112003" Lat="47.805202" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Goldhaube Radar / Kolomannsberg</Name>
+        <Ident>POI2463</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.275622" Lat="47.877266" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ort Castle</Name>
+        <Ident>POI2432</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.792219" Lat="47.911419" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Linz</Name>
+        <Ident>POI2488</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.285692" Lat="48.305641" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sauerling Transmitter</Name>
+        <Ident>POI2450</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.338792" Lat="48.334660" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Aggstein Castle</Name>
+        <Ident>POI2368</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.421331" Lat="48.313599" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Schönbühel Castle</Name>
+        <Ident>POI2453</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.373528" Lat="48.258160" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Schönbrunn Palace</Name>
+        <Ident>POI2452</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.312283" Lat="48.184834" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Vienna</Name>
+        <Ident>POI2491</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.368891" Lat="48.202595" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kreuzenstein Castle</Name>
+        <Ident>POI2417</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.308933" Lat="48.379135" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Andreas Maurer Bridge</Name>
+        <Ident>POI2372</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.908045" Lat="48.146400" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Podersdorf Lighthouse</Name>
+        <Ident>POI2480</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.827005" Lat="47.860664" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Forchtenstein Castle</Name>
+        <Ident>POI2393</Ident>
+        <Type>USER</Type>
+        <Pos Lon="16.331718" Lat="47.709690" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Schottwien Bridge</Name>
+        <Ident>POI2454</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.870194" Lat="47.652557" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Semmering Railway</Name>
+        <Ident>POI2457</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.830947" Lat="47.639343" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Krausel Klause Viaduct</Name>
+        <Ident>POI2416</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.811775" Lat="47.658394" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ghega Brücke</Name>
+        <Ident>POI2398</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.805486" Lat="47.657227" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Riegersburg Castle</Name>
+        <Ident>POI2444</Ident>
+        <Type>USER</Type>
+        <Pos Lon="15.932528" Lat="47.004810" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Grosser Speikkogel</Name>
+        <Ident>POI2403</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.970622" Lat="46.787403" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lavant Viaduct</Name>
+        <Ident>POI2421</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.840783" Lat="46.922894" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pyramidenkogel Tower</Name>
+        <Ident>POI2440</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.144914" Lat="46.608963" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Finkenstein Castle Ruins</Name>
+        <Ident>POI2392</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.903100" Lat="46.546391" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dobratsch Transmitter</Name>
+        <Ident>POI2384</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.673036" Lat="46.603210" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pfaffenberg-Zwenberg Railway Bridge</Name>
+        <Ident>POI2436</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.253536" Lat="46.916573" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Falkenstein Bridge</Name>
+        <Ident>POI2391</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.241225" Lat="46.924400" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Summit of Hoher Sonnblick</Name>
+        <Ident>POI2481</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.957439" Lat="47.054062" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>St. Johann Antenne / Kitzbüheler Horn</Name>
+        <Ident>POI2461</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.429783" Lat="47.475899" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Summit Hut Hohe Salve</Name>
+        <Ident>POI2462</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.203981" Lat="47.465034" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wendelstein Observatory</Name>
+        <Ident>POI2474</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.012389" Lat="47.703800" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tratzberg Castle</Name>
+        <Ident>POI2467</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.743653" Lat="47.385292" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Patscherkofel Transmitter</Name>
+        <Ident>POI2434</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.461597" Lat="47.208878" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Europa Bridge</Name>
+        <Ident>POI2389</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.401722" Lat="47.201893" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bergisel Ski Jump</Name>
+        <Ident>POI2374</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.399558" Lat="47.246883" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Karwendelbahn Mountain Station</Name>
+        <Ident>POI2415</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.295633" Lat="47.430145" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Zugspitze</Name>
+        <Ident>POI2478</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.984917" Lat="47.420982" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Linderhof Palace</Name>
+        <Ident>POI2424</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.960800" Lat="47.571671" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pilgrimage Church of Wies</Name>
+        <Ident>POI2438</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.900411" Lat="47.680595" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>German Weather Service Meteorological Observatory</Name>
+        <Ident>POI2397</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.009311" Lat="47.801563" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Seefeld Castle</Name>
+        <Ident>POI2455</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.204069" Lat="48.031025" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Munich</Name>
+        <Ident>EDDM</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="11.786091" Lat="48.353786" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hohenschwangau Castle</Name>
+        <Ident>POI2410</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.736072" Lat="47.555523" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ehrenberg Castle</Name>
+        <Ident>POI2386</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.717808" Lat="47.465569" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nebelhornbahn Summit Station</Name>
+        <Ident>POI2430</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.342225" Lat="47.421787" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Valluga View</Name>
+        <Ident>POI2479</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.213247" Lat="47.154682" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Trisannabrücke (Wiesberg) Bridge</Name>
+        <Ident>POI2468</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.491097" Lat="47.116245" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wiesberg Castle</Name>
+        <Ident>POI2475</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.492664" Lat="47.117008" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hinterer Brunnenkogel</Name>
+        <Ident>POI2409</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.862233" Lat="46.912476" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Salginatobel Bridge</Name>
+        <Ident>POI2447</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.717925" Lat="46.981789" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sargans Castle</Name>
+        <Ident>POI2449</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.437422" Lat="47.050209" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Säntis Transmission Tower</Name>
+        <Ident>POI2448</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.342636" Lat="47.249359" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sitter Viaduct</Name>
+        <Ident>POI2458</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.325092" Lat="47.400543" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pfänder Transmitter</Name>
+        <Ident>POI2437</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.779986" Lat="47.508099" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Zurich</Name>
+        <Ident>POI2492</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.539836" Lat="47.374889" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Uetliberg TV Tower</Name>
+        <Ident>POI2470</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.490247" Lat="47.351395" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Habsburg Castle</Name>
+        <Ident>POI2407</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.181042" Lat="47.462765" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rigi Kulm Hotel</Name>
+        <Ident>POI2445</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.484067" Lat="47.055904" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Maria Hilf Chapel</Name>
+        <Ident>POI2425</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.664608" Lat="46.980434" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Titlis Cliff Walk</Name>
+        <Ident>POI2465</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.425306" Lat="46.770512" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hotel Pilatus-Kulm and Hotel Bellevue</Name>
+        <Ident>POI2411</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.254469" Lat="46.979591" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Brienzer Rothorn Railway</Name>
+        <Ident>POI2375</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.044525" Lat="46.787144" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Jungfraujoch Railway Station</Name>
+        <Ident>POI2412</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.982131" Lat="46.547157" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Schilthorn</Name>
+        <Ident>POI2451</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.834886" Lat="46.557323" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ganter Bridge</Name>
+        <Ident>POI2395</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.050956" Lat="46.296268" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gornergrat South Observatory</Name>
+        <Ident>POI2401</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.783128" Lat="45.983498" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Matterhorn Glacier Palace</Name>
+        <Ident>POI2426</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.729981" Lat="45.938320" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Grande Dixence Dam</Name>
+        <Ident>POI2402</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.402569" Lat="46.079960" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mauvoisin Dam</Name>
+        <Ident>POI2427</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.349000" Lat="45.998028" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Euseigne Pyramids</Name>
+        <Ident>POI2390</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.417031" Lat="46.172855" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Valère Basilica</Name>
+        <Ident>POI2473</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.364625" Lat="46.233788" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Christ the King Statue</Name>
+        <Ident>POI2381</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.437531" Lat="46.273083" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tseuzier Dam</Name>
+        <Ident>POI2469</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.435942" Lat="46.347572" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Chamois Summit</Name>
+        <Ident>POI2379</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.214514" Lat="46.340088" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Peak Walk By Tissot /Alpine Coaster</Name>
+        <Ident>POI2435</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.204742" Lat="46.326660" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Glacier 3000</Name>
+        <Ident>POI2399</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.205394" Lat="46.354084" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gruyères Castle</Name>
+        <Ident>POI2405</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.083950" Lat="46.584660" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Poya Bridge - Switzerland</Name>
+        <Ident>POI2439</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.164350" Lat="46.813732" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bern</Name>
+        <Ident>POI2484</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.448926" Lat="46.947899" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Belp</Name>
+        <Ident>LSZB</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="7.499445" Lat="46.912228" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Trachselwald Castle</Name>
+        <Ident>POI2466</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.741939" Lat="47.017544" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Chasseral Antenna</Name>
+        <Ident>POI2380</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.060358" Lat="47.133163" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Valagin Castle</Name>
+        <Ident>POI2472</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.906992" Lat="47.014732" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>The Red Tower / Porrentruy Castle</Name>
+        <Ident>POI2464</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.072144" Lat="47.419094" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rolex Learning Center</Name>
+        <Ident>POI2446</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.568269" Lat="46.518291" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>La Barillette</Name>
+        <Ident>POI2419</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.125992" Lat="46.430370" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>La Dôle Radar Station</Name>
+        <Ident>POI2420</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.099672" Lat="46.425255" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Emosson Lake Dam</Name>
+        <Ident>POI2387</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.932314" Lat="46.067513" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Contra Dam</Name>
+        <Ident>POI2382</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.848456" Lat="46.196732" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Lichtenstein Castle</Name>
+        <Ident>POI2423</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.257844" Lat="48.406322" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Goldberg Water Tower</Name>
+        <Ident>POI2400</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.016444" Lat="48.700706" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ulm Minster</Name>
+        <Ident>POI2471</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.991814" Lat="48.398556" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Speyer Cathedral</Name>
+        <Ident>POI2460</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.441619" Lat="49.317287" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Frankfurt am Main</Name>
+        <Ident>POI2485</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.662819" Lat="50.109478" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hanau (Frankfurt)</Name>
+        <Ident>POI2486</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.667705" Lat="50.109024" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wilhelmsturm</Name>
+        <Ident>POI2476</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.285508" Lat="50.738281" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Junker Hansen Tower</Name>
+        <Ident>POI2413</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.115781" Lat="50.851208" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Edersee Dam</Name>
+        <Ident>POI2385</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.058589" Lat="51.183441" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Wilhelmshöhe Mountain Park</Name>
+        <Ident>POI2482</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.393492" Lat="51.315876" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Hanstein Castle</Name>
+        <Ident>POI2408</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.940256" Lat="51.339207" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Carolingian Westwork and Civitas Corvey</Name>
+        <Ident>POI2376</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.409639" Lat="51.778069" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Detmold Princely Residence Castle</Name>
+        <Ident>POI2383</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.877703" Lat="51.936268" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kaiser Wilhelm Monument</Name>
+        <Ident>POI2414</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.905367" Lat="52.245289" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Ahlen Water Tower</Name>
+        <Ident>POI2369</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.906058" Lat="51.741493" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nordkirchen Palace</Name>
+        <Ident>POI2431</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.534108" Lat="51.732056" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mohne Dam</Name>
+        <Ident>POI2428</Ident>
+        <Type>USER</Type>
+        <Pos Lon="8.059294" Lat="51.489704" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Muengstener Bridge</Name>
+        <Ident>POI2429</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.133603" Lat="51.160416" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Altenberger Cathedral</Name>
+        <Ident>POI2370</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.132903" Lat="51.055046" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Leverkusen-Bürrig Water Tower</Name>
+        <Ident>POI2422</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.983292" Lat="51.038715" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castle of Augustusburg at Brühl</Name>
+        <Ident>POI2377</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.907889" Lat="50.828323" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Castle of Falkenlust at Brühl</Name>
+        <Ident>POI2378</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.929239" Lat="50.819759" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Geierlay Suspension Bridge</Name>
+        <Ident>POI2396</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.341111" Lat="50.089909" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Passerelle Mimram</Name>
+        <Ident>POI2433</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.803544" Lat="48.569088" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Würzburg Residence</Name>
+        <Ident>POI2477</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.939008" Lat="49.792740" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Erfurt Cathedral and St. Severus Church</Name>
+        <Ident>POI2388</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.023225" Lat="50.976097" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Belvedere Castle</Name>
+        <Ident>POI2373</Ident>
+        <Type>USER</Type>
+        <Pos Lon="11.349075" Lat="50.948288" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Altenburg Castle</Name>
+        <Ident>POI2371</Ident>
+        <Type>USER</Type>
+        <Pos Lon="12.439592" Lat="50.988361" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Kriebstein Castle</Name>
+        <Ident>POI2418</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.017531" Lat="51.042465" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rakotz Bridge</Name>
+        <Ident>POI2441</Ident>
+        <Type>USER</Type>
+        <Pos Lon="14.640583" Lat="51.536263" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Soviet War Memorial Treptow</Name>
+        <Ident>POI2459</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.469342" Lat="52.487251" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Berlin</Name>
+        <Ident>POI2483</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.394839" Lat="52.516884" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Karow (Berlin)</Name>
+        <Ident>POI2487</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.481219" Lat="52.611637" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Grunewald Tower</Name>
+        <Ident>POI2404</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.196775" Lat="52.478207" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Potsdam</Name>
+        <Ident>POI2489</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.016328" Lat="52.425217" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Gustav Adolf Stave Church</Name>
+        <Ident>POI2406</Ident>
+        <Type>USER</Type>
+        <Pos Lon="10.340464" Lat="51.857086" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rendsburg High Bridge</Name>
+        <Ident>POI2443</Ident>
+        <Type>USER</Type>
+        <Pos Lon="9.682658" Lat="54.293488" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sellin Pier</Name>
+        <Ident>POI2456</Ident>
+        <Type>USER</Type>
+        <Pos Lon="13.698958" Lat="54.383423" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rostock-Laage</Name>
+        <Ident>ETNL</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="12.279289" Lat="53.918087" Alt="131.96"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>

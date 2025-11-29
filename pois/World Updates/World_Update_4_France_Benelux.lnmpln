@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LittleNavmap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://www.littlenavmap.org/schema/lnmpln.xsd">
+  <Flightplan>
+    <Header>
+      <FlightplanType>IFR</FlightplanType>
+      <CruisingAlt>2000</CruisingAlt>
+      <CruisingAltF>2000.00000000</CruisingAltF>
+      <CreationDate>2025-03-30T08:07:45+01:00</CreationDate>
+      <FileVersion>1.2</FileVersion>
+      <ProgramName>Little Navmap</ProgramName>
+      <ProgramVersion>3.0.13.beta1</ProgramVersion>
+      <Documentation>https://www.littlenavmap.org/lnmpln.html</Documentation>
+    </Header>
+    <SimData>MSFS24</SimData>
+    <NavData>MSFS24</NavData>
+    <AircraftPerformance>
+      <Type>C172</Type>
+      <Name>Example Performance Profile</Name>
+    </AircraftPerformance>
+    <Waypoints>
+      <Waypoint>
+        <Name>Nice/Cote d'Azur</Name>
+        <Ident>LFMN</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="7.215000" Lat="43.665279" Alt="10.34"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Allianz Riviera</Name>
+        <Ident>POI908</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.192603" Lat="43.705093" Alt="843.75"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Palais des Festivals</Name>
+        <Ident>POI960</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.017767" Lat="43.550106" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stade Vélodrome</Name>
+        <Ident>POI990</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.395897" Lat="43.269844" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Planier Light</Name>
+        <Ident>POI1007</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.230647" Lat="43.198822" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Arles Monuments</Name>
+        <Ident>POI910</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.630811" Lat="43.677788" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Palais des Papes</Name>
+        <Ident>POI961</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.807483" Lat="43.950848" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Mont Aiguille</Name>
+        <Ident>POI1009</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.549356" Lat="44.840431" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Sanctuaire Notre dame de la Salette</Name>
+        <Ident>POI983</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.978497" Lat="44.858383" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Perret Tower</Name>
+        <Ident>POI966</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.735419" Lat="45.184971" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Parc Olympique Lyonnais</Name>
+        <Ident>POI965</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.982028" Lat="45.765182" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Basilica of Notre-Dame de Fourvière</Name>
+        <Ident>POI912</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.822783" Lat="45.762226" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Metallic Tower of Fourvière</Name>
+        <Ident>POI951</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.822436" Lat="45.763905" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stade Geoffroy-Guichard</Name>
+        <Ident>POI987</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.390158" Lat="45.460739" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Megeve</Name>
+        <Ident>LFHM</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="6.648334" Lat="45.824444" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Royal Saltworks at Arc-et-Senans</Name>
+        <Ident>POI981</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.777669" Lat="47.033062" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Vézelay Abbey</Name>
+        <Ident>POI998</Ident>
+        <Type>USER</Type>
+        <Pos Lon="3.748492" Lat="47.466423" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Bourges Cathedral</Name>
+        <Ident>POI914</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.398739" Lat="47.082348" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Château de Chenonceau</Name>
+        <Ident>POI923</Ident>
+        <Type>USER</Type>
+        <Pos Lon="1.070114" Lat="47.325394" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Abbey Church of Saint-Savin</Name>
+        <Ident>POI905</Ident>
+        <Type>USER</Type>
+        <Pos Lon="0.865839" Lat="46.564339" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Fort Boyard</Name>
+        <Ident>POI943</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.213928" Lat="45.999645" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cordouan Lighthouse</Name>
+        <Ident>POI1001</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.173233" Lat="45.586285" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Nouveau Stade de Bordeaux</Name>
+        <Ident>POI956</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-0.561575" Lat="44.897312" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Phare du Cap Ferret</Name>
+        <Ident>POI967</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.248856" Lat="44.645954" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dune of Pilat</Name>
+        <Ident>POI939</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.213547" Lat="44.590431" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pic du Midi de Bigorre Observatory</Name>
+        <Ident>POI969</Ident>
+        <Type>USER</Type>
+        <Pos Lon="0.141936" Lat="42.936611" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stadium de Toulouse</Name>
+        <Ident>POI991</Ident>
+        <Type>USER</Type>
+        <Pos Lon="1.434069" Lat="43.583290" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Carcassonne</Name>
+        <Ident>POI917</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.364100" Lat="43.206802" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Château de Quéribus</Name>
+        <Ident>POI927</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.622061" Lat="42.836967" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Millau Viaduct</Name>
+        <Ident>POI952</Ident>
+        <Type>USER</Type>
+        <Pos Lon="3.021667" Lat="44.084583" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Château de Fontainebleau</Name>
+        <Ident>POI925</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.699872" Lat="48.402107" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Château de Vaux le Vicomte</Name>
+        <Ident>POI928</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.714072" Lat="48.566326" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pantheon (Paris - France)</Name>
+        <Ident>POI963</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.346414" Lat="48.846222" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cathédrale Notre-Dame de Paris</Name>
+        <Ident>POI921</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.350006" Lat="48.852962" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Paris</Name>
+        <Ident>POI1011</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.352222" Lat="48.856613" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Place de la Concorde</Name>
+        <Ident>POI970</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.321131" Lat="48.865482" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Avenue des Champs-Élysées</Name>
+        <Ident>POI911</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.310133" Lat="48.868984" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Arc de Triomphe</Name>
+        <Ident>POI909</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.295039" Lat="48.873798" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tour First</Name>
+        <Ident>POI995</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.251714" Lat="48.888783" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tour D2</Name>
+        <Ident>POI994</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.247867" Lat="48.890476" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tour Carpe Diem</Name>
+        <Ident>POI993</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.245656" Lat="48.891571" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Coeur Defense</Name>
+        <Ident>POI934</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.243742" Lat="48.891293" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tour Total</Name>
+        <Ident>POI997</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.243389" Lat="48.892807" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Framatome</Name>
+        <Ident>POI944</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.242175" Lat="48.892624" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>CNIT</Name>
+        <Ident>POI933</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.239542" Lat="48.892788" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Grand Arche De La Defense</Name>
+        <Ident>POI945</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.236044" Lat="48.892578" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Society General Complex</Name>
+        <Ident>POI984</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.230811" Lat="48.891964" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Engie</Name>
+        <Ident>POI940</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.240031" Lat="48.895363" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Tour Majunga</Name>
+        <Ident>POI996</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.243600" Lat="48.888973" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stade Jean-Bouin</Name>
+        <Ident>POI988</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.252931" Lat="48.843311" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Parc des Princes</Name>
+        <Ident>POI964</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.253069" Lat="48.841434" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Maine-Montparnasse Tower</Name>
+        <Ident>POI950</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.321986" Lat="48.842098" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stade de France</Name>
+        <Ident>POI985</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.360181" Lat="48.924397" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Château de Pierrefonds</Name>
+        <Ident>POI926</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.980289" Lat="49.346909" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Reims Cathedral</Name>
+        <Ident>POI977</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.034014" Lat="49.253891" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Douaumont Ossuary</Name>
+        <Ident>POI937</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.424828" Lat="49.207218" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Adolphe Bridge</Name>
+        <Ident>POI906</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.126767" Lat="49.608650" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rham-Plateau</Name>
+        <Ident>POI978</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.138492" Lat="49.609417" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Musée Dräi Eechelen</Name>
+        <Ident>POI953</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.139175" Lat="49.616341" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Grand Duke Jean Museum of Modern Art</Name>
+        <Ident>POI946</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.140322" Lat="49.617031" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Coque Sport Center</Name>
+        <Ident>POI935</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.153008" Lat="49.623508" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Vianden Castle</Name>
+        <Ident>POI999</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.202842" Lat="49.934849" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pont de Wandre</Name>
+        <Ident>POI974</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.643569" Lat="50.674095" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Citadel of Namur</Name>
+        <Ident>POI932</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.858681" Lat="50.457397" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Panorama of the Battle of Waterloo</Name>
+        <Ident>POI962</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.404800" Lat="50.678436" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Palais de Justice Brussels</Name>
+        <Ident>POI959</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.351628" Lat="50.836712" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>National Basilica Of the Sacred Heart</Name>
+        <Ident>POI955</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.316944" Lat="50.867073" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>King Baudouin Stadium</Name>
+        <Ident>POI949</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.334103" Lat="50.895687" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Palais de Justice Antwerp</Name>
+        <Ident>POI958</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.387364" Lat="51.204014" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cathedral Of Our Lady Antwerp</Name>
+        <Ident>POI919</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.401272" Lat="51.220318" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Museum aan de Stroom</Name>
+        <Ident>POI954</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.404842" Lat="51.228584" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Windmills at Kinderdijk</Name>
+        <Ident>POI1000</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.644717" Lat="51.880173" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Erasmus Bridge</Name>
+        <Ident>POI941</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.484844" Lat="51.909813" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rotterdam</Name>
+        <Ident>EHRD</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="4.437222" Lat="51.956944" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Maasvlakte Light</Name>
+        <Ident>POI1003</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.014339" Lat="51.970055" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rijksmuseum</Name>
+        <Ident>POI979</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.885275" Lat="52.359982" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Royal Palace Amsterdam</Name>
+        <Ident>POI980</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.891369" Lat="52.373199" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Oude Kerk Amsterdam</Name>
+        <Ident>POI957</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.897933" Lat="52.374348" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Amsterdam</Name>
+        <Ident>POI1010</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.904139" Lat="52.367573" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pythonbrug</Name>
+        <Ident>POI976</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.948894" Lat="52.373013" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Johan Cruyff Arena</Name>
+        <Ident>POI948</Ident>
+        <Type>USER</Type>
+        <Pos Lon="4.941872" Lat="52.314316" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Houtribdijk</Name>
+        <Ident>POI947</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.426664" Lat="52.622269" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Afsluitdijk</Name>
+        <Ident>POI907</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.219450" Lat="53.027168" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>De Grolsch Veste</Name>
+        <Ident>POI936</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.837850" Lat="52.236538" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Philips Stadion</Name>
+        <Ident>POI968</Ident>
+        <Type>USER</Type>
+        <Pos Lon="5.467453" Lat="51.441685" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Provinciaal Hof</Name>
+        <Ident>POI975</Ident>
+        <Type>USER</Type>
+        <Pos Lon="3.225103" Lat="51.208916" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Belfry of Bruges</Name>
+        <Ident>POI913</Ident>
+        <Type>USER</Type>
+        <Pos Lon="3.224781" Lat="51.208210" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Church of Our Lady Bruges</Name>
+        <Ident>POI930</Ident>
+        <Type>USER</Type>
+        <Pos Lon="3.224328" Lat="51.204807" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Citadel of Lille</Name>
+        <Ident>POI931</Ident>
+        <Type>USER</Type>
+        <Pos Lon="3.044550" Lat="50.640934" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stade Pierre-Mauroy</Name>
+        <Ident>POI989</Ident>
+        <Type>USER</Type>
+        <Pos Lon="3.130508" Lat="50.611916" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Canadian National Vimy Memorial</Name>
+        <Ident>POI916</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.773889" Lat="50.379574" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cathedrale Notre-Dame d'Amiens</Name>
+        <Ident>POI920</Ident>
+        <Type>USER</Type>
+        <Pos Lon="2.301642" Lat="49.894703" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Etretat Chalk Complex</Name>
+        <Ident>POI942</Ident>
+        <Type>USER</Type>
+        <Pos Lon="0.201781" Lat="49.708393" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pont de Normandie</Name>
+        <Ident>POI973</Ident>
+        <Type>USER</Type>
+        <Pos Lon="0.273386" Lat="49.437603" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Phare de Gatteville</Name>
+        <Ident>POI1004</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.265831" Lat="49.696438" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Roches-Douvres Light</Name>
+        <Ident>POI1008</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-2.814464" Lat="49.103840" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Château de Costaérès</Name>
+        <Ident>POI924</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.492561" Lat="48.835590" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Cairn of Barnenez</Name>
+        <Ident>POI915</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-3.858464" Lat="48.667648" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Île Vierge Lighthouse</Name>
+        <Ident>POI1002</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-4.567536" Lat="48.638813" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Phare de la Jument</Name>
+        <Ident>POI1005</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-5.117347" Lat="48.434715" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Phare d'Eckmühl</Name>
+        <Ident>POI1006</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-4.372786" Lat="47.798252" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Saint-Nazaire Bridge</Name>
+        <Ident>POI982</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-2.170733" Lat="47.285149" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Stade de la Beaujoire</Name>
+        <Ident>POI986</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-1.524706" Lat="47.256027" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Chartres Cathedral</Name>
+        <Ident>POI922</Ident>
+        <Type>USER</Type>
+        <Pos Lon="1.487822" Lat="48.447819" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Place Stanislas</Name>
+        <Ident>POI971</Ident>
+        <Type>USER</Type>
+        <Pos Lon="6.183283" Lat="48.693546" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Château du Haut-Kœnigsbourg</Name>
+        <Ident>POI929</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.344286" Lat="48.249458" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Strasbourg Cathedral</Name>
+        <Ident>POI992</Ident>
+        <Type>USER</Type>
+        <Pos Lon="7.750833" Lat="48.581795" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Pointe aux Canons Lighthouse</Name>
+        <Ident>POI972</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-56.166153" Lat="46.781380" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Dreyfus Tower</Name>
+        <Ident>POI938</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-52.626442" Lat="5.158611" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Caserne Loubère</Name>
+        <Ident>POI918</Ident>
+        <Type>USER</Type>
+        <Pos Lon="-52.337418" Lat="4.938469" Alt="2000.00"/>
+      </Waypoint>
+      <Waypoint>
+        <Name>Rochambeau</Name>
+        <Ident>SOCA</Ident>
+        <Type>AIRPORT</Type>
+        <Pos Lon="-52.361946" Lat="4.819645" Alt="19.82"/>
+      </Waypoint>
+    </Waypoints>
+  </Flightplan>
+</LittleNavmap>
