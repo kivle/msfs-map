@@ -10,6 +10,7 @@ export const preferenceKeys = [
   'courseLine',
   'shortcutMappings',
   'detectRetinaByMap',
+  'mapView',
   'websocketUrl'
 ];
 

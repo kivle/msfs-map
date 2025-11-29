@@ -10,6 +10,7 @@ import CourseLine from "./layers/CourseLine";
 import SearchRadiusCircle from "./layers/SearchRadiusCircle";
 import Plane from "./layers/Plane";
 import { useShortcutMappingsEffect } from "./shortcutHooks";
+import { MapViewPersistence } from "./components/MapViewPersistence";
 
 export default function MapContent() {
   const map = useMap();
@@ -38,6 +39,7 @@ export default function MapContent() {
 
   return (
     <>
+      <MapViewPersistence />
       <MainLayer currentMap={currentMap} detectRetina={detectRetina} />
       {!!isWikipediaEnabled && 
         <Wikipedia />
