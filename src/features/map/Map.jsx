@@ -4,6 +4,7 @@ import UI from './UI';
 import MapContent from "./MapContent";
 import styles from './Map.module.css';
 import localforage from "localforage";
+import 'maplibre-gl/dist/maplibre-gl.css';
 
 const defaultView = {
   center: [51.505, -0.09],

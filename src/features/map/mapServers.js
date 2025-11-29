@@ -101,8 +101,9 @@ function buildProviderVariant(providerName, variantName, providers) {
 
   return {
     id,
-    name: variantName ? `${providerName} - ${variantName}` : providerName,
+    name: `raster: ${variantName ? `${providerName} - ${variantName}` : providerName}`,
     type: 'tileServer',
+    renderType: 'raster',
     tileServer: url,
     attribution,
     tileOptions
@@ -129,18 +130,60 @@ function buildFreeProviders(providers) {
 const providers = L.TileLayer?.Provider?.providers ?? {};
 const servers = buildFreeProviders(providers);
 
-const openStreetMap = servers.find((s) => s.name === 'OpenStreetMap');
+const openStreetMap = servers.find((s) => s.id === 'OpenStreetMap');
 if (!openStreetMap) {
   servers.unshift({
     id: 'OpenStreetMap',
-    name: 'OpenStreetMap',
+    name: 'raster: OpenStreetMap',
     type: 'tileServer',
+    renderType: 'raster',
     tileServer: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     tileOptions: { maxZoom: 19 }
   });
 } else {
-  servers.sort((a, b) => (a.name === 'OpenStreetMap' ? -1 : b.name === 'OpenStreetMap' ? 1 : 0));
+  servers.sort((a, b) => (a.id === 'OpenStreetMap' ? -1 : b.id === 'OpenStreetMap' ? 1 : 0));
 }
 
-export default servers;
+const stadiaAttribution = '&copy; <a target="_blank" href="https://www.stadiamaps.com/">Stadia Maps</a> &copy; <a target="_blank" href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a target="_blank" href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>';
+
+const vectorMaps = [
+  {
+    id: 'vector-stadia-alidade-smooth',
+    name: 'vector: Stadia Alidade Smooth',
+    type: 'vectorStyle',
+    renderType: 'vector',
+    styleUrl: 'https://tiles.stadiamaps.com/styles/alidade_smooth.json',
+    attribution: stadiaAttribution
+  },
+  {
+    id: 'vector-stadia-outdoors',
+    name: 'vector: Stadia Outdoors',
+    type: 'vectorStyle',
+    renderType: 'vector',
+    styleUrl: 'https://tiles.stadiamaps.com/styles/outdoors.json',
+    attribution: stadiaAttribution
+  },
+  {
+    id: 'vector-stadia-osm-bright',
+    name: 'vector: Stadia OSM Bright',
+    type: 'vectorStyle',
+    renderType: 'vector',
+    styleUrl: 'https://tiles.stadiamaps.com/styles/osm_bright.json',
+    attribution: stadiaAttribution
+  }
+];
+
+const allMaps = [...servers, ...vectorMaps];
+
+const uniqueMaps = [];
+const seen = new Set();
+for (const m of allMaps) {
+  if (seen.has(m.id)) continue;
+  seen.add(m.id);
+  uniqueMaps.push(m);
+}
+
+uniqueMaps.sort((a, b) => (a.id === 'OpenStreetMap' ? -1 : b.id === 'OpenStreetMap' ? 1 : 0));
+
+export default uniqueMaps;
