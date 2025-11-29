@@ -16,7 +16,8 @@ const PreferencesPanel = React.memo(({
   changeEdition, edition, availableEditions, changeVoice, voice, 
   availableVoices, autoPlay, changeAutoPlay, 
   visualizeSearchRadius, changeVisualizeSearchRadius,
-  courseLine, changeShowCourseLine, connectedGamepads, shortcutMappings,
+  courseLine, changeShowCourseLine, detectRetina, changeDetectRetina,
+  connectedGamepads, shortcutMappings,
   changeShortcutMappings, websocketUrl, changeWebsocketUrl
 }) =>
   <>
@@ -44,6 +45,10 @@ const PreferencesPanel = React.memo(({
     <div className={styles.preference}>
       <label htmlFor="showCourseLine">Show course line</label>
       <input id="showCourseLine" type="checkbox" checked={courseLine} onChange={(e) => changeShowCourseLine(e.target.checked)} />
+    </div>
+    <div className={styles.preference}>
+      <label htmlFor="detectRetina">Use high-DPI tiles (may reduce label legibility)</label>
+      <input id="detectRetina" type="checkbox" checked={detectRetina} onChange={(e) => changeDetectRetina(e.target.checked)} />
     </div>
     <div className={styles.preference}>
       <label htmlFor="voice">Voice</label>
@@ -80,6 +85,7 @@ function PreferencesPanelContainer() {
     autoPlay,
     visualizeSearchRadius,
     courseLine,
+    detectRetina,
     shortcutMappings,
     websocketUrl
   } = usePreferenceState();
@@ -93,6 +99,7 @@ function PreferencesPanelContainer() {
     changeAutoPlay,
     changeVisualizeSearchRadius,
     changeShowCourseLine,
+    changeDetectRetina,
     changeShortcutMappings,
     changeWebsocketUrl
   } = usePreferenceCallbacks();
@@ -115,6 +122,8 @@ function PreferencesPanelContainer() {
     changeVisualizeSearchRadius={changeVisualizeSearchRadius}
     courseLine={courseLine}
     changeShowCourseLine={changeShowCourseLine}
+    detectRetina={detectRetina}
+    changeDetectRetina={changeDetectRetina}
     connectedGamepads={connectedGamepads}
     shortcutMappings={shortcutMappings}
     changeShortcutMappings={changeShortcutMappings}

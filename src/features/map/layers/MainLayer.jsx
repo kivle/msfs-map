@@ -3,7 +3,7 @@ import { TileLayer } from 'react-leaflet';
 
 import packageJson from '../../../../package.json';
 
-export const MainLayer = React.memo(({ currentMap }) => {
+export const MainLayer = React.memo(({ currentMap, detectRetina }) => {
   const attribution = 
     `&copy; <a target="_blank" href="https://en.wikipedia.org">Wikipedia</a>, ` +
     `${currentMap.attribution}, ` +
@@ -12,11 +12,14 @@ export const MainLayer = React.memo(({ currentMap }) => {
 
   let mainLayer = null;
 
-  const tileOptions = currentMap.tileOptions ?? {};
+  const tileOptions = {
+    detectRetina,
+    ...(currentMap.tileOptions ?? {})
+  };
 
   if (currentMap.type === 'tileServer') {
     mainLayer = <TileLayer
-      key={`${currentMap.name}-${currentMap.tileServer}`}
+      key={`${currentMap.id ?? currentMap.name}-${currentMap.tileServer}-${detectRetina ? 'retina' : 'standard'}`}
       attribution={attribution}
       url={currentMap.tileServer}
       {...tileOptions}

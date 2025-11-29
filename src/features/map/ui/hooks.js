@@ -9,7 +9,7 @@ import { setEdition, setEnabled } from "../../wikipedia/wikipediaSlice";
 import { 
   selectAvailableMaps, selectCourseLine, selectCurrentMap, 
   selectShortcutMappings, selectVisualizeSearchRadius, setCurrentMap, 
-  setShortcutMappings, setShowCourseLine, setVisualizeSearchRadius 
+  setShortcutMappings, setShowCourseLine, setVisualizeSearchRadius, selectDetectRetina, setDetectRetina 
 } from "../mapSlice";
 import { selectWebsocketUrl, setWebsocketUrl } from "../../simdata/simdataSlice";
 import { loadPreferences, savePreference } from "../../../utils/prefs";
@@ -35,6 +35,8 @@ export function useLoadPreferencesEffect() {
         dispatch(setVisualizeSearchRadius(prefs['visualizeSearchRadius']));
       if (prefs['courseLine'] !== undefined)
         dispatch(setShowCourseLine(prefs['courseLine']));
+      if (prefs['detectRetina'] !== undefined)
+        dispatch(setDetectRetina(prefs['detectRetina']));
       if (prefs['shortcutMappings'])
         dispatch(setShortcutMappings(prefs['shortcutMappings']));
       if (prefs['websocketUrl'])
@@ -54,6 +56,7 @@ export function usePreferenceState() {
   const autoPlay = useSelector(selectAutoPlay);
   const visualizeSearchRadius = useSelector(selectVisualizeSearchRadius);
   const courseLine = useSelector(selectCourseLine);
+  const detectRetina = useSelector(selectDetectRetina);
   const shortcutMappings = useSelector(selectShortcutMappings);
   const websocketUrl = useSelector(selectWebsocketUrl);
 
@@ -67,6 +70,7 @@ export function usePreferenceState() {
     autoPlay,
     visualizeSearchRadius,
     courseLine,
+    detectRetina,
     shortcutMappings,
     websocketUrl
   };
@@ -108,6 +112,11 @@ export function usePreferenceCallbacks() {
     dispatch(setShowCourseLine(enabled));
   }, [dispatch]);
 
+  const changeDetectRetina = useCallback(async (enabled) => {
+    dispatch(setDetectRetina(enabled));
+    savePreference('detectRetina', enabled).catch(() => {});
+  }, [dispatch]);
+
   const changeShortcutMappings = useCallback(async (mappings) => {
     await savePreference('shortcutMappings', mappings);
     dispatch(setShortcutMappings(mappings));
@@ -125,6 +134,7 @@ export function usePreferenceCallbacks() {
     changeAutoPlay,
     changeVisualizeSearchRadius,
     changeShowCourseLine,
+    changeDetectRetina,
     changeShortcutMappings,
     changeWebsocketUrl
   };

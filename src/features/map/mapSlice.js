@@ -13,6 +13,7 @@ export const mapSlice = createSlice({
     availableMaps: servers,
     visualizeSearchRadius: true,
     courseLine: false,
+    detectRetina: false,
     shortcutMappings: []
   },
   reducers: {
@@ -28,6 +29,9 @@ export const mapSlice = createSlice({
     setShowCourseLine: (state, action) => {
       state.courseLine = action.payload;
     },
+    setDetectRetina: (state, action) => {
+      state.detectRetina = action.payload;
+    },
     setShortcutMappings: (state, action) => {
       state.shortcutMappings = action.payload;
     }
@@ -40,6 +44,7 @@ export const {
   setIsFollowing,
   setVisualizeSearchRadius,
   setShowCourseLine,
+  setDetectRetina,
   setShortcutMappings
 } = mapSlice.actions;
 
@@ -55,6 +60,8 @@ export const selectIsFollowing = state => state.map.isFollowing;
 export const selectVisualizeSearchRadius = state => state.map.visualizeSearchRadius;
 
 export const selectCourseLine = state => state.map.courseLine;
+
+export const selectDetectRetina = state => state.map.detectRetina;
 
 export const selectShortcutMappings = state => state.map.shortcutMappings;
 
