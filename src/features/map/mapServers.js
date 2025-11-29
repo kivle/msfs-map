@@ -23,11 +23,6 @@ const KEY_OPTION_FIELDS = [
   'token'
 ];
 
-const PROVIDER_BLOCKLIST = new Set([
-  // Require API keys or commercial access even if not explicitly templated
-  'Stadia'
-]);
-
 function isHttpsUrl(url) {
   return typeof url === 'string' && url.startsWith('https://');
 }
@@ -41,7 +36,6 @@ function optionsContainKeys(options = {}) {
 }
 
 function providerRequiresApiKey(providerName, providerDefinition) {
-  if (PROVIDER_BLOCKLIST.has(providerName)) return true;
   if (!providerDefinition) return true;
 
   const urls = [providerDefinition.url];
