@@ -9,7 +9,7 @@ import { setEdition, setEnabled } from "../../wikipedia/wikipediaSlice";
 import {
   selectAvailableMaps, selectCourseLine, selectCurrentMap, 
   selectShortcutMappings, selectVisualizeSearchRadius, setCurrentMap, 
-  setShortcutMappings, setShowCourseLine, setVisualizeSearchRadius, selectDetectRetinaForCurrentMap, setDetectRetina, selectDetectRetinaByMap, setDetectRetinaMap, setMapLayers
+  setShortcutMappings, setShowCourseLine, setVisualizeSearchRadius, selectDetectRetinaForCurrentMap, setDetectRetina, selectDetectRetinaByMap, setDetectRetinaMap, setMapLayers, setMapLayersEnabled, selectMapLayersEnabled
 } from "../mapSlice";
 import { selectWebsocketUrl, setWebsocketUrl } from "../../simdata/simdataSlice";
 import { loadPreferences, savePreference } from "../../../utils/prefs";
@@ -68,6 +68,8 @@ export function useLoadPreferencesEffect() {
         dispatch(setWebsocketUrl(normalizeWebsocketUrl(prefs['websocketUrl'])));
       if (prefs['mapLayers'])
         dispatch(setMapLayers(prefs['mapLayers']));
+      if (prefs['mapLayersEnabled'] !== undefined)
+        dispatch(setMapLayersEnabled(!!prefs['mapLayersEnabled']));
     }
     load();
   }, [dispatch]);
@@ -86,6 +88,7 @@ export function usePreferenceState() {
   const detectRetina = useSelector(selectDetectRetinaForCurrentMap);
   const shortcutMappings = useSelector(selectShortcutMappings);
   const websocketUrl = useSelector(selectWebsocketUrl);
+  const mapLayersEnabled = useSelector(selectMapLayersEnabled);
 
   return {
     edition,
@@ -99,7 +102,8 @@ export function usePreferenceState() {
     courseLine,
     detectRetina,
     shortcutMappings,
-    websocketUrl
+    websocketUrl,
+    mapLayersEnabled
   };
 }
 
@@ -161,6 +165,11 @@ export function usePreferenceCallbacks() {
     dispatch(setWebsocketUrl(normalized));
   }, [dispatch]);
 
+  const setAllMapLayersEnabled = useCallback(async (enabled) => {
+    await savePreference('mapLayersEnabled', enabled);
+    dispatch(setMapLayersEnabled(enabled));
+  }, [dispatch]);
+
   return {
     changeEdition,
     changeVoice,
@@ -170,7 +179,8 @@ export function usePreferenceCallbacks() {
     changeShowCourseLine,
     changeDetectRetina,
     changeShortcutMappings,
-    changeWebsocketUrl
+    changeWebsocketUrl,
+    setAllMapLayersEnabled
   };
 }
 

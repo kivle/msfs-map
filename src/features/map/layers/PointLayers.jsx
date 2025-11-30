@@ -7,7 +7,7 @@ import { GeoJSON } from 'react-leaflet';
 import L from 'leaflet';
 import { useSelector } from 'react-redux';
 import { mapLayerDefinitions, defaultMapLayerVisibility } from '../mapLayers';
-import { selectMapLayerVisibility } from '../mapSlice';
+import { selectMapLayerVisibility, selectMapLayersEnabled } from '../mapSlice';
 
 const ensureTrailingSlash = (value) => value.endsWith('/') ? value : `${value}/`;
 const baseUrl = ensureTrailingSlash(import.meta?.env?.BASE_URL ?? '/');
@@ -153,6 +153,7 @@ function MapPointLayer({ layer }) {
 
 export default function PointLayers() {
   const visibility = useSelector(selectMapLayerVisibility);
+  const layersEnabled = useSelector(selectMapLayersEnabled);
   const resolvedVisibility = useMemo(() => ({
     ...defaultMapLayerVisibility,
     ...(visibility ?? {})
@@ -165,6 +166,8 @@ export default function PointLayers() {
       ? new URL(layer.fileName, window.location.origin).toString()
       : null
   })), []);
+
+  if (!layersEnabled) return null;
 
   return layerSources
     .filter((layer) => resolvedVisibility[layer.id])

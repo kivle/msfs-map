@@ -21,6 +21,14 @@
   gap: 6px;
 }
 
+.globalToggle {
+  margin-top: 4px;
+}
+
+.childLayer {
+  margin-left: 10px;
+}
+
 .layerButton {
   display: flex;
   align-items: center;
@@ -47,6 +55,13 @@
   border-color: #0d6efd;
   background: linear-gradient(180deg, #e8f1ff 0%, #ddebff 100%);
   box-shadow: 0 0 0 1px rgba(13, 110, 253, 0.15);
+}
+
+.layerButton.disabled {
+  background: #f0f0f0;
+  border-color: #d8d8d8;
+  box-shadow: none;
+  color: #6f6f6f;
 }
 
 .color {

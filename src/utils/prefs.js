@@ -12,7 +12,8 @@ export const preferenceKeys = [
   'detectRetinaByMap',
   'mapView',
   'websocketUrl',
-  'mapLayers'
+  'mapLayers',
+  'mapLayersEnabled'
 ];
 
 export async function loadPreferences() {
