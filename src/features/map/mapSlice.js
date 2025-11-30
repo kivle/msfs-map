@@ -17,7 +17,8 @@ export const mapSlice = createSlice({
     detectRetinaByMap: {},
     shortcutMappings: [],
     mapLayers: defaultMapLayerVisibility,
-    mapLayersEnabled: false
+    mapLayersEnabled: false,
+    preferencesLoaded: false
   },
   reducers: {
     setCurrentMap: (state, action) => {
@@ -64,6 +65,9 @@ export const mapSlice = createSlice({
     },
     setMapLayersEnabled: (state, action) => {
       state.mapLayersEnabled = !!action.payload;
+    },
+    setPreferencesLoaded: (state, action) => {
+      state.preferencesLoaded = !!action.payload;
     }
   },
 });
@@ -78,7 +82,8 @@ export const {
   setShortcutMappings,
   setMapLayers,
   setMapLayerEnabled,
-  setMapLayersEnabled
+  setMapLayersEnabled,
+  setPreferencesLoaded
 } = mapSlice.actions;
 
 export const selectCurrentMap = createSelector(
@@ -122,6 +127,8 @@ export const selectMapLayerVisibility = createSelector(
 );
 
 export const selectMapLayersEnabled = state => !!state.map.mapLayersEnabled;
+
+export const selectPreferencesLoaded = state => !!state.map.preferencesLoaded;
 
 const courseLinePointInterval = 500;
 const courseLineLength = 10000;

@@ -13,6 +13,7 @@ import {
 } from "../mapSlice";
 import { selectWebsocketUrl, setWebsocketUrl } from "../../simdata/simdataSlice";
 import { loadPreferences, savePreference } from "../../../utils/prefs";
+import { setPreferencesLoaded } from "../mapSlice";
 
 const websocketDefaultPort = '9000';
 const websocketDefaultPath = '/ws';
@@ -70,6 +71,7 @@ export function useLoadPreferencesEffect() {
         dispatch(setMapLayers(prefs['mapLayers']));
       if (prefs['mapLayersEnabled'] !== undefined)
         dispatch(setMapLayersEnabled(!!prefs['mapLayersEnabled']));
+      dispatch(setPreferencesLoaded(true));
     }
     load();
   }, [dispatch]);
