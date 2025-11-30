@@ -6,6 +6,7 @@ import { selectCourseLine, selectCurrentMap, selectDetectRetinaForCurrentMap, se
 import { selectIsEnabled } from '../wikipedia/wikipediaSelectors';
 import { MainLayer } from "./layers/MainLayer";
 import { selectSimdata } from "../simdata/simdataSlice";
+import PointLayers from "./layers/PointLayers";
 import CourseLine from "./layers/CourseLine";
 import SearchRadiusCircle from "./layers/SearchRadiusCircle";
 import Plane from "./layers/Plane";
@@ -48,6 +49,7 @@ export default function MapContent() {
     <>
       <MapViewPersistence />
       <MainLayer currentMap={currentMap} detectRetina={detectRetina} />
+      <PointLayers />
       {!!isWikipediaEnabled && 
         <Wikipedia />
       }

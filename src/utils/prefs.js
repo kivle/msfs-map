@@ -11,7 +11,8 @@ export const preferenceKeys = [
   'shortcutMappings',
   'detectRetinaByMap',
   'mapView',
-  'websocketUrl'
+  'websocketUrl',
+  'mapLayers'
 ];
 
 export async function loadPreferences() {

@@ -4,6 +4,7 @@ import { computeDestinationPoint } from 'geolib';
 import servers from './mapServers';
 import { selectSimdata } from '../simdata/simdataSlice';
 import { arrayToGeolibPoint, geolibToArrayPoint } from '../../utils/geo';
+import { defaultMapLayerVisibility } from './mapLayers';
 
 export const mapSlice = createSlice({
   name: 'map',
@@ -14,7 +15,8 @@ export const mapSlice = createSlice({
     visualizeSearchRadius: true,
     courseLine: false,
     detectRetinaByMap: {},
-    shortcutMappings: []
+    shortcutMappings: [],
+    mapLayers: defaultMapLayerVisibility
   },
   reducers: {
     setCurrentMap: (state, action) => {
@@ -43,6 +45,21 @@ export const mapSlice = createSlice({
     },
     setShortcutMappings: (state, action) => {
       state.shortcutMappings = action.payload;
+    },
+    setMapLayers: (state, action) => {
+      state.mapLayers = {
+        ...defaultMapLayerVisibility,
+        ...(action.payload ?? {})
+      };
+    },
+    setMapLayerEnabled: (state, action) => {
+      const { layerId, enabled } = action.payload ?? {};
+      if (!layerId) return;
+      state.mapLayers = {
+        ...defaultMapLayerVisibility,
+        ...(state.mapLayers ?? {}),
+        [layerId]: enabled
+      };
     }
   },
 });
@@ -55,7 +72,9 @@ export const {
   setShowCourseLine,
   setDetectRetina,
   setDetectRetinaMap,
-  setShortcutMappings
+  setShortcutMappings,
+  setMapLayers,
+  setMapLayerEnabled
 } = mapSlice.actions;
 
 export const selectCurrentMap = state => {
@@ -80,6 +99,11 @@ export const selectDetectRetinaForCurrentMap = createSelector(
 );
 
 export const selectShortcutMappings = state => state.map.shortcutMappings;
+
+export const selectMapLayerVisibility = state => ({
+  ...defaultMapLayerVisibility,
+  ...(state.map.mapLayers ?? {})
+});
 
 const courseLinePointInterval = 500;
 const courseLineLength = 10000;

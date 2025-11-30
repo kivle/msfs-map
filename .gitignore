@@ -12,6 +12,9 @@
 /build
 /dist
 
+# generated map data
+/public/*.geojson
+
 # misc
 .DS_Store
 .env.local

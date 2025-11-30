@@ -6,10 +6,10 @@ import {
   selectEdition,
 } from "../../wikipedia/wikipediaSelectors";
 import { setEdition, setEnabled } from "../../wikipedia/wikipediaSlice";
-import { 
+import {
   selectAvailableMaps, selectCourseLine, selectCurrentMap, 
   selectShortcutMappings, selectVisualizeSearchRadius, setCurrentMap, 
-  setShortcutMappings, setShowCourseLine, setVisualizeSearchRadius, selectDetectRetinaForCurrentMap, setDetectRetina, selectDetectRetinaByMap, setDetectRetinaMap 
+  setShortcutMappings, setShowCourseLine, setVisualizeSearchRadius, selectDetectRetinaForCurrentMap, setDetectRetina, selectDetectRetinaByMap, setDetectRetinaMap, setMapLayers
 } from "../mapSlice";
 import { selectWebsocketUrl, setWebsocketUrl } from "../../simdata/simdataSlice";
 import { loadPreferences, savePreference } from "../../../utils/prefs";
@@ -41,6 +41,8 @@ export function useLoadPreferencesEffect() {
         dispatch(setShortcutMappings(prefs['shortcutMappings']));
       if (prefs['websocketUrl'])
         dispatch(setWebsocketUrl(prefs['websocketUrl']));
+      if (prefs['mapLayers'])
+        dispatch(setMapLayers(prefs['mapLayers']));
     }
     load();
   }, [dispatch]);

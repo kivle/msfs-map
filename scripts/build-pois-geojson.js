@@ -3,37 +3,54 @@ const path = require('path');
 
 const repoRoot = path.join(__dirname, '..');
 const poisBase = path.join(repoRoot, 'pois');
-const outputDir = process.env.GEOJSON_OUTPUT_DIR || path.join(repoRoot, 'dist');
+
+function parseOutputDirs() {
+  const multi = process.env.GEOJSON_OUTPUT_DIRS;
+  if (multi) {
+    return multi.split(',')
+      .map((dir) => dir.trim())
+      .filter(Boolean)
+      .map((dir) => path.isAbsolute(dir) ? dir : path.join(repoRoot, dir));
+  }
+  const single = process.env.GEOJSON_OUTPUT_DIR;
+  if (single) {
+    return [path.isAbsolute(single) ? single : path.join(repoRoot, single)];
+  }
+  // Default: write to both dist (deploy) and public (dev server)
+  return [path.join(repoRoot, 'dist'), path.join(repoRoot, 'public')];
+}
+
+const outputDirs = Array.from(new Set(parseOutputDirs()));
 
 const targets = [
   {
     name: 'world_updates',
     inputDir: path.join(poisBase, 'World Updates'),
-    output: path.join(outputDir, 'world_updates.geojson'),
+    outputFile: 'world_updates.geojson',
     mode: 'all-files'
   },
   {
     name: 'city_updates',
     inputDir: path.join(poisBase, 'City Updates'),
-    output: path.join(outputDir, 'city_updates.geojson'),
+    outputFile: 'city_updates.geojson',
     mode: 'all-files'
   },
   {
     name: 'photogammetry',
     inputDir: path.join(poisBase, 'Core'),
-    output: path.join(outputDir, 'photogammetry.geojson'),
+    outputFile: 'photogammetry.geojson',
     files: ['Core Sim - 3D_cities_Photogrammetry - Core Sim.csv']
   },
   {
     name: 'airports',
     inputDir: path.join(poisBase, 'Core'),
-    output: path.join(outputDir, 'airports.geojson'),
+    outputFile: 'airports.geojson',
     files: ['Core Sim - Airports_Standard_Deluxe_Premium.csv']
   },
   {
     name: 'pois',
     inputDir: path.join(poisBase, 'Core'),
-    output: path.join(outputDir, 'pois.geojson'),
+    outputFile: 'pois.geojson',
     files: ['Core Sim - Points_of_Interest.csv']
   }
 ];
@@ -114,7 +131,7 @@ function listCsvFiles(dir) {
     .map((file) => path.join(dir, file));
 }
 
-function buildTarget({ inputDir, output, files, mode }) {
+function buildTarget({ inputDir, outputFile, files, mode }) {
   const inputFiles = mode === 'all-files'
     ? listCsvFiles(inputDir)
     : (files ?? []).map((f) => path.join(inputDir, f)).filter((f) => fs.existsSync(f));
@@ -149,9 +166,12 @@ function buildTarget({ inputDir, output, files, mode }) {
     features
   };
 
-  fs.mkdirSync(path.dirname(output), { recursive: true });
-  fs.writeFileSync(output, JSON.stringify(geojson, null, 2));
-  console.log(`Wrote ${features.length} features to ${output}`);
+  outputDirs.forEach((dir) => {
+    const outputPath = path.join(dir, outputFile);
+    fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+    fs.writeFileSync(outputPath, JSON.stringify(geojson, null, 2));
+    console.log(`Wrote ${features.length} features to ${outputPath}`);
+  });
 }
 
 targets.forEach(buildTarget);
