@@ -14,6 +14,31 @@ import {
 import { selectWebsocketUrl, setWebsocketUrl } from "../../simdata/simdataSlice";
 import { loadPreferences, savePreference } from "../../../utils/prefs";
 
+const websocketDefaultPort = '9000';
+const websocketDefaultPath = '/ws';
+
+function normalizeWebsocketUrl(value) {
+  const trimmed = (value ?? '').trim();
+  if (!trimmed) return '';
+
+  const hasProtocol = /^wss?:\/\//i.test(trimmed);
+  const urlString = hasProtocol ? trimmed : `ws://${trimmed}`;
+
+  try {
+    const url = new URL(urlString);
+    if (!url.port) {
+      url.port = websocketDefaultPort;
+    }
+    if (!url.pathname || url.pathname === '/') {
+      url.pathname = websocketDefaultPath;
+    }
+    return url.toString();
+  } catch {
+    // Fall back to original input if parsing fails; caller can still handle it.
+    return trimmed;
+  }
+}
+
 export function useLoadPreferencesEffect() {
   const dispatch = useDispatch();
 
@@ -40,7 +65,7 @@ export function useLoadPreferencesEffect() {
       if (prefs['shortcutMappings'])
         dispatch(setShortcutMappings(prefs['shortcutMappings']));
       if (prefs['websocketUrl'])
-        dispatch(setWebsocketUrl(prefs['websocketUrl']));
+        dispatch(setWebsocketUrl(normalizeWebsocketUrl(prefs['websocketUrl'])));
       if (prefs['mapLayers'])
         dispatch(setMapLayers(prefs['mapLayers']));
     }
@@ -131,8 +156,9 @@ export function usePreferenceCallbacks() {
   }, [dispatch]);
 
   const changeWebsocketUrl = useCallback(async (newUrl) => {
-    await savePreference('websocketUrl', newUrl);
-    dispatch(setWebsocketUrl(newUrl));
+    const normalized = normalizeWebsocketUrl(newUrl);
+    await savePreference('websocketUrl', normalized);
+    dispatch(setWebsocketUrl(normalized));
   }, [dispatch]);
 
   return {

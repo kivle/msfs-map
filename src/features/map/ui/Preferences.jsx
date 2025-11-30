@@ -16,7 +16,7 @@ const PreferencesPanel = React.memo(({
   visualizeSearchRadius, changeVisualizeSearchRadius,
   courseLine, changeShowCourseLine, detectRetina, changeDetectRetina,
   connectedGamepads, shortcutMappings,
-  changeShortcutMappings, websocketUrl, changeWebsocketUrl
+  changeShortcutMappings, websocketUrlInput, onWebsocketInputChange, onWebsocketInputBlur
 }) =>
   <>
     <div className={styles.preference}>
@@ -59,8 +59,15 @@ const PreferencesPanel = React.memo(({
       <input id="autoPlay" type="checkbox" checked={autoPlay} onChange={(e) => changeAutoPlay(e.target.checked)} />
     </div>
     <div className={styles.preference}>
-      <label htmlFor="websocketUrl">URL to vfrmap server (leave blank for default)</label>
-      <input id="websocketUrl" type="text" placeholder="ws://localhost:9000/ws" onChange={(e) => changeWebsocketUrl(e.target.value)} />
+      <label htmlFor="websocketUrl">URL or IP to vfrmap server (leave blank for default)</label>
+      <input
+        id="websocketUrl"
+        type="text"
+        placeholder="ws://localhost:9000/ws"
+        value={websocketUrlInput}
+        onChange={(e) => onWebsocketInputChange(e.target.value)}
+        onBlur={() => onWebsocketInputBlur(websocketUrlInput)}
+      />
     </div>
     <div className={styles.preference}>
       <ShortcutMappings
@@ -103,6 +110,19 @@ function PreferencesPanelContainer() {
   } = usePreferenceCallbacks();
   
   const connectedGamepads = useConnectedGamepads();
+  const [websocketUrlInput, setWebsocketUrlInput] = React.useState(websocketUrl || '');
+
+  React.useEffect(() => {
+    setWebsocketUrlInput(websocketUrl || '');
+  }, [websocketUrl]);
+
+  const handleWebsocketInputChange = React.useCallback((value) => {
+    setWebsocketUrlInput(value);
+  }, []);
+
+  const handleWebsocketInputBlur = React.useCallback((value) => {
+    changeWebsocketUrl(value);
+  }, [changeWebsocketUrl]);
 
   return <PreferencesPanel
     changeMap={changeMap}
@@ -125,8 +145,9 @@ function PreferencesPanelContainer() {
     connectedGamepads={connectedGamepads}
     shortcutMappings={shortcutMappings}
     changeShortcutMappings={changeShortcutMappings}
-    websocketUrl={websocketUrl}
-    changeWebsocketUrl={changeWebsocketUrl}
+    websocketUrlInput={websocketUrlInput}
+    onWebsocketInputChange={handleWebsocketInputChange}
+    onWebsocketInputBlur={handleWebsocketInputBlur}
   />;
 }
 
