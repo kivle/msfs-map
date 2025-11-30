@@ -14,30 +14,24 @@ const baseUrl = ensureTrailingSlash(import.meta?.env?.BASE_URL ?? '/');
 
 const geojsonCache = new Map();
 
-const cityIcons = {
-  Airport: FaPlaneDeparture,
-  Building: FaBuilding,
-  Landform: MdTerrain,
-  Park: FaTree,
-  Settlement: MdLocationCity
-};
-const poiIcons = {
-  Building: FaBuilding,
-  Landform: MdTerrain,
-  Lighthouse: GiLighthouse,
-  Mountain: FaMountain
-};
-const worldUpdateIcons = {
+// Unified mapping from Type -> icon component so layers render consistently.
+const typeIconMap = {
   Airport: FaPlaneDeparture,
   Building: FaBuilding,
   Helipad: FaHelicopter,
   Landform: MdTerrain,
   Lighthouse: GiLighthouse,
   Mountain: FaMountain,
-  POI: FaMapMarkerAlt,
   Park: FaTree,
+  POI: FaMapMarkerAlt,
   Seaport: FaShip,
   Settlement: MdLocationCity
+};
+
+// Layer-level fallback types when a feature lacks a Type value.
+const layerDefaultType = {
+  coreAirports: 'Airport',
+  photogammetry: 'Settlement'
 };
 
 function useGeoJson(url, fallbackUrl) {
@@ -86,11 +80,7 @@ function buildTooltip(feature, fallbackLabel) {
 
 function MapPointLayer({ layer }) {
   const { data } = useGeoJson(layer.url, layer.fallbackUrl);
-  const isCityUpdates = layer.id === 'cityUpdates';
-  const isAirportLayer = layer.id === 'coreAirports';
-  const isPhotogammetry = layer.id === 'photogammetry';
-  const isPoiLayer = layer.id === 'corePois';
-  const isWorldUpdates = layer.id === 'worldUpdates';
+  const layerDefault = layerDefaultType[layer.id];
 
   const pointToLayer = useMemo(() => {
     const createIconMarker = (latlng, IconComponent) => {
@@ -119,41 +109,24 @@ function MapPointLayer({ layer }) {
       });
     };
 
-    if (isCityUpdates) {
-      return (feature, latlng) => {
-        const type = feature?.properties?.Type;
-        const IconComponent = cityIcons[type] || MdLocationCity;
+    return (feature, latlng) => {
+      const type = feature?.properties?.Type || layerDefault;
+      const IconComponent = type ? typeIconMap[type] : undefined;
+
+      if (IconComponent) {
         return createIconMarker(latlng, IconComponent);
-      };
-    }
-    if (isAirportLayer) {
-      return (_, latlng) => createIconMarker(latlng, FaPlaneDeparture);
-    }
-    if (isPhotogammetry) {
-      return (_, latlng) => createIconMarker(latlng, MdLocationCity);
-    }
-    if (isPoiLayer) {
-      return (feature, latlng) => {
-        const type = feature?.properties?.Type;
-        const IconComponent = poiIcons[type] || MdLocationCity;
-        return createIconMarker(latlng, IconComponent);
-      };
-    }
-    if (isWorldUpdates) {
-      return (feature, latlng) => {
-        const type = feature?.properties?.Type;
-        const IconComponent = worldUpdateIcons[type] || MdLocationCity;
-        return createIconMarker(latlng, IconComponent);
-      };
-    }
-    return (feature, latlng) => L.circleMarker(latlng, {
-      radius: 5,
-      color: layer.color,
-      weight: 1,
-      fillColor: layer.color,
-      fillOpacity: 0.9
-    });
-  }, [isAirportLayer, isCityUpdates, isPhotogammetry, isPoiLayer, isWorldUpdates, layer.color]);
+      }
+
+      // Fallback: render as a simple dot if no icon is mapped for this Type.
+      return L.circleMarker(latlng, {
+        radius: 5,
+        color: layer.color,
+        weight: 1,
+        fillColor: layer.color,
+        fillOpacity: 0.9
+      });
+    };
+  }, [layer.color, layerDefault]);
 
   const onEachFeature = useMemo(() => (feature, leafletLayer) => {
     const tooltip = buildTooltip(feature, layer.label);
