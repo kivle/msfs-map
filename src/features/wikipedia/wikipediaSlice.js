@@ -8,7 +8,7 @@ export const wikipediaSlice = createSlice({
   name: 'wikipedia',
   initialState: {
     edition: 'en',
-    isEnabled: true,
+    isEnabled: false,
     availableEditions: wikipediaEditions,
     pages: [],
     calculatedData: {},
