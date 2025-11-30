@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import PlaneInfo from './ui/PlaneInfo';
-import Preferences from './ui/Preferences';
+import SettingsPanel from './ui/SettingsPanel';
 import ButtonBar from './ui/ButtonBar';
 import TtsPanel from './ui/TtsPanel';
 
@@ -11,7 +11,7 @@ export default function UI() {
   return (
     <div className={styles.ui}>
       <PlaneInfo />
-      <Preferences />
+      <SettingsPanel />
       <ButtonBar />
       <TtsPanel />
     </div>

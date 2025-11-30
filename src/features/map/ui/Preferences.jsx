@@ -1,11 +1,9 @@
 import * as React from 'react';
 import ISO6391 from 'iso-639-1';
 import styles from './Preferences.module.css';
-import { FaCog, FaCaretRight } from 'react-icons/fa';
 import { 
   useAvailableVoicesEffect, 
   useConnectedGamepads, 
-  useExpandedState, 
   usePreferenceCallbacks, 
   usePreferenceState 
 } from './hooks';
@@ -132,21 +130,4 @@ function PreferencesPanelContainer() {
   />;
 }
 
-export default function Preferences() {
-  const {
-    toggleExpanded,
-    expanded
-  } = useExpandedState();
-
-  return (
-    <div className={styles.main}>
-      <button 
-        className={`${styles.preferenceButton}${expanded ? ` ${styles.expanded}` : ''}`}
-        onClick={toggleExpanded}>
-        <FaCog size="100%" />
-        <FaCaretRight className={styles.caret} />
-      </button>
-      {!!expanded && <PreferencesPanelContainer />}
-    </div>
-  );
-};
+export { PreferencesPanelContainer };

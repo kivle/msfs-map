@@ -1,0 +1,41 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(0,0,0,0.2);
+  padding: 4px;
+  position: absolute;
+  left: 10px;
+  top: calc(90px + 48px);
+  z-index: 1000;
+  border: 2px solid rgba(0,0,0,0.2);
+  background-color: white;
+}
+
+.buttonRow {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+}
+
+.preferenceButton {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 2px;
+  position: relative;
+}
+
+.preferenceButton.expanded {
+  filter: invert();
+}
+
+.caret {
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  transform: rotate(45deg);
+  font-size: 16px;
+}

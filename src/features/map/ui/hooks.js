@@ -162,15 +162,15 @@ export function useAvailableVoicesEffect() {
 }
 
 export function useExpandedState() {
-  const [expanded, setExpanded] = useState(false);
+  const [openPanel, setOpenPanel] = useState(null);
 
-  const toggleExpanded = useCallback((e) => {
-    setExpanded(!expanded);
-  }, [expanded]);
+  const togglePanel = useCallback((panel) => {
+    setOpenPanel((current) => current === panel ? null : panel);
+  }, []);
 
   return {
-    toggleExpanded,
-    expanded
+    togglePanel,
+    openPanel
   };
 }
 
