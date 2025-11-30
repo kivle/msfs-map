@@ -9,6 +9,8 @@ These commands ensure that dependencies install correctly and the project builds
 
 All commits must include a well-formed, expressive commit message summarizing what changed and why.
 
+Do not stage or commit changes unless explicitly requested by the user.
+
 Additional findings about this project:
 - Frontend uses Vite with React 19 and Redux Toolkit slices for map, simdata (websocket feed), Wikipedia, and TTS state.
 - The sim connection is opened via `useVfrmapConnection` (default `ws://localhost:9000/ws`) and auto-reconnects; it expects the patched `vfrmap.exe` noted in README.
