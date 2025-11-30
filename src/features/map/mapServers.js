@@ -94,6 +94,9 @@ function buildProviderVariant(providerName, variantName, providers) {
 
   if (url.includes('{variant}') && resolvedVariant) {
     url = url.replace('{variant}', resolvedVariant);
+  } else if (url.includes('{variant}')) {
+    // Skip providers whose URL templates require a variant we don't know.
+    return undefined;
   }
 
   const attribution = resolveAttribution(options.attribution, providers);
@@ -180,6 +183,7 @@ const uniqueMaps = [];
 const seen = new Set();
 for (const m of allMaps) {
   if (seen.has(m.id)) continue;
+  if (m.tileServer && m.tileServer.includes('{variant}')) continue;
   seen.add(m.id);
   uniqueMaps.push(m);
 }

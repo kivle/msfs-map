@@ -82,10 +82,17 @@ export const {
   setMapLayersEnabled
 } = mapSlice.actions;
 
-export const selectCurrentMap = state => {
-  const available = state.map.availableMaps ?? [];
-  return available.find(m => m.id === state.map.currentMap) ?? available[0];
-};
+export const selectCurrentMap = createSelector(
+  [
+    state => state.map.availableMaps ?? [],
+    state => state.map.currentMap
+  ],
+  (available, currentId) => {
+    const isValid = (m) => m && !m.tileServer?.includes?.('{variant}');
+    const validMap = available.find((m) => m.id === currentId && isValid(m));
+    return validMap ?? available.find(isValid) ?? available[0];
+  }
+);
 
 export const selectAvailableMaps = state => state.map.availableMaps;
 
@@ -105,10 +112,15 @@ export const selectDetectRetinaForCurrentMap = createSelector(
 
 export const selectShortcutMappings = state => state.map.shortcutMappings;
 
-export const selectMapLayerVisibility = state => ({
-  ...defaultMapLayerVisibility,
-  ...(state.map.mapLayers ?? {})
-});
+const selectMapLayersState = state => state.map.mapLayers ?? {};
+
+export const selectMapLayerVisibility = createSelector(
+  selectMapLayersState,
+  (layers) => ({
+    ...defaultMapLayerVisibility,
+    ...layers
+  })
+);
 
 export const selectMapLayersEnabled = state => !!state.map.mapLayersEnabled;
 

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'msfs-map-cache-v1';
+const CACHE_NAME = 'msfs-map-cache-v2';
 const CORE_ASSETS = [
   './',
   './index.html',
@@ -12,12 +12,14 @@ const withScope = (path) => new URL(path, self.registration.scope).toString();
 const assetsToCache = CORE_ASSETS.map(withScope);
 
 self.addEventListener('install', (event) => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => cache.addAll(assetsToCache))
   );
 });
 
 self.addEventListener('activate', (event) => {
+  self.clientsClaim();
   event.waitUntil(
     caches.keys().then((keys) =>
       Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k)))

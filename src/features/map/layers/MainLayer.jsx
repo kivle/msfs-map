@@ -86,7 +86,13 @@ export const MainLayer = React.memo(({ currentMap, detectRetina }) => {
     ...(currentMap.tileOptions ?? {})
   };
 
+  const hasUnknownVariant = currentMap?.tileServer?.includes?.('{variant}');
+
   if (currentMap.type === 'tileServer') {
+    if (hasUnknownVariant) {
+      console.warn('Skipping tile layer with unresolved variant', currentMap);
+      return null;
+    }
     mainLayer = <TileLayer
       key={`${currentMap.id ?? currentMap.name}-${currentMap.tileServer}-${detectRetina ? 'retina' : 'standard'}`}
       attribution={attribution}
