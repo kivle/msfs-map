@@ -26,6 +26,12 @@
   height: 32px;
   padding: 2px;
   position: relative;
+  border: 1px solid #bfbfbf;
+  background: #fff;
+  border-radius: 4px;
+  color: inherit;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .preferenceButton.expanded {
