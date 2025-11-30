@@ -23,7 +23,8 @@ export function useShortcutMappingsEffect() {
           const gamepad = connectedGamepads.find(
             gamepad => gamepad?.id === mapping.gamepadId
           );
-          if (gamepad && gamepad.buttons.length >= buttonId) {
+          const hasButton = Number.isInteger(buttonId) && buttonId >= 0 && gamepad && gamepad.buttons.length > buttonId;
+          if (hasButton) {
             const pressed = gamepad.buttons[buttonId].pressed;
             if (pressed && !mappingButtonStates[idx]) {
               switch (mapping.action) {

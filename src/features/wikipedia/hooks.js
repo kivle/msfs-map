@@ -7,7 +7,6 @@ import {
   selectEdition,
   selectIsEnabled,
   selectLastSearchPosition,
-  selectLastSearchRadius,
   selectLastSearchTime,
   selectSearchCenterPoint,
   selectSearchRadius,
@@ -18,7 +17,6 @@ export function usePeriodicWikipediaFetching(minimumInterval = 20000) {
   const dispatch = useDispatch();
   const isEnabled = useSelector(selectIsEnabled);
   const lastSearchPosition = useSelector(selectLastSearchPosition);
-  const lastSearchRadius = useSelector(selectLastSearchRadius);
   const lastSearchTime = useSelector(selectLastSearchTime);
   const searchRadius = useSelector(selectSearchRadius);
   const searchCenterPoint = useSelector(selectSearchCenterPoint);
@@ -39,7 +37,7 @@ export function usePeriodicWikipediaFetching(minimumInterval = 20000) {
   [
     dispatch, isEnabled, 
     searchCenterPoint, lastSearchPosition,
-    searchRadius, lastSearchRadius, 
+    searchRadius, 
     lastSearchTime, minimumInterval
   ]);
 }

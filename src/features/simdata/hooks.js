@@ -1,12 +1,13 @@
 import { useEffect } from "react";
-import { useDispatch, useStore } from "react-redux";
-import { setConnected, updateData } from "./simdataSlice";
+import { useDispatch, useSelector, useStore } from "react-redux";
+import { selectWebsocketUrl, setConnected, updateData } from "./simdataSlice";
 
 const defaultUrl = "ws://localhost:9000/ws";
 
 export function useVfrmapConnection() {
   const store = useStore();
   const dispatch = useDispatch();
+  const websocketUrl = useSelector(selectWebsocketUrl) || defaultUrl;
 
   useEffect(() => {
     let ws = undefined;
@@ -14,20 +15,23 @@ export function useVfrmapConnection() {
     let timeout = undefined;
 
     function createConnection() {
-      const url = store?.getState()?.simdata?.websocketUrl || defaultUrl;
-      ws = new WebSocket(url);
+      ws = new WebSocket(websocketUrl);
 
       ws.onmessage = (e) => {
         const connected = store.getState()?.simdata?.connected;
         if (!connected) {
           dispatch(setConnected(true));
         }
-        
-        const msg = JSON.parse(e.data);
-        if (msg.latitude >= 0 && msg.latitude < 0.015 && msg.longitude >= 0 && msg.longitude < 0.015) {
-          return;
+
+        try {
+          const msg = JSON.parse(e.data);
+          if (msg.latitude >= 0 && msg.latitude < 0.015 && msg.longitude >= 0 && msg.longitude < 0.015) {
+            return;
+          }
+          dispatch(updateData(msg));
+        } catch (err) {
+          console.warn('Failed to parse simdata message', err);
         }
-        dispatch(updateData(msg));
       };
       
       ws.onerror = (event) => {
@@ -56,5 +60,5 @@ export function useVfrmapConnection() {
         dispatch(setConnected(false));
       } catch {}
     };
-  }, [dispatch, store]);
+  }, [dispatch, store, websocketUrl]);
 }

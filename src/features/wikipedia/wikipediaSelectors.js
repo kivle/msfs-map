@@ -8,7 +8,6 @@ export const selectAvailableEditions = (state) => state.wikipedia.availableEditi
 export const selectPages = (state) => state.wikipedia.pages;
 export const selectSearchRadius = (state) => state.wikipedia.searchRadius;
 export const selectLastSearchPosition = (state) => state.wikipedia.lastSearchPosition;
-export const selectLastSearchRadius = (state) => state.wikipedia.lastSearchRadius;
 export const selectLastSearchTime = (state) => state.wikipedia.lastSearchTime;
 
 function pageSort(a, b) {

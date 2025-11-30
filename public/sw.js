@@ -31,6 +31,14 @@ self.addEventListener('fetch', (event) => {
   const { request } = event;
   if (request.method !== 'GET') return;
 
+  const requestUrl = withScope(request.url);
+  const isAppAsset = assetsToCache.includes(requestUrl);
+
+  if (!isAppAsset) {
+    // Defer external and dynamic requests to the browser's caching logic.
+    return;
+  }
+
   event.respondWith(
     caches.match(request).then((cached) => {
       if (cached) return cached;

@@ -15,7 +15,6 @@ export const wikipediaSlice = createSlice({
     pagesViewed: [],
     playingPageid: undefined,
     lastSearchPosition: undefined,
-    lastSearchRadius: undefined,
     lastSearchTime: undefined,
     searchRadius: 10000
   },
@@ -31,22 +30,20 @@ export const wikipediaSlice = createSlice({
         state.pagesViewed = [];
         state.playingPageid = undefined;
         state.lastSearchPosition = undefined;
-        state.lastSearchRadius = undefined;
         state.lastSearchTime = undefined;
       }
     },
     updateLastSearch: (state, action) => {
       const {
-        searchPosition, searchRadius, searchTime 
+        searchPosition, searchTime 
       } = action.payload;
       state.lastSearchPosition = searchPosition;
-      state.lastSearchRadius = searchRadius;
       state.lastSearchTime = searchTime;
     },
     receivePages: (state, action) => {
       const { 
         data: { query: { pages } = {} } = {}, 
-        searchPosition, searchRadius, searchTime 
+        searchPosition, searchTime 
       } = action.payload;
       
       if (!pages) return;
@@ -62,7 +59,6 @@ export const wikipediaSlice = createSlice({
       );
       state.pages.push(...pagesToAdd);
       state.lastSearchPosition = searchPosition;
-      state.lastSearchRadius = searchRadius;
       state.lastSearchTime = searchTime;
     },
     removePages: (state, action) => {
@@ -103,7 +99,6 @@ export const wikipediaSlice = createSlice({
       state.pagesViewed = [];
       state.playingPageid = undefined;
       state.lastSearchPosition = undefined;
-      state.lastSearchRadius = undefined;
       state.lastSearchTime = undefined;
     },
     setSearchRadius: (state, action) => {

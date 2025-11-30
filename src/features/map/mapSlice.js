@@ -69,7 +69,6 @@ export const mapSlice = createSlice({
 });
 
 export const {
-  updateMsfs,
   setCurrentMap,
   setIsFollowing,
   setVisualizeSearchRadius,

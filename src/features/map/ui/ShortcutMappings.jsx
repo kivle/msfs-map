@@ -41,10 +41,8 @@ function ShortcutMapping({
         return gamepad?.buttons.map(b => b.pressed);
       };
       const preState = getButtonStates();
-      console.log(preState);
       const interval = setInterval(() => {
         const currentState = getButtonStates();
-        console.log(currentState);
         const changedButton = currentState?.findIndex?.((pressed, i) => pressed !== preState?.[i]);
         if (changedButton !== undefined && changedButton !== null && changedButton !== -1) {
           changeButton(changedButton);

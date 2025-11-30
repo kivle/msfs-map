@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useMap } from "react-leaflet";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Wikipedia from "./layers/Wikipedia";
-import { selectCourseLine, selectCurrentMap, selectDetectRetinaForCurrentMap, selectIsFollowing, selectVisualizeSearchRadius, setCurrentMap } from "./mapSlice";
+import { selectCourseLine, selectCurrentMap, selectDetectRetinaForCurrentMap, selectIsFollowing, selectVisualizeSearchRadius } from "./mapSlice";
 import { selectIsEnabled } from '../wikipedia/wikipediaSelectors';
 import { MainLayer } from "./layers/MainLayer";
 import { selectSimdata } from "../simdata/simdataSlice";
@@ -15,7 +15,6 @@ import { MapViewPersistence } from "./components/MapViewPersistence";
 
 export default function MapContent() {
   const map = useMap();
-  const dispatch = useDispatch();
 
   useShortcutMappingsEffect();
 

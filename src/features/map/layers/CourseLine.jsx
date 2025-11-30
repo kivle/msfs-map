@@ -9,6 +9,6 @@ export default function CourseLine() {
   return destinationPoints ? (
     <Polyline
       positions={destinationPoints}
-      pathOptions={{strokeWidth: 1, color: 'gray', opacity: 0.5, }} />
+      pathOptions={{ color: 'gray', opacity: 0.5 }} />
   ) : null;
 }
