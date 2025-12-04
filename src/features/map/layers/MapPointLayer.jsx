@@ -27,12 +27,66 @@ const layerDefaultType = {
   photogammetry: 'Settlement'
 };
 
-function buildTooltip(feature, fallbackLabel) {
+function formatLatLng(latlng) {
+  if (!latlng) return null;
+  const { lat, lng } = latlng;
+  if (typeof lat !== 'number' || typeof lng !== 'number' || Number.isNaN(lat) || Number.isNaN(lng)) return null;
+
+  const latValue = lat.toFixed(5);
+  const lngValue = lng.toFixed(5);
+
+  return {
+    text: `${latValue}, ${lngValue}`,
+    query: `${latValue},${lngValue}`,
+    path: `${latValue}/${lngValue}`
+  };
+}
+
+function buildTooltip(feature, fallbackLabel, latlng, type) {
   const properties = feature?.properties ?? {};
   const name = properties.Name || properties.Title || fallbackLabel;
-  const ident = properties.Ident;
+  const ident = (properties.Ident || '').toString().trim() || undefined;
   const description = properties.Description;
-  return [name, ident, description].filter(Boolean).join(' • ');
+
+  const coords = formatLatLng(latlng);
+  const label = [name, ident].filter(Boolean).join(' • ') || fallbackLabel;
+  const googleMapsUrl = coords
+    ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(coords.query)}`
+    : null;
+  const openAirportMapUrl = coords && type === 'Airport' && ident
+    ? `https://openairportmap.org/${encodeURIComponent(ident)}#map=14/${coords.path}`
+    : null;
+
+  const links = [
+    googleMapsUrl && { label: 'Open in Google Maps', href: googleMapsUrl },
+    openAirportMapUrl && { label: 'Open in OpenAirportMap', href: openAirportMapUrl }
+  ].filter(Boolean);
+
+  const tooltipContent = (
+    <div>
+      {label && <div><strong>{label}</strong></div>}
+      {description && <div>{description}</div>}
+      {coords && (
+        <div>
+          {coords.text}
+        </div>
+      )}
+      {links.length > 0 && (
+        <div style={{ marginTop: 6 }}>
+          <div>External maps:</div>
+          <ul style={{ paddingLeft: 18, margin: '4px 0' }}>
+            {links.map((link) => (
+              <li key={link.href}>
+                <a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+
+  return renderToStaticMarkup(tooltipContent);
 }
 
 export default function MapPointLayer({ layer }) {
@@ -86,12 +140,21 @@ export default function MapPointLayer({ layer }) {
   }, [layer.color, layerDefault]);
 
   const onEachFeature = useMemo(() => (feature, leafletLayer) => {
-    const tooltip = buildTooltip(feature, layer.label);
+    const type = feature?.properties?.Type || layerDefault;
+    const latlng = typeof leafletLayer.getLatLng === 'function'
+      ? leafletLayer.getLatLng()
+      : (feature?.geometry?.coordinates?.length >= 2
+        ? { lat: feature.geometry.coordinates[1], lng: feature.geometry.coordinates[0] }
+        : null);
+
+    const tooltip = buildTooltip(feature, layer.label, latlng, type);
     if (tooltip) {
-      leafletLayer.bindTooltip(tooltip, {
-        direction: 'top',
-        offset: [0, -6],
-        opacity: 0.9
+      leafletLayer.bindPopup(tooltip, {
+        autoClose: true,
+        closeButton: true,
+        closeOnClick: true,
+        maxWidth: 320,
+        className: 'poi-popup'
       });
     }
   }, [layer.label]);

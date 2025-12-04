@@ -1,11 +1,4 @@
-All agents contributing to this repository must verify their changes by running the following commands before committing:
-
-```
-npm install
-npm run build
-```
-
-These commands ensure that dependencies install correctly and the project builds without errors.
+All agents contributing to this repository must verify their changes by running `npm run build` before committing. Run `npm install` only after pulling dependency changes or on a fresh setup; it is not required for every change.
 
 All commits must include a well-formed, expressive commit message summarizing what changed and why.
 
