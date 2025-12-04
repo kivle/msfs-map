@@ -1,7 +1,5 @@
-const CACHE_NAME = 'msfs-map-cache-v2';
+const CACHE_NAME = 'msfs-map-cache-v3';
 const CORE_ASSETS = [
-  './',
-  './index.html',
   './manifest.json',
   './icon-192.png',
   './icon-512.png',
@@ -30,6 +28,14 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   if (request.method !== 'GET') return;
+
+  // Always prefer network for HTML so we don't serve stale indexes that reference old bundles.
+  if (request.mode === 'navigate' || (request.headers.get('accept') || '').includes('text/html')) {
+    event.respondWith(
+      fetch(request).catch(() => caches.match('/msfs-map/index.html'))
+    );
+    return;
+  }
 
   const requestUrl = withScope(request.url);
   const isAppAsset = assetsToCache.includes(requestUrl);
