@@ -1,4 +1,4 @@
-const CACHE_NAME = 'msfs-map-cache-v4';
+const CACHE_NAME = 'msfs-map-cache-v5';
 const CORE_ASSETS = [
   './manifest.json',
   './icon-192.png',
