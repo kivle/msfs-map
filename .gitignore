@@ -14,6 +14,12 @@
 
 # generated map data
 /public/*.geojson
+/public/airports/
+/public/global_airports/
+/public/world_updates/
+/public/city_updates/
+/public/photogammetry/
+/public/pois/
 
 # misc
 .DS_Store

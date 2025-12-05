@@ -21,6 +21,12 @@
   gap: 6px;
 }
 
+.sectionLabel {
+  font-size: 0.8em;
+  color: #4f4f4f;
+  margin: 2px 0 0 10px;
+}
+
 .globalToggle {
   margin-top: 4px;
 }

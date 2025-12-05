@@ -51,3 +51,7 @@ Create a production build with:
 ```bash
 npm run build
 ```
+
+## Attribution
+
+- Global airport dataset courtesy of [mwgg](https://github.com/mwgg/Airports).

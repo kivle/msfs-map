@@ -10,6 +10,7 @@ export const MainLayer = React.memo(({ currentMap, detectRetina }) => {
     `&copy; <a target="_blank" href="https://en.wikipedia.org">Wikipedia</a>, ` +
     `${currentMap.attribution}, ` +
     `<a target="_blank" href="https://flightsim.to/file/81114/littlenavmap-msfs-poi-s">Timwintle1979's POI DB</a>, ` +
+    `<a target="_blank" href="https://github.com/mwgg/Airports">mwgg Airports</a>, ` +
     `&copy; <a target="_blank" href="https://react-leaflet.js.org/">react-leaflet</a>, ` +
     `<a target="_blank" href="https://github.com/kivle/msfs-map">MSFS-map</a> v${packageJson.version}`;
 

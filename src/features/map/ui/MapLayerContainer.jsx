@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { defaultMapLayerVisibility, mapLayerDefinitions } from '../mapLayers';
+import { defaultMapLayerVisibility, groupedLayerDefinitions } from '../mapLayers';
 import { selectMapLayerVisibility, selectMapLayersEnabled, setMapLayers, setMapLayersEnabled } from '../mapSlice';
 import { savePreference } from '../../../utils/prefs';
 import styles from './MapLayerContainer.module.css';
@@ -44,7 +44,7 @@ export default function MapLayerContainer() {
         <span className={styles.state}>{layersEnabled ? 'On' : 'Off'}</span>
       </button>
       <div className={styles.layers}>
-        {mapLayerDefinitions.map((layer) => {
+        {groupedLayerDefinitions.pointLayers.map((layer) => {
           const enabled = resolvedVisibility[layer.id];
           const disabled = !layersEnabled;
           return (
@@ -55,6 +55,29 @@ export default function MapLayerContainer() {
               aria-pressed={enabled}
               onClick={disabled ? undefined : () => toggleLayer(layer.id)}
               disabled={disabled}
+            >
+              <span
+                className={styles.color}
+                style={{ backgroundColor: layer.color }}
+                aria-hidden="true"
+              />
+              <span className={styles.label}>{layer.label}</span>
+              <span className={styles.state}>{enabled ? 'On' : 'Off'}</span>
+            </button>
+          );
+        })}
+      </div>
+      <div className={styles.layers}>
+        <div className={styles.sectionLabel}>Global data</div>
+        {groupedLayerDefinitions.extraPointLayers.map((layer) => {
+          const enabled = resolvedVisibility[layer.id];
+          return (
+            <button
+              key={layer.id}
+              type="button"
+              className={`${styles.layerButton} ${styles.childLayer}${enabled ? ` ${styles.enabled}` : ''}`}
+              aria-pressed={enabled}
+              onClick={() => toggleLayer(layer.id)}
             >
               <span
                 className={styles.color}

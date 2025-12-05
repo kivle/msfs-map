@@ -2,10 +2,11 @@ import React, { useMemo } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { GeoJSON } from 'react-leaflet';
 import L from 'leaflet';
-import { FaPlaneDeparture, FaBuilding, FaTree, FaMountain, FaMapMarkerAlt, FaHelicopter, FaShip } from 'react-icons/fa';
+import { FaPlaneDeparture, FaBuilding, FaTree, FaMountain, FaMapMarkerAlt, FaHelicopter, FaShip, FaGlobeAmericas } from 'react-icons/fa';
 import { MdLocationCity, MdTerrain } from 'react-icons/md';
 import { GiLighthouse } from 'react-icons/gi';
 import { useGeoJson } from './useGeoJson';
+import { useTiledGeoJson } from './useTiledGeoJson';
 
 // Unified mapping from Type -> icon component so layers render consistently.
 const typeIconMap = {
@@ -16,6 +17,7 @@ const typeIconMap = {
   Lighthouse: GiLighthouse,
   Mountain: FaMountain,
   Park: FaTree,
+  GlobalAirport: FaGlobeAmericas,
   POI: FaMapMarkerAlt,
   Seaport: FaShip,
   Settlement: MdLocationCity
@@ -24,6 +26,7 @@ const typeIconMap = {
 // Layer-level fallback types when a feature lacks a Type value.
 const layerDefaultType = {
   coreAirports: 'Airport',
+  globalAirports: 'GlobalAirport',
   photogammetry: 'Settlement'
 };
 
@@ -53,7 +56,7 @@ function buildTooltip(feature, fallbackLabel, latlng, type) {
   const googleMapsUrl = coords
     ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(coords.query)}`
     : null;
-  const openAirportMapUrl = coords && type === 'Airport' && ident
+  const openAirportMapUrl = coords && ['Airport', 'GlobalAirport'].includes(type) && ident
     ? `https://openairportmap.org/${encodeURIComponent(ident)}#map=14/${coords.path}`
     : null;
 
@@ -62,10 +65,30 @@ function buildTooltip(feature, fallbackLabel, latlng, type) {
     openAirportMapUrl && { label: 'Open in OpenAirportMap', href: openAirportMapUrl }
   ].filter(Boolean);
 
+  const metadata = [
+    ident && { label: 'ICAO', value: ident },
+    properties.Iata && { label: 'IATA', value: properties.Iata },
+    (properties.City || properties.State) && { label: 'Location', value: [properties.City, properties.State].filter(Boolean).join(', ') },
+    properties.Country && { label: 'Country', value: properties.Country },
+    properties.ElevationFt !== undefined && properties.ElevationFt !== null && properties.ElevationFt !== ''
+      ? { label: 'Elevation', value: `${properties.ElevationFt} ft` }
+      : null,
+    properties.Timezone && { label: 'Timezone', value: properties.Timezone }
+  ].filter(Boolean);
+
   const tooltipContent = (
     <div>
       {label && <div><strong>{label}</strong></div>}
       {description && <div>{description}</div>}
+      {metadata.length > 0 && (
+        <ul style={{ paddingLeft: 18, margin: '6px 0' }}>
+          {metadata.map((meta) => (
+            <li key={`${meta.label}-${meta.value}`}>
+              <strong>{meta.label}:</strong> {meta.value}
+            </li>
+          ))}
+        </ul>
+      )}
       {coords && (
         <div>
           {coords.text}
@@ -90,7 +113,8 @@ function buildTooltip(feature, fallbackLabel, latlng, type) {
 }
 
 export default function MapPointLayer({ layer }) {
-  const { data } = useGeoJson(layer.url, layer.fallbackUrl);
+  const loader = layer.tiled ? useTiledGeoJson : useGeoJson;
+  const { data } = loader(layer.url, layer.fallbackUrl, layer.minZoom);
   const layerDefault = layerDefaultType[layer.id];
 
   const pointToLayer = useMemo(() => {
@@ -161,9 +185,11 @@ export default function MapPointLayer({ layer }) {
 
   if (!data) return null;
 
+  const renderKey = `${layer.id}-${data?.features?.length ?? 0}`;
+
   return (
     <GeoJSON
-      key={layer.id}
+      key={renderKey}
       data={data}
       pointToLayer={pointToLayer}
       onEachFeature={onEachFeature}

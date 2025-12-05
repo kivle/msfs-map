@@ -3,6 +3,8 @@ const path = require('path');
 
 const repoRoot = path.join(__dirname, '..');
 const poisBase = path.join(repoRoot, 'pois');
+const globalAirportsJson = path.join(repoRoot, 'global-airports', 'airports.json');
+const tileSizeDegrees = parseFloat(process.env.GEOJSON_TILE_DEGREES || '10');
 
 function parseOutputDirs() {
   const multi = process.env.GEOJSON_OUTPUT_DIRS;
@@ -46,6 +48,11 @@ const targets = [
     inputDir: path.join(poisBase, 'Core'),
     outputFile: 'airports.geojson',
     files: ['Core Sim - Airports_Standard_Deluxe_Premium.csv']
+  },
+  {
+    name: 'global_airports',
+    jsonInput: globalAirportsJson,
+    outputFile: 'global_airports.geojson'
   },
   {
     name: 'pois',
@@ -131,7 +138,7 @@ function listCsvFiles(dir) {
     .map((file) => path.join(dir, file));
 }
 
-function buildTarget({ inputDir, outputFile, files, mode }) {
+function buildCsvFeatures(inputDir, files, mode) {
   const inputFiles = mode === 'all-files'
     ? listCsvFiles(inputDir)
     : (files ?? []).map((f) => path.join(inputDir, f)).filter((f) => fs.existsSync(f));
@@ -161,17 +168,118 @@ function buildTarget({ inputDir, outputFile, files, mode }) {
     });
   });
 
-  const geojson = {
-    type: 'FeatureCollection',
-    features
+  return features;
+}
+
+function buildAirportJsonFeatures(jsonInput) {
+  const raw = fs.readFileSync(jsonInput, 'utf8');
+  const entries = JSON.parse(raw);
+  const features = [];
+
+  Object.entries(entries).forEach(([icao, entry]) => {
+    const lat = parseFloat(entry.lat);
+    const lon = parseFloat(entry.lon);
+    if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
+
+    const properties = {
+      ...entry,
+      icao: entry.icao || icao,
+      Name: entry.name || entry.icao || icao,
+      Ident: entry.icao || icao,
+      Iata: entry.iata || '',
+      City: entry.city || '',
+      State: entry.state || '',
+      Country: entry.country || '',
+      ElevationFt: entry.elevation,
+      Latitude: lat,
+      Longitude: lon,
+      Type: 'GlobalAirport',
+      sourceFile: path.basename(jsonInput)
+    };
+
+    features.push({
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [lon, lat]
+      },
+      properties
+    });
+  });
+
+  return features;
+}
+
+function getTileKey(lat, lon) {
+  const latBucket = Math.floor(lat / tileSizeDegrees) * tileSizeDegrees;
+  const lonBucket = Math.floor(lon / tileSizeDegrees) * tileSizeDegrees;
+  return {
+    id: `lat${latBucket}_lon${lonBucket}`,
+    bounds: {
+      minLat: latBucket,
+      maxLat: latBucket + tileSizeDegrees,
+      minLon: lonBucket,
+      maxLon: lonBucket + tileSizeDegrees
+    }
   };
+}
+
+function writeTiledGeoJson(outputFile, features) {
+  const baseName = path.basename(outputFile, path.extname(outputFile));
+
+  const tileMap = new Map();
+  features.forEach((feature) => {
+    const [lon, lat] = feature.geometry?.coordinates ?? [];
+    if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
+    const tile = getTileKey(lat, lon);
+    if (!tileMap.has(tile.id)) {
+      tileMap.set(tile.id, { ...tile, features: [] });
+    }
+    tileMap.get(tile.id).features.push(feature);
+  });
 
   outputDirs.forEach((dir) => {
-    const outputPath = path.join(dir, outputFile);
-    fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-    fs.writeFileSync(outputPath, JSON.stringify(geojson, null, 2));
-    console.log(`Wrote ${features.length} features to ${outputPath}`);
+    const layerDir = path.join(dir, baseName);
+    fs.mkdirSync(layerDir, { recursive: true });
+
+    const manifest = {
+      type: 'TiledGeoJSONManifest',
+      layer: baseName,
+      tileSizeDegrees,
+      tileCount: tileMap.size,
+      totalFeatures: features.length,
+      tiles: []
+    };
+
+    tileMap.forEach((tile) => {
+      const tileFile = `${tile.id}.geojson`;
+      const outputPath = path.join(layerDir, tileFile);
+      const geojson = {
+        type: 'FeatureCollection',
+        features: tile.features
+      };
+      fs.writeFileSync(outputPath, JSON.stringify(geojson, null, 2));
+      manifest.tiles.push({
+        id: tile.id,
+        file: tileFile,
+        bounds: tile.bounds,
+        featureCount: tile.features.length
+      });
+    });
+
+    const manifestPath = path.join(layerDir, 'manifest.json');
+    fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
+
+    console.log(`Wrote ${features.length} features across ${tileMap.size} tiles to ${layerDir}`);
   });
+}
+
+function buildTarget({ inputDir, outputFile, files, mode, jsonInput }) {
+  const features = jsonInput
+    ? buildAirportJsonFeatures(jsonInput)
+    : buildCsvFeatures(inputDir, files, mode);
+
+  writeTiledGeoJson(outputFile, features);
 }
 
 targets.forEach(buildTarget);

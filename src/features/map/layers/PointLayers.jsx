@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { useSelector } from 'react-redux';
-import { mapLayerDefinitions, defaultMapLayerVisibility } from '../mapLayers';
+import { groupedLayerDefinitions, defaultMapLayerVisibility } from '../mapLayers';
 import { selectMapLayerVisibility, selectMapLayersEnabled } from '../mapSlice';
 import MapPointLayer from './MapPointLayer';
 
@@ -15,7 +15,7 @@ export default function PointLayers() {
     ...(visibility ?? {})
   }), [visibility]);
 
-  const layerSources = useMemo(() => mapLayerDefinitions.map((layer) => ({
+  const buildLayerSources = useMemo(() => (definitions) => definitions.map((layer) => ({
     ...layer,
     url: new URL(layer.fileName, `${window.location.origin}${baseUrl}`).toString(),
     fallbackUrl: baseUrl !== '/'
@@ -23,9 +23,24 @@ export default function PointLayers() {
       : null
   })), []);
 
-  if (!layersEnabled) return null;
+  const layerSources = useMemo(
+    () => buildLayerSources(groupedLayerDefinitions.pointLayers),
+    [buildLayerSources]
+  );
 
-  return layerSources
-    .filter((layer) => resolvedVisibility[layer.id])
-    .map((layer) => <MapPointLayer key={layer.id} layer={layer} />);
+  const extraLayerSources = useMemo(
+    () => buildLayerSources(groupedLayerDefinitions.extraPointLayers),
+    [buildLayerSources]
+  );
+
+  return (
+    <>
+      {layersEnabled && layerSources
+        .filter((layer) => resolvedVisibility[layer.id])
+        .map((layer) => <MapPointLayer key={layer.id} layer={layer} />)}
+      {extraLayerSources
+        .filter((layer) => resolvedVisibility[layer.id])
+        .map((layer) => <MapPointLayer key={layer.id} layer={layer} />)}
+    </>
+  );
 }
