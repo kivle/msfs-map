@@ -2,8 +2,8 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { GeoJSON, useMap } from 'react-leaflet';
 import L from 'leaflet';
-import { FaPlaneDeparture, FaBuilding, FaTree, FaMountain, FaMapMarkerAlt, FaHelicopter, FaShip, FaExclamationTriangle } from 'react-icons/fa';
-import { MdLocationCity, MdTerrain } from 'react-icons/md';
+import { FaPlaneDeparture, FaBuilding, FaTree, FaMountain, FaMapMarkerAlt, FaHelicopter, FaShip, FaExclamationTriangle, FaCity } from 'react-icons/fa';
+import { MdTerrain } from 'react-icons/md';
 import { GiLighthouse } from 'react-icons/gi';
 import { useGeoJson } from './useGeoJson';
 import { useTiledGeoJson } from './useTiledGeoJson';
@@ -20,7 +20,7 @@ const typeIconMap = {
   globalairport: FaPlaneDeparture,
   poi: FaMapMarkerAlt,
   seaport: FaShip,
-  settlement: MdLocationCity
+  settlement: FaCity
 };
 
 // Layer-level fallback types when a feature lacks a Type value.
@@ -35,6 +35,9 @@ const rasterIconPromises = new Map();
 
 async function renderSvgToPngIcon(IconComponent, color) {
   const size = 22;
+  const outlineWidth = 3;
+  const padding = Math.ceil(outlineWidth * 2);
+  const canvasSize = size + padding * 2;
   const svgMarkup = renderToStaticMarkup(<IconComponent size={size} color={color} />);
   const withNs = svgMarkup.includes('xmlns')
     ? svgMarkup
@@ -49,20 +52,18 @@ async function renderSvgToPngIcon(IconComponent, color) {
       img.onerror = reject;
     }));
     const canvas = document.createElement('canvas');
-    canvas.width = canvas.height = size;
+    canvas.width = canvas.height = canvasSize;
     const ctx = canvas.getContext('2d');
-    ctx.clearRect(0, 0, size, size);
-    const radius = size / 2;
-    ctx.beginPath();
-    ctx.arc(radius, radius, radius - 1, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(255,255,255,0.95)';
-    ctx.fill();
-    ctx.drawImage(img, 0, 0, size, size);
+    ctx.clearRect(0, 0, canvasSize, canvasSize);
+    // Draw a real outline using drop shadows so the halo follows the icon shape instead of a fixed circle.
+    ctx.filter = `drop-shadow(0 0 ${outlineWidth}px rgba(255,255,255,0.95)) drop-shadow(0 0 ${Math.max(1, outlineWidth - 1)}px rgba(255,255,255,0.9))`;
+    ctx.drawImage(img, padding, padding, size, size);
+    ctx.filter = 'none';
     const pngUrl = canvas.toDataURL('image/png');
     return L.icon({
       iconUrl: pngUrl,
-      iconSize: [size, size],
-      iconAnchor: [size / 2, size / 2]
+      iconSize: [canvasSize, canvasSize],
+      iconAnchor: [canvasSize / 2, canvasSize / 2]
     });
   } finally {
     URL.revokeObjectURL(url);
