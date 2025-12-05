@@ -18,7 +18,8 @@ export const mapSlice = createSlice({
     shortcutMappings: [],
     mapLayers: defaultMapLayerVisibility,
     mapLayersEnabled: false,
-    preferencesLoaded: false
+    preferencesLoaded: false,
+    marchingSpeedKnots: 120
   },
   reducers: {
     setCurrentMap: (state, action) => {
@@ -68,6 +69,10 @@ export const mapSlice = createSlice({
     },
     setPreferencesLoaded: (state, action) => {
       state.preferencesLoaded = !!action.payload;
+    },
+    setMarchingSpeedKnots: (state, action) => {
+      const value = Number(action.payload);
+      state.marchingSpeedKnots = Number.isFinite(value) && value > 0 ? value : state.marchingSpeedKnots;
     }
   },
 });
@@ -83,7 +88,8 @@ export const {
   setMapLayers,
   setMapLayerEnabled,
   setMapLayersEnabled,
-  setPreferencesLoaded
+  setPreferencesLoaded,
+  setMarchingSpeedKnots
 } = mapSlice.actions;
 
 export const selectCurrentMap = createSelector(
@@ -129,6 +135,7 @@ export const selectMapLayerVisibility = createSelector(
 export const selectMapLayersEnabled = state => !!state.map.mapLayersEnabled;
 
 export const selectPreferencesLoaded = state => !!state.map.preferencesLoaded;
+export const selectMarchingSpeedKnots = state => state.map.marchingSpeedKnots ?? 120;
 
 const courseLinePointInterval = 500;
 const courseLineLength = 10000;

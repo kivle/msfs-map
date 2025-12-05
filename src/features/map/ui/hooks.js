@@ -11,6 +11,7 @@ import {
   selectShortcutMappings, selectVisualizeSearchRadius, setCurrentMap, 
   setShortcutMappings, setShowCourseLine, setVisualizeSearchRadius, selectDetectRetinaForCurrentMap, setDetectRetina, selectDetectRetinaByMap, setDetectRetinaMap, setMapLayers, setMapLayersEnabled, selectMapLayersEnabled
 } from "../mapSlice";
+import { selectMarchingSpeedKnots, setMarchingSpeedKnots } from "../mapSlice";
 import { selectWebsocketUrl, setWebsocketUrl } from "../../simdata/simdataSlice";
 import { loadPreferences, savePreference } from "../../../utils/prefs";
 import { setPreferencesLoaded } from "../mapSlice";
@@ -71,6 +72,8 @@ export function useLoadPreferencesEffect() {
         dispatch(setMapLayers(prefs['mapLayers']));
       if (prefs['mapLayersEnabled'] !== undefined)
         dispatch(setMapLayersEnabled(!!prefs['mapLayersEnabled']));
+      if (prefs['marchingSpeedKnots'] !== undefined)
+        dispatch(setMarchingSpeedKnots(prefs['marchingSpeedKnots']));
       dispatch(setPreferencesLoaded(true));
     }
     load();
@@ -91,6 +94,7 @@ export function usePreferenceState() {
   const shortcutMappings = useSelector(selectShortcutMappings);
   const websocketUrl = useSelector(selectWebsocketUrl);
   const mapLayersEnabled = useSelector(selectMapLayersEnabled);
+  const marchingSpeedKnots = useSelector(selectMarchingSpeedKnots);
 
   return {
     edition,
@@ -105,7 +109,8 @@ export function usePreferenceState() {
     detectRetina,
     shortcutMappings,
     websocketUrl,
-    mapLayersEnabled
+    mapLayersEnabled,
+    marchingSpeedKnots
   };
 }
 
@@ -113,6 +118,7 @@ export function usePreferenceCallbacks() {
   const dispatch = useDispatch();
   const detectRetinaByMap = useSelector(selectDetectRetinaByMap);
   const currentMap = useSelector(selectCurrentMap);
+  const marchingSpeedKnots = useSelector(selectMarchingSpeedKnots);
 
   const changeEdition = useCallback(async (e) => {
     await savePreference('wikipedia-edition', e.target.value);
@@ -167,6 +173,14 @@ export function usePreferenceCallbacks() {
     dispatch(setWebsocketUrl(normalized));
   }, [dispatch]);
 
+  const changeMarchingSpeedKnots = useCallback(async (value) => {
+    const numeric = Number(value);
+    if (!Number.isFinite(numeric) || numeric <= 0) return;
+    if (numeric === marchingSpeedKnots) return;
+    await savePreference('marchingSpeedKnots', numeric);
+    dispatch(setMarchingSpeedKnots(numeric));
+  }, [dispatch]);
+
   const setAllMapLayersEnabled = useCallback(async (enabled) => {
     await savePreference('mapLayersEnabled', enabled);
     dispatch(setMapLayersEnabled(enabled));
@@ -182,7 +196,8 @@ export function usePreferenceCallbacks() {
     changeDetectRetina,
     changeShortcutMappings,
     changeWebsocketUrl,
-    setAllMapLayersEnabled
+    setAllMapLayersEnabled,
+    changeMarchingSpeedKnots
   };
 }
 

@@ -13,7 +13,8 @@ export const preferenceKeys = [
   'mapView',
   'websocketUrl',
   'mapLayers',
-  'mapLayersEnabled'
+  'mapLayersEnabled',
+  'marchingSpeedKnots'
 ];
 
 export async function loadPreferences() {

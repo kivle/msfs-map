@@ -21,6 +21,8 @@ const PreferencesPanel = React.memo(({
   changeVisualizeSearchRadius,
   courseLine,
   changeShowCourseLine,
+  marchingSpeedKnots,
+  changeMarchingSpeedKnots,
   edition,
   availableEditions,
   changeEdition,
@@ -47,6 +49,8 @@ const PreferencesPanel = React.memo(({
       onChangeVisualizeSearchRadius={changeVisualizeSearchRadius}
       courseLine={courseLine}
       onChangeCourseLine={changeShowCourseLine}
+      marchingSpeedKnots={marchingSpeedKnots}
+      onChangeMarchingSpeedKnots={changeMarchingSpeedKnots}
     />
     <WikipediaPreferencesSection
       edition={edition}
@@ -86,7 +90,8 @@ function PreferencesPanelContainer() {
     courseLine,
     detectRetina,
     shortcutMappings,
-    websocketUrl
+    websocketUrl,
+    marchingSpeedKnots
   } = usePreferenceState();
 
   useAvailableVoicesEffect();
@@ -100,7 +105,8 @@ function PreferencesPanelContainer() {
     changeShowCourseLine,
     changeDetectRetina,
     changeShortcutMappings,
-    changeWebsocketUrl
+    changeWebsocketUrl,
+    changeMarchingSpeedKnots
   } = usePreferenceCallbacks();
   
   const connectedGamepads = useConnectedGamepads();
@@ -134,6 +140,8 @@ function PreferencesPanelContainer() {
     changeVisualizeSearchRadius={changeVisualizeSearchRadius}
     courseLine={courseLine}
     changeShowCourseLine={changeShowCourseLine}
+    marchingSpeedKnots={marchingSpeedKnots}
+    changeMarchingSpeedKnots={changeMarchingSpeedKnots}
     detectRetina={detectRetina}
     changeDetectRetina={changeDetectRetina}
     connectedGamepads={connectedGamepads}
