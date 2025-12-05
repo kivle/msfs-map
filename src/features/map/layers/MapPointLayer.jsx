@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { GeoJSON, useMap } from 'react-leaflet';
 import L from 'leaflet';
-import { FaPlaneDeparture, FaBuilding, FaTree, FaMountain, FaMapMarkerAlt, FaHelicopter, FaShip, FaGlobeAmericas } from 'react-icons/fa';
+import { FaPlaneDeparture, FaBuilding, FaTree, FaMountain, FaMapMarkerAlt, FaHelicopter, FaShip, FaExclamationTriangle } from 'react-icons/fa';
 import { MdLocationCity, MdTerrain } from 'react-icons/md';
 import { GiLighthouse } from 'react-icons/gi';
 import { useGeoJson } from './useGeoJson';
@@ -10,24 +10,24 @@ import { useTiledGeoJson } from './useTiledGeoJson';
 
 // Unified mapping from Type -> icon component so layers render consistently.
 const typeIconMap = {
-  Airport: FaPlaneDeparture,
-  Building: FaBuilding,
-  Helipad: FaHelicopter,
-  Landform: MdTerrain,
-  Lighthouse: GiLighthouse,
-  Mountain: FaMountain,
-  Park: FaTree,
-  GlobalAirport: FaGlobeAmericas,
-  POI: FaMapMarkerAlt,
-  Seaport: FaShip,
-  Settlement: MdLocationCity
+  airport: FaPlaneDeparture,
+  building: FaBuilding,
+  helipad: FaHelicopter,
+  landform: MdTerrain,
+  lighthouse: GiLighthouse,
+  mountain: FaMountain,
+  park: FaTree,
+  globalairport: FaPlaneDeparture,
+  poi: FaMapMarkerAlt,
+  seaport: FaShip,
+  settlement: MdLocationCity
 };
 
 // Layer-level fallback types when a feature lacks a Type value.
 const layerDefaultType = {
-  coreAirports: 'Airport',
-  globalAirports: 'GlobalAirport',
-  photogammetry: 'Settlement'
+  coreAirports: 'airport',
+  globalAirports: 'globalairport',
+  photogammetry: 'settlement'
 };
 
 const rasterIconCache = new Map();
@@ -52,6 +52,11 @@ async function renderSvgToPngIcon(IconComponent, color) {
     canvas.width = canvas.height = size;
     const ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, size, size);
+    const radius = size / 2;
+    ctx.beginPath();
+    ctx.arc(radius, radius, radius - 1, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(255,255,255,0.95)';
+    ctx.fill();
     ctx.drawImage(img, 0, 0, size, size);
     const pngUrl = canvas.toDataURL('image/png');
     return L.icon({
@@ -118,7 +123,7 @@ function clusterFeatures(features, cellSizeDegrees) {
         Count: count,
         Cluster: true,
         ClusterCell: { latKey, lonKey, size },
-        Type: sample?.properties?.Type ?? 'Cluster'
+        type: sample?.properties?.type ?? sample?.properties?.Type ?? 'cluster'
       }
     });
   });
@@ -141,18 +146,19 @@ function formatLatLng(latlng) {
   };
 }
 
-function buildTooltip(feature, fallbackLabel, latlng, type) {
+function buildTooltip(feature, fallbackLabel, latlng, type, warnElevation) {
   const properties = feature?.properties ?? {};
-  const name = properties.Name || properties.Title || fallbackLabel;
-  const ident = (properties.Ident || '').toString().trim() || undefined;
-  const description = properties.Description;
+  const name = properties.name || fallbackLabel;
+  const rawIdent = properties.ident || properties.icao || properties.ICAO || properties.Ident;
+  const ident = rawIdent ? rawIdent.toString().trim() : undefined;
+  const description = properties.description;
 
   const coords = formatLatLng(latlng);
   const label = [name, ident].filter(Boolean).join(' • ') || fallbackLabel;
   const googleMapsUrl = coords
     ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(coords.query)}`
     : null;
-  const openAirportMapUrl = coords && ['Airport', 'GlobalAirport'].includes(type) && ident
+  const openAirportMapUrl = coords && ['airport', 'globalairport'].includes((type || '').toLowerCase()) && ident
     ? `https://openairportmap.org/${encodeURIComponent(ident)}#map=14/${coords.path}`
     : null;
 
@@ -161,15 +167,18 @@ function buildTooltip(feature, fallbackLabel, latlng, type) {
     openAirportMapUrl && { label: 'Open in OpenAirportMap', href: openAirportMapUrl }
   ].filter(Boolean);
 
+  const elevationRaw = properties.elevationFt;
+  const elevation = Number.isFinite(parseFloat(elevationRaw)) ? Math.round(parseFloat(elevationRaw)) : null;
+
   const metadata = [
     ident && { label: 'ICAO', value: ident },
-    properties.Iata && { label: 'IATA', value: properties.Iata },
-    (properties.City || properties.State) && { label: 'Location', value: [properties.City, properties.State].filter(Boolean).join(', ') },
-    properties.Country && { label: 'Country', value: properties.Country },
-    properties.ElevationFt !== undefined && properties.ElevationFt !== null && properties.ElevationFt !== ''
-      ? { label: 'Elevation', value: `${properties.ElevationFt} ft` }
-      : null,
-    properties.Timezone && { label: 'Timezone', value: properties.Timezone }
+    properties.iata && { label: 'IATA', value: properties.iata },
+    properties.location && {
+      label: 'Location',
+      value: properties.location
+    },
+    elevation !== null ? { label: 'Elevation', value: `${elevation} ft`, warn: warnElevation } : null,
+    properties.timezone && { label: 'Timezone', value: properties.timezone }
   ].filter(Boolean);
 
   const tooltipContent = (
@@ -181,6 +190,15 @@ function buildTooltip(feature, fallbackLabel, latlng, type) {
           {metadata.map((meta) => (
             <li key={`${meta.label}-${meta.value}`}>
               <strong>{meta.label}:</strong> {meta.value}
+              {meta.warn && (
+                <span style={{ marginLeft: 6, verticalAlign: 'middle' }}>
+                  <FaExclamationTriangle
+                    color="#d00000"
+                    size={12}
+                    title="Elevation may be incorrect for some points."
+                  />
+                </span>
+              )}
             </li>
           ))}
         </ul>
@@ -253,8 +271,7 @@ export default function MapPointLayer({ layer }) {
   }, [effectiveFeatures, layer.color, layerDefault]);
 
   const pointToLayer = useMemo(() => {
-    const createIconMarker = (latlng, IconComponent) => {
-      const typeKey = IconComponent?.displayName ?? 'icon';
+    const createIconMarker = (latlng, IconComponent, typeKey) => {
       const rasterIcon = ensureRasterIcon(typeKey, layer.color, IconComponent, () => setIconVersion((v) => v + 1));
       if (rasterIcon) {
         return L.marker(latlng, { icon: rasterIcon });
@@ -269,7 +286,8 @@ export default function MapPointLayer({ layer }) {
     };
 
     return (feature, latlng) => {
-      const type = feature?.properties?.Cluster ? 'Cluster' : (feature?.properties?.Type || layerDefault);
+      const rawType = feature?.properties?.type || feature?.properties?.Type;
+      const type = feature?.properties?.Cluster ? 'cluster' : ((rawType || layerDefault)?.toString?.().toLowerCase?.());
       const isCluster = feature?.properties?.Cluster;
       if (isCluster) {
         const count = feature?.properties?.Count ?? 1;
@@ -298,7 +316,7 @@ export default function MapPointLayer({ layer }) {
       const IconComponent = type ? typeIconMap[type] : undefined;
 
       if (IconComponent) {
-        return createIconMarker(latlng, IconComponent);
+        return createIconMarker(latlng, IconComponent, type);
       }
 
       // Fallback: render as a simple dot if no icon is mapped for this Type.
@@ -315,23 +333,31 @@ export default function MapPointLayer({ layer }) {
   const onEachFeature = useMemo(() => (feature, leafletLayer) => {
     if (feature?.properties?.Cluster) {
       const count = feature?.properties?.Count ?? 0;
-      leafletLayer.bindPopup(`Cluster of ${count} locations. Zoom in for individual points.`, {
+      const cell = feature?.properties?.ClusterCell;
+      const content = `
+        <div>
+          Cluster of ${count} locations. Zoom in for individual points.
+        </div>
+      `;
+      leafletLayer.bindPopup(content, {
         autoClose: true,
         closeButton: true,
         closeOnClick: true,
-        maxWidth: 240,
+        maxWidth: 260,
         className: 'poi-popup'
       });
       return;
     }
-    const type = feature?.properties?.Type || layerDefault;
+    const rawType = feature?.properties?.type || feature?.properties?.Type;
+    const type = feature?.properties?.Cluster ? 'cluster' : ((rawType || layerDefault)?.toString?.().toLowerCase?.());
     const latlng = typeof leafletLayer.getLatLng === 'function'
       ? leafletLayer.getLatLng()
       : (feature?.geometry?.coordinates?.length >= 2
         ? { lat: feature.geometry.coordinates[1], lng: feature.geometry.coordinates[0] }
         : null);
 
-    const tooltip = buildTooltip(feature, layer.label, latlng, type);
+    const warnElevation = layer.id !== 'globalAirports';
+    const tooltip = buildTooltip(feature, layer.label, latlng, type, warnElevation);
     if (tooltip) {
       leafletLayer.bindPopup(tooltip, {
         autoClose: true,
@@ -341,7 +367,7 @@ export default function MapPointLayer({ layer }) {
         className: 'poi-popup'
       });
     }
-  }, [layer.label]);
+  }, [layer.label, map, layerDefault]);
 
   if (!effectiveFeatures) return null;
 

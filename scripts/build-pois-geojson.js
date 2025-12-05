@@ -4,7 +4,31 @@ const path = require('path');
 const repoRoot = path.join(__dirname, '..');
 const poisBase = path.join(repoRoot, 'pois');
 const globalAirportsJson = path.join(repoRoot, 'global-airports', 'airports.json');
-const tileSizeDegrees = parseFloat(process.env.GEOJSON_TILE_DEGREES || '1');
+const tileSizeDegrees = parseFloat(process.env.GEOJSON_TILE_DEGREES || '10');
+
+function normalizeProperties(entry = {}) {
+  const pick = (keys) => {
+    for (const key of keys) {
+      if (entry[key] !== undefined && entry[key] !== '') return entry[key];
+    }
+    return undefined;
+  };
+
+  const city = pick(['City', 'city']);
+  const state = pick(['State', 'state', 'Region', 'region']);
+  const country = pick(['Country', 'country']);
+  const locationParts = [city, state, country].filter(Boolean);
+
+  return {
+    name: pick(['Name', 'Title', 'name', 'title']),
+    ident: pick(['Ident', 'ICAO', 'icao', 'ident']),
+    description: pick(['Description', 'description']),
+    iata: pick(['Iata', 'IATA', 'iata']),
+    location: locationParts.join(', '),
+    elevationFt: pick(['ElevationFt', 'Elevation', 'Elevation (ft)', 'elevation']),
+    timezone: pick(['Timezone', 'timeZone', 'time_zone', 'tz'])
+  };
+}
 
 function parseOutputDirs() {
   const multi = process.env.GEOJSON_OUTPUT_DIRS;
@@ -152,9 +176,16 @@ function buildCsvFeatures(inputDir, files, mode) {
       const lon = parseFloat(entry.Longitude);
       if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
 
+      const normalized = normalizeProperties(entry);
       const properties = {
-        ...entry,
-        sourceFile: path.basename(filePath)
+        name: normalized.name,
+        ident: normalized.ident,
+        description: normalized.description,
+        iata: normalized.iata,
+        location: normalized.location,
+        elevationFt: normalized.elevationFt,
+        timezone: normalized.timezone,
+        type: (entry.Type || entry.type || '').toString() || undefined
       };
 
       features.push({
@@ -181,20 +212,16 @@ function buildAirportJsonFeatures(jsonInput) {
     const lon = parseFloat(entry.lon);
     if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
 
+    const normalized = normalizeProperties(entry);
     const properties = {
-      ...entry,
-      icao: entry.icao || icao,
-      Name: entry.name || entry.icao || icao,
-      Ident: entry.icao || icao,
-      Iata: entry.iata || '',
-      City: entry.city || '',
-      State: entry.state || '',
-      Country: entry.country || '',
-      ElevationFt: entry.elevation,
-      Latitude: lat,
-      Longitude: lon,
-      Type: 'GlobalAirport',
-      sourceFile: path.basename(jsonInput)
+      name: normalized.name || entry.name || entry.icao || icao,
+      ident: normalized.ident || entry.icao || icao,
+      description: normalized.description,
+      iata: normalized.iata,
+      location: normalized.location,
+      elevationFt: normalized.elevationFt ?? entry.elevation,
+      timezone: normalized.timezone,
+      type: 'GlobalAirport'
     };
 
     features.push({

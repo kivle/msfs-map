@@ -40,7 +40,7 @@ export default function MapLayerContainer() {
         onClick={toggleAllLayers}
         aria-pressed={layersEnabled}
       >
-        <span className={styles.label}>Point layers</span>
+        <span className={styles.label}>MSFS layers</span>
         <span className={styles.state}>{layersEnabled ? 'On' : 'Off'}</span>
       </button>
       <div className={styles.layers}>
