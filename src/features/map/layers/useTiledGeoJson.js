@@ -8,13 +8,13 @@ const MAX_TILES_CACHED = 200;
 async function fetchJsonWithFallback(primaryUrl, fallbackUrl) {
   let resp;
   try {
-    resp = await fetch(primaryUrl);
+    resp = await fetch(primaryUrl, { cache: 'no-store' });
   } catch (err) {
     if (!fallbackUrl) throw err;
   }
 
   if (!resp?.ok && fallbackUrl) {
-    resp = await fetch(fallbackUrl);
+    resp = await fetch(fallbackUrl, { cache: 'no-store' });
   }
 
   if (!resp?.ok) {

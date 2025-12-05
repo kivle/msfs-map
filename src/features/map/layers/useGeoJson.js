@@ -17,9 +17,9 @@ export function useGeoJson(url, fallbackUrl) {
         return;
       }
       try {
-        let resp = await fetch(url);
+        let resp = await fetch(url, { cache: 'no-store' });
         if (!resp.ok && fallbackUrl) {
-          resp = await fetch(fallbackUrl);
+          resp = await fetch(fallbackUrl, { cache: 'no-store' });
         }
         if (!resp.ok) throw new Error(`Failed to load ${url} (${resp.status})`);
         const json = await resp.json();
