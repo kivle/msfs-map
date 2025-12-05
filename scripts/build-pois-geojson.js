@@ -277,6 +277,10 @@ function writeTiledGeoJson(outputFile, features) {
 
   outputDirs.forEach((dir) => {
     const layerDir = path.join(dir, baseName);
+    // Remove any stale tiles from previous builds (e.g., different tiling sizes or schemas).
+    if (fs.existsSync(layerDir)) {
+      fs.rmSync(layerDir, { recursive: true, force: true });
+    }
     fs.mkdirSync(layerDir, { recursive: true });
 
     const manifest = {

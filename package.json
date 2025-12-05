@@ -1,7 +1,7 @@
 {
   "name": "msfs-map",
   "homepage": "http://kivle.github.io/msfs-map",
-  "version": "0.15.2",
+  "version": "0.15.3",
   "private": true,
   "dependencies": {
     "@maplibre/maplibre-gl-leaflet": "^0.1.3",
