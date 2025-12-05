@@ -3,6 +3,7 @@ import { useMap } from 'react-leaflet';
 
 const manifestCache = new Map();
 const tileCache = new Map();
+const MAX_TILES_CACHED = 200;
 
 async function fetchJsonWithFallback(primaryUrl, fallbackUrl) {
   let resp;
@@ -103,9 +104,9 @@ export function useTiledGeoJson(manifestUrl, fallbackUrl, minZoom) {
   }, [withinZoom]);
 
   const visibleTiles = useMemo(() => {
-    if (!manifestState?.manifest || !viewBounds) return [];
+    if (!manifestState?.manifest || !viewBounds || !withinZoom) return [];
     return manifestState.manifest.tiles.filter((tile) => intersects(tile.bounds, viewBounds));
-  }, [manifestState, viewBounds]);
+  }, [manifestState, viewBounds, withinZoom]);
 
   // Load tiles that intersect the viewport
   useEffect(() => {
@@ -117,6 +118,8 @@ export function useTiledGeoJson(manifestUrl, fallbackUrl, minZoom) {
       for (const tile of visibleTiles) {
         const cacheKey = tileKey(sourceUrl, tile.id);
         if (tileCache.has(cacheKey)) {
+          const cached = tileCache.get(cacheKey);
+          cached.lastUsed = Date.now();
           setLoadedTiles((prev) => {
             if (prev.has(tile.id)) return prev;
             const next = new Set(prev);
@@ -131,7 +134,7 @@ export function useTiledGeoJson(manifestUrl, fallbackUrl, minZoom) {
           const fallbackTileUrl = fallbackUrl ? new URL(tile.file, fallbackUrl).toString() : null;
           const json = await fetchJsonWithFallback(primaryTileUrl, fallbackTileUrl);
           if (cancelled) return;
-          tileCache.set(cacheKey, json);
+          tileCache.set(cacheKey, { data: json, lastUsed: Date.now() });
           setLoadedTiles((prev) => {
             const next = new Set(prev);
             next.add(tile.id);
@@ -143,6 +146,15 @@ export function useTiledGeoJson(manifestUrl, fallbackUrl, minZoom) {
             console.warn('Failed to load tile', tile.id, err);
           }
         }
+      }
+
+      // Evict least-recently-used tiles when over budget
+      const keys = Array.from(tileCache.keys());
+      if (keys.length > MAX_TILES_CACHED) {
+        const entries = keys.map((key) => ({ key, lastUsed: tileCache.get(key)?.lastUsed ?? 0 }));
+        entries.sort((a, b) => a.lastUsed - b.lastUsed);
+        const toDelete = entries.slice(0, Math.max(0, entries.length - MAX_TILES_CACHED));
+        toDelete.forEach(({ key }) => tileCache.delete(key));
       }
     }
 
@@ -156,8 +168,9 @@ export function useTiledGeoJson(manifestUrl, fallbackUrl, minZoom) {
     loadedTiles.forEach((tileId) => {
       const cacheKey = tileKey(manifestState.sourceUrl, tileId);
       const tileData = tileCache.get(cacheKey);
-      if (tileData?.features?.length) {
-        features.push(...tileData.features);
+      if (tileData?.data?.features?.length) {
+        tileData.lastUsed = Date.now();
+        features.push(...tileData.data.features);
       }
     });
     return {

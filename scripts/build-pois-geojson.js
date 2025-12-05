@@ -4,7 +4,7 @@ const path = require('path');
 const repoRoot = path.join(__dirname, '..');
 const poisBase = path.join(repoRoot, 'pois');
 const globalAirportsJson = path.join(repoRoot, 'global-airports', 'airports.json');
-const tileSizeDegrees = parseFloat(process.env.GEOJSON_TILE_DEGREES || '10');
+const tileSizeDegrees = parseFloat(process.env.GEOJSON_TILE_DEGREES || '1');
 
 function parseOutputDirs() {
   const multi = process.env.GEOJSON_OUTPUT_DIRS;
