@@ -75,7 +75,7 @@ export default function MapLayerContainer() {
             <button
               key={layer.id}
               type="button"
-              className={`${styles.layerButton} ${styles.childLayer}${enabled ? ` ${styles.enabled}` : ''}`}
+              className={`${styles.layerButton}${enabled ? ` ${styles.enabled}` : ''}`}
               aria-pressed={enabled}
               onClick={() => toggleLayer(layer.id)}
             >
