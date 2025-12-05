@@ -89,41 +89,52 @@ function ensureRasterIcon(type, color, IconComponent, notifyReady) {
   return null;
 }
 
-function clusterFeatures(features, cellSizeDegrees) {
+function clusterFeatures(features, map, bucketSizePx, minClusterSize = 2) {
+  if (!map) return features;
+  const zoom = map.getZoom?.();
+  if (!Number.isFinite(zoom)) return features;
+
+  const sizePx = bucketSizePx || 100;
   const buckets = new Map();
-  const size = cellSizeDegrees || 1;
   features.forEach((feature) => {
     const [lon, lat] = feature.geometry?.coordinates ?? [];
     if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
-    const latBucket = Math.floor(lat / size) * size;
-    const lonBucket = Math.floor(lon / size) * size;
-    const key = `${latBucket}:${lonBucket}`;
-    if (!buckets.has(key)) {
-      buckets.set(key, { latSum: 0, lonSum: 0, count: 0, sample: feature });
-    }
+
+    const projected = map.project({ lat, lng: lon }, zoom);
+    const keyX = Math.floor(projected.x / sizePx);
+    const keyY = Math.floor(projected.y / sizePx);
+    const key = `${keyX}:${keyY}`;
+    if (!buckets.has(key)) buckets.set(key, { xSum: 0, ySum: 0, features: [] });
     const bucket = buckets.get(key);
-    bucket.latSum += lat;
-    bucket.lonSum += lon;
-    bucket.count += 1;
+    bucket.xSum += projected.x;
+    bucket.ySum += projected.y;
+    bucket.features.push(feature);
   });
 
   const clustered = [];
-  buckets.forEach(({ latSum, lonSum, count, sample }, key) => {
-    const [latKey, lonKey] = key.split(':').map(parseFloat);
-    const lat = latSum / count;
-    const lon = lonSum / count;
+  buckets.forEach(({ xSum, ySum, features: bucketFeatures }) => {
+    const count = bucketFeatures.length;
+    if (count < minClusterSize) {
+      clustered.push(...bucketFeatures);
+      return;
+    }
+    const avgX = xSum / count;
+    const avgY = ySum / count;
+    const { lat, lng } = map.unproject({ x: avgX, y: avgY }, zoom);
     clustered.push({
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [lon, lat]
+        coordinates: [lng, lat]
       },
       properties: {
         Name: `${count} locations`,
         Count: count,
         Cluster: true,
-        ClusterCell: { latKey, lonKey, size },
-        type: sample?.properties?.type ?? sample?.properties?.Type ?? 'cluster'
+        type: bucketFeatures[0]?.properties?.type ?? bucketFeatures[0]?.properties?.Type ?? 'cluster'
+      },
+      _clusterInternal: {
+        center: { lat, lng }
       }
     });
   });
@@ -243,16 +254,17 @@ export default function MapPointLayer({ layer }) {
   const dense = layer.dense;
   const useCanvas = layer.useCanvas;
   const clusterBelowZoom = layer.clusterBelowZoom;
-  const clusterCellSizeDegrees = layer.clusterCellSizeDegrees;
+  const clusterMinPoints = layer.clusterMinPoints ?? 2;
   const [iconVersion, setIconVersion] = useState(0);
 
   const effectiveFeatures = useMemo(() => {
     if (!data?.features) return null;
     if (clusterBelowZoom && mapZoom !== undefined && mapZoom < clusterBelowZoom) {
-      return clusterFeatures(data.features, clusterCellSizeDegrees);
+      const bucketSizePx = 100;
+      return clusterFeatures(data.features, map, bucketSizePx, clusterMinPoints);
     }
     return data.features;
-  }, [data, clusterBelowZoom, clusterCellSizeDegrees, mapZoom]);
+  }, [data, clusterBelowZoom, clusterMinPoints, map, mapZoom]);
 
   const renderer = useMemo(() => (useCanvas ? L.canvas({ padding: 0.5 }) : undefined), [useCanvas]);
 
@@ -261,7 +273,7 @@ export default function MapPointLayer({ layer }) {
     if (!effectiveFeatures) return;
     const types = new Set();
     effectiveFeatures.forEach((f) => {
-      const t = f?.properties?.Type || layerDefault;
+      const t = f?.properties?.type || f?.properties?.Type || layerDefault;
       if (t) types.add(t);
     });
     types.forEach((t) => {
@@ -333,7 +345,6 @@ export default function MapPointLayer({ layer }) {
   const onEachFeature = useMemo(() => (feature, leafletLayer) => {
     if (feature?.properties?.Cluster) {
       const count = feature?.properties?.Count ?? 0;
-      const cell = feature?.properties?.ClusterCell;
       const content = `
         <div>
           Cluster of ${count} locations. Zoom in for individual points.

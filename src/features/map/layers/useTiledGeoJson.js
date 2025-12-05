@@ -108,6 +108,19 @@ export function useTiledGeoJson(manifestUrl, fallbackUrl, minZoom) {
     return manifestState.manifest.tiles.filter((tile) => intersects(tile.bounds, viewBounds));
   }, [manifestState, viewBounds, withinZoom]);
 
+  // Only keep loaded tiles that are still relevant to the current viewport so
+  // we stop rendering off-screen data. Tile data remains in tileCache for reuse.
+  useEffect(() => {
+    const allowed = new Set(visibleTiles.map((t) => t.id));
+    setLoadedTiles((prev) => {
+      const next = new Set();
+      allowed.forEach((id) => {
+        if (prev.has(id)) next.add(id);
+      });
+      return next;
+    });
+  }, [visibleTiles]);
+
   // Load tiles that intersect the viewport
   useEffect(() => {
     if (!manifestState?.manifest || !manifestState.sourceUrl || !withinZoom) return;
