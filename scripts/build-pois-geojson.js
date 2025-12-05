@@ -6,6 +6,16 @@ const poisBase = path.join(repoRoot, 'pois');
 const globalAirportsJson = path.join(repoRoot, 'global-airports', 'airports.json');
 const tileSizeDegrees = parseFloat(process.env.GEOJSON_TILE_DEGREES || '10');
 
+function decodeText(buffer) {
+  const decodeReplacementCount = (text) => (text.match(/\uFFFD/g) || []).length;
+  const utf8 = buffer.toString('utf8').replace(/^\uFEFF/, '');
+  const utf8Repl = decodeReplacementCount(utf8);
+  if (utf8Repl === 0) return utf8;
+  const latin1 = buffer.toString('latin1').replace(/^\uFEFF/, '');
+  const latin1Repl = decodeReplacementCount(latin1);
+  return latin1Repl < utf8Repl ? latin1 : utf8;
+}
+
 function normalizeProperties(entry = {}) {
   const pick = (keys) => {
     for (const key of keys) {
@@ -144,7 +154,7 @@ function parseCsv(text) {
 }
 
 function readCsv(filePath) {
-  const raw = fs.readFileSync(filePath, 'utf8').replace(/^\uFEFF/, '');
+  const raw = decodeText(fs.readFileSync(filePath));
   const rows = parseCsv(raw);
   const [header = [], ...dataRows] = rows;
   return dataRows.map((values) => {
