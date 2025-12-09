@@ -6,4 +6,4 @@
 * Add new items to sim status bar (gps course, gps speed, etc)
 * Update documentation for new/rebranded vfrmap (simconnect-ws)
 * Move selection of base map layer (raster/vector dropdwon) over to the dedicated map layers section
-* Refresh button and even less caching in service worker to help with refreshing changes in the PWA
+//* Less (no) caching in service worker to help with refreshing changes in the PWA
