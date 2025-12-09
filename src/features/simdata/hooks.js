@@ -39,7 +39,10 @@ function parseSimdataMessage(raw) {
     airspeed_true,
     flaps,
     trim,
-    rudder_trim
+    rudder_trim,
+    ground_heading,
+    ground_course,
+    ground_speed
   } = msg;
 
   if (!isFiniteNumber(latitude) || !isFiniteNumber(longitude)) {
@@ -55,7 +58,10 @@ function parseSimdataMessage(raw) {
     airspeed_true,
     flaps,
     trim,
-    rudder_trim
+    rudder_trim,
+    ground_heading,
+    ground_course,
+    ground_speed
   };
 
   const hasInvalidOptional = Object.values(numericFields).some((value) => !isNullableFiniteNumber(value));
@@ -78,7 +84,10 @@ function parseSimdataMessage(raw) {
     airspeed_true,
     flaps,
     trim,
-    rudder_trim
+    rudder_trim,
+    ground_heading,
+    ground_course,
+    ground_speed
   };
 }
 

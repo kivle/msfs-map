@@ -13,6 +13,9 @@ export const simdataSlice = createSlice({
     flaps: 0,
     trim: 0,
     rudder_trim: 0,
+    ground_heading: undefined,
+    ground_course: undefined,
+    ground_speed: undefined,
     connected: false
   },
   reducers: {
@@ -29,6 +32,9 @@ export const simdataSlice = createSlice({
       state.flaps = msg.flaps;
       state.trim = msg.trim;
       state.rudder_trim = msg.rudder_trim;
+      state.ground_heading = msg.ground_heading;
+      state.ground_course = msg.ground_course;
+      state.ground_speed = msg.ground_speed;
     },
     setConnected: (state, action) => {
       state.connected = action.payload;
