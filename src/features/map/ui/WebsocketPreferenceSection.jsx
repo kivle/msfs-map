@@ -8,7 +8,7 @@ export default function WebsocketPreferenceSection({
 }) {
   return (
     <div className={styles.preference}>
-      <label htmlFor="websocketUrl">URL or IP to vfrmap server (leave blank for default)</label>
+      <label htmlFor="websocketUrl">URL or IP to simconnect-ws server (leave blank for default)</label>
       <input
         id="websocketUrl"
         type="text"

@@ -17,6 +17,7 @@ import { loadPreferences, savePreference } from "../../../utils/prefs";
 import { setPreferencesLoaded } from "../mapSlice";
 
 const websocketDefaultPort = '9000';
+const websocketSecureDefaultPort = '9443';
 const websocketDefaultPath = '/ws';
 
 function normalizeWebsocketUrl(value) {
@@ -24,13 +25,23 @@ function normalizeWebsocketUrl(value) {
   if (!trimmed) return '';
 
   const hasProtocol = /^wss?:\/\//i.test(trimmed);
-  const urlString = hasProtocol ? trimmed : `ws://${trimmed}`;
+  const inferredProtocol = hasProtocol ? '' : determineProtocol(trimmed);
+  const urlString = hasProtocol ? trimmed : `${inferredProtocol}${trimmed}`;
 
   try {
     const url = new URL(urlString);
+    const isSecure = url.protocol === 'wss:';
     if (!url.port) {
-      url.port = websocketDefaultPort;
+      url.port = isSecure ? websocketSecureDefaultPort : websocketDefaultPort;
+    } else if (!hasProtocol) {
+      // If the user typed a port with no protocol, keep their port but ensure protocol stays consistent with host
+      url.protocol = isSecureHost(url.hostname) ? 'wss:' : 'ws:';
     }
+
+    if (!hasProtocol) {
+      url.protocol = isSecureHost(url.hostname) ? 'wss:' : 'ws:';
+    }
+
     if (!url.pathname || url.pathname === '/') {
       url.pathname = websocketDefaultPath;
     }
@@ -39,6 +50,14 @@ function normalizeWebsocketUrl(value) {
     // Fall back to original input if parsing fails; caller can still handle it.
     return trimmed;
   }
+}
+
+function isSecureHost(hostname) {
+  return hostname !== 'localhost' && hostname !== '127.0.0.1';
+}
+
+function determineProtocol(hostname) {
+  return isSecureHost(hostname) ? 'wss://' : 'ws://';
 }
 
 export function useLoadPreferencesEffect() {
