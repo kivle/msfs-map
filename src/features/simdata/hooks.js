@@ -8,6 +8,10 @@ function isFiniteNumber(value) {
   return typeof value === "number" && Number.isFinite(value);
 }
 
+function isNullableFiniteNumber(value) {
+  return value === null || value === undefined || isFiniteNumber(value);
+}
+
 function parseSimdataMessage(raw) {
   let msg = raw;
 
@@ -38,9 +42,12 @@ function parseSimdataMessage(raw) {
     rudder_trim
   } = msg;
 
-  const numericFields = [
-    latitude,
-    longitude,
+  if (!isFiniteNumber(latitude) || !isFiniteNumber(longitude)) {
+    console.warn("Ignoring simdata message: missing latitude/longitude", msg);
+    return null;
+  }
+
+  const numericFields = {
     altitude,
     heading,
     airspeed,
@@ -49,10 +56,11 @@ function parseSimdataMessage(raw) {
     flaps,
     trim,
     rudder_trim
-  ];
+  };
 
-  if (!numericFields.every(isFiniteNumber)) {
-    console.warn("Ignoring simdata message: missing or invalid numeric fields", msg);
+  const hasInvalidOptional = Object.values(numericFields).some((value) => !isNullableFiniteNumber(value));
+  if (hasInvalidOptional) {
+    console.warn("Ignoring simdata message: invalid numeric fields", msg);
     return null;
   }
 
