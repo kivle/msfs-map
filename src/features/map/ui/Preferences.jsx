@@ -12,11 +12,6 @@ import WebsocketPreferenceSection from './WebsocketPreferenceSection';
 import ShortcutPreferencesSection from './ShortcutPreferencesSection';
 
 const PreferencesPanel = React.memo(({
-  currentMap,
-  availableMaps,
-  detectRetina,
-  changeMap,
-  changeDetectRetina,
   visualizeSearchRadius,
   changeVisualizeSearchRadius,
   courseLine,
@@ -40,11 +35,6 @@ const PreferencesPanel = React.memo(({
 }) =>
   <>
     <MapPreferencesSection
-      currentMap={currentMap}
-      availableMaps={availableMaps}
-      detectRetina={detectRetina}
-      onChangeMap={changeMap}
-      onChangeDetectRetina={changeDetectRetina}
       visualizeSearchRadius={visualizeSearchRadius}
       onChangeVisualizeSearchRadius={changeVisualizeSearchRadius}
       courseLine={courseLine}
@@ -83,12 +73,9 @@ function PreferencesPanelContainer() {
     availableEditions,
     voice,
     availableVoices,
-    currentMap,
-    availableMaps,
     autoPlay,
     visualizeSearchRadius,
     courseLine,
-    detectRetina,
     shortcutMappings,
     websocketUrl,
     marchingSpeedKnots
@@ -99,11 +86,9 @@ function PreferencesPanelContainer() {
   const {
     changeEdition,
     changeVoice,
-    changeMap,
     changeAutoPlay,
     changeVisualizeSearchRadius,
     changeShowCourseLine,
-    changeDetectRetina,
     changeShortcutMappings,
     changeWebsocketUrl,
     changeMarchingSpeedKnots
@@ -125,9 +110,6 @@ function PreferencesPanelContainer() {
   }, [changeWebsocketUrl]);
 
   return <PreferencesPanel
-    changeMap={changeMap}
-    currentMap={currentMap}
-    availableMaps={availableMaps}
     changeEdition={changeEdition}
     edition={edition}
     availableEditions={availableEditions}
@@ -142,8 +124,6 @@ function PreferencesPanelContainer() {
     changeShowCourseLine={changeShowCourseLine}
     marchingSpeedKnots={marchingSpeedKnots}
     changeMarchingSpeedKnots={changeMarchingSpeedKnots}
-    detectRetina={detectRetina}
-    changeDetectRetina={changeDetectRetina}
     connectedGamepads={connectedGamepads}
     shortcutMappings={shortcutMappings}
     changeShortcutMappings={changeShortcutMappings}

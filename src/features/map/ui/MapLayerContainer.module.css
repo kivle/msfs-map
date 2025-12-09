@@ -5,6 +5,39 @@
   margin: 4px;
 }
 
+.preferenceGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+}
+
+.preferenceRow {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.labelText {
+  font-size: 0.85em;
+  font-weight: 700;
+  min-width: 130px;
+}
+
+.select {
+  flex: 1;
+  max-width: 320px;
+  justify-self: start;
+}
+
+.preferenceRow input[type="checkbox"] {
+  justify-self: start;
+}
+
 .heading {
   font-size: 0.9em;
   font-weight: 700;

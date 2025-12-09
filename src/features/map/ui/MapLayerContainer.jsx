@@ -1,7 +1,18 @@
 import * as React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { defaultMapLayerVisibility, groupedLayerDefinitions } from '../mapLayers';
-import { selectMapLayerVisibility, selectMapLayersEnabled, setMapLayers, setMapLayersEnabled } from '../mapSlice';
+import {
+  selectAvailableMaps,
+  selectCurrentMap,
+  selectDetectRetinaByMap,
+  selectDetectRetinaForCurrentMap,
+  selectMapLayerVisibility,
+  selectMapLayersEnabled,
+  setCurrentMap,
+  setDetectRetina,
+  setMapLayers,
+  setMapLayersEnabled
+} from '../mapSlice';
 import { savePreference } from '../../../utils/prefs';
 import styles from './MapLayerContainer.module.css';
 
@@ -9,6 +20,10 @@ export default function MapLayerContainer() {
   const dispatch = useDispatch();
   const visibility = useSelector(selectMapLayerVisibility);
   const layersEnabled = useSelector(selectMapLayersEnabled);
+  const currentMap = useSelector(selectCurrentMap);
+  const availableMaps = useSelector(selectAvailableMaps);
+  const detectRetina = useSelector(selectDetectRetinaForCurrentMap);
+  const detectRetinaByMap = useSelector(selectDetectRetinaByMap);
 
   const resolvedVisibility = React.useMemo(() => ({
     ...defaultMapLayerVisibility,
@@ -30,10 +45,44 @@ export default function MapLayerContainer() {
     savePreference('mapLayersEnabled', next).catch(() => {});
   }, [dispatch, layersEnabled]);
 
+  const handleMapChange = React.useCallback((e) => {
+    const mapId = e.target.value;
+    dispatch(setCurrentMap(mapId));
+    savePreference('currentMap', mapId).catch(() => {});
+  }, [dispatch]);
+
+  const handleDetectRetinaChange = React.useCallback((checked) => {
+    const mapId = currentMap?.id;
+    if (!mapId) return;
+    dispatch(setDetectRetina({ mapId, enabled: checked }));
+    const updated = { ...(detectRetinaByMap ?? {}) };
+    updated[mapId] = checked;
+    savePreference('detectRetinaByMap', updated).catch(() => {});
+  }, [dispatch, currentMap, detectRetinaByMap]);
+
   return (
     <div className={styles.container}>
+      <div className={styles.preferenceGroup}>
+        <div className={styles.preferenceRow}>
+          <label htmlFor="mapserver" className={styles.labelText}>Base map</label>
+          <select id="mapserver" onChange={handleMapChange} value={currentMap?.id} className={styles.select}>
+            {availableMaps.map(({ id, name }) => (
+              <option key={id} value={id}>{name}</option>
+            ))}
+          </select>
+        </div>
+        <div className={styles.preferenceRow}>
+          <label htmlFor="detectRetina" className={styles.labelText}>Use High-DPI tiles</label>
+          <input
+            id="detectRetina"
+            type="checkbox"
+            checked={detectRetina}
+            onChange={(e) => handleDetectRetinaChange(e.target.checked)}
+          />
+        </div>
+      </div>
       <div className={styles.heading}>Map layers</div>
-      <div className={styles.subheading}>Show or hide available point sets.</div>
+      <div className={styles.subheading}>Choose map settings and show or hide point sets.</div>
       <button
         type="button"
         className={`${styles.layerButton} ${styles.globalToggle}${layersEnabled ? ` ${styles.enabled}` : ''}`}
