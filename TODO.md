@@ -8,4 +8,4 @@
 * Move selection of base map layer (raster/vector dropdwon) over to the dedicated map layers section
 //* Less (no) caching in service worker to help with refreshing changes in the PWA
 * Change preference for ws:// url to instead default to wss:// and port 9443 when configuring for anything but localhost/127.0.0.1
-* DistanceScaleControl should be moved out of MapContent file
+//* DistanceScaleControl should be moved out of MapContent file
