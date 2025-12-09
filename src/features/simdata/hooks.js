@@ -4,6 +4,76 @@ import { selectWebsocketUrl, setConnected, updateData } from "./simdataSlice";
 
 const defaultUrl = "ws://localhost:9000/ws";
 
+function isFiniteNumber(value) {
+  return typeof value === "number" && Number.isFinite(value);
+}
+
+function parseSimdataMessage(raw) {
+  let msg = raw;
+
+  if (typeof raw === "string") {
+    try {
+      msg = JSON.parse(raw);
+    } catch (err) {
+      console.warn("Failed to parse simdata message JSON", err);
+      return null;
+    }
+  }
+
+  if (!msg || typeof msg !== "object") {
+    console.warn("Ignoring simdata message: not an object", msg);
+    return null;
+  }
+
+  const {
+    latitude,
+    longitude,
+    altitude,
+    heading,
+    airspeed,
+    vertical_speed,
+    airspeed_true,
+    flaps,
+    trim,
+    rudder_trim
+  } = msg;
+
+  const numericFields = [
+    latitude,
+    longitude,
+    altitude,
+    heading,
+    airspeed,
+    vertical_speed,
+    airspeed_true,
+    flaps,
+    trim,
+    rudder_trim
+  ];
+
+  if (!numericFields.every(isFiniteNumber)) {
+    console.warn("Ignoring simdata message: missing or invalid numeric fields", msg);
+    return null;
+  }
+
+  if (latitude >= 0 && latitude < 0.015 && longitude >= 0 && longitude < 0.015) {
+    return null;
+  }
+
+  return {
+    latitude,
+    longitude,
+    altitude,
+    heading,
+    airspeed,
+    vertical_speed,
+    airspeed_true,
+    flaps,
+    trim,
+    rudder_trim
+  };
+}
+
 export function useVfrmapConnection() {
   const store = useStore();
   const dispatch = useDispatch();
@@ -15,22 +85,30 @@ export function useVfrmapConnection() {
     let timeout = undefined;
 
     function createConnection() {
-      ws = new WebSocket(websocketUrl);
+      try {
+        ws = new WebSocket(websocketUrl);
+      } catch (err) {
+        console.error("Failed to open simdata websocket", err);
+        dispatch(setConnected(false));
+        if (!closing) {
+          timeout = setTimeout(createConnection, 2000);
+        }
+        return;
+      }
 
       ws.onmessage = (e) => {
-        const connected = store.getState()?.simdata?.connected;
-        if (!connected) {
-          dispatch(setConnected(true));
-        }
-
         try {
-          const msg = JSON.parse(e.data);
-          if (msg.latitude >= 0 && msg.latitude < 0.015 && msg.longitude >= 0 && msg.longitude < 0.015) {
-            return;
+          const connected = store.getState()?.simdata?.connected;
+          if (!connected) {
+            dispatch(setConnected(true));
           }
+
+          const msg = parseSimdataMessage(e.data);
+          if (!msg) return;
+
           dispatch(updateData(msg));
         } catch (err) {
-          console.warn('Failed to parse simdata message', err);
+          console.warn("Failed to handle simdata message", err);
         }
       };
       
