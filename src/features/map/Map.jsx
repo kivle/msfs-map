@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { MapContainer as LeafletMapContainer } from "react-leaflet";
+import { useSelector } from "react-redux";
 import UI from './UI';
 import MapContent from "./MapContent";
 import styles from './Map.module.css';
 import localforage from "localforage";
 import 'maplibre-gl/dist/maplibre-gl.css';
+import { selectCurrentMap } from "./mapSlice";
+import AttributionDialog from "./components/AttributionDialog";
+import packageJson from "../../../package.json";
 
 const defaultView = {
   center: [51.505, -0.09],
@@ -13,6 +17,8 @@ const defaultView = {
 
 export default function Map() {
   const [initialView, setInitialView] = useState(defaultView);
+  const [showAttribution, setShowAttribution] = useState(false);
+  const currentMap = useSelector(selectCurrentMap);
 
   useEffect(() => {
     let cancelled = false;
@@ -44,9 +50,27 @@ export default function Map() {
         zoom={initialView.zoom}
         zoomSnap={1}
         zoomDelta={1}
+        attributionControl={false}
       >
         <MapContent />
       </LeafletMapContainer>
+      <div className={styles.footer}>
+        <span>Map credits</span>
+        <button
+          type="button"
+          className={styles.moreLink}
+          onClick={() => setShowAttribution(true)}
+        >
+          more
+        </button>
+      </div>
+      {showAttribution && (
+        <AttributionDialog
+          version={packageJson.version}
+          mapAttribution={currentMap?.attribution}
+          onClose={() => setShowAttribution(false)}
+        />
+      )}
     </div>
   );
 }
