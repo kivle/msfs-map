@@ -24,6 +24,7 @@ export default function MapLayerContainer() {
   const availableMaps = useSelector(selectAvailableMaps);
   const detectRetina = useSelector(selectDetectRetinaForCurrentMap);
   const detectRetinaByMap = useSelector(selectDetectRetinaByMap);
+  const isRasterMap = currentMap?.renderType === 'raster';
 
   const resolvedVisibility = React.useMemo(() => ({
     ...defaultMapLayerVisibility,
@@ -71,15 +72,17 @@ export default function MapLayerContainer() {
             ))}
           </select>
         </div>
-        <div className={styles.preferenceRow}>
-          <label htmlFor="detectRetina" className={styles.labelText}>Use High-DPI tiles</label>
-          <input
-            id="detectRetina"
-            type="checkbox"
-            checked={detectRetina}
-            onChange={(e) => handleDetectRetinaChange(e.target.checked)}
-          />
-        </div>
+        {isRasterMap && (
+          <div className={styles.preferenceRow}>
+            <label htmlFor="detectRetina" className={styles.labelText}>Use High-DPI tiles</label>
+            <input
+              id="detectRetina"
+              type="checkbox"
+              checked={detectRetina}
+              onChange={(e) => handleDetectRetinaChange(e.target.checked)}
+            />
+          </div>
+        )}
       </div>
       <div className={styles.heading}>Map layers</div>
       <div className={styles.subheading}>Choose map settings and show or hide point sets.</div>
