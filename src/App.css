@@ -2,7 +2,8 @@
   display: flex;
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
+  min-height: 100vh;
 }
 
 .leaflet-container {
