@@ -38,3 +38,15 @@
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
+
+:global(.leaflet-control-container .leaflet-top.leaflet-left) {
+  top: auto;
+  left: auto;
+  right: 10px;
+  bottom: calc(10px + 44px);
+}
+
+:global(.leaflet-control-zoom) {
+  margin: 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
