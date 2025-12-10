@@ -29,21 +29,26 @@ function parseSimdataMessage(raw) {
     return null;
   }
 
-  const {
-    latitude,
-    longitude,
-    altitude,
-    heading,
-    airspeed,
-    vertical_speed,
-    airspeed_true,
-    flaps,
-    trim,
-    rudder_trim,
-    ground_heading,
-    ground_course,
-    ground_speed
-  } = msg;
+  // vfrmap/simconnect-ws payloads use the field names shown in the sample frame; coerce numeric strings.
+  const toNumber = (value) => {
+    if (value === undefined || value === null) return value;
+    const n = Number(value);
+    return Number.isFinite(n) ? n : value;
+  };
+
+  const latitude = toNumber(msg.latitude);
+  const longitude = toNumber(msg.longitude);
+  const altitude = toNumber(msg.altitude);
+  const heading = toNumber(msg.heading);
+  const airspeed = toNumber(msg.airspeed);
+  const vertical_speed = toNumber(msg.vertical_speed);
+  const airspeed_true = toNumber(msg.airspeed_true);
+  const flaps = toNumber(msg.flaps);
+  const trim = toNumber(msg.trim);
+  const rudder_trim = toNumber(msg.rudder_trim);
+  const ground_heading = toNumber(msg.ground_heading);
+  const ground_course = toNumber(msg.ground_course);
+  const ground_speed = toNumber(msg.ground_speed);
 
   if (!isFiniteNumber(latitude) || !isFiniteNumber(longitude)) {
     console.warn("Ignoring simdata message: missing latitude/longitude", msg);
