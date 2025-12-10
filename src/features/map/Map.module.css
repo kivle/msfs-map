@@ -6,6 +6,7 @@
   --safe-area-right: env(safe-area-inset-right, 0px);
   --safe-area-bottom: env(safe-area-inset-bottom, 0px);
   --safe-area-left: env(safe-area-inset-left, 0px);
+  padding-bottom: var(--safe-area-bottom);
 }
 
 .footer {
@@ -50,20 +51,34 @@
   bottom: calc(10px + var(--safe-area-bottom) + 44px);
 }
 
-:global(.leaflet-control-container .leaflet-bottom.leaflet-left),
-:global(.leaflet-control-container .leaflet-bottom.leaflet-right) {
-  margin-bottom: var(--safe-area-bottom);
-}
-
-:global(.leaflet-control-container .leaflet-bottom.leaflet-left) {
-  margin-left: var(--safe-area-left);
-}
-
-:global(.leaflet-control-container .leaflet-bottom.leaflet-right) {
-  margin-right: var(--safe-area-right);
-}
-
 :global(.leaflet-control-zoom) {
   margin: 0;
   box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+:global(.leaflet-control-container .leaflet-bottom.leaflet-left),
+:global(.leaflet-control-container .leaflet-bottom.leaflet-right) {
+  margin-bottom: calc(10px + var(--safe-area-bottom));
+}
+
+:global(.leaflet-control-container .leaflet-bottom.leaflet-left) {
+  margin-left: calc(10px + var(--safe-area-left));
+}
+
+:global(.leaflet-control-container .leaflet-bottom.leaflet-right) {
+  margin-right: calc(10px + var(--safe-area-right));
+}
+
+:global(.leaflet-control-attribution) {
+  margin: 0;
+  margin-bottom: calc(10px + var(--safe-area-bottom));
+  margin-right: calc(10px + var(--safe-area-right));
+  max-width: calc(100vw - var(--safe-area-left) - var(--safe-area-right) - 20px);
+}
+
+:global(.leaflet-control.custom-scale) {
+  margin: 0;
+  margin-left: calc(10px + var(--safe-area-left));
+  margin-bottom: calc(10px + var(--safe-area-bottom));
+  max-width: calc(100vw - var(--safe-area-left) - var(--safe-area-right) - 20px);
 }
