@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector, useStore } from "react-redux";
 import { selectWebsocketUrl, setConnected, updateData } from "./simdataSlice";
 
@@ -95,65 +95,117 @@ export function useVfrmapConnection() {
   const store = useStore();
   const dispatch = useDispatch();
   const websocketUrl = useSelector(selectWebsocketUrl) || defaultUrl;
+  const [status, setStatus] = useState("idle");
+  const [error, setError] = useState(null);
+  const websocketRef = useRef(null);
+  const manuallyClosedSockets = useRef(new WeakSet());
 
-  useEffect(() => {
-    let ws = undefined;
-    let closing = false;
-    let timeout = undefined;
+  const clearError = useCallback(() => setError(null), []);
 
-    function createConnection() {
+  const disconnect = useCallback(() => {
+    const socket = websocketRef.current;
+    if (socket) {
+      manuallyClosedSockets.current.add(socket);
       try {
-        ws = new WebSocket(websocketUrl);
-      } catch (err) {
-        console.error("Failed to open simdata websocket", err);
-        dispatch(setConnected(false));
-        if (!closing) {
-          timeout = setTimeout(createConnection, 2000);
-        }
-        return;
-      }
+        socket.close();
+      } catch {}
+    }
+    websocketRef.current = null;
+    setStatus("idle");
+    setError(null);
+    dispatch(setConnected(false));
+  }, [dispatch]);
 
-      ws.onmessage = (e) => {
-        try {
-          const connected = store.getState()?.simdata?.connected;
-          if (!connected) {
-            dispatch(setConnected(true));
-          }
+  useEffect(() => () => disconnect(), [disconnect]);
 
-          const msg = parseSimdataMessage(e.data);
-          if (!msg) return;
+  const connect = useCallback(() => {
+    if (status === "connecting") return;
 
-          dispatch(updateData(msg));
-        } catch (err) {
-          console.warn("Failed to handle simdata message", err);
-        }
-      };
-      
-      ws.onerror = (event) => {
-        // Suppress noisy console errors when vfrmap.exe is not running; preventDefault keeps the error from bubbling
-        try {
-          event?.preventDefault?.();
-        } catch {}
-      };
+    setError(null);
 
-      ws.onclose = (e) => {
-        dispatch(setConnected(false));
-        if (!closing) {
-          timeout = setTimeout(createConnection, 2000);
-        }
-      };
+    const existingSocket = websocketRef.current;
+    if (existingSocket) {
+      manuallyClosedSockets.current.add(existingSocket);
+      try {
+        existingSocket.close();
+      } catch {}
+      websocketRef.current = null;
+      dispatch(setConnected(false));
     }
 
-    createConnection();
+    setStatus("connecting");
 
-    return () => {
-      try {
-        clearTimeout(timeout);
-        closing = true;
-        ws.close(); 
-        ws = undefined;
-        dispatch(setConnected(false));
-      } catch {}
+    let socket;
+    try {
+      socket = new WebSocket(websocketUrl);
+    } catch (err) {
+      setStatus("idle");
+      dispatch(setConnected(false));
+      setError(err?.message || "Unable to open websocket connection.");
+      return;
+    }
+
+    websocketRef.current = socket;
+
+    socket.onopen = () => {
+      if (websocketRef.current !== socket) return;
+      setStatus("connected");
+      setError(null);
+      dispatch(setConnected(true));
     };
-  }, [dispatch, store, websocketUrl]);
+
+    socket.onmessage = (e) => {
+      if (websocketRef.current !== socket) return;
+      try {
+        const msg = parseSimdataMessage(e.data);
+        if (!msg) return;
+
+        dispatch(updateData(msg));
+        const connected = store.getState()?.simdata?.connected;
+        if (!connected) {
+          dispatch(setConnected(true));
+        }
+      } catch (err) {
+        console.warn("Failed to handle simdata message", err);
+      }
+    };
+    
+    socket.onerror = (event) => {
+      if (websocketRef.current !== socket) return;
+      // Suppress noisy console errors when vfrmap.exe is not running; preventDefault keeps the error from bubbling
+      try {
+        event?.preventDefault?.();
+      } catch {}
+
+      const message = event?.message || "Connection error. Verify the simulator bridge is running.";
+      setError(message);
+    };
+
+    socket.onclose = (event) => {
+      const isCurrentSocket = websocketRef.current === socket;
+      const wasManual = manuallyClosedSockets.current.has(socket);
+      manuallyClosedSockets.current.delete(socket);
+      if (!isCurrentSocket) return;
+
+      websocketRef.current = null;
+      dispatch(setConnected(false));
+      setStatus("idle");
+
+      if (!wasManual) {
+        const reason = event?.reason?.trim();
+        const code = event?.code;
+        const message = reason || (code ? `Connection closed (code ${code}).` : "Connection closed.");
+        if (message) setError(message);
+      }
+    };
+  }, [dispatch, status, store, websocketUrl]);
+
+  return {
+    connect,
+    disconnect,
+    clearError,
+    status,
+    error,
+    websocketUrl
+  };
 }

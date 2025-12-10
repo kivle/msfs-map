@@ -1,6 +1,5 @@
 import Map from './features/map/Map';
 import './App.css';
-import { useVfrmapConnection } from './features/simdata/hooks';
 import { Suspense, lazy } from 'react';
 import { useSelector } from 'react-redux';
 import { selectIsEnabled } from './features/wikipedia/wikipediaSelectors';
@@ -13,7 +12,6 @@ function App() {
   const isWikipediaEnabled = useSelector(selectIsEnabled);
   const preferencesLoaded = useSelector(selectPreferencesLoaded);
   useLoadPreferencesEffect();
-  useVfrmapConnection();
 
   if (!preferencesLoaded) {
     return (
