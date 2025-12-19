@@ -1,13 +1,11 @@
 import * as React from 'react';
 import { 
-  useAvailableVoicesEffect, 
   useConnectedGamepads, 
   usePreferenceCallbacks, 
   usePreferenceState 
 } from './hooks';
 import MapPreferencesSection from './MapPreferencesSection';
 import WikipediaPreferencesSection from './WikipediaPreferencesSection';
-import TtsPreferencesSection from './TtsPreferencesSection';
 import WebsocketPreferenceSection from './WebsocketPreferenceSection';
 import ShortcutPreferencesSection from './ShortcutPreferencesSection';
 
@@ -21,11 +19,6 @@ const PreferencesPanel = React.memo(({
   edition,
   availableEditions,
   changeEdition,
-  voice,
-  availableVoices,
-  changeVoice,
-  autoPlay,
-  changeAutoPlay,
   websocketUrlInput,
   onWebsocketInputChange,
   onWebsocketInputBlur,
@@ -47,13 +40,6 @@ const PreferencesPanel = React.memo(({
       availableEditions={availableEditions}
       onChangeEdition={changeEdition}
     />
-    <TtsPreferencesSection
-      voice={voice}
-      availableVoices={availableVoices}
-      onChangeVoice={changeVoice}
-      autoPlay={autoPlay}
-      onChangeAutoPlay={changeAutoPlay}
-    />
     <WebsocketPreferenceSection
       value={websocketUrlInput}
       onChange={onWebsocketInputChange}
@@ -71,9 +57,6 @@ function PreferencesPanelContainer() {
   const {
     edition,
     availableEditions,
-    voice,
-    availableVoices,
-    autoPlay,
     visualizeSearchRadius,
     courseLine,
     shortcutMappings,
@@ -81,12 +64,8 @@ function PreferencesPanelContainer() {
     marchingSpeedKnots
   } = usePreferenceState();
 
-  useAvailableVoicesEffect();
-
   const {
     changeEdition,
-    changeVoice,
-    changeAutoPlay,
     changeVisualizeSearchRadius,
     changeShowCourseLine,
     changeShortcutMappings,
@@ -113,11 +92,6 @@ function PreferencesPanelContainer() {
     changeEdition={changeEdition}
     edition={edition}
     availableEditions={availableEditions}
-    changeVoice={changeVoice}
-    voice={voice}
-    availableVoices={availableVoices}
-    autoPlay={autoPlay}
-    changeAutoPlay={changeAutoPlay}
     visualizeSearchRadius={visualizeSearchRadius}
     changeVisualizeSearchRadius={changeVisualizeSearchRadius}
     courseLine={courseLine}

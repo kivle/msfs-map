@@ -108,8 +108,6 @@ function ShortcutMapping({
       onChange={onChangeAction}
       value={action}>
       <option value="">(none)</option>
-      <option value="next">Skip to next article</option>
-      <option value="play">Play/pause</option>
       <option value="zoomIn">Zoom in</option>
       <option value="zoomOut">Zoom out</option>
     </select>

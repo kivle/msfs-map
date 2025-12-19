@@ -23,18 +23,16 @@ function pageSort(a, b) {
 
 const selectPagesState = (state) => state.wikipedia?.pages;
 const selectCalculatedData = (state) => state.wikipedia?.calculatedData;
-const selectPlayingPageId = (state) => state.wikipedia?.playingPageid;
 
 export const selectPagesWithDistances = createSelector(
-  [selectPagesState, selectCalculatedData, selectPlayingPageId],
-  (pages, calculatedData, playingPageid) => {
+  [selectPagesState, selectCalculatedData],
+  (pages, calculatedData) => {
     const pagesWithClosestPoints = pages?.map((p) => {
       const { closestPoint } = calculatedData[p.pageid] ?? {};
 
       return {
         page: p,
-        closestPoint,
-        isReading: playingPageid === p.pageid,
+        closestPoint
       };
     }).sort(pageSort);
 
@@ -43,11 +41,6 @@ export const selectPagesWithDistances = createSelector(
       ...pagesWithClosestPoints.filter((p) => !p.closestPoint?.isInFront),
     ];
   }
-);
-
-export const selectPlayingPage = createSelector(
-  [selectPagesWithDistances, selectPlayingPageId],
-  (pages, playingPageid) => pages.find((p) => p.page.pageid === playingPageid)
 );
 
 const selectPosition = (state) => state.simdata?.position;

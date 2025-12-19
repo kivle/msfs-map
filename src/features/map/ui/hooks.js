@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { selectAutoPlay, selectAvailableVoices, selectVoice, setAutoPlay, setAvailableVoices, setVoice } from "../../tts/ttsSlice";
 import {
   selectAvailableEditions,
   selectEdition,
@@ -71,12 +70,8 @@ export function useLoadPreferencesEffect() {
         dispatch(setEnabled(prefs['wikipedia-enabled']));
       if (prefs['wikipedia-edition'])
         dispatch(setEdition(prefs['wikipedia-edition']));
-      if (prefs['voice'])
-        dispatch(setVoice(prefs['voice']));
       if (prefs['currentMap'])
         dispatch(setCurrentMap(prefs['currentMap']));
-      if (prefs['autoPlay'] !== undefined)
-        dispatch(setAutoPlay(prefs['autoPlay']));
       if (prefs['visualizeSearchRadius'] !== undefined)
         dispatch(setVisualizeSearchRadius(prefs['visualizeSearchRadius']));
       if (prefs['courseLine'] !== undefined)
@@ -102,11 +97,8 @@ export function useLoadPreferencesEffect() {
 export function usePreferenceState() {
   const edition = useSelector(selectEdition);
   const availableEditions = useSelector(selectAvailableEditions);
-  const voice = useSelector(selectVoice);
-  const availableVoices = useSelector(selectAvailableVoices);
   const currentMap = useSelector(selectCurrentMap);
   const availableMaps = useSelector(selectAvailableMaps);
-  const autoPlay = useSelector(selectAutoPlay);
   const visualizeSearchRadius = useSelector(selectVisualizeSearchRadius);
   const courseLine = useSelector(selectCourseLine);
   const detectRetina = useSelector(selectDetectRetinaForCurrentMap);
@@ -118,11 +110,8 @@ export function usePreferenceState() {
   return {
     edition,
     availableEditions,
-    voice,
-    availableVoices,
     currentMap,
     availableMaps,
-    autoPlay,
     visualizeSearchRadius,
     courseLine,
     detectRetina,
@@ -144,22 +133,11 @@ export function usePreferenceCallbacks() {
     dispatch(setEdition(e.target.value));
   }, [dispatch]);
 
-  const changeVoice = useCallback(async (e) => {
-    await savePreference('voice', e.target.value);
-    dispatch(setVoice(e.target.value));
-  }, [dispatch]);
-
   const changeMap = useCallback(async (e) => {
     const mapId = e.target.value;
     dispatch(setCurrentMap(mapId));
     // Persist asynchronously; failures should not block UI update
     savePreference('currentMap', mapId).catch(() => {});
-  }, [dispatch]);
-
-  const changeAutoPlay = useCallback(async (enabled) => {
-    if (enabled !== undefined)
-      await savePreference('autoPlay', enabled);
-    dispatch(setAutoPlay(enabled));
   }, [dispatch]);
 
   const changeVisualizeSearchRadius = useCallback(async (enabled) => {
@@ -207,9 +185,7 @@ export function usePreferenceCallbacks() {
 
   return {
     changeEdition,
-    changeVoice,
     changeMap,
-    changeAutoPlay,
     changeVisualizeSearchRadius,
     changeShowCourseLine,
     changeDetectRetina,
@@ -218,21 +194,6 @@ export function usePreferenceCallbacks() {
     setAllMapLayersEnabled,
     changeMarchingSpeedKnots
   };
-}
-
-export function useAvailableVoicesEffect() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    const voicesChanged = () => {
-      const newVoices = window.speechSynthesis.getVoices();
-      dispatch(setAvailableVoices(newVoices.map(v => v.name)));
-    };
-    voicesChanged();
-    window.speechSynthesis.addEventListener('voiceschanged', voicesChanged);
-    
-    return () => window.speechSynthesis.removeEventListener('voiceschanged', voicesChanged);
-  }, [dispatch]);
 }
 
 export function useExpandedState() {

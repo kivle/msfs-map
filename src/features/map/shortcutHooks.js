@@ -2,14 +2,9 @@ import { useEffect } from "react";
 import { useMap } from "react-leaflet";
 import { useSelector } from "react-redux";
 import { selectShortcutMappings } from "./mapSlice";
-import { usePlaybackCallbacks } from "../tts/TtsPlayer/hooks";
 
 export function useShortcutMappingsEffect() {
   const shortcutMappings = useSelector(selectShortcutMappings);
-  const {
-    togglePlaybackState,
-    next
-  } = usePlaybackCallbacks();
   const map = useMap();
 
   useEffect(() => {
@@ -23,17 +18,11 @@ export function useShortcutMappingsEffect() {
           const gamepad = connectedGamepads.find(
             gamepad => gamepad?.id === mapping.gamepadId
           );
-          const hasButton = Number.isInteger(buttonId) && buttonId >= 0 && gamepad && gamepad.buttons.length > buttonId;
-          if (hasButton) {
-            const pressed = gamepad.buttons[buttonId].pressed;
-            if (pressed && !mappingButtonStates[idx]) {
-              switch (mapping.action) {
-                case "next":
-                  next();
-                  break;
-                case "play":
-                  togglePlaybackState();
-                  break;
+            const hasButton = Number.isInteger(buttonId) && buttonId >= 0 && gamepad && gamepad.buttons.length > buttonId;
+            if (hasButton) {
+              const pressed = gamepad.buttons[buttonId].pressed;
+              if (pressed && !mappingButtonStates[idx]) {
+                switch (mapping.action) {
                 case "zoomIn":
                   map.zoomIn();
                   break;
@@ -53,5 +42,5 @@ export function useShortcutMappingsEffect() {
     return () => {
       interval && clearInterval(interval);
     };
-  }, [shortcutMappings, togglePlaybackState, next, map]);
+  }, [shortcutMappings, map]);
 }

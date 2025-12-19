@@ -4,19 +4,12 @@ import {
   removePages,
   updateCalculatedData,
   updateLastSearch,
-  wikipediaSlice,
 } from './wikipediaSlice';
 import {
   selectEdition,
-  selectPagesWithDistances,
-  selectPlayingPage,
+  selectPagesWithDistances
 } from './wikipediaSelectors';
 import { selectSimdata } from '../simdata/simdataSlice';
-import {
-  selectAutoPlay,
-  selectIsPlaying,
-  toggleIsPlaying,
-} from '../tts/ttsSlice';
 
 export const getPages = (lat, lng, radius) => async (dispatch, getState) => {
   dispatch(updateLastSearch({
@@ -45,10 +38,6 @@ export const getPages = (lat, lng, radius) => async (dispatch, getState) => {
         currentTime: new Date().getTime(),
       })
     );
-    const playingPage = selectPlayingPage(state);
-    if (!playingPage) {
-      dispatch(playNext());
-    }
   }
 };
 
@@ -59,7 +48,7 @@ export const clearPagesOutOfRange = () => (dispatch, getState) => {
   const state = getState();
   const pages = selectPagesWithDistances(state);
   const pagesToRemove = pages.filter((p, i) => {
-    if (i >= maxPagesInState && state.wikipedia.playingPageid !== p.page?.pageid) {
+    if (i >= maxPagesInState) {
       return true;
     }
     return (
@@ -68,22 +57,4 @@ export const clearPagesOutOfRange = () => (dispatch, getState) => {
     );
   });
   dispatch(removePages({ pageids: pagesToRemove.map((p) => p.page?.pageid) }));
-};
-
-export const playNext = () => (dispatch, getState) => {
-  const state = getState();
-  const autoPlay = selectAutoPlay(state);
-  const isPlaying = selectIsPlaying(state);
-  if (!autoPlay && isPlaying) {
-    dispatch(toggleIsPlaying());
-  }
-  const allPages = selectPagesWithDistances(state).filter(
-    (p) => p.page.pageid !== state.wikipedia.playingPageid
-  );
-  dispatch(
-    // internal reducer action from slice
-    wikipediaSlice.actions.playNext({
-      nextPageid: allPages[0]?.page?.pageid,
-    })
-  );
 };

@@ -22,22 +22,3 @@
   z-index: 500;
   opacity: 0.5;
 }
-
-.current, .queued {
-  z-index: 600;
-  background-color: white;
-  opacity: 1;
-}
-
-.speaker {
-  animation: pulse 1s linear infinite alternate;
-}
-
-@keyframes pulse {
-  from {
-    transform: scale(1.0, 1.0);
-  }
-  to {
-    transform: scale(0.8, 0.8);
-  }
-}

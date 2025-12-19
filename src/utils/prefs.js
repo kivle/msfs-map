@@ -3,9 +3,7 @@ import localforage from 'localforage';
 export const preferenceKeys = [
   'wikipedia-enabled',
   'wikipedia-edition',
-  'voice',
   'currentMap',
-  'autoPlay',
   'visualizeSearchRadius',
   'courseLine',
   'shortcutMappings',

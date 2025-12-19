@@ -3,7 +3,6 @@ import { BiTrash } from 'react-icons/bi';
 import { useWikipediaPageLink } from '../hooks';
 import parse from 'html-react-parser';
 import styles from './WikipediaPage.module.css';
-import { MdRecordVoiceOver } from 'react-icons/md';
 import { useDispatch } from 'react-redux';
 import { markAsRead } from '../wikipediaSlice';
 import DistanceVisualizer from './DistanceVisualizer';
@@ -36,13 +35,6 @@ const WikipediaPage = ({ page, closestPoint }) => {
   return (
     <article className={styles.page}>
       <div className={styles.title}>
-        {page.isReading && <MdRecordVoiceOver 
-          className={styles.speaker}
-          size={32} 
-          stroke="black"
-          strokeWidth={1}
-          color="#FFF" 
-        />}
         <a href={link} target="_blank" rel="noreferrer">
           {page.title}
         </a>

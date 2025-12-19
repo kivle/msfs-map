@@ -13,7 +13,6 @@ export const wikipediaSlice = createSlice({
     pages: [],
     calculatedData: {},
     pagesViewed: [],
-    playingPageid: undefined,
     lastSearchPosition: undefined,
     lastSearchTime: undefined,
     searchRadius: 10000
@@ -28,7 +27,6 @@ export const wikipediaSlice = createSlice({
         state.pages = [];
         state.calculatedData = {};
         state.pagesViewed = [];
-        state.playingPageid = undefined;
         state.lastSearchPosition = undefined;
         state.lastSearchTime = undefined;
       }
@@ -64,24 +62,11 @@ export const wikipediaSlice = createSlice({
     removePages: (state, action) => {
       const { pageids } = action.payload;
       state.pages = state.pages.filter(p => !pageids.includes(p.pageid));
-      state.playingPageid = pageids.includes(state.playingPageid) ? undefined : state.playingPageid;
       pageids.forEach(p => {
         if (Object.hasOwnProperty.call(state.calculatedData, p)) {
           delete state.calculatedData[p];
         }
       });
-    },
-    playNext: (state, action) => {
-      const { nextPageid } = action.payload;
-      const pageid = state.playingPageid;
-      if (pageid) {
-        state.pages = state.pages.filter(p => p.pageid !== pageid);
-        state.pagesViewed.push(pageid);
-      }
-      state.playingPageid = nextPageid;
-      if (Object.hasOwnProperty.call(state.calculatedData, pageid)) {
-        delete state.calculatedData[pageid];
-      }
     },
     markAsRead: (state, action) => {
       const { pageid } = action.payload;
@@ -97,7 +82,6 @@ export const wikipediaSlice = createSlice({
       state.pages = [];
       state.calculatedData = {};
       state.pagesViewed = [];
-      state.playingPageid = undefined;
       state.lastSearchPosition = undefined;
       state.lastSearchTime = undefined;
     },
