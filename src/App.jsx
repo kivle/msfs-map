@@ -1,15 +1,10 @@
 import Map from './features/map/Map';
 import './App.css';
-import { Suspense, lazy } from 'react';
 import { useSelector } from 'react-redux';
-import { selectIsEnabled } from './features/wikipedia/wikipediaSelectors';
 import { useLoadPreferencesEffect } from './features/map/ui/hooks';
 import { selectPreferencesLoaded } from './features/map/mapSlice';
 
-const Sidebar = lazy(() => import('./features/sidebar/Sidebar'));
-
 function App() {
-  const isWikipediaEnabled = useSelector(selectIsEnabled);
   const preferencesLoaded = useSelector(selectPreferencesLoaded);
   useLoadPreferencesEffect();
 
@@ -24,11 +19,6 @@ function App() {
   return (
     <div className="App">
       <Map />
-      {isWikipediaEnabled && (
-        <Suspense fallback={null}>
-          <Sidebar />
-        </Suspense>
-      )}
     </div>
   );
 }

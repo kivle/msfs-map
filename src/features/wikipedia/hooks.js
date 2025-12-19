@@ -1,76 +1,51 @@
-import { getDistance } from "geolib";
-import { useEffect } from "react";
-import { useDispatch, useSelector, useStore } from "react-redux";
-import { selectSimdata } from "../simdata/simdataSlice";
-import { clearPagesOutOfRange, getPages } from "./wikipediaThunks";
-import {
-  selectEdition,
-  selectIsEnabled,
-  selectLastSearchPosition,
-  selectLastSearchTime,
-  selectSearchCenterPoint,
-  selectSearchRadius,
-} from "./wikipediaSelectors";
-import { updateCalculatedData } from "./wikipediaSlice";
+import { useEffect, useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchPagesForBounds } from "./wikipediaThunks";
+import { selectEdition, selectIsEnabled } from "./wikipediaSelectors";
 
-export function usePeriodicWikipediaFetching(minimumInterval = 20000) {
+export function boundsFromLeaflet(leafletBounds) {
+  if (!leafletBounds) return undefined;
+  const ne = leafletBounds.getNorthEast().wrap();
+  const sw = leafletBounds.getSouthWest().wrap();
+  let east = ne.lng;
+  let west = sw.lng;
+  if (east < west) {
+    west -= 360;
+  }
+  return {
+    north: ne.lat,
+    east,
+    south: sw.lat,
+    west
+  };
+}
+
+export function useWikipediaViewportSearch(map, debounceMs = 1000) {
   const dispatch = useDispatch();
   const isEnabled = useSelector(selectIsEnabled);
-  const lastSearchPosition = useSelector(selectLastSearchPosition);
-  const lastSearchTime = useSelector(selectLastSearchTime);
-  const searchRadius = useSelector(selectSearchRadius);
-  const searchCenterPoint = useSelector(selectSearchCenterPoint);
+  const edition = useSelector(selectEdition);
+  const debounceRef = useRef();
 
   useEffect(() => {
-    if (!searchCenterPoint || !isEnabled) return;
+    if (!map || !isEnabled) return;
 
-    const searchCenterPointArray = [searchCenterPoint.latitude ?? 0, searchCenterPoint.longitude ?? 0];
-    const positionChanged = 
-      !lastSearchPosition || 
-      getDistance(searchCenterPoint, { latitude: lastSearchPosition[0], longitude: lastSearchPosition[1] }) > 1000;
-    const timeSinceLastSearch = new Date().getTime() - (lastSearchTime ?? 0);
-    // console.log('position changed', positionChanged, 'time since last search', timeSinceLastSearch);
-    if (positionChanged && timeSinceLastSearch > minimumInterval) {
-      dispatch(getPages(searchCenterPointArray[0], searchCenterPointArray[1], searchRadius));
-    }
-  },
-  [
-    dispatch, isEnabled, 
-    searchCenterPoint, lastSearchPosition,
-    searchRadius, 
-    lastSearchTime, minimumInterval
-  ]);
-}
-
-export function usePeriodicRemoveWikipediaPagesOutOfRange() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      dispatch(clearPagesOutOfRange());
-    }, 30000);
-    return () => {
-      clearInterval(interval);
+    const trigger = () => {
+      const bounds = boundsFromLeaflet(map.getBounds());
+      clearTimeout(debounceRef.current);
+      debounceRef.current = setTimeout(() => {
+        dispatch(fetchPagesForBounds(bounds));
+      }, debounceMs);
     };
-  }, [dispatch]);
-}
 
-export function usePeriodicCalculateEffect() {
-  const dispatch = useDispatch();
-  const store = useStore();
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const {
-        position,
-        heading
-      } = selectSimdata(store.getState());
-      dispatch(updateCalculatedData({ position, heading, currentTime: new Date().getTime() }));
-    }, 250);
+    trigger();
+    map.on('moveend', trigger);
+    map.on('zoomend', trigger);
     return () => {
-      clearInterval(interval);
+      clearTimeout(debounceRef.current);
+      map.off('moveend', trigger);
+      map.off('zoomend', trigger);
     };
-  }, [dispatch, store]);
+  }, [map, isEnabled, dispatch, debounceMs, edition]);
 }
 
 export function useWikipediaPageLink(page) {

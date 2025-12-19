@@ -1,8 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 import wikipediaEditions from './wikipediaEditions';
-import { getDistance, getRhumbLineBearing } from 'geolib';
-import { angleDiff, arrayToGeolibPoint, wikipediaPointToGeolibPoint } from '../../utils/geo';
 
 export const wikipediaSlice = createSlice({
   name: 'wikipedia',
@@ -11,11 +9,13 @@ export const wikipediaSlice = createSlice({
     isEnabled: false,
     availableEditions: wikipediaEditions,
     pages: [],
-    calculatedData: {},
     pagesViewed: [],
-    lastSearchPosition: undefined,
-    lastSearchTime: undefined,
-    searchRadius: 10000
+    pageDetails: {},
+    loadingPageDetails: {},
+    selectedPageId: undefined,
+    lastSearchBounds: undefined,
+    searchRadius: 10000,
+    needsMoreZoom: false
   },
   reducers: {
     setEnabled: (state, action) => {
@@ -25,98 +25,87 @@ export const wikipediaSlice = createSlice({
       else {
         state.isEnabled = false;
         state.pages = [];
-        state.calculatedData = {};
         state.pagesViewed = [];
-        state.lastSearchPosition = undefined;
-        state.lastSearchTime = undefined;
+        state.pageDetails = {};
+        state.loadingPageDetails = {};
+        state.selectedPageId = undefined;
+        state.lastSearchBounds = undefined;
+        state.needsMoreZoom = false;
       }
     },
-    updateLastSearch: (state, action) => {
-      const {
-        searchPosition, searchTime 
-      } = action.payload;
-      state.lastSearchPosition = searchPosition;
-      state.lastSearchTime = searchTime;
-    },
     receivePages: (state, action) => {
-      const { 
-        data: { query: { pages } = {} } = {}, 
-        searchPosition, searchTime 
-      } = action.payload;
-      
-      if (!pages) return;
-      
-      const geosearch = Object.keys(pages).reduce((a, p) => {
-        a.push(pages[p]);
-        return a;
-      }, []);
-      const pagesToAdd = geosearch.filter(
-        p => !state.pages.some(p2 => p.pageid === p2.pageid) &&
-             !state.pagesViewed.some(p2 => p.pageid === p2) &&
-             p.coordinates
+      const { pages, bounds } = action.payload ?? {};
+      const filtered = (pages ?? []).filter(
+        (p) => p?.pageid &&
+          !state.pagesViewed.some((p2) => p2 === p.pageid)
       );
-      state.pages.push(...pagesToAdd);
-      state.lastSearchPosition = searchPosition;
-      state.lastSearchTime = searchTime;
+      state.pages = filtered;
+      state.lastSearchBounds = bounds;
+      state.needsMoreZoom = false;
+      if (state.selectedPageId && !filtered.some((p) => p.pageid === state.selectedPageId)) {
+        state.selectedPageId = undefined;
+      }
     },
     removePages: (state, action) => {
-      const { pageids } = action.payload;
+      const { pageids } = action.payload ?? {};
       state.pages = state.pages.filter(p => !pageids.includes(p.pageid));
-      pageids.forEach(p => {
-        if (Object.hasOwnProperty.call(state.calculatedData, p)) {
-          delete state.calculatedData[p];
+      pageids?.forEach(p => {
+        if (Object.hasOwnProperty.call(state.pageDetails, p)) {
+          delete state.pageDetails[p];
         }
       });
-    },
-    markAsRead: (state, action) => {
-      const { pageid } = action.payload;
-      state.pages = state.pages.filter(p => p.pageid !== pageid);
-      state.pagesViewed.push(pageid);
-      if (Object.hasOwnProperty.call(state.calculatedData, pageid)) {
-        delete state.calculatedData[pageid];
+      if (pageids?.includes(state.selectedPageId)) {
+        state.selectedPageId = undefined;
       }
     },
     setEdition: (state, action) => {
       const edition = action.payload;
       state.edition = edition;
       state.pages = [];
-      state.calculatedData = {};
       state.pagesViewed = [];
-      state.lastSearchPosition = undefined;
-      state.lastSearchTime = undefined;
+      state.pageDetails = {};
+      state.loadingPageDetails = {};
+      state.selectedPageId = undefined;
+      state.lastSearchBounds = undefined;
+      state.needsMoreZoom = false;
     },
     setSearchRadius: (state, action) => {
       state.searchRadius = parseInt(action.payload, 10);
     },
-    updateCalculatedData: (state, action) => {
-      const { position, heading, currentTime } = action.payload;
-
-      const pos = arrayToGeolibPoint(position);
-
-      state.pages.forEach(p => {
-        const closestPoint = p.coordinates?.map((coord) => {
-          const coordGeolib = wikipediaPointToGeolibPoint(coord);
-          const distance = pos && getDistance(pos, coordGeolib);
-          const bearing = pos && Math.round(getRhumbLineBearing(pos, coordGeolib));
-          const headingDifference = angleDiff(bearing ?? 0, heading ?? 0);
-
-          return { 
-            coord,
-            distance,
-            bearing,
-            headingDifference,
-            isInFront: headingDifference >= -90 && headingDifference <= 90
-          };
-        }).sort((a, b) => a.distance - b.distance)[0];
-
-        if (closestPoint) {
-          state.calculatedData[p.pageid] = {
-            ...state.calculatedData[p.pageid],
-            closestPoint,
-            lastUpdateTime: currentTime
-          };
+    setSelectedPageId: (state, action) => {
+      state.selectedPageId = action.payload;
+    },
+    setLastSearchBounds: (state, action) => {
+      state.lastSearchBounds = action.payload;
+    },
+    startLoadingPageDetail: (state, action) => {
+      const pageid = action.payload;
+      state.loadingPageDetails = {
+        ...(state.loadingPageDetails ?? {}),
+        [pageid]: true
+      };
+    },
+    receivePageDetails: (state, action) => {
+      const { pages, pageids } = action.payload ?? {};
+      const receivedPages = Object.values(pages ?? {});
+      receivedPages.forEach((page) => {
+        const existing = state.pageDetails[page.pageid] ?? {};
+        if ((!page.pageimages || page.pageimages.length === 0) && existing.pageimages?.length) {
+          page.pageimages = existing.pageimages;
+        }
+        if (!page.thumbnail && existing.thumbnail) {
+          page.thumbnail = existing.thumbnail;
+        }
+        state.pageDetails[page.pageid] = page;
+      });
+      (pageids ?? receivedPages.map((p) => p.pageid)).forEach((id) => {
+        if (state.loadingPageDetails?.[id]) {
+          delete state.loadingPageDetails[id];
         }
       });
+    },
+    setNeedsMoreZoom: (state, action) => {
+      state.needsMoreZoom = !!action.payload;
     }
   }
 });
@@ -126,10 +115,12 @@ export const {
   setEdition,
   receivePages,
   removePages,
-  markAsRead,
   setSearchRadius,
-  updateCalculatedData,
-  updateLastSearch
+  setSelectedPageId,
+  setLastSearchBounds,
+  startLoadingPageDetail,
+  receivePageDetails,
+  setNeedsMoreZoom
 } = wikipediaSlice.actions;
 
 export default wikipediaSlice.reducer;

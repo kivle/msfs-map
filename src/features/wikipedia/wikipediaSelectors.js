@@ -5,43 +5,15 @@ import { arrayToGeolibPoint } from '../../utils/geo';
 export const selectIsEnabled = (state) => state.wikipedia.isEnabled;
 export const selectEdition = (state) => state.wikipedia.edition;
 export const selectAvailableEditions = (state) => state.wikipedia.availableEditions;
-export const selectPages = (state) => state.wikipedia.pages;
+export const selectPages = (state) => state.wikipedia.pages ?? [];
 export const selectSearchRadius = (state) => state.wikipedia.searchRadius;
-export const selectLastSearchPosition = (state) => state.wikipedia.lastSearchPosition;
-export const selectLastSearchTime = (state) => state.wikipedia.lastSearchTime;
+export const selectLastSearchBounds = (state) => state.wikipedia.lastSearchBounds;
+export const selectSelectedPageId = (state) => state.wikipedia.selectedPageId;
+export const selectNeedsMoreZoom = (state) => state.wikipedia.needsMoreZoom;
 
-function pageSort(a, b) {
-  let res = a?.closestPoint && b?.closestPoint ? a.closestPoint.distance - b.closestPoint.distance : 0;
-  if (res === 0) {
-    res = a.page.title.localeCompare(b.page.title);
-  }
-  if (res === 0) {
-    res = a.page.pageid - b.page.pageid;
-  }
-  return res;
-}
-
-const selectPagesState = (state) => state.wikipedia?.pages;
-const selectCalculatedData = (state) => state.wikipedia?.calculatedData;
-
-export const selectPagesWithDistances = createSelector(
-  [selectPagesState, selectCalculatedData],
-  (pages, calculatedData) => {
-    const pagesWithClosestPoints = pages?.map((p) => {
-      const { closestPoint } = calculatedData[p.pageid] ?? {};
-
-      return {
-        page: p,
-        closestPoint
-      };
-    }).sort(pageSort);
-
-    return [
-      ...pagesWithClosestPoints.filter((p) => p.closestPoint?.isInFront),
-      ...pagesWithClosestPoints.filter((p) => !p.closestPoint?.isInFront),
-    ];
-  }
-);
+const selectPagesState = (state) => state.wikipedia?.pages ?? [];
+const selectPageDetailsState = (state) => state.wikipedia?.pageDetails ?? {};
+const selectLoadingState = (state) => state.wikipedia?.loadingPageDetails ?? {};
 
 const selectPosition = (state) => state.simdata?.position;
 const selectHeading = (state) => state.simdata?.heading;
@@ -55,4 +27,31 @@ export const selectSearchCenterPoint = createSelector(
         ? computeDestinationPoint(arrayToGeolibPoint(position), searchRadius, heading)
         : arrayToGeolibPoint(position)
       : undefined
+);
+
+export const selectPageById = createSelector(
+  [selectPagesState, (_, pageid) => pageid],
+  (pages, pageid) => pages.find((p) => p.pageid === pageid)
+);
+
+export const selectPageDetailsById = createSelector(
+  [selectPageDetailsState, (_, pageid) => pageid],
+  (details, pageid) => (pageid ? details[pageid] : undefined)
+);
+
+export const selectIsPageLoading = createSelector(
+  [selectLoadingState, (_, pageid) => pageid],
+  (loading, pageid) => !!(pageid && loading?.[pageid])
+);
+
+export const selectSelectedPage = createSelector(
+  [selectPagesState, selectPageDetailsState, selectSelectedPageId],
+  (pages, details, selectedPageId) => {
+    if (!selectedPageId) return undefined;
+    const base = pages.find((p) => p.pageid === selectedPageId) ?? {};
+    return {
+      ...base,
+      ...(details[selectedPageId] ?? {})
+    };
+  }
 );
