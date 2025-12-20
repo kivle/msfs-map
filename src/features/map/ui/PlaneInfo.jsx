@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { FaPlane } from 'react-icons/fa';
 import styles from './PlaneInfo.module.css';
 import { selectSimdata } from '../../simdata/simdataSlice';
-import { useVfrmapConnection } from '../../simdata/hooks';
+import { useSimconnectWsConnection } from '../../simdata/hooks';
 
 const PlaneInfoPanel = React.memo(({
   airspeed,
@@ -128,7 +128,7 @@ function InfoField({ label, value, unit }) {
 
 export default function PlaneInfo() {
   const simdata = useSelector(selectSimdata);
-  const { status, error, connect, disconnect, clearError, websocketUrl } = useVfrmapConnection();
+  const { status, error, connect, disconnect, clearError, websocketUrl } = useSimconnectWsConnection();
 
   if (simdata.connected) {
     return <PlaneInfoPanel {...simdata} />;

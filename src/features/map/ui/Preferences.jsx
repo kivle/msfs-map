@@ -10,8 +10,6 @@ import WebsocketPreferenceSection from './WebsocketPreferenceSection';
 import ShortcutPreferencesSection from './ShortcutPreferencesSection';
 
 const PreferencesPanel = React.memo(({
-  visualizeSearchRadius,
-  changeVisualizeSearchRadius,
   courseLine,
   changeShowCourseLine,
   marchingSpeedKnots,
@@ -28,8 +26,6 @@ const PreferencesPanel = React.memo(({
 }) =>
   <>
     <MapPreferencesSection
-      visualizeSearchRadius={visualizeSearchRadius}
-      onChangeVisualizeSearchRadius={changeVisualizeSearchRadius}
       courseLine={courseLine}
       onChangeCourseLine={changeShowCourseLine}
       marchingSpeedKnots={marchingSpeedKnots}
@@ -57,7 +53,6 @@ function PreferencesPanelContainer() {
   const {
     edition,
     availableEditions,
-    visualizeSearchRadius,
     courseLine,
     shortcutMappings,
     websocketUrl,
@@ -66,7 +61,6 @@ function PreferencesPanelContainer() {
 
   const {
     changeEdition,
-    changeVisualizeSearchRadius,
     changeShowCourseLine,
     changeShortcutMappings,
     changeWebsocketUrl,
@@ -92,8 +86,6 @@ function PreferencesPanelContainer() {
     changeEdition={changeEdition}
     edition={edition}
     availableEditions={availableEditions}
-    visualizeSearchRadius={visualizeSearchRadius}
-    changeVisualizeSearchRadius={changeVisualizeSearchRadius}
     courseLine={courseLine}
     changeShowCourseLine={changeShowCourseLine}
     marchingSpeedKnots={marchingSpeedKnots}

@@ -75,19 +75,30 @@ export const globalAirportLayerDefinition = {
   defaultVisibility: false
 };
 
-export const allPointLayerDefinitions = [
-  ...mapLayerDefinitions,
-  globalAirportLayerDefinition
+export const wikipediaLayerDefinition = {
+  id: 'wikipedia',
+  label: 'Wikipedia',
+  color: '#2a6fdb',
+  defaultVisibility: false,
+  renderType: 'overlay'
+};
+
+export const extraLayerDefinitions = [
+  globalAirportLayerDefinition,
+  wikipediaLayerDefinition
 ];
 
-export const defaultMapLayerVisibility = allPointLayerDefinitions.reduce((acc, layer) => {
+export const allLayerDefinitions = [
+  ...mapLayerDefinitions,
+  ...extraLayerDefinitions
+];
+
+export const defaultMapLayerVisibility = allLayerDefinitions.reduce((acc, layer) => {
   acc[layer.id] = layer.defaultVisibility ?? true;
   return acc;
 }, {});
 
 export const groupedLayerDefinitions = {
   pointLayers: mapLayerDefinitions,
-  extraPointLayers: [
-    globalAirportLayerDefinition
-  ]
+  extraPointLayers: extraLayerDefinitions
 };

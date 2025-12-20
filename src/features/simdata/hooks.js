@@ -29,7 +29,7 @@ function parseSimdataMessage(raw) {
     return null;
   }
 
-  // vfrmap/simconnect-ws payloads use the field names shown in the sample frame; coerce numeric strings.
+  // simconnect-ws payloads use the field names shown in the sample frame; coerce numeric strings.
   const toNumber = (value) => {
     if (value === undefined || value === null) return value;
     const n = Number(value);
@@ -96,7 +96,7 @@ function parseSimdataMessage(raw) {
   };
 }
 
-export function useVfrmapConnection() {
+export function useSimconnectWsConnection() {
   const store = useStore();
   const dispatch = useDispatch();
   const websocketUrl = useSelector(selectWebsocketUrl) || defaultUrl;
@@ -177,7 +177,7 @@ export function useVfrmapConnection() {
     
     socket.onerror = (event) => {
       if (websocketRef.current !== socket) return;
-      // Suppress noisy console errors when vfrmap.exe is not running; preventDefault keeps the error from bubbling
+      // Suppress noisy console errors when simconnect-ws.exe is not running; preventDefault keeps the error from bubbling
       try {
         event?.preventDefault?.();
       } catch {}

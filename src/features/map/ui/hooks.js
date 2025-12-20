@@ -1,14 +1,14 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   selectAvailableEditions,
   selectEdition,
 } from "../../wikipedia/wikipediaSelectors";
-import { setEdition, setEnabled } from "../../wikipedia/wikipediaSlice";
+import { setEdition } from "../../wikipedia/wikipediaSlice";
 import {
-  selectAvailableMaps, selectCourseLine, selectCurrentMap, 
-  selectShortcutMappings, selectVisualizeSearchRadius, setCurrentMap, 
-  setShortcutMappings, setShowCourseLine, setVisualizeSearchRadius, selectDetectRetinaForCurrentMap, setDetectRetina, selectDetectRetinaByMap, setDetectRetinaMap, setMapLayers, setMapLayersEnabled, selectMapLayersEnabled
+  selectAvailableMaps, selectCourseLine, selectCurrentMap,
+  selectShortcutMappings, setCurrentMap,
+  setShortcutMappings, setShowCourseLine, selectDetectRetinaForCurrentMap, setDetectRetina, selectDetectRetinaByMap, setDetectRetinaMap, setMapLayers, setMapLayersEnabled, selectMapLayersEnabled
 } from "../mapSlice";
 import { selectMarchingSpeedKnots, setMarchingSpeedKnots } from "../mapSlice";
 import { selectWebsocketUrl, setWebsocketUrl } from "../../simdata/simdataSlice";
@@ -18,6 +18,7 @@ import { setPreferencesLoaded } from "../mapSlice";
 const websocketDefaultPort = '9000';
 const websocketSecureDefaultPort = '9443';
 const websocketDefaultPath = '/ws';
+let editionChangeRequested = false;
 
 function normalizeWebsocketUrl(value) {
   const trimmed = (value ?? '').trim();
@@ -61,19 +62,29 @@ function determineProtocol(hostname) {
 
 export function useLoadPreferencesEffect() {
   const dispatch = useDispatch();
+  const edition = useSelector(selectEdition);
+  const latestEditionRef = useRef(edition);
+  const hasLoadedRef = useRef(false);
 
   useEffect(() => {
+    latestEditionRef.current = edition;
+  }, [edition]);
+
+  useEffect(() => {
+    if (hasLoadedRef.current) return;
+    hasLoadedRef.current = true;
     // Load preferences on startup
     async function load() {
       const prefs = await loadPreferences();
-      if (prefs['wikipedia-enabled'] !== undefined)
-        dispatch(setEnabled(prefs['wikipedia-enabled']));
-      if (prefs['wikipedia-edition'])
-        dispatch(setEdition(prefs['wikipedia-edition']));
+      if (prefs['wikipedia-edition'] && !editionChangeRequested) {
+        const storedEdition = prefs['wikipedia-edition'];
+        const currentEdition = latestEditionRef.current;
+        if (storedEdition !== currentEdition && currentEdition === 'en' && storedEdition !== 'en') {
+          dispatch(setEdition(storedEdition));
+        }
+      }
       if (prefs['currentMap'])
         dispatch(setCurrentMap(prefs['currentMap']));
-      if (prefs['visualizeSearchRadius'] !== undefined)
-        dispatch(setVisualizeSearchRadius(prefs['visualizeSearchRadius']));
       if (prefs['courseLine'] !== undefined)
         dispatch(setShowCourseLine(prefs['courseLine']));
       if (prefs['detectRetinaByMap'] !== undefined)
@@ -99,7 +110,6 @@ export function usePreferenceState() {
   const availableEditions = useSelector(selectAvailableEditions);
   const currentMap = useSelector(selectCurrentMap);
   const availableMaps = useSelector(selectAvailableMaps);
-  const visualizeSearchRadius = useSelector(selectVisualizeSearchRadius);
   const courseLine = useSelector(selectCourseLine);
   const detectRetina = useSelector(selectDetectRetinaForCurrentMap);
   const shortcutMappings = useSelector(selectShortcutMappings);
@@ -112,7 +122,6 @@ export function usePreferenceState() {
     availableEditions,
     currentMap,
     availableMaps,
-    visualizeSearchRadius,
     courseLine,
     detectRetina,
     shortcutMappings,
@@ -129,8 +138,10 @@ export function usePreferenceCallbacks() {
   const marchingSpeedKnots = useSelector(selectMarchingSpeedKnots);
 
   const changeEdition = useCallback(async (e) => {
-    await savePreference('wikipedia-edition', e.target.value);
-    dispatch(setEdition(e.target.value));
+    const value = e.target.value;
+    editionChangeRequested = true;
+    dispatch(setEdition(value));
+    savePreference('wikipedia-edition', value).catch(() => {});
   }, [dispatch]);
 
   const changeMap = useCallback(async (e) => {
@@ -138,11 +149,6 @@ export function usePreferenceCallbacks() {
     dispatch(setCurrentMap(mapId));
     // Persist asynchronously; failures should not block UI update
     savePreference('currentMap', mapId).catch(() => {});
-  }, [dispatch]);
-
-  const changeVisualizeSearchRadius = useCallback(async (enabled) => {
-    await savePreference('visualizeSearchRadius', enabled);
-    dispatch(setVisualizeSearchRadius(enabled));
   }, [dispatch]);
 
   const changeShowCourseLine = useCallback(async (enabled) => {
@@ -186,7 +192,6 @@ export function usePreferenceCallbacks() {
   return {
     changeEdition,
     changeMap,
-    changeVisualizeSearchRadius,
     changeShowCourseLine,
     changeDetectRetina,
     changeShortcutMappings,

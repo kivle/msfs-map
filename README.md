@@ -1,6 +1,6 @@
 # Wikipedia virtual tour guide for MSFS 2020/2024
 
-NOTE: A new patched version of vfrmap.exe is required for MSFS 2024. Download from the release page below!
+NOTE: A new patched version of simconnect-ws.exe is required for MSFS 2024. Download from the release page below!
 
 The aim of this project is to provide a "virtual" tour guide that reads Wikipedia articles about the places you fly over in Microsoft Flight Simulator 2020/2024. A video is worth more than a thousand words, so here is a video of it in action over the island of Ibiza:
 
@@ -8,11 +8,11 @@ https://www.youtube.com/watch?v=2rDPMjrYLFg
 
 ## Setting it up to try it yourself
 
-This project only contains the front-end code to display the actual map and query the Wikipedia API. The actual location from the simulator is provided by a patched version of [vfrmap by lian](https://github.com/lian/msfs2020-go) . The only thing changed in the patched version is to allow cross-origin requests to the websocket.
+This project only contains the front-end code to display the actual map and query the Wikipedia API. The actual location from the simulator is provided by a patched version of [simconnect-ws by lian](https://github.com/lian/msfs2020-go) . The only thing changed in the patched version is to allow cross-origin requests to the websocket.
 
-1. Download the patched version of vfrmap (separate version for MSFS 2024 has been added!) from https://github.com/kivle/msfs2020-go/releases/tag/0.0.7-patched
+1. Download the patched version of simconnect-ws (separate version for MSFS 2024 has been added!) from https://github.com/kivle/msfs2020-go/releases/tag/0.0.7-patched
 2. Start MSFS 2020.
-3. Execute patched version of vfrmap.exe
+3. Execute patched version of simconnect-ws.exe
 4. Open https://kivle.github.io/msfs-map/ 
 
 Microsoft Edge is highly recommended since it provides high quality "cloud" TTS voices out of the box, but any modern browser should work.
@@ -29,7 +29,7 @@ It is also possible to map certain actions to gamepad controllers in the prefere
 
 ## Running the map on a different computer / device on the network
 
-It's possible to run the map on a different device than the computer running the simulator. To do this, vfrmap.exe still needs to be started on the computer running the sim. On the other device, open the map and go to preferences. You will need to put in the full websocket url to the computer running vfrmap.exe. For instance "ws://192.168.50.123:9000/ws". If you do not know the local ip address of the computer running the simulator, you can open a command prompt and type "ipconfig" to find it.
+It's possible to run the map on a different device than the computer running the simulator. To do this, simconnect-ws.exe still needs to be started on the computer running the sim. On the other device, open the map and go to preferences. You will need to put in the full websocket url to the computer running simconnect-ws.exe. For instance "ws://192.168.50.123:9000/ws". If you do not know the local ip address of the computer running the simulator, you can open a command prompt and type "ipconfig" to find it.
 
 
 ## Development

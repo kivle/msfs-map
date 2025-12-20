@@ -1,4 +1,4 @@
-* Update documentation for new/rebranded vfrmap (simconnect-ws)
+* Update documentation for new/rebranded simconnect-ws (simconnect-ws)
 * Consider using ground_heading or ground_course for the heading line instead of the normal heading
 * Consider removing the text to speech part of the Wikipedia functionality. Make it more focused and have better UX.
 //* Move zoom in/out to bottom right (better on ipad/touch screens)

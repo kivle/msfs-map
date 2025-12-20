@@ -2,8 +2,6 @@ import * as React from 'react';
 import styles from './Preferences.module.css';
 
 export default function MapPreferencesSection({
-  visualizeSearchRadius,
-  onChangeVisualizeSearchRadius,
   courseLine,
   onChangeCourseLine,
   marchingSpeedKnots,
@@ -35,15 +33,6 @@ export default function MapPreferencesSection({
 
   return (
     <>
-      <div className={styles.preference}>
-        <label htmlFor="visualizeSearchRadius">Visualize search radius on map</label>
-        <input
-          id="visualizeSearchRadius"
-          type="checkbox"
-          checked={visualizeSearchRadius}
-          onChange={(e) => onChangeVisualizeSearchRadius(e.target.checked)}
-        />
-      </div>
       <div className={styles.preference}>
         <label htmlFor="showCourseLine">Show course line</label>
         <input

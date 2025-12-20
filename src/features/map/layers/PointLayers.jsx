@@ -15,13 +15,15 @@ export default function PointLayers() {
     ...(visibility ?? {})
   }), [visibility]);
 
-  const buildLayerSources = useMemo(() => (definitions) => definitions.map((layer) => ({
-    ...layer,
-    url: new URL(layer.fileName, `${window.location.origin}${baseUrl}`).toString(),
-    fallbackUrl: baseUrl !== '/'
-      ? new URL(layer.fileName, window.location.origin).toString()
-      : null
-  })), []);
+  const buildLayerSources = useMemo(() => (definitions) => definitions
+    .filter((layer) => layer.fileName)
+    .map((layer) => ({
+      ...layer,
+      url: new URL(layer.fileName, `${window.location.origin}${baseUrl}`).toString(),
+      fallbackUrl: baseUrl !== '/'
+        ? new URL(layer.fileName, window.location.origin).toString()
+        : null
+    })), []);
 
   const layerSources = useMemo(
     () => buildLayerSources(groupedLayerDefinitions.pointLayers),

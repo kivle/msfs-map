@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
 import { useMap } from "react-leaflet";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Wikipedia from "./layers/Wikipedia";
-import { selectCourseLine, selectCurrentMap, selectDetectRetinaForCurrentMap, selectIsFollowing, selectVisualizeSearchRadius } from "./mapSlice";
+import { selectCourseLine, selectCurrentMap, selectDetectRetinaForCurrentMap, selectIsFollowing, selectMapLayerVisibility } from "./mapSlice";
 import { selectMarchingSpeedKnots } from "./mapSlice";
 import { selectIsEnabled } from '../wikipedia/wikipediaSelectors';
+import { setEnabled } from "../wikipedia/wikipediaSlice";
 import { MainLayer } from "./layers/MainLayer";
 import { selectSimdata } from "../simdata/simdataSlice";
 import PointLayers from "./layers/PointLayers";
 import CourseLine from "./layers/CourseLine";
-import SearchRadiusCircle from "./layers/SearchRadiusCircle";
 import Plane from "./layers/Plane";
 import { useShortcutMappingsEffect } from "./shortcutHooks";
 import { MapViewPersistence } from "./components/MapViewPersistence";
@@ -17,6 +17,7 @@ import DistanceScaleControl from "./components/DistanceScaleControl";
 
 export default function MapContent() {
   const map = useMap();
+  const dispatch = useDispatch();
   const marchingSpeedKnots = useSelector(selectMarchingSpeedKnots);
 
   useShortcutMappingsEffect();
@@ -28,7 +29,8 @@ export default function MapContent() {
   const detectRetina = useSelector(selectDetectRetinaForCurrentMap);
   const isFollowing = useSelector(selectIsFollowing);
   const isWikipediaEnabled = useSelector(selectIsEnabled);
-  const visualizeSearchRadius = useSelector(selectVisualizeSearchRadius);
+  const mapLayerVisibility = useSelector(selectMapLayerVisibility);
+  const isWikipediaLayerEnabled = !!mapLayerVisibility?.wikipedia;
   const courseLineEnabled = useSelector(selectCourseLine);
 
   useEffect(() => {
@@ -36,6 +38,12 @@ export default function MapContent() {
       map.setView(position, map.getZoom(), { animate: true });
     }
   }, [map, isFollowing, position]);
+
+  useEffect(() => {
+    if (isWikipediaEnabled !== isWikipediaLayerEnabled) {
+      dispatch(setEnabled(isWikipediaLayerEnabled));
+    }
+  }, [dispatch, isWikipediaEnabled, isWikipediaLayerEnabled]);
 
   // Recalculate map layout when sidebar (Wikipedia panel) is shown/hidden or on resize.
   useEffect(() => {
@@ -46,7 +54,7 @@ export default function MapContent() {
       cancelAnimationFrame(raf);
       window.removeEventListener('resize', invalidate);
     };
-  }, [map, isWikipediaEnabled]);
+  }, [map, isWikipediaLayerEnabled]);
 
   return (
     <>
@@ -54,11 +62,8 @@ export default function MapContent() {
       <MainLayer currentMap={currentMap} detectRetina={detectRetina} />
       <DistanceScaleControl marchingSpeedKnots={marchingSpeedKnots} />
       <PointLayers />
-      {!!isWikipediaEnabled && 
+      {!!isWikipediaLayerEnabled && 
         <Wikipedia />
-      }
-      {!!position && !!isWikipediaEnabled && !!visualizeSearchRadius && 
-        <SearchRadiusCircle />
       }
       {!!position && !!courseLineEnabled && 
         <CourseLine />

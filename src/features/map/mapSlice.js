@@ -12,7 +12,6 @@ export const mapSlice = createSlice({
     isFollowing: true,
     currentMap: servers[0]?.id ?? 'OpenStreetMap',
     availableMaps: servers,
-    visualizeSearchRadius: true,
     courseLine: false,
     detectRetinaByMap: {},
     shortcutMappings: [],
@@ -27,9 +26,6 @@ export const mapSlice = createSlice({
     },
     setIsFollowing: (state, action) => {
       state.isFollowing = action.payload;
-    },
-    setVisualizeSearchRadius: (state, action) => {
-      state.visualizeSearchRadius = action.payload;
     },
     setShowCourseLine: (state, action) => {
       state.courseLine = action.payload;
@@ -80,7 +76,6 @@ export const mapSlice = createSlice({
 export const {
   setCurrentMap,
   setIsFollowing,
-  setVisualizeSearchRadius,
   setShowCourseLine,
   setDetectRetina,
   setDetectRetinaMap,
@@ -107,8 +102,6 @@ export const selectCurrentMap = createSelector(
 export const selectAvailableMaps = state => state.map.availableMaps;
 
 export const selectIsFollowing = state => state.map.isFollowing;
-
-export const selectVisualizeSearchRadius = state => state.map.visualizeSearchRadius;
 
 export const selectCourseLine = state => state.map.courseLine;
 
