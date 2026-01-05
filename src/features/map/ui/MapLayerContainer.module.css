@@ -54,6 +54,12 @@
   gap: 6px;
 }
 
+.layerGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
 .sectionLabel {
   font-size: 0.8em;
   color: #4f4f4f;
@@ -126,4 +132,29 @@
 
 .layerButton.enabled .state {
   color: #0d6efd;
+}
+
+.favoritesActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+  margin-left: 22px;
+}
+
+.favoritesButton {
+  border: 1px solid #d8d8d8;
+  background: #f7f7f7;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 0.78em;
+  cursor: pointer;
+}
+
+.favoritesButton:hover {
+  border-color: #bfbfbf;
+  background: #efefef;
+}
+
+.hiddenInput {
+  display: none;
 }

@@ -15,7 +15,7 @@ export default function FavoritesLayer({
 }) {
   useMapEvents({
     click: (event) => {
-      if (!enabled || !canAdd) return;
+      if (!canAdd) return;
       const { lat, lng } = event.latlng ?? {};
       if (!Number.isFinite(lat) || !Number.isFinite(lng)) return;
       onRequestAdd?.({ lat, lng });

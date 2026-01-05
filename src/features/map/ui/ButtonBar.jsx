@@ -6,8 +6,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   selectFavoriteAddMode,
   selectIsFollowing,
+  selectMapLayerVisibility,
   setFavoriteAddMode,
-  setIsFollowing
+  setIsFollowing,
+  setMapLayerEnabled
 } from '../mapSlice';
 
 import styles from './ButtonBar.module.css';
@@ -46,12 +48,17 @@ export default function ButtonBar() {
 
   const isFollowing = useSelector(selectIsFollowing);
   const isAddingFavorite = useSelector(selectFavoriteAddMode);
+  const mapLayerVisibility = useSelector(selectMapLayerVisibility);
   const toggleFollow = useCallback(() => {
     dispatch(setIsFollowing(!isFollowing));
   }, [dispatch, isFollowing]);
   const toggleFavoriteMode = useCallback(() => {
-    dispatch(setFavoriteAddMode(!isAddingFavorite));
-  }, [dispatch, isAddingFavorite]);
+    const next = !isAddingFavorite;
+    dispatch(setFavoriteAddMode(next));
+    if (next && !mapLayerVisibility?.favorites) {
+      dispatch(setMapLayerEnabled({ layerId: 'favorites', enabled: true }));
+    }
+  }, [dispatch, isAddingFavorite, mapLayerVisibility]);
 
   useEffect(() => {
     const handleChange = () => setIsFullscreen(Boolean(document?.fullscreenElement));

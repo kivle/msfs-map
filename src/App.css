@@ -11,6 +11,10 @@
   height: 100%;
 }
 
+.leaflet-container.favoriteAddMode {
+  cursor: crosshair;
+}
+
 .updateBanner {
   position: absolute;
   top: 16px;

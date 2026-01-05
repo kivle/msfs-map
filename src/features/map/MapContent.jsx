@@ -16,7 +16,7 @@ import { MapViewPersistence } from "./components/MapViewPersistence";
 import DistanceScaleControl from "./components/DistanceScaleControl";
 import FavoritesLayer from "./layers/FavoritesLayer";
 import FavoriteDialog from "./components/FavoriteDialog";
-import { loadFavorites, saveFavorites } from "./favoritesStorage";
+import { loadFavorites, saveFavorites, subscribeToFavoritesUpdates } from "./favoritesStorage";
 import { favoritesLayerDefinition } from "./mapLayers";
 
 export default function MapContent() {
@@ -43,7 +43,7 @@ export default function MapContent() {
   const courseLineEnabled = useSelector(selectCourseLine);
   const isDialogOpen = !!draftFavorite || !!activeFavorite;
 
-  const canAddFavorite = favoriteAddMode && isFavoritesLayerEnabled && !isDialogOpen;
+  const canAddFavorite = favoriteAddMode && !isDialogOpen;
 
   const favoriteIconColor = favoritesLayerDefinition?.color ?? '#f5b301';
 
@@ -59,6 +59,15 @@ export default function MapContent() {
     return () => {
       cancelled = true;
     };
+  }, []);
+
+  useEffect(() => {
+    const handleUpdate = () => {
+      loadFavorites()
+        .then((stored) => setFavorites(stored))
+        .catch(() => {});
+    };
+    return subscribeToFavoritesUpdates(handleUpdate);
   }, []);
 
   const handleSaveFavorite = (name) => {
@@ -95,6 +104,17 @@ export default function MapContent() {
       map.setView(position, map.getZoom(), { animate: true });
     }
   }, [map, isFollowing, position]);
+
+  useEffect(() => {
+    const container = map?.getContainer?.();
+    if (!container) return undefined;
+    if (favoriteAddMode) {
+      container.classList.add('favoriteAddMode');
+    } else {
+      container.classList.remove('favoriteAddMode');
+    }
+    return () => container.classList.remove('favoriteAddMode');
+  }, [map, favoriteAddMode]);
 
   useEffect(() => {
     if (isWikipediaEnabled !== isWikipediaLayerEnabled) {
