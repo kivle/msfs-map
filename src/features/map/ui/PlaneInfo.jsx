@@ -16,7 +16,6 @@ const PlaneInfoPanel = React.memo(({
   flaps,
   trim,
   rudder_trim,
-  ground_heading,
   ground_course,
   ground_speed,
   position
@@ -38,12 +37,8 @@ const PlaneInfoPanel = React.memo(({
       label="Heading" 
       value={<><FaPlane style={{transform: `rotate(${heading - 90}deg)`}} />{` ${heading}°`}</>}
     />
-    {Number.isFinite(ground_heading) && <InfoField 
-      label="Ground heading" 
-      value={`${ground_heading}°`}
-    />}
     {Number.isFinite(ground_course) && <InfoField 
-      label="Ground course" 
+      label="Gnd course" 
       value={`${ground_course}°`}
     />}
     <InfoField 

@@ -154,10 +154,12 @@ function calculatePoints(position, heading) {
 export const selectCourseLinePoint = createSelector(
   state => ({
     position: selectSimdata(state)?.position,
-    heading: selectSimdata(state)?.heading
+    heading: selectSimdata(state)?.heading,
+    groundCourse: selectSimdata(state)?.ground_course
   }),
-  ({ position, heading }) => {
-    return position ? [position, ...calculatePoints(position, heading)] : undefined;
+  ({ position, heading, groundCourse }) => {
+    const course = Number.isFinite(groundCourse) ? groundCourse : heading;
+    return position ? [position, ...calculatePoints(position, course)] : undefined;
   }
 );
 
