@@ -3,6 +3,8 @@ import './App.css';
 import { useSelector } from 'react-redux';
 import { useLoadPreferencesEffect } from './features/map/ui/hooks';
 import { selectPreferencesLoaded } from './features/map/mapSlice';
+import packageJson from '../package.json';
+import UpdateBanner from './components/UpdateBanner';
 
 function App() {
   const preferencesLoaded = useSelector(selectPreferencesLoaded);
@@ -18,6 +20,7 @@ function App() {
 
   return (
     <div className="App">
+      <UpdateBanner currentVersion={packageJson.version} />
       <Map />
     </div>
   );

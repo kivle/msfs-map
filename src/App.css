@@ -10,3 +10,49 @@
   width: 100%;
   height: 100%;
 }
+
+.updateBanner {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1200;
+  background: rgba(15, 23, 42, 0.92);
+  color: #f8fafc;
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  font-size: 14px;
+}
+
+.updateBanner__text {
+  font-weight: 600;
+}
+
+.updateBanner__actions {
+  display: flex;
+  gap: 8px;
+}
+
+.updateBanner__actions button {
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.updateBanner__actions button:last-child {
+  background: rgba(148, 163, 184, 0.2);
+  color: #e2e8f0;
+}
+
+.updateBanner__actions button:hover {
+  filter: brightness(1.05);
+}
