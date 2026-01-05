@@ -83,9 +83,18 @@ export const wikipediaLayerDefinition = {
   renderType: 'overlay'
 };
 
+export const favoritesLayerDefinition = {
+  id: 'favorites',
+  label: 'Favorites',
+  color: '#f5b301',
+  defaultVisibility: true,
+  renderType: 'overlay'
+};
+
 export const extraLayerDefinitions = [
   globalAirportLayerDefinition,
-  wikipediaLayerDefinition
+  wikipediaLayerDefinition,
+  favoritesLayerDefinition
 ];
 
 export const allLayerDefinitions = [
