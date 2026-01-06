@@ -124,14 +124,19 @@ export default function MapContent() {
 
   // Recalculate map layout when sidebar (Wikipedia panel) is shown/hidden or on resize.
   useEffect(() => {
-    const invalidate = () => map.invalidateSize();
+    const invalidate = () => {
+      map.invalidateSize();
+      if (isFollowing && position) {
+        map.setView(position, map.getZoom(), { animate: false });
+      }
+    };
     const raf = requestAnimationFrame(invalidate);
     window.addEventListener('resize', invalidate);
     return () => {
       cancelAnimationFrame(raf);
       window.removeEventListener('resize', invalidate);
     };
-  }, [map, isWikipediaLayerEnabled]);
+  }, [map, isWikipediaLayerEnabled, isFollowing, position]);
 
   return (
     <>
