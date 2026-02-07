@@ -17,6 +17,66 @@ import { savePreference } from '../../../utils/prefs';
 import { clearFavorites, loadFavorites, normalizeFavoritesList, saveFavorites } from '../favoritesStorage';
 import styles from './MapLayerContainer.module.css';
 
+const KML_MIME = 'application/vnd.google-earth.kml+xml';
+const KML_NS = 'http://www.opengis.net/kml/2.2';
+
+function escapeXml(value) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
+function favoritesToKml(favorites) {
+  const placemarks = favorites.map((favorite) => {
+    const name = escapeXml(favorite.name);
+    const lng = Number(favorite.lng);
+    const lat = Number(favorite.lat);
+    return [
+      '    <Placemark>',
+      `      <name>${name}</name>`,
+      '      <Point>',
+      `        <coordinates>${lng},${lat},0</coordinates>`,
+      '      </Point>',
+      '    </Placemark>'
+    ].join('\n');
+  }).join('\n');
+
+  return [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    `<kml xmlns="${KML_NS}">`,
+    '  <Document>',
+    placemarks,
+    '  </Document>',
+    '</kml>',
+    ''
+  ].join('\n');
+}
+
+function kmlToFavorites(text) {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(text, 'application/xml');
+  if (doc.getElementsByTagName('parsererror').length) {
+    throw new Error('Invalid KML');
+  }
+
+  const placemarks = Array.from(doc.getElementsByTagName('Placemark'));
+  return placemarks.map((placemark, index) => {
+    const nameNode = placemark.getElementsByTagName('name')[0];
+    const name = (nameNode?.textContent || '').trim() || `Favorite ${index + 1}`;
+    const pointNode = placemark.getElementsByTagName('Point')[0];
+    const coordinatesNode = (pointNode || placemark).getElementsByTagName('coordinates')[0];
+    const rawCoordinates = (coordinatesNode?.textContent || '').trim();
+    const firstCoordinate = rawCoordinates.split(/\s+/).find(Boolean) || '';
+    const [lngText, latText] = firstCoordinate.split(',');
+    const lng = Number(lngText);
+    const lat = Number(latText);
+    return { name, lat, lng };
+  });
+}
+
 export default function MapLayerContainer() {
   const dispatch = useDispatch();
   const fileInputRef = React.useRef(null);
@@ -66,12 +126,12 @@ export default function MapLayerContainer() {
   const handleExportFavorites = React.useCallback(async () => {
     try {
       const favorites = await loadFavorites();
-      const payload = JSON.stringify({ favorites }, null, 2);
-      const blob = new Blob([payload], { type: 'application/json' });
+      const payload = favoritesToKml(favorites);
+      const blob = new Blob([payload], { type: KML_MIME });
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.download = `msfs-map-favorites-${new Date().toISOString().slice(0, 10)}.json`;
+      link.download = `msfs-map-favorites-${new Date().toISOString().slice(0, 10)}.kml`;
       document.body.appendChild(link);
       link.click();
       link.remove();
@@ -90,8 +150,7 @@ export default function MapLayerContainer() {
     if (!file) return;
     try {
       const text = await file.text();
-      const parsed = JSON.parse(text);
-      const entries = Array.isArray(parsed) ? parsed : parsed?.favorites;
+      const entries = kmlToFavorites(text);
       const normalized = normalizeFavoritesList(entries);
       await saveFavorites(normalized);
     } catch {
@@ -201,7 +260,7 @@ export default function MapLayerContainer() {
                   <input
                     ref={fileInputRef}
                     type="file"
-                    accept="application/json"
+                    accept=".kml,application/vnd.google-earth.kml+xml,application/xml,text/xml"
                     className={styles.hiddenInput}
                     onChange={handleImportFile}
                   />
@@ -242,7 +301,7 @@ export default function MapLayerContainer() {
               <input
                 ref={fileInputRef}
                 type="file"
-                accept="application/json"
+                accept=".kml,application/vnd.google-earth.kml+xml,application/xml,text/xml"
                 className={styles.hiddenInput}
                 onChange={handleImportFile}
               />
